@@ -7,7 +7,6 @@ import HowItWorks from './components/HowItWorks'
 import Industries from './components/Industries'
 import Testimonials from './components/Testimonials'
 import ComparisonTable from './components/ComparisonTable'
-import Pricing from './components/Pricing'
 import FAQ from './components/FAQ'
 import DarkCTA from './components/DarkCTA'
 import CTABanner from './components/CTABanner'
@@ -45,7 +44,6 @@ export default function Home() {
         <Industries />
         <Testimonials />
         <ComparisonTable />
-        <Pricing />
         <FAQ />
         <DarkCTA />
       </main>

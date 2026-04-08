@@ -48,7 +48,7 @@ export default function Footer() {
             <p className="footer-col-title">Product</p>
             <a href="/#features" className="footer-link">Features</a>
             <a href="/#how-it-works" className="footer-link">Voice Billing</a>
-            <a href="/#pricing" className="footer-link">Pricing</a>
+            <a href="/pricing" className="footer-link">Pricing</a>
             <a href="/#features" className="footer-link">CA Portal</a>
           </div>
 
@@ -65,6 +65,7 @@ export default function Footer() {
             <p className="footer-col-title">Legal</p>
             <a href="/privacy-policy" className="footer-link">Privacy Policy</a>
             <a href="/terms-of-service" className="footer-link">Terms of Service</a>
+            <a href="/refund-policy" className="footer-link">Refund Policy</a>
             <a href="/gst-compliance" className="footer-link">GST Compliance</a>
             <a href="/cookie-policy" className="footer-link">Cookie Policy</a>
           </div>

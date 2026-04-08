@@ -7,10 +7,10 @@ const SIGN_UP_URL = 'https://app.udyogbook.in/sign-up'
 const LOGIN_URL = 'https://app.udyogbook.in/sign-in'
 
 const NAV_LINKS = [
-  { label: 'Features', href: '#features' },
-  { label: 'How it works', href: '#how-it-works' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Features', href: '/#features' },
+  { label: 'How it works', href: '/#how-it-works' },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'FAQ', href: '/#faq' },
   { label: 'Contact', href: '/contact' },
 ]
 

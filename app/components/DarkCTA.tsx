@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import { ArrowRight, Phone } from 'lucide-react'
+import { ArrowRight, Phone, Zap, Mic2, BarChart3 } from 'lucide-react'
 import { useLaunchModal } from './LaunchModalProvider'
 
 export default function DarkCTA() {
@@ -60,21 +60,25 @@ export default function DarkCTA() {
 
         <div className={`dcta-right fade-up d2${visible ? ' visible' : ''}`}>
           <div className="dcta-cards">
-            {[
-              { icon: '⚡', title: 'Setup in 2 minutes', sub: 'Add your business, products, and parties in minutes' },
-              { icon: '🎙️', title: 'Bill by voice instantly', sub: 'Speak in Hinglish — Maya creates the invoice for you' },
-              { icon: '📊', title: 'See your business grow', sub: 'Real-time dashboard, reports, and CA collaboration' },
-            ].map(c => (
-              <div key={c.title} className="dcta-card">
-                <div className="dcta-card-icon">
-                  <span style={{ fontSize: 20 }}>{c.icon}</span>
+            {(() => {
+              const CARDS = [
+                { Icon: Zap, color: '#F97316', bg: 'rgba(249,115,22,0.15)', title: 'Setup in 2 minutes', sub: 'Add your business, products, and parties in minutes' },
+                { Icon: Mic2, color: '#F97316', bg: 'rgba(249,115,22,0.15)', title: 'Bill by voice instantly', sub: 'Speak in Hinglish — Maya creates the invoice for you' },
+                { Icon: BarChart3, color: '#F97316', bg: 'rgba(249,115,22,0.15)', title: 'See your business grow', sub: 'Real-time dashboard, reports, and CA collaboration' },
+              ]
+
+              return CARDS.map(({ Icon, color, bg, title, sub }) => (
+                <div key={title} className="dcta-card">
+                  <div className="dcta-card-icon" style={{ background: bg }}>
+                    <Icon size={20} color={color} strokeWidth={1.75} />
+                  </div>
+                  <div>
+                    <p className="dcta-card-title">{title}</p>
+                    <p className="dcta-card-sub">{sub}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="dcta-card-title">{c.title}</p>
-                  <p className="dcta-card-sub">{c.sub}</p>
-                </div>
-              </div>
-            ))}
+              ))
+            })()}
           </div>
         </div>
       </div>

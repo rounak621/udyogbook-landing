@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { Globe, Zap, Shield, Mic2, Users, TrendingUp } from 'lucide-react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -64,22 +65,30 @@ export default function AboutPage() {
               <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#F97316', marginBottom: 12 }}>What We Stand For</p>
               <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,4vw,42px)', fontWeight: 400, color: '#0f172a', letterSpacing: '-0.02em' }}>Our Values</h2>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
-              {[
-                { icon: '🇮🇳', title: 'India First', desc: 'Every feature is designed for Indian businesses — GST, Hinglish voice, WhatsApp sharing, and more.' },
-                { icon: '⚡', title: 'Radical Simplicity', desc: 'If a feature takes more than 3 taps, we rethink it. Complexity is the enemy of adoption.' },
-                { icon: '🔒', title: 'Trust & Compliance', desc: 'GST-compliant invoices, secure data storage, and CA collaboration built into the core.' },
-                { icon: '🎙️', title: 'Voice First', desc: 'Maya AI lets you bill by speaking. No typing. No training. Just say it and it\'s done.' },
-                { icon: '🤝', title: 'CA Partnership', desc: 'We believe your CA is your partner. Udyog gives them their own portal to serve you better.' },
-                { icon: '📈', title: 'Growing with You', desc: 'From a solo kirana to a multi-branch business — Udyog scales with your growth.' },
-              ].map(v => (
-                <div key={v.title} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 16, padding: '28px 24px' }}>
-                  <div style={{ fontSize: 32, marginBottom: 14 }}>{v.icon}</div>
-                  <h3 style={{ fontSize: 17, fontWeight: 700, color: '#0f172a', marginBottom: 8 }}>{v.title}</h3>
-                  <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.6 }}>{v.desc}</p>
+            {(() => {
+              const VALUES = [
+                { Icon: Globe, color: '#F97316', bg: '#FFF5E6', title: 'India First', desc: 'Every feature is designed for Indian businesses — GST, Hinglish voice, WhatsApp sharing, and more.' },
+                { Icon: Zap, color: '#8b5cf6', bg: '#f5f3ff', title: 'Radical Simplicity', desc: 'If a feature takes more than 3 taps, we rethink it. Complexity is the enemy of adoption.' },
+                { Icon: Shield, color: '#10b981', bg: '#f0fdf4', title: 'Trust & Compliance', desc: 'GST-compliant invoices, secure data storage, and CA collaboration built into the core.' },
+                { Icon: Mic2, color: '#F97316', bg: '#FFF5E6', title: 'Voice First', desc: 'Maya AI lets you bill by speaking. No typing. No training. Just say it and it\'s done.' },
+                { Icon: Users, color: '#0ea5e9', bg: '#eff6ff', title: 'CA Partnership', desc: 'We believe your CA is your partner. Udyog gives them their own portal to serve you better.' },
+                { Icon: TrendingUp, color: '#10b981', bg: '#f0fdf4', title: 'Growing with You', desc: 'From a solo kirana to a multi-branch business — Udyog scales with your growth.' },
+              ]
+
+              return (
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
+                  {VALUES.map(({ Icon, color, bg, title, desc }) => (
+                    <div key={title} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 16, padding: '28px 24px' }}>
+                      <div style={{ width: 48, height: 48, background: bg, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 14 }}>
+                        <Icon size={22} color={color} strokeWidth={1.75} />
+                      </div>
+                      <h3 style={{ fontSize: 17, fontWeight: 700, color: '#0f172a', marginBottom: 8 }}>{title}</h3>
+                      <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.6 }}>{desc}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              )
+            })()}
           </div>
         </section>
 
