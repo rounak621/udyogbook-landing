@@ -2,10 +2,33 @@ import type { Metadata } from 'next'
 import LaunchModalProvider from './components/LaunchModalProvider'
 
 export const metadata: Metadata = {
-  title: 'Udyog — GST Billing Software for Indian Businesses',
+  title: {
+    default: 'Udyog — GST Billing Software for Indian Businesses',
+    template: '%s | Udyog'
+  },
   description: 'Create GST invoices in seconds with voice billing, manage inventory, track payments, and collaborate with your CA. Built for Indian retailers, traders, and MSMEs.',
-  keywords: 'GST billing software India, invoice software, MSME billing, voice billing, CA portal, inventory management India',
-  authors: [{ name: 'Udyog' }],
+  keywords: [
+    'GST billing software India',
+    'GST invoice software',
+    'billing software for small business India',
+    'MSME billing software',
+    'voice billing app India',
+    'CA portal software',
+    'inventory management India',
+    'Vyapar alternative',
+    'myBillBook alternative',
+    'GST invoice maker',
+    'online billing software India',
+    'shop billing software',
+    'kirana store billing software',
+    'rental management software India',
+    'udyog billing',
+    'udyogbook'
+  ],
+  authors: [{ name: 'Udyog', url: 'https://udyogbook.in' }],
+  creator: 'Udyog',
+  publisher: 'Udyog',
+  metadataBase: new URL('https://udyogbook.in'),
   openGraph: {
     title: 'Udyog — Bill banao, bolke.',
     description: "India's smartest GST billing platform. Create invoices with your voice, manage inventory, and collaborate with your CA.",
@@ -13,14 +36,39 @@ export const metadata: Metadata = {
     siteName: 'Udyog',
     locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Udyog — GST Billing Software for Indian Businesses',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Udyog — GST Billing for Indian Businesses',
     description: 'Create GST invoices with your voice. Built for Indian MSMEs.',
+    images: ['/og-image.png'],
   },
-  robots: { index: true, follow: true },
-  alternates: { canonical: 'https://udyogbook.in' },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://udyogbook.in',
+  },
+  verification: {
+    google: 'REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_CODE',
+  },
+  category: 'technology',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
