@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     canonical: 'https://udyogbook.in',
   },
   verification: {
-    google: 'REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_CODE',
+    google: '<meta name="google-site-verification" content="oP-ry-1Ab18vApvlXUTunE8RlNd47Tw-qWpVUXWeY38" />',
   },
   category: 'technology',
 }
