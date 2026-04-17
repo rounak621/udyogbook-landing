@@ -1,62 +1,17 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import type { Metadata } from 'next'
+import { BLOG_POSTS } from '../../lib/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Blog — Udyog',
-  description: 'Tips, guides, and insights for Indian small businesses on GST, billing, and growth.',
+  title: 'Blog — GST Guides, Billing Tips & Business Insights | Udyog',
+  description: 'Tips, guides, and insights for Indian small businesses on GST, billing, voice invoicing, and business growth. Written by the Udyog team.',
+  openGraph: {
+    title: 'Udyog Blog — GST Guides & Billing Tips for Indian Businesses',
+    description: 'GST guides, billing tips, and business insights for Indian MSMEs, retailers, and traders.',
+    url: 'https://udyogbook.in/blog',
+  },
 }
-
-const POSTS = [
-  {
-    category: 'GST Guide',
-    title: 'How to file GSTR-1 in 2026 — A complete guide for small businesses',
-    excerpt: 'Step-by-step walkthrough of GSTR-1 filing for Indian retailers and traders. Includes what data you need, common mistakes to avoid, and how Udyog makes it one-click.',
-    date: '5 Apr 2026',
-    readTime: '8 min read',
-    color: '#10b981',
-  },
-  {
-    category: 'Voice Billing',
-    title: 'Bill banao bolke — How Maya AI is changing billing for Indian traders',
-    excerpt: 'Maya, our Hinglish voice AI, can create a complete GST invoice in under 8 seconds. Here\'s how it works and why thousands of business owners love it.',
-    date: '1 Apr 2026',
-    readTime: '5 min read',
-    color: '#F97316',
-  },
-  {
-    category: 'Inventory',
-    title: 'Why negative stock is normal for Indian retailers (and what to do about it)',
-    excerpt: 'Most kirana owners restock from the wholesale market daily with cash — no digital record. Here\'s how Udyog handles this reality without blocking your billing.',
-    date: '28 Mar 2026',
-    readTime: '4 min read',
-    color: '#8b5cf6',
-  },
-  {
-    category: 'CA Portal',
-    title: 'How to collaborate with your CA digitally — No more WhatsApp chaos',
-    excerpt: 'Udyog\'s CA portal gives your accountant their own login to view financials, run reports, and file GST — without you having to send a single screenshot.',
-    date: '22 Mar 2026',
-    readTime: '6 min read',
-    color: '#0ea5e9',
-  },
-  {
-    category: 'Rental Business',
-    title: 'Running a camera or equipment rental business? Here\'s the software you need',
-    excerpt: 'Udyog Enterprise is built specifically for rental businesses — track which camera is with whom, auto-calculate late fees, and generate rental invoices instantly.',
-    date: '15 Mar 2026',
-    readTime: '7 min read',
-    color: '#f59e0b',
-  },
-  {
-    category: 'Business Tips',
-    title: '5 GST mistakes small businesses make (and how to avoid them)',
-    excerpt: 'From wrong HSN codes to missed ITC claims — these are the most common GST errors we see among Indian MSMEs, and how Udyog prevents them automatically.',
-    date: '10 Mar 2026',
-    readTime: '6 min read',
-    color: '#ef4444',
-  },
-]
 
 export default function BlogPage() {
   return (
@@ -80,7 +35,7 @@ export default function BlogPage() {
         {/* Posts grid */}
         <section style={{ padding: 'clamp(48px,6vw,80px) var(--section-px)' }}>
           <style suppressHydrationWarning>{`
-            .blog-card { background: #fff; border: 1px solid #E2E8F0; border-radius: 16px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+            .blog-card { background: #fff; border: 1px solid #E2E8F0; border-radius: 16px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; display: block; }
             .blog-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
             .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
             @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -88,8 +43,8 @@ export default function BlogPage() {
           `}</style>
           <div style={{ maxWidth: 1280, margin: '0 auto' }}>
             <div className="blog-grid">
-              {POSTS.map(post => (
-                <article key={post.title} className="blog-card">
+              {BLOG_POSTS.map(post => (
+                <a key={post.slug} href={`/blog/${post.slug}`} className="blog-card">
                   <div style={{ height: 6, background: post.color }} />
                   <div style={{ padding: '24px 20px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
@@ -103,7 +58,7 @@ export default function BlogPage() {
                       <span style={{ fontSize: 13, color: '#F97316', fontWeight: 600 }}>Read more →</span>
                     </div>
                   </div>
-                </article>
+                </a>
               ))}
             </div>
 
