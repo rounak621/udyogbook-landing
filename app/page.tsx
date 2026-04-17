@@ -11,6 +11,7 @@ import FAQ from './components/FAQ'
 import DarkCTA from './components/DarkCTA'
 import CTABanner from './components/CTABanner'
 import Footer from './components/Footer'
+import FreeTools from './components/FreeTools'
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
         <Testimonials />
         <ComparisonTable />
         <FAQ />
+        <FreeTools />
         <DarkCTA />
       </main>
       <Footer />

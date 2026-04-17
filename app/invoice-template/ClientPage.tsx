@@ -31,9 +31,167 @@ const CHECKLIST = [
 
 export default function InvoiceTemplateClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
-  const [showModal, setShowModal] = useState(false)
 
-  const handleDownload = () => setShowModal(true)
+  const handleDownload = () => {
+    const htmlContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GST Invoice Template</title>
+<style>
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 40px; color: #333; background: #f9f9f9; }
+  .invoice-box { max-width: 800px; margin: auto; padding: 40px; border: 1px solid #e5e5e5; box-shadow: 0 4px 16px rgba(0,0,0,0.05); font-size: 14px; line-height: 1.6; background: #fff; }
+  .header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #333; padding-bottom: 20px; }
+  .header h1 { margin: 0; font-size: 32px; color: #111; letter-spacing: 1px; }
+  .details-row { display: flex; justify-content: space-between; margin-top: 20px; color: #555; }
+  .parties { display: flex; justify-content: space-between; margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 30px; }
+  .party { width: 45%; }
+  .party h3 { margin: 0 0 10px 0; font-size: 16px; border-bottom: 1px solid #eee; padding-bottom: 5px; color: #111; }
+  table { width: 100%; border-collapse: collapse; margin-top: 30px; }
+  th, td { border: 1px solid #eee; padding: 12px; text-align: left; }
+  th { background: #fcfcfc; font-weight: 600; color: #111; }
+  td.right, th.right { text-align: right; }
+  .totals { flex: 1; padding-left: 50%; padding-top: 20px; }
+  .totals table { margin-top: 0; }
+  .footer { margin-top: 60px; text-align: right; }
+  .signature-box { display: inline-block; width: 200px; text-align: center; border-top: 1px solid #333; padding-top: 10px; margin-top: 60px; font-weight: 600; }
+  .words { margin-top: 20px; font-weight: 600; }
+  @media print {
+    body { padding: 0; background: #fff; }
+    .invoice-box { border: none; box-shadow: none; max-width: 100%; padding: 0; }
+  }
+</style>
+</head>
+<body>
+  <div class="invoice-box">
+    <div class="header">
+      <div>
+        <h1>TAX INVOICE</h1>
+        <div style="margin-top: 5px; font-weight: 600; color: #666; font-size: 13px;">Original for Recipient</div>
+      </div>
+      <div style="text-align: right;">
+        <h2 style="margin: 0 0 4px 0; color: #111; font-size: 20px;">[Your Business Name]</h2>
+        <div>123 Business Street, Business Area, City, State - 100001</div>
+        <div style="margin-top: 4px;"><strong>GSTIN:</strong> 22AAAAA0000A1Z5</div>
+        <div>contact@yourbusiness.com | +91 9876543210</div>
+      </div>
+    </div>
+    
+    <div class="details-row">
+      <div>
+        <strong>Invoice No:</strong> INV-2026-001<br>
+        <strong>Invoice Date:</strong> 15-Jun-2026
+      </div>
+      <div style="text-align: right;">
+        <strong>Place of Supply:</strong> 27 - Maharashtra<br>
+        <strong>State Code:</strong> 27
+      </div>
+    </div>
+
+    <div class="parties">
+      <div class="party">
+        <h3>Billed To:</h3>
+        <strong style="font-size: 15px;">[Client Business Name]</strong><br>
+        456 Client Avenue, Client Park, City, State - 200002<br>
+        <div style="margin-top: 4px;"><strong>GSTIN:</strong> 27BBBBB1111B2Z6</div>
+      </div>
+      <div class="party">
+        <h3>Shipped To:</h3>
+        <strong style="font-size: 15px;">[Client Business Name]</strong><br>
+        456 Client Avenue, Client Park, City, State - 200002<br>
+        <div style="margin-top: 4px;"><strong>GSTIN:</strong> 27BBBBB1111B2Z6</div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 5%;">#</th>
+          <th style="width: 35%;">Description of Goods/Services</th>
+          <th style="width: 10%;">HSN/SAC</th>
+          <th class="right" style="width: 10%;">Qty</th>
+          <th class="right" style="width: 15%;">Rate</th>
+          <th class="right" style="width: 15%;">Taxable Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>[Example Product / Service]</td>
+          <td>9983</td>
+          <td class="right">1.00</td>
+          <td class="right">₹10,000.00</td>
+          <td class="right">₹10,000.00</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>[Another Item]</td>
+          <td>8517</td>
+          <td class="right">2.00</td>
+          <td class="right">₹500.00</td>
+          <td class="right">₹1,000.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="display: flex;">
+      <div style="width: 50%; padding-top: 20px; font-size: 13px;">
+        <div class="words">Amount in Words:</div>
+        <div>Rupees Twelve Thousand Nine Hundred and Eighty Only</div>
+        
+        <div style="margin-top: 40px; padding: 15px; background: #fdfdfd; border: 1px solid #eee;">
+          <strong style="color: #111;">Bank Details:</strong><br>
+          Bank: [Your Bank Name]<br>
+          A/C Name: [Account Holder Name]<br>
+          A/C No: 1234567890123<br>
+          IFSC: ABCD0001234<br>
+        </div>
+      </div>
+      
+      <div class="totals">
+        <table>
+          <tr>
+            <td>Total Taxable Value</td>
+            <td class="right">₹11,000.00</td>
+          </tr>
+          <tr>
+            <td>CGST (9%)</td>
+            <td class="right">₹990.00</td>
+          </tr>
+          <tr>
+            <td>SGST (9%)</td>
+            <td class="right">₹990.00</td>
+          </tr>
+          <tr>
+            <td>IGST (0%)</td>
+            <td class="right">₹0.00</td>
+          </tr>
+          <tr style="font-weight: bold; font-size: 16px; background: #fcfcfc;">
+            <td style="color: #111;">Grand Total</td>
+            <td class="right" style="color: #111;">₹12,980.00</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="signature-box">
+        For [Your Business Name]<br>
+        <span style="font-size: 12px; color: #777; font-weight: normal;">(Authorized Signatory)</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>`
+    const blob = new Blob([htmlContent], { type: 'text/html' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = 'gst-invoice-template.html'
+    a.click()
+    URL.revokeObjectURL(url)
+  }
 
   return (
     <>
@@ -221,36 +379,7 @@ export default function InvoiceTemplateClient() {
 
       </main>
 
-      {/* Modal / Alert equivalent */}
-      {showModal && (
-        <div style={{
-          position: 'fixed', inset: 0, background: 'rgba(15,23,42,0.8)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999,
-          padding: 24, backdropFilter: 'blur(4px)'
-        }}>
-          <div style={{
-            background: '#fff', borderRadius: 24, padding: 'clamp(32px, 5vw, 48px)',
-            maxWidth: 460, textAlign: 'center', boxShadow: '0 24px 64px rgba(0,0,0,0.15)'
-          }}>
-            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 400, color: '#0f172a', marginBottom: 16 }}>
-              Sign up free on Udyog to download this template and create unlimited GST invoices automatically.
-            </h3>
-            <p style={{ fontSize: 15, color: '#64748b', marginBottom: 32 }}>Takes 10 seconds. No credit card required.</p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              <a href="https://app.udyogbook.in/signup" className="btn-orange" style={{ justifyContent: 'center' }}>
-                Create Free Account →
-              </a>
-              <button 
-                onClick={() => setShowModal(false)}
-                style={{
-                  background: 'none', border: 'none', padding: '14px',
-                  fontSize: 15, fontWeight: 600, color: '#64748b', cursor: 'pointer'
-                }}
-              >Cancel</button>
-            </div>
-          </div>
-        </div>
-      )}
+
 
       <Footer />
     </>
