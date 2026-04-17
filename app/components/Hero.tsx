@@ -193,6 +193,20 @@ export default function Hero() {
               Udyog is India&apos;s GST-ready billing platform for retailers, traders, and CAs.
               Voice invoicing, live inventory, CA collaboration — all in one place.
             </p>
+            <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '32px', maxWidth: '480px' }}>
+              <div style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '12px 20px', textAlign: 'center', flex: 1, minWidth: '120px' }}>
+                <div style={{ fontSize: '22px', fontWeight: 700, color: '#F97316', lineHeight: 1.2 }}>8 sec</div>
+                <div style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>to create one GST invoice</div>
+              </div>
+              <div style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '12px 20px', textAlign: 'center', flex: 1, minWidth: '120px' }}>
+                <div style={{ fontSize: '22px', fontWeight: 700, color: '#F97316', lineHeight: 1.2 }}>5,000+</div>
+                <div style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>businesses trust Udyog</div>
+              </div>
+              <div style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '12px 20px', textAlign: 'center', flex: 1, minWidth: '120px' }}>
+                <div style={{ fontSize: '22px', fontWeight: 700, color: '#F97316', lineHeight: 1.2 }}>₹149/yr</div>
+                <div style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>vs ₹1,999 for Vyapar</div>
+              </div>
+            </div>
             <div className="hero-btns">
               <button onClick={openModal} className="btn-mango">Start free trial →</button>
               <button onClick={openModal} className="btn-demo">Watch demo</button>

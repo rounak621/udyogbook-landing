@@ -2,6 +2,8 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import StatsBar from './components/StatsBar'
 import Features from './components/Features'
+import MayaAISpotlight from './components/MayaAISpotlight'
+import PriceComparison from './components/PriceComparison'
 import FeatureTabs from './components/FeatureTabs'
 import HowItWorks from './components/HowItWorks'
 import Industries from './components/Industries'
@@ -40,6 +42,8 @@ export default function Home() {
         <Hero />
         <StatsBar />
         <Features />
+        <MayaAISpotlight />
+        <PriceComparison />
         <FeatureTabs />
         <HowItWorks />
         <Industries />

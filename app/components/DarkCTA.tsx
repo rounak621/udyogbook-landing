@@ -54,8 +54,17 @@ export default function DarkCTA() {
             <button onClick={openModal} className="dcta-btn-secondary">
               <Phone size={16} /> Talk to sales
             </button>
+            <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" style={{ background: '#25D366', color: '#fff', border: 'none', padding: '12px 24px', borderRadius: '10px', fontWeight: 700, fontSize: '15px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+              💬 Chat with us on WhatsApp
+            </a>
           </div>
-          <p className="dcta-fine">14-day free trial · No credit card · Cancel anytime</p>
+          <p className="dcta-fine">
+            14-day free trial · No credit card · Cancel anytime
+            <br />
+            <span style={{ color: 'rgba(255,255,255,0.3)', display: 'block', marginTop: '4px' }}>
+              Or call us: +91-XXXXXXXXXX
+            </span>
+          </p>
         </div>
 
         <div className={`dcta-right fade-up d2${visible ? ' visible' : ''}`}>
