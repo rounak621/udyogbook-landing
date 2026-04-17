@@ -34,7 +34,7 @@ export default function Home() {
             Coming Soon
           </span>
           <span>Udyog is launching soon — </span>
-          <a href="mailto:udyogbook@gmail.com" style={{ color: '#F97316', fontWeight: 700, textDecoration: 'none' }}>
+          <a href="mailto:contact@udyogbook.in" style={{ color: '#F97316', fontWeight: 700, textDecoration: 'none' }}>
             Join the waitlist →
           </a>
         </div>

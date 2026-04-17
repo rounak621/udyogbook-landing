@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
               { title: '5. Data Sharing', content: 'We do not sell, trade, or rent your personal information to third parties. We may share your information with: your authorized CA through the CA Portal (with your consent); service providers who assist in our operations; law enforcement when required by applicable law.' },
               { title: '6. Your Rights', content: 'You have the right to: access the personal data we hold about you; correct inaccurate data; request deletion of your data (subject to legal retention requirements); export your data in a machine-readable format; withdraw consent where processing is based on consent.' },
               { title: '7. Cookies', content: 'We use cookies and similar tracking technologies to track activity on our service and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. See our Cookie Policy for details.' },
-              { title: '8. Contact Us', content: 'If you have questions about this Privacy Policy, please contact us at udyogbook@gmail.com or call +91 79774 22531. Our office is located in Mumbai, Maharashtra, India.' },
+              { title: '8. Contact Us', content: 'If you have questions about this Privacy Policy, please contact us at contact@udyogbook.in or call +91 79774 22531. Our office is located in Mumbai, Maharashtra, India.' },
             ].map(section => (
               <div key={section.title} style={{ marginBottom: 36 }}>
                 <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0f172a', marginBottom: 10 }}>{section.title}</h2>

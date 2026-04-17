@@ -103,7 +103,15 @@ export default function Navbar() {
           </div>
 
           <div className="nav-actions">
-            <a href={LOGIN_URL} className="nav-login">Log in</a>
+            <a 
+              href="https://app.udyogbook.in/sign-in"
+              style={{
+                color: '#0f172a', fontSize: 14, fontWeight: 600,
+                textDecoration: 'none', padding: '8px 16px'
+              }}
+            >
+              Login
+            </a>
             <button onClick={openModal} className="nav-cta" style={{ cursor: 'pointer' }}>Free trial</button>
             <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
               <span style={{ transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />

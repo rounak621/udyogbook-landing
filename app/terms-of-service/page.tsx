@@ -28,7 +28,7 @@ export default function TermsPage() {
               { title: '7. Data Ownership', content: 'You retain ownership of all data you input into Udyog. We do not claim ownership of your business data, invoices, or customer information. Upon account termination, you may export your data within 30 days.' },
               { title: '8. Limitation of Liability', content: 'To the maximum extent permitted by law, Udyog shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of the Service. Our total liability shall not exceed the amount paid by you in the 12 months preceding the claim.' },
               { title: '9. Governing Law', content: 'These Terms shall be governed by and construed in accordance with the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Mumbai, Maharashtra.' },
-              { title: '10. Contact', content: 'For questions about these Terms, contact us at udyogbook@gmail.com or +91 79774 22531.' },
+              { title: '10. Contact', content: 'For questions about these Terms, contact us at contact@udyogbook.in or +91 79774 22531.' },
             ].map(section => (
               <div key={section.title} style={{ marginBottom: 36 }}>
                 <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0f172a', marginBottom: 10 }}>{section.title}</h2>

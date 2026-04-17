@@ -139,8 +139,8 @@ export default function LaunchModal({ isOpen, onClose }: LaunchModalProps) {
         {/* Contact info */}
         <p style={{ fontSize: 13, color: '#64748b' }}>
           Questions? Reach us at{' '}
-          <a href="mailto:udyogbook@gmail.com" style={{ color: '#F97316', fontWeight: 600, textDecoration: 'none' }}>
-            udyogbook@gmail.com
+          <a href="mailto:contact@udyogbook.in" style={{ color: '#F97316', fontWeight: 600, textDecoration: 'none' }}>
+            contact@udyogbook.in
           </a>
           {' '}or{' '}
           <a href="tel:+917977422531" style={{ color: '#F97316', fontWeight: 600, textDecoration: 'none' }}>

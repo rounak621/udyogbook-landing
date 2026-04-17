@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { Check, X, Zap, Star, Crown, Building2, ChevronDown, ChevronUp, Shield, Clock, CreditCard, RefreshCw } from 'lucide-react'
 
+const SIGN_UP_URL = 'https://app.udyogbook.in/sign-up'
+
 const PLANS = [
   {
     Icon: Zap,
@@ -317,7 +319,7 @@ export default function PricingPage() {
                         </div>
                       ))}
                     </div>
-                    <a href="/contact" style={{
+                    <a href={name === 'Enterprise' ? '/contact' : SIGN_UP_URL} style={{
                       display: 'block', textAlign: 'center', padding: '13px 20px',
                       borderRadius: 10, fontSize: 14, fontWeight: 700,
                       textDecoration: 'none', marginTop: 'auto',
@@ -447,7 +449,7 @@ export default function PricingPage() {
             </h2>
             <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', marginBottom: 28 }}>14 days free. No credit card. Cancel anytime.</p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#F97316', color: '#fff', padding: '14px 28px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none', boxShadow: '0 4px 16px rgba(249,115,22,0.4)' }}>
+              <a href={SIGN_UP_URL} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#F97316', color: '#fff', padding: '14px 28px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none', boxShadow: '0 4px 16px rgba(249,115,22,0.4)' }}>
                 Start free trial →
               </a>
               <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'transparent', color: '#fff', padding: '14px 28px', borderRadius: 10, fontWeight: 600, fontSize: 15, textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.2)' }}>
