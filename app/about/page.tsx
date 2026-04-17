@@ -1,113 +1,152 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { Globe, Zap, Shield, Mic2, Users, TrendingUp } from 'lucide-react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Us — Udyog',
-  description: 'Learn about Udyog — built for Indian MSMEs, retailers, and traders to bill smarter.',
+  title: 'About Udyog — India\'s Next-Generation GST Billing Platform',
+  description: 'Udyog is India\'s GST-ready billing and business management platform for retailers, traders, MSMEs, and CAs. Our story, mission, and the team behind the product.',
 }
 
 export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <main style={{ paddingTop: 68, background: '#fff', minHeight: '100vh' }}>
-
-        {/* Hero */}
+      <main style={{ paddingTop: 68, minHeight: '100vh', background: '#fff' }}>
+        {/* Hero section */}
         <section style={{ background: '#0F172A', padding: 'clamp(60px,8vw,100px) var(--section-px)', textAlign: 'center' }}>
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
-            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#F97316', marginBottom: 14 }}>Our Story</p>
-            <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px,5vw,56px)', fontWeight: 400, color: '#fff', lineHeight: 1.15, marginBottom: 20, letterSpacing: '-0.02em' }}>
-              Built for <span style={{ fontStyle: 'italic', color: '#F97316' }}>Bharat</span>, by Bharat
+            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#F97316', marginBottom: 14, display: 'inline-block' }}>OUR STORY</span>
+            <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px,5vw,56px)', fontWeight: 400, color: '#fff', lineHeight: 1.15, marginBottom: 20 }}>
+              Built by people who love small business
             </h1>
             <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', lineHeight: 1.8, maxWidth: 560, margin: '0 auto' }}>
-              Udyog was born from a simple frustration — why is billing software in India so complicated? We set out to build something every shopkeeper, trader, and retailer could use without training.
+              We are a small, passionate team based in Mumbai. We talk to real business owners every week — kirana stores, textile traders, camera rental shops — to make sure Udyog solves real problems.
             </p>
           </div>
         </section>
 
-        {/* Mission */}
-        <section style={{ padding: 'clamp(48px,6vw,80px) var(--section-px)' }}>
-          <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
-            <div>
-              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#F97316', marginBottom: 12 }}>Our Mission</p>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,4vw,42px)', fontWeight: 400, color: '#0f172a', lineHeight: 1.2, marginBottom: 20, letterSpacing: '-0.02em' }}>
-                Make every Indian business <span style={{ fontStyle: 'italic', color: '#F97316' }}>GST-ready</span>
-              </h2>
-              <p style={{ fontSize: 16, color: '#64748b', lineHeight: 1.8, marginBottom: 16 }}>
-                India has over 63 million MSMEs. Most of them still use handwritten ledgers or complicated desktop software. We believe every small business owner — whether a chaiwala, a textile trader, or a camera rental shop — deserves modern, simple, GST-compliant billing.
-              </p>
-              <p style={{ fontSize: 16, color: '#64748b', lineHeight: 1.8 }}>
-                Udyog is built mobile-first, voice-first, and India-first. Our Maya AI voice assistant lets you create an invoice just by speaking in Hinglish — no typing, no training required.
-              </p>
+        {/* About section */}
+        <section style={{ background: '#fff', padding: 'clamp(56px,7vw,80px) var(--section-px)' }}>
+          <div style={{ maxWidth: 860, margin: '0 auto' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,4vw,42px)', fontWeight: 400, color: '#0f172a', marginBottom: 20 }}>
+              What is Udyog?
+            </h2>
+            <p style={{ fontSize: 16, color: '#64748b', lineHeight: 1.8, marginBottom: 32 }}>
+              Udyog is India's next-generation GST-ready billing and business management platform built specially for retailers, traders, MSMEs, and Chartered Accountants. We bring together billing, inventory, GST compliance, CA collaboration, and rental business management into one powerful, easy-to-use platform — designed for how Indian businesses actually operate. No complexity. No unnecessary features. Everything you need, nothing you don't.
+            </p>
+            {/* 3-column stat row */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexWrap: 'wrap', gap: '8px 0', marginTop: 32 }}>
+              <div style={{ padding: '0 24px 0 0', display: 'inline-flex', alignItems: 'baseline' }}>
+                <span style={{ fontSize: 20, fontWeight: 700, color: '#F97316' }}>5,000+</span>
+                <span style={{ fontSize: 13, color: '#64748b', marginLeft: 6 }}>businesses onboarded</span>
+              </div>
+              <div style={{ width: 1, height: 32, background: 'rgba(0,0,0,0.15)' }} className="stat-hide-mobile" />
+              <div style={{ padding: '0 24px', display: 'inline-flex', alignItems: 'baseline' }}>
+                <span style={{ fontSize: 20, fontWeight: 700, color: '#F97316' }}>₹500Cr+</span>
+                <span style={{ fontSize: 13, color: '#64748b', marginLeft: 6 }}>invoiced on platform</span>
+              </div>
+              <div style={{ width: 1, height: 32, background: 'rgba(0,0,0,0.15)' }} className="stat-hide-mobile" />
+              <div style={{ padding: '0 0 0 24px', display: 'inline-flex', alignItems: 'baseline' }}>
+                <span style={{ fontSize: 20, fontWeight: 700, color: '#F97316' }}>₹149/yr</span>
+                <span style={{ fontSize: 13, color: '#64748b', marginLeft: 6 }}>starting price</span>
+              </div>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+          </div>
+        </section>
+
+        {/* Our Story section */}
+        <section style={{ background: '#F8FAFC', padding: 'clamp(56px,7vw,80px) var(--section-px)' }}>
+          <div style={{ maxWidth: 860, margin: '0 auto' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,4vw,42px)', fontWeight: 400, color: '#0f172a', marginBottom: 20 }}>
+              Our Story
+            </h2>
+            <p style={{ fontSize: 18, color: '#0f172a', lineHeight: 1.6, marginBottom: 16 }}>
+              Udyog was born from a simple yet powerful question: Why is billing software in India so complicated?
+            </p>
+            <p style={{ fontSize: 16, color: '#64748b', lineHeight: 1.8, marginBottom: 48 }}>
+              And why do business owners still have to share GST documents with their CA over WhatsApp, email, and multiple platforms? We asked — why can't CAs access everything in real time?
+            </p>
+            
+            <h3 style={{ fontSize: 20, fontWeight: 700, color: '#0f172a', marginBottom: 24 }}>What we saw across India</h3>
+            
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24, marginBottom: 40 }}>
+              {/* Card 1 */}
+              <div style={{ borderLeft: '3px solid #F97316', background: '#fff', borderRadius: 10, padding: '16px 20px' }}>
+                <h4 style={{ fontSize: 15, fontWeight: 700, color: '#0f172a', marginBottom: 8 }}>Complex, hard-to-use software</h4>
+                <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.6 }}>"Most billing apps are built for accountants, not business owners. Real traders don't have time to learn complicated tools."</p>
+              </div>
+              {/* Card 2 */}
+              <div style={{ borderLeft: '3px solid #F97316', background: '#fff', borderRadius: 10, padding: '16px 20px' }}>
+                <h4 style={{ fontSize: 15, fontWeight: 700, color: '#0f172a', marginBottom: 8 }}>Time-consuming manual GST work</h4>
+                <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.6 }}>"Every month, hundreds of WhatsApp messages just to share invoices with a CA. Hours wasted on data entry."</p>
+              </div>
+              {/* Card 3 */}
+              <div style={{ borderLeft: '3px solid #F97316', background: '#fff', borderRadius: 10, padding: '16px 20px' }}>
+                <h4 style={{ fontSize: 15, fontWeight: 700, color: '#0f172a', marginBottom: 8 }}>Limited access to simple digital tools</h4>
+                <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.6 }}>"63 million Indian MSMEs. Most still use paper ledgers or outdated desktop software."</p>
+              </div>
+              {/* Card 4 */}
+              <div style={{ borderLeft: '3px solid #F97316', background: '#fff', borderRadius: 10, padding: '16px 20px' }}>
+                <h4 style={{ fontSize: 15, fontWeight: 700, color: '#0f172a', marginBottom: 8 }}>Heavy dependence on others for compliance</h4>
+                <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.6 }}>"Business owners depend entirely on their CA for GST filing, with no visibility into their own financials."</p>
+              </div>
+            </div>
+
+            <p style={{ fontSize: 16, color: '#64748b', lineHeight: 1.8 }}>
+              That's when we decided to build something truly different. A platform that requires zero training, works seamlessly in Hinglish, and is designed for real Indian business workflows.
+            </p>
+          </div>
+        </section>
+
+        {/* Mission section */}
+        <section style={{ background: '#0F172A', padding: 'clamp(56px,7vw,80px) var(--section-px)' }}>
+          <div style={{ maxWidth: 860, margin: '0 auto' }}>
+            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#F97316', marginBottom: 14, display: 'inline-block' }}>OUR MISSION</span>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,4vw,42px)', fontWeight: 400, color: '#fff', marginBottom: 20 }}>
+              One platform. Owner and CA. Always in sync.
+            </h2>
+            <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 48 }}>
+              To create a single, unified platform where business owners and their CA work together seamlessly. No document sharing. No follow-ups. No confusion. Udyog is built to simplify business operations and make GST compliance effortless through a voice-first, India-first approach.
+            </p>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24, marginBottom: 48 }}>
               {[
-                { number: '5,000+', label: 'Businesses using Udyog' },
-                { number: '₹500Cr+', label: 'Invoiced on platform' },
-                { number: '8 sec', label: 'Average invoice creation time' },
-                { number: '4.9/5', label: 'Average rating' },
-              ].map(stat => (
-                <div key={stat.label} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 14, padding: '24px 20px' }}>
-                  <p style={{ fontSize: 32, fontWeight: 900, color: '#F97316', letterSpacing: '-0.03em', lineHeight: 1, marginBottom: 6 }}>{stat.number}</p>
-                  <p style={{ fontSize: 13, color: '#64748b' }}>{stat.label}</p>
+                "Eliminate manual GST document sharing between owners and CAs",
+                "Enable real-time financial access for CAs and GST consultants",
+                "Replace complex systems with simple, unified digital solutions",
+                "Make GST filing faster, accurate, and completely hassle-free",
+                "Empower non-technical users with voice-based billing via Maya AI",
+                "Give every Indian MSME the tools that were only available to large enterprises"
+              ].map((point, i) => (
+                <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+                  <span style={{ color: '#F97316', fontWeight: 'bold' }}>✓</span>
+                  <span style={{ color: '#fff', fontSize: 15, lineHeight: 1.5 }}>{point}</span>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
 
-        {/* Values */}
-        <section style={{ padding: 'clamp(48px,6vw,80px) var(--section-px)', background: '#F8FAFC' }}>
-          <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: 48 }}>
-              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#F97316', marginBottom: 12 }}>What We Stand For</p>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,4vw,42px)', fontWeight: 400, color: '#0f172a', letterSpacing: '-0.02em' }}>Our Values</h2>
-            </div>
-            {(() => {
-              const VALUES = [
-                { Icon: Globe, color: '#F97316', bg: '#FFF5E6', title: 'India First', desc: 'Every feature is designed for Indian businesses — GST, Hinglish voice, WhatsApp sharing, and more.' },
-                { Icon: Zap, color: '#8b5cf6', bg: '#f5f3ff', title: 'Radical Simplicity', desc: 'If a feature takes more than 3 taps, we rethink it. Complexity is the enemy of adoption.' },
-                { Icon: Shield, color: '#10b981', bg: '#f0fdf4', title: 'Trust & Compliance', desc: 'GST-compliant invoices, secure data storage, and CA collaboration built into the core.' },
-                { Icon: Mic2, color: '#F97316', bg: '#FFF5E6', title: 'Voice First', desc: 'Maya AI lets you bill by speaking. No typing. No training. Just say it and it\'s done.' },
-                { Icon: Users, color: '#0ea5e9', bg: '#eff6ff', title: 'CA Partnership', desc: 'We believe your CA is your partner. Udyog gives them their own portal to serve you better.' },
-                { Icon: TrendingUp, color: '#10b981', bg: '#f0fdf4', title: 'Growing with You', desc: 'From a solo kirana to a multi-branch business — Udyog scales with your growth.' },
-              ]
-
-              return (
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
-                  {VALUES.map(({ Icon, color, bg, title, desc }) => (
-                    <div key={title} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 16, padding: '28px 24px' }}>
-                      <div style={{ width: 48, height: 48, background: bg, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 14 }}>
-                        <Icon size={22} color={color} strokeWidth={1.75} />
-                      </div>
-                      <h3 style={{ fontSize: 17, fontWeight: 700, color: '#0f172a', marginBottom: 8 }}>{title}</h3>
-                      <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.6 }}>{desc}</p>
-                    </div>
-                  ))}
-                </div>
-              )
-            })()}
-          </div>
-        </section>
-
-        {/* Team */}
-        <section style={{ padding: 'clamp(48px,6vw,80px) var(--section-px)' }}>
-          <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
-            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#F97316', marginBottom: 12 }}>The Team</p>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,4vw,42px)', fontWeight: 400, color: '#0f172a', letterSpacing: '-0.02em', marginBottom: 20 }}>
-              Built by people who <span style={{ fontStyle: 'italic', color: '#F97316' }}>love small business</span>
-            </h2>
-            <p style={{ fontSize: 16, color: '#64748b', lineHeight: 1.8, marginBottom: 36 }}>
-              We are a small, passionate team based in Mumbai. We talk to real business owners every week — kirana stores, textile traders, camera rental shops, pharmacies — to make sure Udyog solves real problems.
+            <p style={{ fontSize: 18, color: '#fff', fontStyle: 'italic', fontFamily: 'var(--font-display)' }}>
+              "With Udyog, your CA can file GST anytime from your live data — while you focus only on growing your business."
             </p>
-            <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#F97316', color: '#fff', padding: '14px 28px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none', boxShadow: '0 4px 16px rgba(249,115,22,0.35)' }}>
-              Get in touch →
-            </a>
           </div>
         </section>
 
+        {/* CTA section */}
+        <section style={{ background: '#fff', padding: 'clamp(56px,7vw,80px) var(--section-px)', textAlign: 'center' }}>
+          <div style={{ maxWidth: 720, margin: '0 auto' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,4vw,42px)', fontWeight: 400, color: '#0f172a', marginBottom: 32 }}>
+              Want to know more?
+            </h2>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, flexWrap: 'wrap' }}>
+              <a href="https://app.udyogbook.in/signup" style={{ background: '#F97316', color: '#fff', padding: '14px 28px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none', boxShadow: '0 4px 16px rgba(249,115,22,0.35)', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                Start free trial →
+              </a>
+              <a href="/contact" style={{ background: 'transparent', color: '#0f172a', border: '2px solid #E2E8F0', padding: '12px 28px', borderRadius: 10, fontWeight: 600, fontSize: 15, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                Contact us →
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

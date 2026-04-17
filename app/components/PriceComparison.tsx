@@ -83,7 +83,7 @@ export default function PriceComparison() {
                 <td>Annual price</td>
                 <td><span className="price-cross">₹1,999</span></td>
                 <td><span className="price-cross">₹1,499</span></td>
-                <td><span className="price-udyog">₹149</span></td>
+                <td><span className="price-udyog">₹149/year</span></td>
               </tr>
             </tbody>
           </table>

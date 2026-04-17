@@ -34,7 +34,7 @@ export default function Footer() {
                 alt="Udyog"
                 width={130}
                 height={40}
-                style={{ objectFit: 'contain' }}
+                style={{ objectFit: 'contain', borderRadius: '10px' }}
               />
             </div>
             <p className="footer-tagline">

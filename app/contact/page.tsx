@@ -100,7 +100,7 @@ export default function ContactPage() {
               <div className="contact-card-icon"><Mail size={20} color="#F97316" /></div>
               <div>
                 <p className="contact-card-title">Email</p>
-                <a href="mailto:udyogbook@gmail.com" className="contact-card-value" style={{ textDecoration: 'none', color: '#0f172a' }}>udyogbook@gmail.com</a>
+                <a href="mailto:contact@udyogbook.in" className="contact-card-value" style={{ textDecoration: 'none', color: '#0f172a' }}>contact@udyogbook.in</a>
                 <p className="contact-card-note">We reply within 2 hours on business days</p>
               </div>
             </div>
@@ -201,7 +201,7 @@ export default function ContactPage() {
                 <div style={{ marginTop: 14, background: '#fef2f2', border: '1px solid #fecaca', borderRadius: 8, padding: '14px 16px' }}>
                   <p style={{ fontWeight: 700, color: '#dc2626', fontSize: 14 }}>
                     Something went wrong. Please email us at{' '}
-                    <a href="mailto:udyogbook@gmail.com" style={{ textDecoration: 'underline' }}>udyogbook@gmail.com</a>
+                    <a href="mailto:contact@udyogbook.in" style={{ textDecoration: 'underline' }}>contact@udyogbook.in</a>
                   </p>
                 </div>
               )}

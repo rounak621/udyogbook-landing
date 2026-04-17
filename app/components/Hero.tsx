@@ -103,17 +103,23 @@ export default function Hero() {
         .hero-right { position: relative; display: flex; align-items: center; justify-content: center; padding-bottom: 40px; }
         .scene-3d {
           position: relative; width: 100%; z-index: 1;
-          transform: perspective(1200px) rotateY(-12deg) rotateX(6deg);
+          transform: perspective(1000px) rotateY(-8deg) rotateX(3deg) translateZ(0);
           transform-origin: center center;
           transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           filter: drop-shadow(0 48px 96px rgba(0,0,0,0.28)) drop-shadow(0 16px 40px rgba(0,0,0,0.16));
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          image-rendering: -webkit-optimize-contrast;
+          image-rendering: crisp-edges;
+          will-change: transform;
+          -webkit-font-smoothing: antialiased;
         }
-        .scene-3d:hover { transform: perspective(1200px) rotateY(-4deg) rotateX(2deg); }
+        .scene-3d:hover { transform: perspective(1000px) rotateY(-4deg) rotateX(2deg) translateZ(0); }
 
         /* Stacked card layers */
         .dash-layer-3 { position: absolute; top: 20px; left: -24px; right: 24px; bottom: -20px; background: #f0ece6; border-radius: 18px; border: 1px solid #e5e0da; z-index: 0; }
         .dash-layer-2 { position: absolute; top: 10px; left: -12px; right: 12px; bottom: -10px; background: #f7f4f0; border-radius: 18px; border: 1px solid #ede8e3; z-index: 1; }
-        .dash-main { position: relative; z-index: 2; background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+        .dash-main { position: relative; z-index: 2; background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06); transform: translateZ(0); }
 
         .browser-bar { background: #1c1c1e; padding: 12px 14px; display: flex; align-items: center; gap: 6px; }
         .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
@@ -248,7 +254,7 @@ export default function Hero() {
               filter: 'blur(40px)',
               pointerEvents: 'none' as const,
             }} />
-            <div className="scene-3d">
+            <div className="scene-3d" style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}>
               <div className="dash-layer-3" />
               <div className="dash-layer-2" />
               <div className="dash-main">
@@ -259,7 +265,7 @@ export default function Hero() {
                   <div className="browser-url"><span>app.udyogbook.in/dashboard</span></div>
                 </div>
                 <div className="browser-screen">
-                  <Image src="/dashboard-screenshot.png" alt="Udyog Dashboard" width={900} height={560} style={{ width: '100%', height: 'auto', display: 'block' }} priority />
+                  <Image src="/dashboard-screenshot.png" alt="Udyog Dashboard" width={900} height={560} style={{ width: '100%', height: 'auto', display: 'block' }} quality={100} priority />
                 </div>
               </div>
               {/* Floating cards */}
