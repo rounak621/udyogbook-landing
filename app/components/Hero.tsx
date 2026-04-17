@@ -89,6 +89,16 @@ export default function Hero() {
         .hero-badges { display: flex; gap: 20px; flex-wrap: wrap; }
         .hero-badge { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #475569; font-weight: 500; }
 
+        /* ── INLINE STATS ── */
+        .hero-stats-inline { display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap; gap: 8px 0; margin-bottom: 32px; }
+        .stat-inline-item { padding: 0 24px; display: inline-flex; align-items: baseline; }
+        .stat-inline-item:first-child { padding-left: 0; }
+        .stat-inline-item:last-child { padding-right: 0; }
+        .stat-inline-div { width: 1px; height: 32px; background: rgba(0,0,0,0.15); }
+        .stat-inline-num { font-size: 20px; font-weight: 700; color: #F97316; }
+        .stat-inline-lbl { font-size: 13px; color: #64748b; margin-left: 6px; }
+
+
         /* ── RIGHT — 3D DASHBOARD ── */
         .hero-right { position: relative; display: flex; align-items: center; justify-content: center; padding-bottom: 40px; }
         .scene-3d {
@@ -167,6 +177,8 @@ export default function Hero() {
         @media (max-width: 600px) {
           .hero-btns { flex-direction: column; }
           .float-gst { left: 0; }
+          .stat-inline-div { display: none; }
+          .stat-inline-item { padding: 0; width: 100%; margin-bottom: 4px; }
         }
       `}</style>
 
@@ -193,18 +205,20 @@ export default function Hero() {
               Udyog is India&apos;s GST-ready billing platform for retailers, traders, and CAs.
               Voice invoicing, live inventory, CA collaboration — all in one place.
             </p>
-            <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '32px', maxWidth: '480px' }}>
-              <div style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '12px 20px', textAlign: 'center', flex: 1, minWidth: '120px' }}>
-                <div style={{ fontSize: '22px', fontWeight: 700, color: '#F97316', lineHeight: 1.2 }}>8 sec</div>
-                <div style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>to create one GST invoice</div>
+            <div className="hero-stats-inline">
+              <div className="stat-inline-item">
+                <span className="stat-inline-num">8 sec</span>
+                <span className="stat-inline-lbl">to create an invoice</span>
               </div>
-              <div style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '12px 20px', textAlign: 'center', flex: 1, minWidth: '120px' }}>
-                <div style={{ fontSize: '22px', fontWeight: 700, color: '#F97316', lineHeight: 1.2 }}>5,000+</div>
-                <div style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>businesses trust Udyog</div>
+              <div className="stat-inline-div" />
+              <div className="stat-inline-item">
+                <span className="stat-inline-num">5,000+</span>
+                <span className="stat-inline-lbl">businesses</span>
               </div>
-              <div style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '12px 20px', textAlign: 'center', flex: 1, minWidth: '120px' }}>
-                <div style={{ fontSize: '22px', fontWeight: 700, color: '#F97316', lineHeight: 1.2 }}>₹149/yr</div>
-                <div style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>vs ₹1,999 for Vyapar</div>
+              <div className="stat-inline-div" />
+              <div className="stat-inline-item">
+                <span className="stat-inline-num">₹149</span>
+                <span className="stat-inline-lbl">/year</span>
               </div>
             </div>
             <div className="hero-btns">
