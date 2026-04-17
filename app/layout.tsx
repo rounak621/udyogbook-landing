@@ -149,7 +149,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }
           a { text-decoration: none; color: inherit; }
           button { cursor: pointer; font-family: var(--font-body); border: none; }
-          img { max-width: 100%; display: block; }
+          img { max-width: 100%; display: block; -webkit-backface-visibility: hidden; backface-visibility: hidden; image-rendering: auto; }
 
           .btn-orange {
             display: inline-flex; align-items: center; justify-content: center; gap: 6px;
