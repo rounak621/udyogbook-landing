@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useLaunchModal } from './LaunchModalProvider'
+import ComingSoonModal from './ComingSoonModal'
 
 const SIGN_UP_URL = 'https://app.udyogbook.in/sign-up'
 const LOGIN_URL = 'https://app.udyogbook.in/sign-in'
@@ -18,6 +19,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const { openModal } = useLaunchModal()
+  const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16)
@@ -103,16 +105,17 @@ export default function Navbar() {
           </div>
 
           <div className="nav-actions">
-            <a 
-              href="https://app.udyogbook.in/sign-in"
+            <button 
+              onClick={() => setShowModal(true)}
               style={{
                 color: '#0f172a', fontSize: 14, fontWeight: 600,
-                textDecoration: 'none', padding: '8px 16px'
+                textDecoration: 'none', padding: '8px 16px',
+                background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit'
               }}
             >
               Login
-            </a>
-            <button onClick={openModal} className="nav-cta" style={{ cursor: 'pointer' }}>Free trial</button>
+            </button>
+            <button onClick={() => setShowModal(true)} className="nav-cta" style={{ cursor: 'pointer' }}>Free trial</button>
             <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
               <span style={{ transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
               <span style={{ opacity: menuOpen ? 0 : 1 }} />
@@ -126,9 +129,10 @@ export default function Navbar() {
         {NAV_LINKS.map(l => (
           <a key={l.label} href={l.href} className="mobile-nav-link" onClick={() => setMenuOpen(false)}>{l.label}</a>
         ))}
-        <a href={LOGIN_URL} className="mobile-nav-link" onClick={() => setMenuOpen(false)}>Log in</a>
-        <button className="mobile-cta" onClick={() => { setMenuOpen(false); openModal(); }}>Start free trial →</button>
+        <button className="mobile-nav-link" style={{ textAlign: 'left', width: '100%', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }} onClick={() => { setMenuOpen(false); setShowModal(true); }}>Log in</button>
+        <button className="mobile-cta" style={{ border: 'none', fontFamily: 'inherit', cursor: 'pointer', width: '100%' }} onClick={() => { setMenuOpen(false); setShowModal(true); }}>Start free trial →</button>
       </div>
+      <ComingSoonModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </>
   )
 }

@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import AboutCTAButtons from './AboutCTAButtons'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -137,14 +138,7 @@ export default function AboutPage() {
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,4vw,42px)', fontWeight: 400, color: '#0f172a', marginBottom: 32 }}>
               Want to know more?
             </h2>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, flexWrap: 'wrap' }}>
-              <a href="https://app.udyogbook.in/signup" style={{ background: '#F97316', color: '#fff', padding: '14px 28px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none', boxShadow: '0 4px 16px rgba(249,115,22,0.35)', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-                Start free trial →
-              </a>
-              <a href="/contact" style={{ background: 'transparent', color: '#0f172a', border: '2px solid #E2E8F0', padding: '12px 28px', borderRadius: 10, fontWeight: 600, fontSize: 15, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-                Contact us →
-              </a>
-            </div>
+            <AboutCTAButtons />
           </div>
         </section>
       </main>

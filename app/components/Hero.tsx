@@ -2,11 +2,14 @@
 import Image from 'next/image'
 import { Mic, ShieldCheck, Zap, Star } from 'lucide-react'
 import { useLaunchModal } from './LaunchModalProvider'
+import { useState } from 'react'
+import ComingSoonModal from './ComingSoonModal'
 
 const SIGN_UP_URL = 'https://app.udyogbook.in/sign-up'
 
 export default function Hero() {
   const { openModal } = useLaunchModal()
+  const [showModal, setShowModal] = useState(false)
   return (
     <>
     <section style={{ background: '#ffffff', position: 'relative', overflow: 'hidden', paddingTop: 80 }}>
@@ -227,8 +230,8 @@ export default function Hero() {
               </div>
             </div>
             <div className="hero-btns">
-              <button onClick={openModal} className="btn-mango">Start free trial →</button>
-              <button onClick={openModal} className="btn-demo">Watch demo</button>
+              <button onClick={() => setShowModal(true)} className="btn-mango">Start free trial →</button>
+              <button onClick={() => setShowModal(true)} className="btn-demo">Watch demo</button>
             </div>
             <p className="hero-fine">No credit card · 14-day free trial · Cancel anytime</p>
             <div className="hero-badges">
@@ -317,6 +320,7 @@ export default function Hero() {
         </div>
       </div>
     </div>
+    <ComingSoonModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </>
   )
 }
