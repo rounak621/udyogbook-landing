@@ -230,36 +230,48 @@ export default function Hero() {
               filter: 'blur(40px)',
               pointerEvents: 'none' as const,
             }} />
-            {/* Laptop Mockup */}
+            {/* Beautiful Laptop Mockup */}
+            <div style={{
+              filter: 'drop-shadow(0 40px 80px rgba(0,0,0,0.15))',
+              transform: 'perspective(2000px) rotateY(-3deg)',
+            }}>
             <div style={{
               position: 'relative',
               width: '100%',
-              maxWidth: '600px',
+              maxWidth: '620px',
               margin: '0 auto',
-              filter: 'drop-shadow(0 40px 80px rgba(0,0,0,0.20))',
             }}>
-              {/* Laptop Screen */}
+              {/* Screen Part */}
               <div style={{
-                background: '#1a1a2e',
-                borderRadius: '16px 16px 0 0',
-                padding: '20px 20px 0 20px',
-                border: '2px solid #333',
-                borderBottom: 'none',
                 position: 'relative',
+                background: 'linear-gradient(145deg, #2c2c2e, #1c1c1e)',
+                borderRadius: '16px 16px 0 0',
+                padding: '16px',
+                boxShadow: '0 0 0 2px #3a3a3c, inset 0 0 0 1px #111',
+                border: '1.5px solid #444',
               }}>
-                {/* Camera dot */}
+                {/* Top bar with camera */}
                 <div style={{
-                  width: 8, height: 8,
-                  background: '#444',
-                  borderRadius: '50%',
-                  margin: '0 auto 12px',
-                }} />
-                
-                {/* Screen content */}
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  marginBottom: '10px',
+                }}>
+                  {/* Camera */}
+                  <div style={{
+                    width: 8, height: 8,
+                    borderRadius: '50%',
+                    background: 'radial-gradient(circle at 35% 35%, #555, #222)',
+                    boxShadow: '0 0 0 1.5px #333, inset 0 0 3px rgba(0,0,0,0.8)',
+                  }} />
+                </div>
+
+                {/* Screen bezel */}
                 <div style={{
-                  borderRadius: '8px 8px 0 0',
+                  background: '#000',
+                  borderRadius: '8px',
                   overflow: 'hidden',
-                  background: '#fff',
+                  boxShadow: 'inset 0 0 12px rgba(0,0,0,0.8)',
                   lineHeight: 0,
                 }}>
                   <Image
@@ -274,28 +286,61 @@ export default function Hero() {
                       width: '100%',
                       height: 'auto',
                       display: 'block',
+                      borderRadius: '6px',
                     }}
                   />
                 </div>
               </div>
-              
-              {/* Laptop Base */}
+
+              {/* Hinge */}
               <div style={{
-                background: 'linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%)',
-                height: '24px',
-                borderRadius: '0 0 4px 4px',
-                border: '2px solid #333',
+                background: 'linear-gradient(180deg, #3a3a3c 0%, #2c2c2e 100%)',
+                height: '6px',
+                borderRadius: '0',
+                boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.5)',
+                border: '1px solid #444',
                 borderTop: 'none',
+                borderBottom: 'none',
               }} />
-              
-              {/* Laptop Bottom/Hinge */}
+
+              {/* Base/Keyboard */}
               <div style={{
-                background: 'linear-gradient(180deg, #222 0%, #111 100%)',
-                height: '14px',
-                borderRadius: '0 0 12px 12px',
-                margin: '0 20px',
-                boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
+                background: 'linear-gradient(180deg, #2c2c2e 0%, #1c1c1e 60%, #111 100%)',
+                height: '32px',
+                borderRadius: '0 0 6px 6px',
+                border: '1.5px solid #444',
+                borderTop: '1px solid #555',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+                {/* Trackpad hint */}
+                <div style={{
+                  width: 60, height: 8,
+                  borderRadius: 4,
+                  background: 'linear-gradient(180deg, #3a3a3c, #2a2a2c)',
+                  border: '1px solid #555',
+                }} />
+              </div>
+
+              {/* Bottom foot shadow */}
+              <div style={{
+                margin: '0 40px',
+                height: '12px',
+                background: 'linear-gradient(180deg, #1a1a1a, transparent)',
+                borderRadius: '0 0 20px 20px',
               }} />
+
+              {/* Desk reflection/shadow */}
+              <div style={{
+                margin: '0 20px',
+                height: '20px',
+                background: 'radial-gradient(ellipse, rgba(0,0,0,0.25) 0%, transparent 70%)',
+                borderRadius: '50%',
+                marginTop: '4px',
+              }} />
+
               {/* Floating cards */}
               <div className="float-gst">
                 <div className="float-icon gst-pulse" style={{ background: '#F0FDF4' }}>
@@ -316,6 +361,7 @@ export default function Hero() {
                   <span className="float-badge">Maya AI</span>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
