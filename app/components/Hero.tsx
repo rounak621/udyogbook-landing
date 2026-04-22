@@ -127,7 +127,7 @@ export default function Hero() {
         .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
         .browser-url { flex: 1; background: rgba(255,255,255,0.07); border-radius: 5px; height: 22px; margin-left: 8px; display: flex; align-items: center; padding: 0 10px; }
         .browser-url span { color: rgba(255,255,255,0.3); font-size: 10px; }
-        .browser-screen { line-height: 0; transform: translateZ(0); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+        .browser-screen { line-height: 0; transform: translateZ(0); backface-visibility: hidden; -webkit-backface-visibility: hidden; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
 
         /* Floating cards */
         .float-gst {
@@ -265,7 +265,7 @@ export default function Hero() {
                   <div className="browser-url"><span>app.udyogbook.in/dashboard</span></div>
                 </div>
                 <div className="browser-screen">
-                  <Image src="/dashboard-screenshot.png" alt="Udyog Dashboard" width={900} height={560} style={{ width: '100%', height: 'auto', display: 'block', imageRendering: 'auto', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)', borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} quality={100} priority unoptimized />
+                  <Image src="/dashboard-screenshot.png" alt="Udyog Dashboard" width={900} height={560} style={{ width: '100%', height: 'auto', display: 'block', imageRendering: 'crisp-edges', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)', borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} quality={100} priority={true} unoptimized />
                 </div>
               </div>
               {/* Floating cards */}
