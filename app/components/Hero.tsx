@@ -106,10 +106,12 @@ export default function Hero() {
         .hero-right { position: relative; display: flex; align-items: center; justify-content: center; padding-bottom: 40px; }
         .scene-3d {
           position: relative; width: 100%; z-index: 1;
-          transform: none;
-          filter: drop-shadow(0 20px 60px rgba(0,0,0,0.15));
+          transform: perspective(2000px) rotateY(-5deg) rotateX(2deg);
+          filter: drop-shadow(0 25px 50px rgba(0,0,0,0.18));
           border-radius: 12px;
+          transition: transform 0.3s ease;
         }
+        .scene-3d:hover { transform: perspective(2000px) rotateY(-3deg) rotateX(1deg); }
 
         /* Stacked card layers */
         .dash-layer-3 { position: absolute; top: 20px; left: -24px; right: 24px; bottom: -20px; background: #f0ece6; border-radius: 18px; border: 1px solid #e5e0da; z-index: 0; }
