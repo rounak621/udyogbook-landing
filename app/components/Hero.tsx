@@ -210,12 +210,11 @@ export default function Hero() {
               <span className="italic-black">Sirf</span> ek awaaz mein.
             </h1>
             <p className="hero-p">
-              Udyog is India&apos;s GST-ready billing platform for retailers, traders, and CAs.
-              Voice invoicing, live inventory, CA collaboration — all in one place.
+              Udyog is India&apos;s next-generation GST-ready billing and business management platform, built specially for retailers, rental businesses, traders and MSMEs. We bring together billing, inventory, GST compliance and CA collaboration into one powerful, easy-to-use platform, designed for how Indian businesses actually operate.
             </p>
             <div className="hero-stats-inline">
               <div className="stat-inline-item">
-                <span className="stat-inline-num">8 sec</span>
+                <span className="stat-inline-num">3 sec</span>
                 <span className="stat-inline-lbl">to create an invoice</span>
               </div>
               <div className="stat-inline-div" />
@@ -226,7 +225,7 @@ export default function Hero() {
               <div className="stat-inline-div" />
               <div className="stat-inline-item">
                 <span className="stat-inline-num">₹149</span>
-                <span className="stat-inline-lbl">/year</span>
+                <span className="stat-inline-lbl">/mo</span>
               </div>
             </div>
             <div className="hero-btns">
@@ -286,7 +285,7 @@ export default function Hero() {
                 </div>
                 <div>
                   <p className="float-label">Voice invoice</p>
-                  <p className="float-value" style={{ fontSize: 13 }}>Created in 4s</p>
+                  <p className="float-value" style={{ fontSize: 13 }}>Created in 3s</p>
                   <span className="float-badge">Maya AI</span>
                 </div>
               </div>

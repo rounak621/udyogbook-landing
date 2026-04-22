@@ -40,7 +40,7 @@ export default function PriceComparison() {
       
       <div className={`pc-inner fade-up${visible ? ' visible' : ''}`}>
         <div className="pc-header">
-          <h2 className="pc-heading">10x cheaper than Vyapar. More features too.</h2>
+          <h2 className="pc-heading">10x cheaper than competitors. More features too.</h2>
           <p className="pc-sub">Same GST billing. Same inventory. Plus voice billing and CA portal — at a fraction of the price.</p>
         </div>
         
@@ -59,7 +59,7 @@ export default function PriceComparison() {
                 <td>Voice billing (Hinglish)</td>
                 <td><span className="pc-x">✗</span></td>
                 <td><span className="pc-x">✗</span></td>
-                <td><span className="pc-check">✓ Maya AI</span></td>
+                <td><span className="pc-check">✓ Maya AI*</span></td>
               </tr>
               <tr>
                 <td>CA collaboration portal</td>
@@ -81,16 +81,17 @@ export default function PriceComparison() {
               </tr>
               <tr className="price-row">
                 <td>Annual price</td>
-                <td><span className="price-cross">₹1,999</span></td>
-                <td><span className="price-cross">₹1,499</span></td>
-                <td><span className="price-udyog">₹149/year</span></td>
+                <td><span className="price-cross">₹599/mo</span></td>
+                <td><span className="price-cross">₹399/mo</span></td>
+                <td><span className="price-udyog">₹149/mo</span></td>
               </tr>
             </tbody>
           </table>
         </div>
         
         <div className="pc-cta-wrap">
-          <a href="/pricing" className="btn-orange">Switch to Udyog — ₹149/year →</a>
+          <a href="/pricing" className="btn-orange">Switch to Udyog — ₹149/mo →</a>
+          <p style={{ fontSize: 12, color: '#64748b', marginTop: 12 }}>*Maya AI is not included in the Basic plan.</p>
         </div>
       </div>
     </section>

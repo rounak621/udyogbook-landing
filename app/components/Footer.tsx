@@ -38,8 +38,7 @@ export default function Footer() {
               />
             </div>
             <p className="footer-tagline">
-              India&apos;s smartest GST billing platform for MSMEs, retailers, traders, and CAs.
-              Bill banao, bolke.
+              Udyog is built to simplify business operations and make GST compliance effortless through a NextGen, technology-first, voice-first, and India-first approach where all business data is available in real-time for both the owner and their CA.
             </p>
           </div>
 

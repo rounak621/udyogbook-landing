@@ -42,7 +42,7 @@ export default function MayaAISpotlight() {
           <span className="maya-badge">UNIQUE TO UDYOG</span>
           <h2 className="maya-heading">Meet Maya — India&apos;s first Hinglish voice billing AI</h2>
           <p className="maya-desc">
-            Just say &quot;Ramesh ko 10 shirt ka bill banao, 500 rupaye wali&quot; and Maya creates a complete GST invoice in 8 seconds. No typing. No menus. No accounting knowledge needed.
+            Just say &quot;Ramesh ko 10 shirt ka bill banao, 500 rupaye wali&quot; and Maya creates a complete GST invoice in 3 seconds. No typing. No menus. No accounting knowledge needed.
           </p>
           
           <div className="maya-bullets">
@@ -83,7 +83,7 @@ export default function MayaAISpotlight() {
             <div className="maya-inv-row"><span>Total:</span> <span>₹5,600</span></div>
           </div>
           
-          <div className="maya-success">✓ Invoice created in 8 seconds</div>
+          <div className="maya-success">✓ Invoice created in 3 seconds</div>
         </div>
       </div>
     </section>

@@ -122,7 +122,7 @@ export default function HowItWorks() {
               &ldquo;Ravi Traders ka bill banao. Item hai P U Chest Pad, 500 quantity. Aaj ka date.&rdquo;
             </p>
             <p className="vd-sub">
-              Maya understands Hinglish, matches your existing customers and products, calculates GST automatically, and asks you to confirm — all in under 5 seconds.
+              Maya understands Hinglish, matches your existing customers and products, calculates GST automatically, and asks you to confirm — all in under 3 seconds.
             </p>
           </div>
 

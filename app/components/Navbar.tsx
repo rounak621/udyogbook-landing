@@ -105,8 +105,8 @@ export default function Navbar() {
           </div>
 
           <div className="nav-actions">
-            <button 
-              onClick={() => setShowModal(true)}
+            <a 
+              href="https://app.udyogbook.in/sign-in"
               style={{
                 color: '#0f172a', fontSize: 14, fontWeight: 600,
                 textDecoration: 'none', padding: '8px 16px',
@@ -114,7 +114,7 @@ export default function Navbar() {
               }}
             >
               Login
-            </button>
+            </a>
             <button onClick={() => setShowModal(true)} className="nav-cta" style={{ cursor: 'pointer' }}>Free trial</button>
             <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
               <span style={{ transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
@@ -129,7 +129,7 @@ export default function Navbar() {
         {NAV_LINKS.map(l => (
           <a key={l.label} href={l.href} className="mobile-nav-link" onClick={() => setMenuOpen(false)}>{l.label}</a>
         ))}
-        <button className="mobile-nav-link" style={{ textAlign: 'left', width: '100%', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }} onClick={() => { setMenuOpen(false); setShowModal(true); }}>Log in</button>
+        <a href="https://app.udyogbook.in/sign-in" className="mobile-nav-link" style={{ textAlign: 'left', width: '100%', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }} onClick={() => setMenuOpen(false)}>Log in</a>
         <button className="mobile-cta" style={{ border: 'none', fontFamily: 'inherit', cursor: 'pointer', width: '100%' }} onClick={() => { setMenuOpen(false); setShowModal(true); }}>Start free trial →</button>
       </div>
       <ComingSoonModal isOpen={showModal} onClose={() => setShowModal(false)} />

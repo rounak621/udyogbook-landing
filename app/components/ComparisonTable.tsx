@@ -3,11 +3,11 @@ import { useEffect, useRef, useState } from 'react'
 import { Check, X } from 'lucide-react'
 
 const FEATURES = [
-  { name: 'Voice billing (Hinglish)', udyog: true, billbook: false, vyapar: false },
+  { name: 'Voice billing (Hinglish)*', udyog: true, billbook: false, vyapar: false },
   { name: 'GST-compliant invoices', udyog: true, billbook: true, vyapar: true },
   { name: 'CA dedicated portal', udyog: true, billbook: false, vyapar: false },
   { name: 'Inventory management', udyog: true, billbook: true, vyapar: true },
-  { name: 'WhatsApp payment reminders', udyog: true, billbook: true, vyapar: false },
+  { name: 'WhatsApp payment reminders', udyog: true, billbook: true, vyapar: true },
   { name: 'Real-time dashboard', udyog: true, billbook: true, vyapar: true },
   { name: 'Multi-business support', udyog: true, billbook: true, vyapar: true },
   { name: 'Rental Equipment Management', udyog: true, billbook: false, vyapar: false },
@@ -90,6 +90,7 @@ export default function ComparisonTable() {
             </tbody>
           </table>
         </div>
+        <p style={{ fontSize: 12, color: '#666', marginTop: 16, textAlign: 'center' }}>*Maya AI is not included in the Basic plan.</p>
       </div>
     </section>
   )
