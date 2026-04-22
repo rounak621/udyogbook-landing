@@ -102,27 +102,8 @@ export default function Hero() {
         .stat-inline-lbl { font-size: 13px; color: #64748b; margin-left: 6px; }
 
 
-        /* ── RIGHT — 3D DASHBOARD ── */
+        /* ── RIGHT — DASHBOARD ── */
         .hero-right { position: relative; display: flex; align-items: center; justify-content: center; padding-bottom: 40px; }
-        .scene-3d {
-          position: relative; width: 100%; z-index: 1;
-          transform: perspective(2000px) rotateY(-5deg) rotateX(2deg);
-          filter: drop-shadow(0 25px 50px rgba(0,0,0,0.18));
-          border-radius: 12px;
-          transition: transform 0.3s ease;
-        }
-        .scene-3d:hover { transform: perspective(2000px) rotateY(-3deg) rotateX(1deg); }
-
-        /* Stacked card layers */
-        .dash-layer-3 { position: absolute; top: 20px; left: -24px; right: 24px; bottom: -20px; background: #f0ece6; border-radius: 18px; border: 1px solid #e5e0da; z-index: 0; }
-        .dash-layer-2 { position: absolute; top: 10px; left: -12px; right: 12px; bottom: -10px; background: #f7f4f0; border-radius: 18px; border: 1px solid #ede8e3; z-index: 1; }
-        .dash-main { position: relative; z-index: 2; background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 16px rgba(0,0,0,0.06); transform: translateZ(0); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
-
-        .browser-bar { background: #1c1c1e; padding: 12px 14px; display: flex; align-items: center; gap: 6px; border-radius: 16px 16px 0 0; transform: translateZ(0); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
-        .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
-        .browser-url { flex: 1; background: rgba(255,255,255,0.07); border-radius: 5px; height: 22px; margin-left: 8px; display: flex; align-items: center; padding: 0 10px; }
-        .browser-url span { color: rgba(255,255,255,0.3); font-size: 10px; }
-        .browser-screen { line-height: 0; transform: translateZ(0); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 
         /* Floating cards */
         .float-gst {
@@ -249,36 +230,72 @@ export default function Hero() {
               filter: 'blur(40px)',
               pointerEvents: 'none' as const,
             }} />
-            <div className="scene-3d" style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}>
-              <div className="dash-layer-3" />
-              <div className="dash-layer-2" />
-              <div className="dash-main">
-                <div className="browser-bar">
-                  <div className="browser-dot" style={{ background: '#ff5f57' }} />
-                  <div className="browser-dot" style={{ background: '#febc2e' }} />
-                  <div className="browser-dot" style={{ background: '#28c840' }} />
-                  <div className="browser-url"><span>app.udyogbook.in/dashboard</span></div>
-                </div>
-                <div className="browser-screen">
+            {/* Laptop Mockup */}
+            <div style={{
+              position: 'relative',
+              width: '100%',
+              maxWidth: '600px',
+              margin: '0 auto',
+              filter: 'drop-shadow(0 40px 80px rgba(0,0,0,0.20))',
+            }}>
+              {/* Laptop Screen */}
+              <div style={{
+                background: '#1a1a2e',
+                borderRadius: '16px 16px 0 0',
+                padding: '20px 20px 0 20px',
+                border: '2px solid #333',
+                borderBottom: 'none',
+                position: 'relative',
+              }}>
+                {/* Camera dot */}
+                <div style={{
+                  width: 8, height: 8,
+                  background: '#444',
+                  borderRadius: '50%',
+                  margin: '0 auto 12px',
+                }} />
+                
+                {/* Screen content */}
+                <div style={{
+                  borderRadius: '8px 8px 0 0',
+                  overflow: 'hidden',
+                  background: '#fff',
+                  lineHeight: 0,
+                }}>
                   <Image
                     src="/dashboard-screenshot.png"
                     alt="Udyog Dashboard"
                     width={1457}
                     height={822}
-                    quality={90}
+                    quality={95}
                     priority={true}
-                    sizes="(max-width: 768px) 100vw, 55vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     style={{
                       width: '100%',
                       height: 'auto',
                       display: 'block',
-                      WebkitBackfaceVisibility: 'hidden',
-                      backfaceVisibility: 'hidden',
-                      transform: 'translateZ(0)',
                     }}
                   />
                 </div>
               </div>
+              
+              {/* Laptop Base */}
+              <div style={{
+                background: 'linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%)',
+                height: '24px',
+                borderRadius: '0 0 4px 4px',
+                border: '2px solid #333',
+                borderTop: 'none',
+              }} />
+              
+              {/* Laptop Bottom/Hinge */}
+              <div style={{
+                background: 'linear-gradient(180deg, #222 0%, #111 100%)',
+                height: '14px',
+                borderRadius: '0 0 12px 12px',
+                margin: '0 20px',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
+              }} />
               {/* Floating cards */}
               <div className="float-gst">
                 <div className="float-icon gst-pulse" style={{ background: '#F0FDF4' }}>
