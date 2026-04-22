@@ -110,7 +110,7 @@ function renderSection(section: BlogSection, index: number) {
       return (
         <div key={index} style={{ background: '#0F172A', borderRadius: 16, padding: 'clamp(24px,4vw,36px)', textAlign: 'center', margin: '36px 0' }}>
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: 20 }}>{section.text}</p>
-          <a href="https://app.udyogbook.in/signup" style={{ display: 'inline-block', background: '#F97316', color: '#fff', padding: '12px 28px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
+          <a href="https://app.udyogbook.in/sign-in" style={{ display: 'inline-block', background: '#F97316', color: '#fff', padding: '12px 28px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
             {section.label || 'Try Udyog Free'} →
           </a>
         </div>
@@ -239,7 +239,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', marginBottom: 24 }}>
               Free plan. No credit card. First invoice in 2 minutes.
             </p>
-            <a href="https://app.udyogbook.in/signup" style={{ display: 'inline-block', background: '#F97316', color: '#fff', padding: '13px 32px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
+            <a href="https://app.udyogbook.in/sign-in" style={{ display: 'inline-block', background: '#F97316', color: '#fff', padding: '13px 32px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
               Start free →
             </a>
           </div>

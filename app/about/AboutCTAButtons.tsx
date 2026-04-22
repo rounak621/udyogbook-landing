@@ -8,8 +8,8 @@ export default function AboutCTAButtons() {
   return (
     <>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, flexWrap: 'wrap' }}>
-        <button 
-          onClick={() => setShowModal(true)} 
+        <a 
+          href="https://app.udyogbook.in/sign-in"
           style={{ 
             border: 'none', cursor: 'pointer', fontFamily: 'inherit',
             background: '#F97316', color: '#fff', padding: '14px 28px', 
@@ -19,7 +19,7 @@ export default function AboutCTAButtons() {
           }}
         >
           Start free trial →
-        </button>
+        </a>
         <a href="/contact" style={{ background: 'transparent', color: '#0f172a', border: '2px solid #E2E8F0', padding: '12px 28px', borderRadius: 10, fontWeight: 600, fontSize: 15, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
           Contact us →
         </a>

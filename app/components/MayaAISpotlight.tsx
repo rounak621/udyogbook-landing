@@ -65,7 +65,7 @@ export default function MayaAISpotlight() {
             <span className="maya-vs-badge">Not available on myBillBook</span>
           </div>
 
-          <a href="https://app.udyogbook.in/signup" className="btn-orange">
+          <a href="https://app.udyogbook.in/sign-in" className="btn-orange">
             Try Maya free →
           </a>
         </div>

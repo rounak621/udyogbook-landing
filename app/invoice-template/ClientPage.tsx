@@ -371,7 +371,7 @@ export default function InvoiceTemplateClient() {
             <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', marginBottom: 28 }}>
               Generate perfect GST invoices in 8 seconds. No Excel, no manual calculations, no errors. Free forever.
             </p>
-            <a href="https://app.udyogbook.in/signup" className="btn-orange" style={{ textDecoration: 'none' }}>
+            <a href="https://app.udyogbook.in/sign-in" className="btn-orange" style={{ textDecoration: 'none' }}>
               Start Free — No Credit Card →
             </a>
           </div>

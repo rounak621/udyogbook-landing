@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useLaunchModal } from './LaunchModalProvider'
 import ComingSoonModal from './ComingSoonModal'
 
-const SIGN_UP_URL = 'https://app.udyogbook.in/sign-up'
+const SIGN_UP_URL = 'https://app.udyogbook.in/sign-in'
 const LOGIN_URL = 'https://app.udyogbook.in/sign-in'
 
 const NAV_LINKS = [
@@ -105,17 +105,7 @@ export default function Navbar() {
           </div>
 
           <div className="nav-actions">
-            <a 
-              href="https://app.udyogbook.in/sign-in"
-              style={{
-                color: '#0f172a', fontSize: 14, fontWeight: 600,
-                textDecoration: 'none', padding: '8px 16px',
-                background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit'
-              }}
-            >
-              Login
-            </a>
-            <button onClick={() => setShowModal(true)} className="nav-cta" style={{ cursor: 'pointer' }}>Free trial</button>
+            <a href="https://app.udyogbook.in/sign-in" className="nav-cta" style={{ cursor: 'pointer' }}>Login</a>
             <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
               <span style={{ transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
               <span style={{ opacity: menuOpen ? 0 : 1 }} />
@@ -129,8 +119,7 @@ export default function Navbar() {
         {NAV_LINKS.map(l => (
           <a key={l.label} href={l.href} className="mobile-nav-link" onClick={() => setMenuOpen(false)}>{l.label}</a>
         ))}
-        <a href="https://app.udyogbook.in/sign-in" className="mobile-nav-link" style={{ textAlign: 'left', width: '100%', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }} onClick={() => setMenuOpen(false)}>Log in</a>
-        <button className="mobile-cta" style={{ border: 'none', fontFamily: 'inherit', cursor: 'pointer', width: '100%' }} onClick={() => { setMenuOpen(false); setShowModal(true); }}>Start free trial →</button>
+        <a href="https://app.udyogbook.in/sign-in" className="mobile-cta" style={{ border: 'none', fontFamily: 'inherit', cursor: 'pointer', width: '100%' }} onClick={() => setMenuOpen(false)}>Login</a>
       </div>
       <ComingSoonModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </>

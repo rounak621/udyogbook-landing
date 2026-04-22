@@ -135,7 +135,7 @@ export default function FeatureTabs() {
                 </div>
               ))}
             </div>
-            <a href="https://app.udyogbook.in/sign-up" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 28, background: '#F97316', color: '#fff', padding: '12px 24px', borderRadius: 8, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
+            <a href="https://app.udyogbook.in/sign-in" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 28, background: '#F97316', color: '#fff', padding: '12px 24px', borderRadius: 8, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
               Try {tab.label} free →
             </a>
           </div>

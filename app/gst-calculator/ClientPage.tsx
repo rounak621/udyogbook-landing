@@ -291,7 +291,7 @@ export default function GSTCalculatorClient() {
             <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', marginBottom: 28 }}>
               Udyog calculates CGST, SGST, and IGST automatically on every invoice. Free plan, unlimited invoices.
             </p>
-            <a href="https://app.udyogbook.in/signup" className="btn-orange" style={{ textDecoration: 'none' }}>
+            <a href="https://app.udyogbook.in/sign-in" className="btn-orange" style={{ textDecoration: 'none' }}>
               Try Udyog Free →
             </a>
           </div>

@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import { Check, X, Zap, Star, Crown, Building2, ChevronDown, ChevronUp, Shield, Clock, CreditCard, RefreshCw } from 'lucide-react'
 import ComingSoonModal from '../components/ComingSoonModal'
 
-const SIGN_UP_URL = 'https://app.udyogbook.in/sign-up'
+const SIGN_UP_URL = 'https://app.udyogbook.in/sign-in'
 
 const PLANS = [
   {
@@ -333,7 +333,7 @@ export default function PricingPage() {
                         {cta}
                       </a>
                     ) : (
-                      <button onClick={() => setShowModal(true)} style={{
+                      <a href="https://app.udyogbook.in/sign-in" style={{
                         display: 'block', width: '100%', textAlign: 'center', padding: '13px 20px',
                         border: 'none', cursor: 'pointer', fontFamily: 'inherit',
                         borderRadius: 10, fontSize: 14, fontWeight: 700,
@@ -343,7 +343,7 @@ export default function PricingPage() {
                         boxShadow: (highlighted || name !== 'Basic') ? '0 4px 16px rgba(249,115,22,0.4)' : 'none',
                       }}>
                         {cta}
-                      </button>
+                      </a>
                     )}
                   </div>
                 )
@@ -465,9 +465,9 @@ export default function PricingPage() {
             </h2>
             <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', marginBottom: 28 }}>14 days free. No credit card. Cancel anytime.</p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <button onClick={() => setShowModal(true)} style={{ border: 'none', cursor: 'pointer', fontFamily: 'inherit', display: 'inline-flex', alignItems: 'center', gap: 8, background: '#F97316', color: '#fff', padding: '14px 28px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none', boxShadow: '0 4px 16px rgba(249,115,22,0.4)' }}>
+              <a href="https://app.udyogbook.in/sign-in" style={{ border: 'none', cursor: 'pointer', fontFamily: 'inherit', display: 'inline-flex', alignItems: 'center', gap: 8, background: '#F97316', color: '#fff', padding: '14px 28px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none', boxShadow: '0 4px 16px rgba(249,115,22,0.4)' }}>
                 Start free trial →
-              </button>
+              </a>
               <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'transparent', color: '#fff', padding: '14px 28px', borderRadius: 10, fontWeight: 600, fontSize: 15, textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.2)' }}>
                 Talk to sales
               </a>

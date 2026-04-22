@@ -5,7 +5,7 @@ import { useLaunchModal } from './LaunchModalProvider'
 import { useState } from 'react'
 import ComingSoonModal from './ComingSoonModal'
 
-const SIGN_UP_URL = 'https://app.udyogbook.in/sign-up'
+const SIGN_UP_URL = 'https://app.udyogbook.in/sign-in'
 
 export default function Hero() {
   const { openModal } = useLaunchModal()
@@ -229,8 +229,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="hero-btns">
-              <button onClick={() => setShowModal(true)} className="btn-mango">Start free trial →</button>
-              <button onClick={() => setShowModal(true)} className="btn-demo">Watch demo</button>
+              <a href="https://app.udyogbook.in/sign-in" className="btn-mango">Start free trial →</a>
             </div>
             <p className="hero-fine">No credit card · 14-day free trial · Cancel anytime</p>
             <div className="hero-badges">

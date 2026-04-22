@@ -48,9 +48,9 @@ export default function DarkCTA() {
             Just sign up and start billing — by voice or manually.
           </p>
           <div className="dcta-btns">
-            <button onClick={openModal} className="dcta-btn-primary">
+            <a href="https://app.udyogbook.in/sign-in" className="dcta-btn-primary">
               Start free trial <ArrowRight size={16} />
-            </button>
+            </a>
             <button onClick={openModal} className="dcta-btn-secondary">
               <Phone size={16} /> Talk to sales
             </button>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const SIGN_UP_URL = 'https://app.udyogbook.in/sign-up'
+const SIGN_UP_URL = 'https://app.udyogbook.in/sign-in'
 
 export default function Footer() {
   return (

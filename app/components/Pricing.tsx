@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Check, X, Zap, Star, Crown, Building2 } from 'lucide-react'
 import { useLaunchModal } from './LaunchModalProvider'
 
-const SIGN_UP_URL = 'https://app.udyogbook.in/sign-up'
+const SIGN_UP_URL = 'https://app.udyogbook.in/sign-in'
 
 const PLANS = [
   {
@@ -180,7 +180,17 @@ export default function Pricing() {
                   </div>
                 ))}
               </div>
-              <button onClick={openModal} className={`plan-cta ${highlighted ? 'plan-cta-orange' : i >= 1 ? 'plan-cta-orange' : 'plan-cta-default'}`}>{cta}</button>
+              <a href="https://app.udyogbook.in/sign-in" style={{
+                display: 'block', width: '100%', textAlign: 'center', padding: '13px 20px',
+                border: 'none', cursor: 'pointer', fontFamily: 'inherit',
+                borderRadius: 10, fontSize: 14, fontWeight: 700,
+                textDecoration: 'none', marginTop: 'auto',
+                background: highlighted || name !== 'Basic' ? '#F97316' : '#F1F5F9',
+                color: highlighted || name !== 'Basic' ? '#fff' : '#334155',
+                boxShadow: (highlighted || name !== 'Basic') ? '0 4px 16px rgba(249,115,22,0.4)' : 'none',
+              }}>
+                {cta}
+              </a>
             </div>
           ))}
         </div>

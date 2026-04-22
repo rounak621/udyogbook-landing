@@ -48,7 +48,7 @@ export default function AboutPage() {
               </div>
               <div style={{ width: 1, height: 32, background: 'rgba(0,0,0,0.15)' }} className="stat-hide-mobile" />
               <div style={{ padding: '0 0 0 24px', display: 'inline-flex', alignItems: 'baseline' }}>
-                <span style={{ fontSize: 20, fontWeight: 700, color: '#F97316' }}>₹149/yr</span>
+                <span style={{ fontSize: 20, fontWeight: 700, color: '#F97316' }}>₹149/mo</span>
                 <span style={{ fontSize: 13, color: '#64748b', marginLeft: 6 }}>starting price</span>
               </div>
             </div>
