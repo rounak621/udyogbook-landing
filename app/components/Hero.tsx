@@ -210,7 +210,7 @@ export default function Hero() {
               <span className="italic-black">Sirf</span> ek awaaz mein.
             </h1>
             <p className="hero-p">
-              Udyog is India&apos;s next-generation GST-ready billing and business management platform, built specially for retailers, rental businesses, traders and MSMEs. We bring together billing, inventory, GST compliance and CA collaboration into one powerful, easy-to-use platform, designed for how Indian businesses actually operate.
+              India&apos;s next-gen GST billing platform for retailers, traders &amp; MSMEs. Billing, inventory, GST compliance and CA collaboration — all in one place.
             </p>
             <div className="hero-stats-inline">
               <div className="stat-inline-item">
