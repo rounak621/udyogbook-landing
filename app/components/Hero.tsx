@@ -236,60 +236,26 @@ export default function Hero() {
               maxWidth: '620px',
               margin: '0 auto',
             }}>
-              {/* Browser Mockup */}
               <div style={{
-                background: '#fff',
+                width: '100%',
                 borderRadius: '12px',
                 overflow: 'hidden',
-                boxShadow: '0 32px 80px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.08)',
-                width: '100%',
+                boxShadow: '0 24px 60px rgba(0,0,0,0.15)',
               }}>
-                {/* Browser bar */}
-                <div style={{
-                  background: '#F1F3F4',
-                  padding: '10px 16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 8,
-                  borderBottom: '1px solid #E0E0E0',
-                }}>
-                  {/* Traffic lights */}
-                  <div style={{ display: 'flex', gap: 6 }}>
-                    <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#FF5F57' }} />
-                    <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#FFBD2E' }} />
-                    <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#28C840' }} />
-                  </div>
-                  {/* URL bar */}
-                  <div style={{
-                    flex: 1,
-                    background: '#fff',
-                    borderRadius: 6,
-                    padding: '4px 12px',
-                    fontSize: 12,
-                    color: '#666',
-                    border: '1px solid #E0E0E0',
-                  }}>
-                    app.udyogbook.in/dashboard
-                  </div>
-                </div>
-                
-                {/* Screenshot */}
-                <div style={{ lineHeight: 0 }}>
-                  <Image
-                    src="/dashboard-screenshot.png"
-                    alt="Udyog Dashboard"
-                    width={1457}
-                    height={822}
-                    quality={95}
-                    priority={true}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    style={{
-                      width: '100%',
-                      height: 'auto',
-                      display: 'block',
-                    }}
-                  />
-                </div>
+                <Image
+                  src="/dashboard-screenshot.png"
+                  alt="Udyog Dashboard"
+                  width={1457}
+                  height={822}
+                  quality={95}
+                  priority={true}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    display: 'block',
+                  }}
+                />
               </div>
 
               {/* Floating cards */}
