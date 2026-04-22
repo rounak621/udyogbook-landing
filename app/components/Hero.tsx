@@ -106,7 +106,7 @@ export default function Hero() {
         .hero-right { position: relative; display: flex; align-items: center; justify-content: center; padding-bottom: 40px; }
         .scene-3d {
           position: relative; width: 100%; z-index: 1;
-          transform: perspective(1200px) rotateY(-12deg) rotateX(4deg) translateZ(0);
+          transform: perspective(1200px) rotateY(-12deg) rotateX(4deg) translateZ(0) scale(1);
           transform-origin: center center;
           transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           filter: drop-shadow(0 48px 96px rgba(0,0,0,0.28)) drop-shadow(0 16px 40px rgba(0,0,0,0.16));
@@ -127,7 +127,7 @@ export default function Hero() {
         .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
         .browser-url { flex: 1; background: rgba(255,255,255,0.07); border-radius: 5px; height: 22px; margin-left: 8px; display: flex; align-items: center; padding: 0 10px; }
         .browser-url span { color: rgba(255,255,255,0.3); font-size: 10px; }
-        .browser-screen { line-height: 0; transform: translateZ(0); backface-visibility: hidden; -webkit-backface-visibility: hidden; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
+        .browser-screen { line-height: 0; transform: translateZ(0); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 
         /* Floating cards */
         .float-gst {
@@ -265,7 +265,23 @@ export default function Hero() {
                   <div className="browser-url"><span>app.udyogbook.in/dashboard</span></div>
                 </div>
                 <div className="browser-screen">
-                  <Image src="/dashboard-screenshot.png" alt="Udyog Dashboard" width={900} height={560} style={{ width: '100%', height: 'auto', display: 'block', imageRendering: 'crisp-edges', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)', borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} quality={100} priority={true} unoptimized />
+                  <Image
+                    src="/dashboard-screenshot.png"
+                    alt="Udyog Dashboard"
+                    width={1457}
+                    height={822}
+                    quality={90}
+                    priority={true}
+                    sizes="(max-width: 768px) 100vw, 55vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      display: 'block',
+                      WebkitBackfaceVisibility: 'hidden',
+                      backfaceVisibility: 'hidden',
+                      transform: 'translateZ(0)',
+                    }}
+                  />
                 </div>
               </div>
               {/* Floating cards */}
