@@ -106,17 +106,10 @@ export default function Hero() {
         .hero-right { position: relative; display: flex; align-items: center; justify-content: center; padding-bottom: 40px; }
         .scene-3d {
           position: relative; width: 100%; z-index: 1;
-          transform: perspective(1200px) rotateY(-12deg) rotateX(4deg) translateZ(0) scale(1);
-          transform-origin: center center;
-          transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          filter: drop-shadow(0 48px 96px rgba(0,0,0,0.28)) drop-shadow(0 16px 40px rgba(0,0,0,0.16));
-          backface-visibility: hidden;
-          -webkit-backface-visibility: hidden;
-          will-change: transform;
-          transform-style: preserve-3d;
-          -webkit-transform-style: preserve-3d;
+          transform: none;
+          filter: drop-shadow(0 20px 60px rgba(0,0,0,0.15));
+          border-radius: 12px;
         }
-        .scene-3d:hover { transform: perspective(1200px) rotateY(-4deg) rotateX(2deg) translateZ(0); }
 
         /* Stacked card layers */
         .dash-layer-3 { position: absolute; top: 20px; left: -24px; right: 24px; bottom: -20px; background: #f0ece6; border-radius: 18px; border: 1px solid #e5e0da; z-index: 0; }
