@@ -14,9 +14,9 @@ export default function FreeTools() {
   return (
     <section id="freetools" style={{ padding: 'clamp(60px, 8vw, 100px) var(--section-px)', background: '#F8FAFC' }}>
       <style suppressHydrationWarning>{`
-        .tools-inner { max-width: 1000px; margin: 0 auto; }
+        .tools-inner { max-width: 1200px; margin: 0 auto; }
         .tools-header { text-align: center; margin-bottom: 48px; }
-        .tools-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
         .tool-card {
           padding: 32px;
           display: flex;
@@ -64,6 +64,13 @@ export default function FreeTools() {
             <h3 className="tool-title">Free Invoice Templates</h3>
             <p className="tool-desc">Download GST-compliant invoice templates in HTML format. All mandatory fields included.</p>
             <a href="/invoice-template" className="tool-link">Download Free →</a>
+          </div>
+
+          <div className="card tool-card">
+            <div className="tool-icon">✍️</div>
+            <h3 className="tool-title">Digital Signature Maker</h3>
+            <p className="tool-desc">Create professional digital signatures online. Draw, type or upload — download as transparent PNG for your GST invoices.</p>
+            <a href="/tools/digital-signature" className="tool-link">Create Free Signature →</a>
           </div>
         </div>
       </div>
