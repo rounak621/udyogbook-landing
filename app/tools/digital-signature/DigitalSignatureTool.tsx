@@ -1,5 +1,6 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
+import { Pencil, Type, Upload, Trash2, Download, FolderOpen, Shield, BadgeCheck, Smartphone, Check } from 'lucide-react'
 
 const FONT_FAMILIES = [
   { name: 'Dancing Script', css: 'Dancing+Script' },
@@ -119,12 +120,29 @@ export default function DigitalSignatureTool() {
         const ctx = canvas.getContext('2d')
         if (!ctx) return
         ctx.drawImage(img, 0, 0)
-        // Remove white/near-white pixels — make transparent
+        // Remove background — sample corners to detect bg color
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
         const data = imageData.data
+
+        const samplePixel = (x: number, y: number) => {
+          const idx = (y * canvas.width + x) * 4
+          return { r: data[idx], g: data[idx + 1], b: data[idx + 2] }
+        }
+        const corners = [
+          samplePixel(0, 0),
+          samplePixel(canvas.width - 1, 0),
+          samplePixel(0, canvas.height - 1),
+          samplePixel(canvas.width - 1, canvas.height - 1),
+        ]
+        const bgR = Math.round(corners.reduce((s, c) => s + c.r, 0) / 4)
+        const bgG = Math.round(corners.reduce((s, c) => s + c.g, 0) / 4)
+        const bgB = Math.round(corners.reduce((s, c) => s + c.b, 0) / 4)
+
+        const tolerance = 40
         for (let i = 0; i < data.length; i += 4) {
           const r = data[i], g = data[i + 1], b = data[i + 2]
-          if (r > 200 && g > 200 && b > 200) {
+          const diff = Math.abs(r - bgR) + Math.abs(g - bgG) + Math.abs(b - bgB)
+          if (diff < tolerance * 3) {
             data[i + 3] = 0
           }
         }
@@ -167,8 +185,9 @@ export default function DigitalSignatureTool() {
           Create your professional digital signature online for free. Draw, type or upload — download as transparent PNG instantly. No signup required.
         </p>
         <div style={{ marginTop: 16, display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-          {['✓ 100% Free', '✓ No Signup', '✓ Transparent PNG', '✓ Works on Mobile'].map(badge => (
-            <span key={badge} style={{ background: 'rgba(255,255,255,0.2)', padding: '6px 14px', borderRadius: 20, fontSize: 14, fontWeight: 600 }}>
+          {['100% Free', 'No Signup', 'Transparent PNG', 'Works on Mobile'].map(badge => (
+            <span key={badge} style={{ background: 'rgba(255,255,255,0.2)', padding: '6px 14px', borderRadius: 20, fontSize: 14, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 6 }}>
+              <Check size={14} />
               {badge}
             </span>
           ))}
@@ -196,7 +215,9 @@ export default function DigitalSignatureTool() {
                   fontFamily: 'inherit',
                 }}
               >
-                {tab === 'draw' ? '✏️ Draw' : tab === 'type' ? '⌨️ Type' : '📤 Upload'}
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                  {tab === 'draw' ? <><Pencil size={16} /> Draw</> : tab === 'type' ? <><Type size={16} /> Type</> : <><Upload size={16} /> Upload</>}
+                </span>
               </button>
             ))}
           </div>
@@ -243,7 +264,7 @@ export default function DigitalSignatureTool() {
                     onClick={clearCanvas}
                     style={{ marginLeft: 'auto', padding: '8px 16px', border: '1px solid #e5e7eb', borderRadius: 8, background: '#fff', color: '#374151', cursor: 'pointer', fontWeight: 600, fontSize: 13, fontFamily: 'inherit', transition: 'background 0.15s' }}
                   >
-                    🗑️ Clear
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}><Trash2 size={14} /> Clear</span>
                   </button>
                 </div>
 
@@ -316,7 +337,7 @@ export default function DigitalSignatureTool() {
                     transition: 'border-color 0.2s',
                   }}
                 >
-                  <p style={{ fontSize: 48, marginBottom: 12 }}>📁</p>
+                  <div style={{ marginBottom: 12, display: 'flex', justifyContent: 'center' }}><FolderOpen size={48} color="#9ca3af" /></div>
                   <p style={{ fontSize: 16, fontWeight: 600, color: '#374151' }}>Click to upload your signature</p>
                   <p style={{ fontSize: 13, color: '#9ca3af', marginTop: 6 }}>PNG, JPG supported — white background will be removed automatically</p>
                   <input ref={fileInputRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={handleFileUpload} />
@@ -343,7 +364,7 @@ export default function DigitalSignatureTool() {
                   fontFamily: 'inherit', transition: 'background 0.2s',
                 }}
               >
-                ⬇️ Download Signature (Free PNG)
+                <Download size={18} /> Download Signature (Free PNG)
               </button>
               <a
                 href="https://app.udyogbook.in/sign-up"
@@ -364,12 +385,12 @@ export default function DigitalSignatureTool() {
         {/* Trust badges */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: 32, marginTop: 32, flexWrap: 'wrap' }}>
           {[
-            { icon: '🔒', text: 'Your signature stays on your device' },
-            { icon: '🆓', text: 'Always free, no hidden charges' },
-            { icon: '📱', text: 'Works on mobile & desktop' },
+            { icon: <Shield size={20} color="#6b7280" />, text: 'Your signature stays on your device' },
+            { icon: <BadgeCheck size={20} color="#6b7280" />, text: 'Always free, no hidden charges' },
+            { icon: <Smartphone size={20} color="#6b7280" />, text: 'Works on mobile & desktop' },
           ].map(badge => (
             <div key={badge.text} style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#6b7280', fontSize: 14 }}>
-              <span style={{ fontSize: 20 }}>{badge.icon}</span>
+              {badge.icon}
               <span>{badge.text}</span>
             </div>
           ))}
