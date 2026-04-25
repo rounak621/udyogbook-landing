@@ -1,6 +1,6 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
-import { Pencil, Type, Upload, Trash2, Download, FolderOpen, Shield, BadgeCheck, Smartphone, Check } from 'lucide-react'
+import { Pencil, Type, Upload, Trash2, Download, FolderOpen, Shield, BadgeCheck, Smartphone, Check, CheckCircle } from 'lucide-react'
 
 const FONT_FAMILIES = [
   { name: 'Dancing Script', css: 'Dancing+Script' },
@@ -120,30 +120,19 @@ export default function DigitalSignatureTool() {
         const ctx = canvas.getContext('2d')
         if (!ctx) return
         ctx.drawImage(img, 0, 0)
-        // Remove background — sample corners to detect bg color
+        // Brightness-based removal — keeps dark pixels (ink), removes light pixels (background)
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
         const data = imageData.data
-
-        const samplePixel = (x: number, y: number) => {
-          const idx = (y * canvas.width + x) * 4
-          return { r: data[idx], g: data[idx + 1], b: data[idx + 2] }
-        }
-        const corners = [
-          samplePixel(0, 0),
-          samplePixel(canvas.width - 1, 0),
-          samplePixel(0, canvas.height - 1),
-          samplePixel(canvas.width - 1, canvas.height - 1),
-        ]
-        const bgR = Math.round(corners.reduce((s, c) => s + c.r, 0) / 4)
-        const bgG = Math.round(corners.reduce((s, c) => s + c.g, 0) / 4)
-        const bgB = Math.round(corners.reduce((s, c) => s + c.b, 0) / 4)
-
-        const tolerance = 40
         for (let i = 0; i < data.length; i += 4) {
-          const r = data[i], g = data[i + 1], b = data[i + 2]
-          const diff = Math.abs(r - bgR) + Math.abs(g - bgG) + Math.abs(b - bgB)
-          if (diff < tolerance * 3) {
-            data[i + 3] = 0
+          const r = data[i], g = data[i+1], b = data[i+2]
+          // Calculate perceived brightness
+          const brightness = (r * 0.299 + g * 0.587 + b * 0.114)
+          if (brightness > 160) {
+            // Light pixel = background = make transparent
+            data[i+3] = 0
+          } else {
+            // Dark pixel = ink = keep with alpha based on darkness
+            data[i+3] = Math.round(255 * (1 - brightness / 255))
           }
         }
         ctx.putImageData(imageData, 0, 0)
@@ -176,48 +165,55 @@ export default function DigitalSignatureTool() {
         .sig-font-btn:hover { border-color: #fdba74 !important; }
       `}</style>
 
-      {/* Hero Section */}
-      <div style={{ background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)', padding: '100px 20px 60px', textAlign: 'center', color: '#fff' }}>
-        <h1 style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 800, marginBottom: 16, lineHeight: 1.2 }}>
+      {/* Hero */}
+      <div style={{ background: '#fff', borderBottom: '1px solid #e5e7eb', padding: '48px 20px', textAlign: 'center' }}>
+        <div style={{ display: 'inline-block', background: '#fff7ed', color: '#f97316', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, marginBottom: 16 }}>
+          Free Tool
+        </div>
+        <h1 style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 800, color: '#111827', marginBottom: 16, lineHeight: 1.2 }}>
           Free Digital Signature Maker
         </h1>
-        <p style={{ fontSize: 18, opacity: 0.9, maxWidth: 600, margin: '0 auto', lineHeight: 1.6 }}>
-          Create your professional digital signature online for free. Draw, type or upload — download as transparent PNG instantly. No signup required.
+        <p style={{ fontSize: 18, color: '#6b7280', maxWidth: 560, margin: '0 auto 24px', lineHeight: 1.6 }}>
+          Create your professional digital signature online. Draw, type or upload — download as transparent PNG instantly.
         </p>
-        <div style={{ marginTop: 16, display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-          {['100% Free', 'No Signup', 'Transparent PNG', 'Works on Mobile'].map(badge => (
-            <span key={badge} style={{ background: 'rgba(255,255,255,0.2)', padding: '6px 14px', borderRadius: 20, fontSize: 14, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 6 }}>
-              <Check size={14} />
-              {badge}
-            </span>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 24, flexWrap: 'wrap' }}>
+          {[
+            { icon: <Check size={14} />, text: '100% Free' },
+            { icon: <Check size={14} />, text: 'No Signup Required' },
+            { icon: <Check size={14} />, text: 'Transparent PNG' },
+            { icon: <Check size={14} />, text: 'Works on Mobile' },
+          ].map(badge => (
+            <div key={badge.text} style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#374151', fontSize: 14, fontWeight: 500 }}>
+              <span style={{ color: '#f97316' }}>{badge.icon}</span>
+              {badge.text}
+            </div>
           ))}
         </div>
       </div>
 
       {/* Tool Section */}
-      <div style={{ maxWidth: 800, margin: '0 auto', padding: '40px 20px' }}>
-        <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 4px 24px rgba(0,0,0,0.08)', overflow: 'hidden' }}>
+      {/* Tool Card */}
+      <div style={{ maxWidth: 780, margin: '0 auto', padding: '40px 20px' }}>
+        <div style={{ background: '#fff', borderRadius: 16, border: '1px solid #e5e7eb', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', overflow: 'hidden' }}>
 
           {/* Tab Bar */}
-          <div style={{ display: 'flex', borderBottom: '1px solid #e5e7eb' }}>
+          <div style={{ display: 'flex', borderBottom: '1px solid #e5e7eb', background: '#f9fafb' }}>
             {(['draw', 'type', 'upload'] as const).map(tab => (
               <button
                 key={tab}
-                className="sig-tab"
                 onClick={() => setActiveTab(tab)}
                 style={{
-                  flex: 1, padding: '16px', border: 'none', cursor: 'pointer',
-                  background: activeTab === tab ? '#fff' : '#f9fafb',
+                  flex: 1, padding: '14px 8px', border: 'none', cursor: 'pointer',
+                  background: activeTab === tab ? '#fff' : 'transparent',
                   color: activeTab === tab ? '#f97316' : '#6b7280',
                   fontWeight: activeTab === tab ? 700 : 500,
-                  fontSize: 15,
+                  fontSize: 14,
                   borderBottom: activeTab === tab ? '2px solid #f97316' : '2px solid transparent',
-                  fontFamily: 'inherit',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+                  transition: 'all 0.15s',
                 }}
               >
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                  {tab === 'draw' ? <><Pencil size={16} /> Draw</> : tab === 'type' ? <><Type size={16} /> Type</> : <><Upload size={16} /> Upload</>}
-                </span>
+                {tab === 'draw' ? <><Pencil size={15} /> Draw</> : tab === 'type' ? <><Type size={15} /> Type</> : <><Upload size={15} /> Upload</>}
               </button>
             ))}
           </div>
@@ -227,7 +223,11 @@ export default function DigitalSignatureTool() {
             {activeTab === 'draw' && (
               <div>
                 {/* Controls */}
-                <div style={{ display: 'flex', gap: 12, marginBottom: 16, flexWrap: 'wrap', alignItems: 'center' }}>
+                <div style={{
+                  display: 'flex', gap: 16, marginBottom: 16,
+                  padding: '12px 16px', background: '#f9fafb',
+                  borderRadius: 10, alignItems: 'center', flexWrap: 'wrap'
+                }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                     <label style={{ fontSize: 13, color: '#374151', fontWeight: 600 }}>Color:</label>
                     {['#000000', '#1e3a8a', '#1e40af', '#374151'].map(color => (
@@ -269,7 +269,11 @@ export default function DigitalSignatureTool() {
                 </div>
 
                 {/* Canvas */}
-                <div style={{ border: '2px dashed #e5e7eb', borderRadius: 12, background: '#fafafa', position: 'relative' }}>
+                <div style={{
+                  border: '1.5px solid #e5e7eb', borderRadius: 12,
+                  background: '#fafafa', overflow: 'hidden',
+                  cursor: 'crosshair',
+                }}>
                   <canvas
                     ref={canvasRef}
                     width={700}
@@ -343,10 +347,16 @@ export default function DigitalSignatureTool() {
                   <input ref={fileInputRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={handleFileUpload} />
                 </div>
                 {uploadedImage && (
-                  <div style={{ marginTop: 20, textAlign: 'center' }}>
-                    <p style={{ fontSize: 13, color: '#6b7280', marginBottom: 8 }}>Preview (background will be removed on download):</p>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={uploadedImage} alt="Uploaded signature" style={{ maxHeight: 150, maxWidth: '100%', border: '1px solid #e5e7eb', borderRadius: 8, padding: 8, display: 'inline-block' }} />
+                  <div style={{
+                    marginTop: 16, padding: '16px 20px',
+                    background: '#f0fdf4', border: '1px solid #bbf7d0',
+                    borderRadius: 10, display: 'flex', alignItems: 'center', gap: 12
+                  }}>
+                    <CheckCircle size={20} style={{ color: '#16a34a', flexShrink: 0 }} />
+                    <div>
+                      <p style={{ fontSize: 14, fontWeight: 600, color: '#15803d', textAlign: 'left' }}>Image uploaded successfully</p>
+                      <p style={{ fontSize: 12, color: '#16a34a', marginTop: 2, textAlign: 'left' }}>Background will be removed automatically when you download</p>
+                    </div>
                   </div>
                 )}
               </div>
@@ -355,43 +365,34 @@ export default function DigitalSignatureTool() {
             {/* Download Button */}
             <div style={{ marginTop: 24, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
               <button
-                className="sig-download"
                 onClick={downloadSignature}
                 style={{
-                  flex: 1, padding: '14px 24px', background: '#f97316', color: '#fff',
-                  border: 'none', borderRadius: 10, fontWeight: 700, fontSize: 16,
-                  cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-                  fontFamily: 'inherit', transition: 'background 0.2s',
+                  width: '100%', padding: '14px 24px',
+                  background: '#f97316', color: '#fff', border: 'none',
+                  borderRadius: 10, fontWeight: 700, fontSize: 16,
+                  cursor: 'pointer', display: 'flex', alignItems: 'center',
+                  justifyContent: 'center', gap: 8, marginTop: 24,
+                  boxShadow: '0 4px 14px rgba(249,115,22,0.3)',
+                  transition: 'background 0.15s',
                 }}
               >
-                <Download size={18} /> Download Signature (Free PNG)
+                <Download size={18} />
+                Download Signature — Free PNG
               </button>
-              <a
-                href="https://app.udyogbook.in/sign-up"
-                className="sig-cta-outline"
-                style={{
-                  padding: '14px 24px', background: '#fff', color: '#f97316',
-                  border: '2px solid #f97316', borderRadius: 10, fontWeight: 700, fontSize: 15,
-                  cursor: 'pointer', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8,
-                  transition: 'background 0.2s',
-                }}
-              >
-                Use in Udyog Invoice →
-              </a>
             </div>
           </div>
         </div>
 
         {/* Trust badges */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 32, marginTop: 32, flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 32, marginTop: 24, flexWrap: 'wrap' }}>
           {[
-            { icon: <Shield size={20} color="#6b7280" />, text: 'Your signature stays on your device' },
-            { icon: <BadgeCheck size={20} color="#6b7280" />, text: 'Always free, no hidden charges' },
-            { icon: <Smartphone size={20} color="#6b7280" />, text: 'Works on mobile & desktop' },
+            { icon: <Shield size={18} />, text: 'Stays on your device — never uploaded' },
+            { icon: <BadgeCheck size={18} />, text: 'Always free, no hidden charges' },
+            { icon: <Smartphone size={18} />, text: 'Works on mobile & desktop' },
           ].map(badge => (
-            <div key={badge.text} style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#6b7280', fontSize: 14 }}>
-              {badge.icon}
-              <span>{badge.text}</span>
+            <div key={badge.text} style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#6b7280', fontSize: 13 }}>
+              <span style={{ color: '#f97316' }}>{badge.icon}</span>
+              {badge.text}
             </div>
           ))}
         </div>

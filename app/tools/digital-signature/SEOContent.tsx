@@ -1,6 +1,6 @@
 export default function SEOContent() {
   return (
-    <div style={{ background: '#fff', borderTop: '1px solid #e5e7eb', marginTop: 40 }}>
+    <div style={{ background: '#f9fafb', borderTop: '1px solid #e5e7eb', marginTop: 40 }}>
       <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 20px' }}>
 
         <h2 style={{ fontSize: 28, fontWeight: 800, color: '#111', marginBottom: 16 }}>
@@ -59,7 +59,7 @@ export default function SEOContent() {
               a: 'ऊपर दिए गए टूल में Draw, Type या Upload में से कोई एक option चुनें। अपना signature बनाएं और Download बटन पर click करें। आपका signature transparent PNG format में download हो जाएगा।'
             },
           ].map(faq => (
-            <div key={faq.q} style={{ border: '1px solid #e5e7eb', borderRadius: 12, padding: 20 }}>
+            <div key={faq.q} style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 12, padding: 20 }}>
               <h3 style={{ fontSize: 16, fontWeight: 700, color: '#111', marginBottom: 8 }}>{faq.q}</h3>
               <p style={{ fontSize: 14, color: '#6b7280', lineHeight: 1.7 }}>{faq.a}</p>
             </div>
