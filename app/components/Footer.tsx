@@ -7,7 +7,7 @@ export default function Footer() {
     <footer style={{ background: '#0a0a0a', padding: 'clamp(48px, 6vw, 80px) var(--section-px) 32px' }}>
       <style suppressHydrationWarning>{`
         .footer-inner { max-width: var(--max-w); margin: 0 auto; }
-        .footer-top { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 32px; margin-bottom: 48px; }
+        .footer-top { display: grid; grid-template-columns: 1.5fr repeat(4, 1fr); gap: 32px; margin-bottom: 48px; }
         .footer-brand { max-width: 260px; }
         .footer-logo { display: flex; align-items: center; margin-bottom: 14px; }
         .footer-tagline { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; margin-bottom: 0; }
@@ -49,6 +49,14 @@ export default function Footer() {
             <a href="/#how-it-works" className="footer-link">Voice Billing</a>
             <a href="/pricing" className="footer-link">Pricing</a>
             <a href="/#features" className="footer-link">CA Portal</a>
+          </div>
+
+          {/* Free Tools column */}
+          <div>
+            <p className="footer-col-title">Free Tools</p>
+            <a href="/tools/digital-signature" className="footer-link">Digital Signature Maker</a>
+            <a href="/gst-calculator" className="footer-link">GST Calculator</a>
+            <a href="/invoice-template" className="footer-link">Invoice Templates</a>
           </div>
 
           {/* Company column */}
