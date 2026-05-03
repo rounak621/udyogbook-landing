@@ -106,6 +106,7 @@ export default function Navbar() {
           </div>
 
           <div className="nav-actions">
+            <a href="https://app.udyogbook.in/sign-up" className="nav-cta" style={{ cursor: 'pointer', marginRight: 8, background: 'transparent', border: '2px solid currentColor' }}>Sign Up</a>
             <a href="https://app.udyogbook.in/sign-in" className="nav-cta" style={{ cursor: 'pointer' }}>Login</a>
             <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
               <span style={{ transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
@@ -120,6 +121,7 @@ export default function Navbar() {
         {NAV_LINKS.map(l => (
           <a key={l.label} href={l.href} className="mobile-nav-link" onClick={() => setMenuOpen(false)}>{l.label}</a>
         ))}
+        <a href="https://app.udyogbook.in/sign-up" className="mobile-cta" style={{ border: 'none', fontFamily: 'inherit', cursor: 'pointer', width: '100%', marginBottom: 8 }} onClick={() => setMenuOpen(false)}>Sign Up</a>
         <a href="https://app.udyogbook.in/sign-in" className="mobile-cta" style={{ border: 'none', fontFamily: 'inherit', cursor: 'pointer', width: '100%' }} onClick={() => setMenuOpen(false)}>Login</a>
       </div>
       <ComingSoonModal isOpen={showModal} onClose={() => setShowModal(false)} />
