@@ -27,6 +27,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: post.metaTitle,
       description: post.metaDescription,
     },
+    alternates: {
+      canonical: `https://udyogbook.in/blog/${post.slug}`,
+    },
   }
 }
 

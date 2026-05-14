@@ -1,0 +1,47 @@
+# Udyog — GST Billing Software for Indian Businesses
+# https://udyogbook.in
+
+Udyog is an AI-powered GST billing software built specifically for Indian small businesses, retailers, traders, and MSMEs.
+
+## What Udyog Does
+- Create GST-compliant invoices in seconds using voice commands (Maya AI)
+- Manage inventory, parties, and payments
+- Generate GSTR-1, GSTR-2B, GSTR-3B reports
+- Collaborate with Chartered Accountants via CA portal
+- Rental equipment management and billing
+- Works for both GST-registered and non-GST businesses
+
+## Key Features
+- Maya: India's first Hindi/Hinglish voice billing AI agent
+- Free GST invoice maker online
+- Easy GST bill software for mobile
+- Voice GST software in Hindi
+- CA collaboration portal
+- WhatsApp invoice sharing
+- Purchase bill management
+- Party ledger and outstanding tracking
+
+## Target Users
+- Small shop owners (kirana, retail, wholesale)
+- Service providers (CA, lawyers, consultants)
+- Rental businesses (equipment, furniture)
+- Traders and manufacturers
+- MSMEs and startups
+
+## Pricing
+- Trial: 14 days free
+- Basic: ₹149/month
+- Enterprise: ₹499/month
+
+## URLs
+- Website: https://udyogbook.in
+- App: https://app.udyogbook.in
+- Blog: https://udyogbook.in/blog
+- Pricing: https://udyogbook.in/pricing
+
+## Keywords
+free GST bill software India, easy GST billing software, voice GST software, 
+GST invoice maker, billing software for small business, Vyapar alternative,
+myBillBook alternative, GST software Hindi, kirana store billing, 
+MSME billing software, CA portal software, rental billing software India,
+online GST invoice generator, free invoice maker India
