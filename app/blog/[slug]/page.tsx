@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const post = getPostBySlug(params.slug)
   if (!post) return {}
   return {
-    title: post.metaTitle,
+    title: post.metaTitle.endsWith(' | Udyog') ? { absolute: post.metaTitle } : post.metaTitle,
     description: post.metaDescription,
     keywords: post.keywords,
     openGraph: {
