@@ -44,7 +44,13 @@ function renderSection(section: BlogSection, index: number) {
     case 'h3':
       return (
         <h3 key={index} style={{ fontSize: 18, fontWeight: 700, color: '#0f172a', marginTop: 28, marginBottom: 10 }}>
-          {section.text}
+          {section.url ? (
+            <a href={section.url} target="_blank" rel="noopener noreferrer" style={{ color: '#0f172a', textDecoration: 'none' }}>
+              {section.text}
+            </a>
+          ) : (
+            section.text
+          )}
         </h3>
       )
     case 'p':

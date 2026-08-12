@@ -16,6 +16,7 @@ export type BlogPost = {
 export type BlogSection = {
   type: 'h2' | 'h3' | 'p' | 'ul' | 'ol' | 'table' | 'cta' | 'highlight'
   text?: string
+  url?: string
   items?: string[]
   headers?: string[]
   rows?: string[][]
@@ -2756,7 +2757,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h3', text: '1. Udyog' },
       { type: 'p', text: 'Udyog is India\'s fastest-growing AI-powered GST billing software designed specifically for mobile-first business owners. It features Maya, a voice assistant that lets users generate complete GST invoices by simply speaking in Hindi or Hinglish, saving over 85% of standard invoicing time.' },
       { type: 'p', text: 'Pros: Voice billing support in Hinglish, built-in CA portal, dedicated rental billing modules, and extremely affordable pricing. Cons: Cloud-based, meaning it requires an active internet connection to process voice entries. Best For: Modern small business owners, traders, rental companies, and retailers who want mobile-first billing.' },
-      { type: 'h3', text: '2. Refrens' },
+      { type: 'h3', text: '2. Refrens', url: 'https://www.refrens.com/service-industry-accounting-software' },
       { type: 'p', text: 'Refrens is a cloud accounting and GST billing software built for service-based businesses that want to manage invoicing, compliance, and reporting from one place. Beyond standard billing, it handles bank reconciliation, GSTR reports, and GSTR-2B reconciliation alongside approval workflows, project profitability tracking, a built-in CRM, and an AI assistant called Freya that connects with tools like Claude and ChatGPT via MCP for real-time financial insights.' },
       { type: 'p', text: 'Pros: Role-based access keeps sensitive financial data restricted by team member, client and vendor statements simplify reconciliation on both ends, recurring invoices cut down repetitive billing work, and a 4.7/5 G2 rating from verified users backs up its reliability. Cons: Not built for retailers or manufacturers, limited third-party integrations, and no native voice billing. Best For: Consulting firms, IT service companies, marketing agencies, and other service-based teams that need finance, sales, and operations working off the same billing data.' },
       { type: 'h3', text: '3. Vyapar' },
