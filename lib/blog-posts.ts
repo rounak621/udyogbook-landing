@@ -2741,15 +2741,17 @@ export const BLOG_POSTS: BlogPost[] = [
     content: [
       { type: 'p', text: 'Choosing the right billing software is one of the most critical decisions for Indian MSMEs in 2026. With the GST department tightening compliance rules, enforcing e-invoicing for more turnover slabs, and requiring real-time reporting, manual ledger books or simple spreadsheets can lead to heavy penalties. A reliable GST billing app not only saves hours of manual calculations but also ensures smooth operations and seamless input tax credit matching for your business partners.' },
       { type: 'h2', text: 'What to Look for in Billing Software for Indian Businesses' },
-      { type: 'ul', items: [
-        'GST Compliance: Automated CGST, SGST, and IGST calculations, validation of GSTINs, and support for HSN/SAC codes.',
-        'Mobile Access: The ability to generate invoices, track outstanding payments, and check inventory on the go using your smartphone.',
-        'Hindi Language Support: Plain Hindi or Hinglish interface/voice commands for business owners who prefer not to use complex English apps.',
-        'WhatsApp Sharing: Send PDF invoices, payment links, and payment reminders directly to customers via WhatsApp in one tap.',
-        'GSTR Report Generation: Automatic creation of GSTR-1, GSTR-3B, and GSTR-2B reconciliation reports to simplify filing.',
-        'CA Collaboration: A dedicated portal or export system that lets your Chartered Accountant download compliance reports directly.',
-        'Affordable Pricing: Transparent pricing structures that fit small business budgets without hidden charges or expensive hardware requirements.'
-      ]},
+      {
+        type: 'ul', items: [
+          'GST Compliance: Automated CGST, SGST, and IGST calculations, validation of GSTINs, and support for HSN/SAC codes.',
+          'Mobile Access: The ability to generate invoices, track outstanding payments, and check inventory on the go using your smartphone.',
+          'Hindi Language Support: Plain Hindi or Hinglish interface/voice commands for business owners who prefer not to use complex English apps.',
+          'WhatsApp Sharing: Send PDF invoices, payment links, and payment reminders directly to customers via WhatsApp in one tap.',
+          'GSTR Report Generation: Automatic creation of GSTR-1, GSTR-3B, and GSTR-2B reconciliation reports to simplify filing.',
+          'CA Collaboration: A dedicated portal or export system that lets your Chartered Accountant download compliance reports directly.',
+          'Affordable Pricing: Transparent pricing structures that fit small business budgets without hidden charges or expensive hardware requirements.'
+        ]
+      },
       { type: 'h2', text: 'Top 10 Billing Software in India 2026' },
       { type: 'h3', text: '1. Udyog' },
       { type: 'p', text: 'Udyog is India\'s fastest-growing AI-powered GST billing software designed specifically for mobile-first business owners. It features Maya, a voice assistant that lets users generate complete GST invoices by simply speaking in Hindi or Hinglish, saving over 85% of standard invoicing time.' },
@@ -2781,29 +2783,37 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h3', text: '10. Wave' },
       { type: 'p', text: 'Wave is a globally free invoicing and basic accounting software popular among freelancers. However, it is not locally customized for Indian GST.' },
       { type: 'p', text: 'Pros: Completely free for invoicing, clean aesthetic, and easy setup. Cons: No native Indian GST calculation, no HSN support, no regional language interface, and no WhatsApp integration. Best For: Small international freelancers who do not require local GST compliance.' },
+      { type: 'h3', text: '11. Refrens' },
+      { type: 'p', text: 'Refrens is a cloud accounting and GST billing software built for service-based businesses that want to manage invoicing, compliance, and reporting from one place. Beyond standard billing, it handles bank reconciliation, GSTR reports, and GSTR-2B reconciliation alongside approval workflows, project profitability tracking, a built-in CRM, and an AI assistant called Freya that connects with tools like Claude and ChatGPT via MCP for real-time financial insights.' },
+      { type: 'p', text: 'Pros: Role-based access keeps sensitive financial data restricted by team member, client and vendor statements simplify reconciliation on both ends, recurring invoices cut down repetitive billing work, and a 4.7/5 G2 rating from verified users backs up its reliability. Cons: Not built for retailers or manufacturers, limited third-party integrations, and no native voice billing. Best For: Consulting firms, IT service companies, marketing agencies, and other service-based teams that need finance, sales, and operations working off the same billing data.' },
       { type: 'h2', text: 'Quick Comparison Table' },
-      { type: 'table', headers: ['Software', 'Best For', 'Price/year', 'Mobile', 'Voice Billing', 'CA Portal', 'GST Reports'], rows: [
-        ['Udyog', 'Mobile-first Traders', '₹1,788', 'Yes (Web/App)', 'Yes (Hinglish)', 'Yes', 'Yes'],
-        ['Vyapar', 'Offline Retailers', '₹1,999+', 'Yes (Android)', 'No', 'No', 'Yes'],
-        ['myBillBook', 'Standard Shop Owners', '₹1,499+', 'Yes', 'No', 'No', 'Yes'],
-        ['Tally Prime', 'Accountants & CAs', '₹18,000+', 'No', 'No', 'No', 'Yes'],
-        ['Zoho Books', 'Growing Agencies', '₹8,988+', 'Yes', 'No', 'No', 'Yes'],
-        ['Khatabook', 'Micro Kiranas', 'Free / Varies', 'Yes', 'No', 'No', 'No'],
-        ['Busy Accounting', 'Wholesale/Mfg', '₹7,200+', 'No', 'No', 'No', 'Yes'],
-        ['Marg ERP', 'Pharma & FMCG', '₹8,500+', 'No', 'No', 'No', 'Yes'],
-        ['QuickBooks', 'Freelancers', '₹4,800+', 'Yes', 'No', 'No', 'Yes'],
-        ['Wave', 'Global Freelancers', 'Free', 'Yes', 'No', 'No', 'No']
-      ]},
+      {
+        type: 'table', headers: ['Software', 'Best For', 'Price/year', 'Mobile', 'Voice Billing', 'CA Portal', 'GST Reports'], rows: [
+          ['Udyog', 'Mobile-first Traders', '₹1,788', 'Yes (Web/App)', 'Yes (Hinglish)', 'Yes', 'Yes'],
+          ['Vyapar', 'Offline Retailers', '₹1,999+', 'Yes (Android)', 'No', 'No', 'Yes'],
+          ['myBillBook', 'Standard Shop Owners', '₹1,499+', 'Yes', 'No', 'No', 'Yes'],
+          ['Tally Prime', 'Accountants & CAs', '₹18,000+', 'No', 'No', 'No', 'Yes'],
+          ['Zoho Books', 'Growing Agencies', '₹8,988+', 'Yes', 'No', 'No', 'Yes'],
+          ['Khatabook', 'Micro Kiranas', 'Free / Varies', 'Yes', 'No', 'No', 'No'],
+          ['Busy Accounting', 'Wholesale/Mfg', '₹7,200+', 'No', 'No', 'No', 'Yes'],
+          ['Marg ERP', 'Pharma & FMCG', '₹8,500+', 'No', 'No', 'No', 'Yes'],
+          ['QuickBooks', 'Freelancers', '₹4,800+', 'Yes', 'No', 'No', 'Yes'],
+          ['Wave', 'Global Freelancers', 'Free', 'Yes', 'No', 'No', 'No'],
+          ['Refrens', 'Service based Businesses', '₹5,900', 'Yes (Web/App)', 'No', 'No', 'Yes']
+        ]
+      },
       { type: 'h2', text: 'Which Billing Software Should You Choose?' },
-      { type: 'table', headers: ['Your Situation', 'Best Choice'], rows: [
-        ['Wants voice billing in Hinglish/Hindi', 'Udyog'],
-        ['Collaborates directly with a CA via portal', 'Udyog'],
-        ['Needs strict offline operation without internet', 'Vyapar / Tally Prime'],
-        ['Lowest starting cost for GST-compliant app', 'Udyog (₹149/month)'],
-        ['Simple credit and payment reminders for kirana', 'Khatabook / Udyog'],
-        ['Needs specialized camera or equipment rental support', 'Udyog Enterprise'],
-        ['Requires enterprise audit trails and payroll ledger', 'Tally Prime']
-      ]},
+      {
+        type: 'table', headers: ['Your Situation', 'Best Choice'], rows: [
+          ['Wants voice billing in Hinglish/Hindi', 'Udyog'],
+          ['Collaborates directly with a CA via portal', 'Udyog'],
+          ['Needs strict offline operation without internet', 'Vyapar / Tally Prime'],
+          ['Lowest starting cost for GST-compliant app', 'Udyog (₹149/month)'],
+          ['Simple credit and payment reminders for kirana', 'Khatabook / Udyog'],
+          ['Needs specialized camera or equipment rental support', 'Udyog Enterprise'],
+          ['Requires enterprise audit trails and payroll ledger', 'Tally Prime']
+        ]
+      },
       { type: 'highlight', label: 'Verdict', color: '#6366f1', text: 'For the majority of Indian small businesses and traders in 2026, Udyog offers the best combination of speed, features, and price. Its unique Hinglish voice billing assistant, Maya, simplifies the invoice creation process, saving you valuable hours daily.' },
       { type: 'cta', label: 'Try Udyog Free', text: 'Try Udyog free — 14 day trial, no credit card. India\'s fastest growing GST billing software.' }
     ],
@@ -2830,14 +2840,16 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'In India, the vast majority of micro and small business owners manage their operations directly from their Android smartphones. From retail shop counters to wholesale distribution points, a mobile phone is often the only computing device available. Because of this, finding a robust, easy-to-use GST billing app for Android is crucial to ensure that business operations are smooth, billing is fast, and compliance is kept up to date.' },
       { type: 'p', text: 'This guide reviews the best Android GST billing apps available in the Indian market in 2026, comparing their features, offline capabilities, ease of use, and value for money.' },
       { type: 'h2', text: 'What Makes a Good Android Billing App' },
-      { type: 'ul', items: [
-        'Works on Low-End Android Devices: It should load fast and run smoothly on budget Android phones without crashing or lag.',
-        'Offline Mode: Essential for shop owners who need to generate bills even during network outages or in remote market areas.',
-        'Hindi & Hinglish User Interface: Clear options in local languages so that operators and family members can bill without an English barrier.',
-        'WhatsApp Share: One-tap sharing of high-quality PDF invoices directly to customer phone numbers.',
-        'Camera Barcode Scan: Utilizing the phone\'s built-in camera to scan barcodes for quick inventory search and product entry.',
-        'Auto-Save & Cloud Sync: Keeping data secure so that if a phone is lost or damaged, the business records remain safe on the cloud.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Works on Low-End Android Devices: It should load fast and run smoothly on budget Android phones without crashing or lag.',
+          'Offline Mode: Essential for shop owners who need to generate bills even during network outages or in remote market areas.',
+          'Hindi & Hinglish User Interface: Clear options in local languages so that operators and family members can bill without an English barrier.',
+          'WhatsApp Share: One-tap sharing of high-quality PDF invoices directly to customer phone numbers.',
+          'Camera Barcode Scan: Utilizing the phone\'s built-in camera to scan barcodes for quick inventory search and product entry.',
+          'Auto-Save & Cloud Sync: Keeping data secure so that if a phone is lost or damaged, the business records remain safe on the cloud.'
+        ]
+      },
       { type: 'h2', text: 'Top 7 GST Billing Apps for Android 2026' },
       { type: 'h3', text: 'Udyog' },
       { type: 'p', text: 'Udyog leads the market with its modern, mobile-first design and voice-powered assistant, Maya. Users can create GST invoices in under 8 seconds by speaking in natural Hindi or Hinglish, removing the need for tedious manual typing.' },
@@ -2861,15 +2873,17 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'OkCredit is a digital ledger app that helps merchants record credit (Udhar) transactions and send automated reminders to clients.' },
       { type: 'p', text: 'Pros: Minimalist UI and highly secure ledger syncing. Cons: Lacks true GST billing, HSN code databases, and print settings. Best For: Micro-traders focused purely on cash-flow collections.' },
       { type: 'h2', text: 'Android Billing App Comparison Table' },
-      { type: 'table', headers: ['App', 'Offline', 'Hindi UI', 'Voice Billing', 'Free Plan', 'Rating'], rows: [
-        ['Udyog', 'Yes (viewing)', 'Yes', 'Yes', '14-Day Trial', '4.8/5'],
-        ['Vyapar', 'Yes (fully)', 'Yes', 'No', 'Free Basic', '4.6/5'],
-        ['myBillBook', 'Yes (partial)', 'Yes', 'No', 'Trial Only', '4.5/5'],
-        ['Khatabook', 'Yes', 'Yes', 'No', 'Free Tier', '4.4/5'],
-        ['Tally on Mobile', 'No', 'No', 'No', 'Paid Sync', '4.0/5'],
-        ['Zoho Invoice', 'Yes', 'No', 'No', 'Free Plan', '4.5/5'],
-        ['OkCredit', 'Yes', 'Yes', 'No', 'Free Tier', '4.3/5']
-      ]},
+      {
+        type: 'table', headers: ['App', 'Offline', 'Hindi UI', 'Voice Billing', 'Free Plan', 'Rating'], rows: [
+          ['Udyog', 'Yes (viewing)', 'Yes', 'Yes', '14-Day Trial', '4.8/5'],
+          ['Vyapar', 'Yes (fully)', 'Yes', 'No', 'Free Basic', '4.6/5'],
+          ['myBillBook', 'Yes (partial)', 'Yes', 'No', 'Trial Only', '4.5/5'],
+          ['Khatabook', 'Yes', 'Yes', 'No', 'Free Tier', '4.4/5'],
+          ['Tally on Mobile', 'No', 'No', 'No', 'Paid Sync', '4.0/5'],
+          ['Zoho Invoice', 'Yes', 'No', 'No', 'Free Plan', '4.5/5'],
+          ['OkCredit', 'Yes', 'Yes', 'No', 'Free Tier', '4.3/5']
+        ]
+      },
       { type: 'h2', text: 'Our Recommendation for Android' },
       { type: 'p', text: 'If you want the most modern, fast, and feature-rich billing experience on your Android phone, Udyog is our top recommendation. Its voice-first AI assistant, Hinglish language support, and seamless CA portal make it a perfect fit for busy Indian traders who value their time.' },
       { type: 'highlight', label: 'Maya AI Browser Advantage', color: '#10b981', text: 'Maya AI runs smoothly directly inside any Android mobile browser, meaning you do not even need to install heavy apps that slow down your phone. Simply log in and start billing.' },
@@ -2897,13 +2911,15 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Running a rental business is fundamentally different from standard retail or wholesale. Instead of simply selling an item once, you lend assets, collect deposits, calculate time-based rental fees, track late returns, and handle damaged equipment. Standard GST billing software fails rental businesses because it cannot track inventory availability over time or manage refundable deposits properly.' },
       { type: 'p', text: 'This guide explores the best rental billing and management software options in India for 2026, focusing on equipment, camera, tent, and event rental businesses.' },
       { type: 'h2', text: 'What Rental Billing Software Must Do' },
-      { type: 'ul', items: [
-        'Asset Availability Tracking: A visual calendar showing which equipment is rented, what is available, and what is overdue.',
-        'Refundable Deposit Management: Tracking security deposits separately from taxable rental revenue to prevent wrong tax filing.',
-        'Late Fee Auto-Calculation: Automatically calculating penalties when items are returned past their due dates.',
-        'Partial Return Handling: Processing orders where a customer returns some items but keeps others for an extended period.',
-        'GST Compliance on Rental Services: Applying the correct SAC codes (such as SAC 9973) and calculations for rental invoices.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Asset Availability Tracking: A visual calendar showing which equipment is rented, what is available, and what is overdue.',
+          'Refundable Deposit Management: Tracking security deposits separately from taxable rental revenue to prevent wrong tax filing.',
+          'Late Fee Auto-Calculation: Automatically calculating penalties when items are returned past their due dates.',
+          'Partial Return Handling: Processing orders where a customer returns some items but keeps others for an extended period.',
+          'GST Compliance on Rental Services: Applying the correct SAC codes (such as SAC 9973) and calculations for rental invoices.'
+        ]
+      },
       { type: 'h2', text: 'Best Rental Billing Software Options in India 2026' },
       { type: 'h3', text: 'Udyog Enterprise' },
       { type: 'p', text: 'Udyog Enterprise is the only Indian-built cloud software that provides fully integrated rental tracking and GST compliance. It handles inventory availability calendars, deposits, late fees, and customer notifications in Hinglish.' },
@@ -2921,23 +2937,27 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Generic retail apps allow you to create bills but do not have calendar booking features.' },
       { type: 'p', text: 'Pros: Good for basic invoicing and expense recording. Cons: Cannot track return dates, cannot calculate late fees dynamically, and lacks asset scheduling. Best For: Retail-heavy businesses that do occasional simple rentals.' },
       { type: 'h2', text: 'Feature Comparison Table' },
-      { type: 'table', headers: ['Software', 'Asset Tracking', 'Deposits', 'Late Fees', 'GST Invoices', 'India-specific', 'Price'], rows: [
-        ['Udyog Enterprise', 'Yes (Calendar)', 'Yes', 'Auto-calc', 'Yes', 'Yes', '₹499/month'],
-        ['Rentman', 'Yes (Advanced)', 'No', 'Manual', 'No (needs config)', 'No', 'Custom ($$$)'],
-        ['RentalPoint', 'Yes', 'Yes', 'Yes', 'No', 'No', 'Custom ($$)'],
-        ['Excel/Manual', 'No', 'Manual', 'Manual', 'No', 'Yes', 'Free'],
-        ['Generic Apps', 'No', 'No', 'No', 'Yes', 'Yes', '₹1,999/year']
-      ]},
+      {
+        type: 'table', headers: ['Software', 'Asset Tracking', 'Deposits', 'Late Fees', 'GST Invoices', 'India-specific', 'Price'], rows: [
+          ['Udyog Enterprise', 'Yes (Calendar)', 'Yes', 'Auto-calc', 'Yes', 'Yes', '₹499/month'],
+          ['Rentman', 'Yes (Advanced)', 'No', 'Manual', 'No (needs config)', 'No', 'Custom ($$$)'],
+          ['RentalPoint', 'Yes', 'Yes', 'Yes', 'No', 'No', 'Custom ($$)'],
+          ['Excel/Manual', 'No', 'Manual', 'Manual', 'No', 'Yes', 'Free'],
+          ['Generic Apps', 'No', 'No', 'No', 'Yes', 'Yes', '₹1,999/year']
+        ]
+      },
       { type: 'h2', text: 'Why Most Rental Businesses in India Use Udyog Enterprise' },
       { type: 'p', text: 'Udyog Enterprise bridges the gap between complex asset booking and simple Indian GST compliance. It provides a visual calendar dashboard, automatically handles CGST/SGST on rental services, manages refundable security deposits legally, and opens direct WhatsApp sharing for instant customer approvals. Furthermore, its CA portal saves owners from sending messy manual worksheets at the end of every month.' },
       { type: 'h2', text: 'Which Rental Software for Which Business' },
-      { type: 'table', headers: ['Rental Type', 'Recommended Software'], rows: [
-        ['Camera & Lens Rental', 'Udyog Enterprise (Best for serial tracking)'],
-        ['Tent & Shamiana House', 'Udyog Enterprise (Best for bulk item counts)'],
-        ['Furniture & Event Decor', 'Udyog Enterprise (Best for multi-event logistics)'],
-        ['Heavy Construction Equipment', 'RentalPoint / Udyog Enterprise'],
-        ['Medical Equipment Rental', 'Udyog Enterprise (Best for monthly billing cycles)']
-      ]},
+      {
+        type: 'table', headers: ['Rental Type', 'Recommended Software'], rows: [
+          ['Camera & Lens Rental', 'Udyog Enterprise (Best for serial tracking)'],
+          ['Tent & Shamiana House', 'Udyog Enterprise (Best for bulk item counts)'],
+          ['Furniture & Event Decor', 'Udyog Enterprise (Best for multi-event logistics)'],
+          ['Heavy Construction Equipment', 'RentalPoint / Udyog Enterprise'],
+          ['Medical Equipment Rental', 'Udyog Enterprise (Best for monthly billing cycles)']
+        ]
+      },
       { type: 'highlight', label: 'GST Alert', color: '#f59e0b', text: 'Under Indian GST laws, refundable security deposits are not taxable when collected. Udyog Enterprise tracks deposits in separate ledger accounts, ensuring your GST tax liability is calculated only on the actual rental service charges.' },
       { type: 'cta', label: 'Try Udyog Enterprise', text: 'Try Udyog Enterprise free 14 days — built for Indian rental businesses.' }
     ],
@@ -2964,23 +2984,25 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'When setting up a billing system for a small business in India, three names dominate search queries and local recommendations: Tally, Vyapar, and Udyog. Each of these software products has a distinct target user base, design philosophy, and pricing structure. Choosing the wrong one can lead to administrative bottlenecks, high maintenance costs, or compliance issues.' },
       { type: 'p', text: 'This guide offers an honest, detailed 3-way comparison between Tally Prime, Vyapar, and Udyog to help you determine which software fits your business workflow best in 2026.' },
       { type: 'h2', text: 'Quick 3-Way Comparison' },
-      { type: 'table', headers: ['Feature', 'Tally Prime', 'Vyapar', 'Udyog'], rows: [
-        ['GST Invoicing', 'Yes (Comprehensive)', 'Yes', 'Yes'],
-        ['Voice Invoicing', 'No', 'No', 'Yes (Hindi/Hinglish)'],
-        ['Mobile App', 'No (View-only third-party)', 'Yes (Android)', 'Yes (Any device Web)'],
-        ['Cloud Access', 'No (Desktop bound)', 'No (Local-first)', 'Yes (Cloud-native)'],
-        ['CA Portal', 'No (Requires data export)', 'No', 'Yes (Direct access)'],
-        ['Offline Mode', 'Yes (Fully offline)', 'Yes (Fully offline)', 'Yes (Read-only offline)'],
-        ['GSTR Reports', 'Yes', 'Yes', 'Yes'],
-        ['Inventory tracking', 'Yes (Advanced)', 'Yes', 'Yes'],
-        ['Price/Year', '₹18,000+', '₹1,999+', '₹1,788 (₹149/mo)'],
-        ['Free Plan', 'No (Trial only)', 'Free Basic', '14-Day Trial'],
-        ['Setup Time', 'Hours / Days', '30 Minutes', '5 Minutes'],
-        ['Learning Curve', 'Steep (Requires training)', 'Easy', 'Very Easy (Speak)'],
-        ['WhatsApp Share', 'Manual/Complex', 'Yes', 'Yes (One-tap)'],
-        ['Rental Support', 'No', 'No', 'Yes (Enterprise plan)'],
-        ['Hindi Language', 'No', 'Limited', 'Yes (Full Hinglish Voice)']
-      ]},
+      {
+        type: 'table', headers: ['Feature', 'Tally Prime', 'Vyapar', 'Udyog'], rows: [
+          ['GST Invoicing', 'Yes (Comprehensive)', 'Yes', 'Yes'],
+          ['Voice Invoicing', 'No', 'No', 'Yes (Hindi/Hinglish)'],
+          ['Mobile App', 'No (View-only third-party)', 'Yes (Android)', 'Yes (Any device Web)'],
+          ['Cloud Access', 'No (Desktop bound)', 'No (Local-first)', 'Yes (Cloud-native)'],
+          ['CA Portal', 'No (Requires data export)', 'No', 'Yes (Direct access)'],
+          ['Offline Mode', 'Yes (Fully offline)', 'Yes (Fully offline)', 'Yes (Read-only offline)'],
+          ['GSTR Reports', 'Yes', 'Yes', 'Yes'],
+          ['Inventory tracking', 'Yes (Advanced)', 'Yes', 'Yes'],
+          ['Price/Year', '₹18,000+', '₹1,999+', '₹1,788 (₹149/mo)'],
+          ['Free Plan', 'No (Trial only)', 'Free Basic', '14-Day Trial'],
+          ['Setup Time', 'Hours / Days', '30 Minutes', '5 Minutes'],
+          ['Learning Curve', 'Steep (Requires training)', 'Easy', 'Very Easy (Speak)'],
+          ['WhatsApp Share', 'Manual/Complex', 'Yes', 'Yes (One-tap)'],
+          ['Rental Support', 'No', 'No', 'Yes (Enterprise plan)'],
+          ['Hindi Language', 'No', 'Limited', 'Yes (Full Hinglish Voice)']
+        ]
+      },
       { type: 'h2', text: 'Tally Prime — The Accountant\'s Choice' },
       { type: 'p', text: 'Tally Prime is a desktop software built for accounting professionals. It is incredibly powerful for detailed bookkeeping, payroll management, multi-company ledger consolidation, and formal compliance auditing by Chartered Accountants.' },
       { type: 'p', text: 'Strengths: Unmatched accounting depth, robust data safety, and complete trust of Indian CAs. Weaknesses: Desktop-bound with no mobile editing, very steep learning curve for non-accountants, and high annual license costs. Best For: Medium-to-large businesses, manufacturers, and audit-heavy firms.' },
@@ -2991,22 +3013,26 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Udyog is a cloud-native, mobile-first billing platform built for modern traders and service providers. It introduces AI-powered voice billing through Maya, allowing users to create GST invoices in under 8 seconds by speaking in natural Hinglish.' },
       { type: 'p', text: 'Strengths: Voice invoicing in local language, direct CA collaboration portal, rental management systems, and extremely low subscription rates. Weaknesses: Requires active internet for voice features and lacks integrated payroll systems. Best For: Modern traders, mobile-first business owners, rental houses, and micro-kiranas.' },
       { type: 'h2', text: 'Pricing Deep Dive' },
-      { type: 'table', headers: ['Plan', 'Tally Prime', 'Vyapar', 'Udyog'], rows: [
-        ['Basic (Mobile-only)', 'Not available', '₹999/year', '₹149/month (₹1,788/yr)'],
-        ['Standard (Desktop/Sync)', '₹18,000/year (Silver)', '₹1,999/year', '₹299/month (₹3,588/yr)'],
-        ['Enterprise (Multi-User/Rental)', '₹54,000/year (Gold)', '₹3,999/year', '₹499/month (₹5,988/yr)']
-      ]},
+      {
+        type: 'table', headers: ['Plan', 'Tally Prime', 'Vyapar', 'Udyog'], rows: [
+          ['Basic (Mobile-only)', 'Not available', '₹999/year', '₹149/month (₹1,788/yr)'],
+          ['Standard (Desktop/Sync)', '₹18,000/year (Silver)', '₹1,999/year', '₹299/month (₹3,588/yr)'],
+          ['Enterprise (Multi-User/Rental)', '₹54,000/year (Gold)', '₹3,999/year', '₹499/month (₹5,988/yr)']
+        ]
+      },
       { type: 'h2', text: 'Who Should Choose Which' },
-      { type: 'table', headers: ['Your Business Situation', 'Recommended Winner'], rows: [
-        ['You want to dictate bills in Hindi while running a counter', 'Udyog'],
-        ['Your accountant requires a raw Tally backup file for auditing', 'Tally Prime'],
-        ['Your internet is unreliable and you need offline capability', 'Vyapar'],
-        ['You run a rental business tracking security deposits', 'Udyog'],
-        ['You need a quick, cheap solution setup on phone in 5 minutes', 'Udyog'],
-        ['You have complex manufacturing inventory bills of materials', 'Tally Prime / Vyapar'],
-        ['You want to stop exporting Excel files for your CA every month', 'Udyog'],
-        ['You want custom invoice themes and barcode printing offline', 'Vyapar']
-      ]},
+      {
+        type: 'table', headers: ['Your Business Situation', 'Recommended Winner'], rows: [
+          ['You want to dictate bills in Hindi while running a counter', 'Udyog'],
+          ['Your accountant requires a raw Tally backup file for auditing', 'Tally Prime'],
+          ['Your internet is unreliable and you need offline capability', 'Vyapar'],
+          ['You run a rental business tracking security deposits', 'Udyog'],
+          ['You need a quick, cheap solution setup on phone in 5 minutes', 'Udyog'],
+          ['You have complex manufacturing inventory bills of materials', 'Tally Prime / Vyapar'],
+          ['You want to stop exporting Excel files for your CA every month', 'Udyog'],
+          ['You want custom invoice themes and barcode printing offline', 'Vyapar']
+        ]
+      },
       { type: 'highlight', label: 'Verdict', color: '#F97316', text: 'Tally is built for dedicated accountants, Vyapar is built for offline shop owners, and Udyog is built for modern, mobile-first business owners who want to bill quickly by voice and collaborate seamlessly with their CAs.' },
       { type: 'cta', label: 'Switch to Udyog', text: 'Switch to Udyog — 14 day free trial, no credit card.' }
     ],
@@ -3033,20 +3059,22 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Zoho Books is an established, feature-rich cloud accounting software used globally and adapted for the Indian market. On the other hand, Udyog is a modern, mobile-first GST billing platform built specifically for Indian traders and micro-businesses. While Zoho Books aims to handle full double-entry accounting, Udyog focuses on making daily billing faster and compliance simpler.' },
       { type: 'p', text: 'In this comparison, we look at pricing, usability, localized features, and which platform fits the workflow of a typical Indian trader in 2026.' },
       { type: 'h2', text: 'Quick Comparison Table' },
-      { type: 'table', headers: ['Feature', 'Zoho Books', 'Udyog'], rows: [
-        ['GST Invoicing', 'Yes', 'Yes'],
-        ['Voice Invoicing (Hindi/Hinglish)', 'No', 'Yes (Maya AI)'],
-        ['Mobile App', 'Yes', 'Yes (Web app runs on any device)'],
-        ['CA Collaboration Portal', 'Yes (Accountant invite)', 'Yes (Dedicated CA portal)'],
-        ['Pricing/Month', 'Starts ₹749/month', 'Starts ₹149/month'],
-        ['Free Plan', 'Limited free plan', '14-Day Free Trial'],
-        ['GSTR Reports', 'Yes', 'Yes'],
-        ['Inventory management', 'Yes (Advanced)', 'Yes (Simple stock tracking)'],
-        ['Rental Business Support', 'No', 'Yes (Equipment/Camera rental modules)'],
-        ['Offline Access', 'No (Cloud dependent)', 'Yes (Read-only offline)'],
-        ['Setup Time', '1-2 Hours', '5 Minutes'],
-        ['Local Language Support', 'No', 'Yes (Hindi/Hinglish Voice)']
-      ]},
+      {
+        type: 'table', headers: ['Feature', 'Zoho Books', 'Udyog'], rows: [
+          ['GST Invoicing', 'Yes', 'Yes'],
+          ['Voice Invoicing (Hindi/Hinglish)', 'No', 'Yes (Maya AI)'],
+          ['Mobile App', 'Yes', 'Yes (Web app runs on any device)'],
+          ['CA Collaboration Portal', 'Yes (Accountant invite)', 'Yes (Dedicated CA portal)'],
+          ['Pricing/Month', 'Starts ₹749/month', 'Starts ₹149/month'],
+          ['Free Plan', 'Limited free plan', '14-Day Free Trial'],
+          ['GSTR Reports', 'Yes', 'Yes'],
+          ['Inventory management', 'Yes (Advanced)', 'Yes (Simple stock tracking)'],
+          ['Rental Business Support', 'No', 'Yes (Equipment/Camera rental modules)'],
+          ['Offline Access', 'No (Cloud dependent)', 'Yes (Read-only offline)'],
+          ['Setup Time', '1-2 Hours', '5 Minutes'],
+          ['Local Language Support', 'No', 'Yes (Hindi/Hinglish Voice)']
+        ]
+      },
       { type: 'h2', text: 'Zoho Books — Global Software Adapted for India' },
       { type: 'p', text: 'Zoho Books is highly capable accounting software that offers double-entry bookkeeping, automated bank feeds, multi-currency transactions, customer portals, and deep integration with the wider Zoho SaaS ecosystem.' },
       { type: 'p', text: 'Strengths: Comprehensive accounting depth, automated expense categorization, and multi-user configurations. Weaknesses: Interface can feel overly complex for local traders, subscription tiers are expensive, and lacks support for local Indian languages or Hinglish voice assistants. Best For: Medium-sized service agencies, software startups, and exporters.' },
@@ -3058,14 +3086,16 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'GST Features Comparison' },
       { type: 'p', text: 'Both systems are fully GST-compliant, supporting automatic calculations of CGST, SGST, and IGST based on the customer\'s state, alongside GSTR-1 preparation. Zoho Books provides deep automated banking reconciliation, whereas Udyog is optimized for quick offline/online HSN database lookups and direct exports to Chartered Accountants.' },
       { type: 'h2', text: 'Who Should Choose Which' },
-      { type: 'table', headers: ['Your Business Profile', 'Recommended Choice'], rows: [
-        ['Professional service exporter billing in USD', 'Zoho Books'],
-        ['Surat textile trader dictating bills in Hindi', 'Udyog'],
-        ['Shop owner requiring simple, affordable billing under ₹150/mo', 'Udyog'],
-        ['AV rental business tracking equipment deposits', 'Udyog'],
-        ['SaaS startup requiring deep automated bank feeds', 'Zoho Books'],
-        ['Local kirana owner wanting one-tap WhatsApp billing on phone', 'Udyog']
-      ]},
+      {
+        type: 'table', headers: ['Your Business Profile', 'Recommended Choice'], rows: [
+          ['Professional service exporter billing in USD', 'Zoho Books'],
+          ['Surat textile trader dictating bills in Hindi', 'Udyog'],
+          ['Shop owner requiring simple, affordable billing under ₹150/mo', 'Udyog'],
+          ['AV rental business tracking equipment deposits', 'Udyog'],
+          ['SaaS startup requiring deep automated bank feeds', 'Zoho Books'],
+          ['Local kirana owner wanting one-tap WhatsApp billing on phone', 'Udyog']
+        ]
+      },
       { type: 'highlight', label: 'Verdict', color: '#0ea5e9', text: 'For service companies and tech startups, Zoho Books provides comprehensive enterprise tools. However, for the vast majority of local Indian merchants and traders, Udyog is 5 times cheaper and includes localized voice features that make daily operations far faster.' },
       { type: 'cta', label: 'Try Udyog Free', text: 'Try Udyog free — built for India, not adapted for India.' }
     ],
@@ -3091,18 +3121,20 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Both myBillBook and Udyog are modern, mobile-friendly invoicing apps targeting small business owners, retail merchants, and distributors in India. They aim to replace traditional desktop software with fast, cloud-connected interfaces. However, their core designs and pricing philosophies differ significantly.' },
       { type: 'p', text: 'This comparison highlights the key differences in features, costs, and daily usability to help you select the right app for your shop.' },
       { type: 'h2', text: 'Feature Comparison' },
-      { type: 'table', headers: ['Feature', 'myBillBook', 'Udyog'], rows: [
-        ['GST Invoicing', 'Yes', 'Yes'],
-        ['Voice-Command Invoicing', 'No', 'Yes (Maya AI Hinglish)'],
-        ['WhatsApp Sharing', 'Yes', 'Yes (One-tap PDF)'],
-        ['CA Portal Integration', 'No (Manual exports only)', 'Yes (Direct access portal)'],
-        ['Rental Billing Templates', 'No', 'Yes (Specialized rental cycles)'],
-        ['Barcode Scanning', 'Yes', 'Yes (Mobile camera supported)'],
-        ['Multi-User Support', 'Yes (Premium)', 'Yes (Enterprise plan)'],
-        ['Starting Price/Month', '₹125/month (billed annually)', '₹149/month (pay monthly)'],
-        ['Setup Time', '15 Minutes', '5 Minutes'],
-        ['Outstanding Reminders', 'Yes', 'Yes (WhatsApp/SMS)']
-      ]},
+      {
+        type: 'table', headers: ['Feature', 'myBillBook', 'Udyog'], rows: [
+          ['GST Invoicing', 'Yes', 'Yes'],
+          ['Voice-Command Invoicing', 'No', 'Yes (Maya AI Hinglish)'],
+          ['WhatsApp Sharing', 'Yes', 'Yes (One-tap PDF)'],
+          ['CA Portal Integration', 'No (Manual exports only)', 'Yes (Direct access portal)'],
+          ['Rental Billing Templates', 'No', 'Yes (Specialized rental cycles)'],
+          ['Barcode Scanning', 'Yes', 'Yes (Mobile camera supported)'],
+          ['Multi-User Support', 'Yes (Premium)', 'Yes (Enterprise plan)'],
+          ['Starting Price/Month', '₹125/month (billed annually)', '₹149/month (pay monthly)'],
+          ['Setup Time', '15 Minutes', '5 Minutes'],
+          ['Outstanding Reminders', 'Yes', 'Yes (WhatsApp/SMS)']
+        ]
+      },
       { type: 'h2', text: 'myBillBook — Strengths and Weaknesses' },
       { type: 'p', text: 'myBillBook provides a reliable mobile-centric interface optimized for shop counters. It supports barcode generation, basic stock alerts, thermal printing, and standard bookkeeping.' },
       { type: 'p', text: 'Strengths: Simple UI, robust Android application, and excellent support for offline printing. Weaknesses: Requires annual upfront subscriptions, locks multi-user access behind premium tiers, and lacks advanced voice billing or dedicated CA portals. Best For: Standalone FMCG retailers and mobile shop owners.' },
@@ -3112,14 +3144,16 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Pricing Comparison' },
       { type: 'p', text: 'myBillBook requires users to purchase a full annual subscription upfront, which can cost between ₹1,499 and ₹3,999 depending on the plan. Udyog offers flexible monthly billing starting at ₹149/month, allowing small businesses to test the service without a major upfront commitment.' },
       { type: 'h2', text: 'Which Should You Choose' },
-      { type: 'table', headers: ['Your Business Need', 'Winner'], rows: [
-        ['You want to speak bills rather than type them', 'Udyog'],
-        ['You prefer paying a monthly fee instead of a yearly contract', 'Udyog'],
-        ['You need to track camera or furniture rentals and deposits', 'Udyog'],
-        ['You need to print barcode stickers for your products', 'myBillBook'],
-        ['You want your CA to pull GSTR data directly', 'Udyog'],
-        ['You are running a standard standalone kirana shop counter', 'myBillBook / Udyog']
-      ]},
+      {
+        type: 'table', headers: ['Your Business Need', 'Winner'], rows: [
+          ['You want to speak bills rather than type them', 'Udyog'],
+          ['You prefer paying a monthly fee instead of a yearly contract', 'Udyog'],
+          ['You need to track camera or furniture rentals and deposits', 'Udyog'],
+          ['You need to print barcode stickers for your products', 'myBillBook'],
+          ['You want your CA to pull GSTR data directly', 'Udyog'],
+          ['You are running a standard standalone kirana shop counter', 'myBillBook / Udyog']
+        ]
+      },
       { type: 'highlight', label: 'Migration Tip', color: '#8b5cf6', text: 'If you are currently using myBillBook, you can export your product items list and customer directories to Excel and import them directly into Udyog within 5 minutes, allowing you to try voice billing with your own data.' },
       { type: 'cta', label: 'Try Udyog Free', text: 'Switch from myBillBook to Udyog — free 14 day trial.' }
     ],
@@ -3152,16 +3186,18 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'What Udyog Adds Beyond Khatabook' },
       { type: 'p', text: 'Udyog is a complete business management app. It handles everything Khatabook does (including outstanding credit ledger management and WhatsApp reminders) and adds full GST compliance, inventory management, a collaborative CA portal, and voice-command invoicing.' },
       { type: 'h2', text: 'Feature Comparison Table' },
-      { type: 'table', headers: ['Feature', 'Khatabook', 'Udyog'], rows: [
-        ['Credit (Udhar) Tracking', 'Yes', 'Yes'],
-        ['Payment Reminders', 'Yes (SMS/WhatsApp)', 'Yes (WhatsApp/SMS)'],
-        ['GST Invoicing', 'No (Basic receipt only)', 'Yes (Fully compliant)'],
-        ['Voice Billing (Hinglish)', 'No', 'Yes (Maya AI)'],
-        ['Inventory management', 'No', 'Yes'],
-        ['CA Collaboration Portal', 'No', 'Yes'],
-        ['Equipment Rental Modules', 'No', 'Yes'],
-        ['Cloud Synchronization', 'Yes', 'Yes']
-      ]},
+      {
+        type: 'table', headers: ['Feature', 'Khatabook', 'Udyog'], rows: [
+          ['Credit (Udhar) Tracking', 'Yes', 'Yes'],
+          ['Payment Reminders', 'Yes (SMS/WhatsApp)', 'Yes (WhatsApp/SMS)'],
+          ['GST Invoicing', 'No (Basic receipt only)', 'Yes (Fully compliant)'],
+          ['Voice Billing (Hinglish)', 'No', 'Yes (Maya AI)'],
+          ['Inventory management', 'No', 'Yes'],
+          ['CA Collaboration Portal', 'No', 'Yes'],
+          ['Equipment Rental Modules', 'No', 'Yes'],
+          ['Cloud Synchronization', 'Yes', 'Yes']
+        ]
+      },
       { type: 'h2', text: 'Can Udyog Replace Khatabook?' },
       { type: 'p', text: 'Yes, Udyog is a complete superset of Khatabook\'s core ledger features. You can record credit sales, monitor outstanding balances, and send professional payment reminders, while simultaneously maintaining a clean GST book and tracking inventory levels.' },
       { type: 'h2', text: 'Who Should Use Which' },
@@ -3191,32 +3227,38 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Surat is the textile capital of India, driving massive wholesale and retail trade in sarees, lehengas, dress materials, and synthetic fabrics. Operating in Surat\'s bustling markets requires speed, correct HSN tax classifications, bulk volume handling, and simple invoicing tools.' },
       { type: 'p', text: 'This guide reviews the unique billing needs of Surat textile traders and explains why a modern mobile billing setup is essential for efficiency in 2026.' },
       { type: 'h2', text: 'Unique Billing Challenges for Surat Textile Traders' },
-      { type: 'ul', items: [
-        'Multiple HSN Codes: Different fabrics attract different HSN codes and GST rates (e.g., cotton vs synthetic fabrics).',
-        'Bulk Quantity Units: Invoices must handle bulk measurements such as meters, rolls, and cuts, rather than just simple item pieces.',
-        'Intra-State vs Inter-State Sales: Surat traders sell to retailers across India, requiring automated calculations of CGST/SGST vs IGST.',
-        'Gujarati & Hindi Preference: Operators and assistants prefer billing in their regional language to prevent entry errors.',
-        'High Transaction Volumes: Busy market hours demand a billing system that generates invoices in seconds.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Multiple HSN Codes: Different fabrics attract different HSN codes and GST rates (e.g., cotton vs synthetic fabrics).',
+          'Bulk Quantity Units: Invoices must handle bulk measurements such as meters, rolls, and cuts, rather than just simple item pieces.',
+          'Intra-State vs Inter-State Sales: Surat traders sell to retailers across India, requiring automated calculations of CGST/SGST vs IGST.',
+          'Gujarati & Hindi Preference: Operators and assistants prefer billing in their regional language to prevent entry errors.',
+          'High Transaction Volumes: Busy market hours demand a billing system that generates invoices in seconds.'
+        ]
+      },
       { type: 'h2', text: 'GST HSN Codes for Textile Products' },
-      { type: 'table', headers: ['Product', 'HSN Code', 'GST Rate'], rows: [
-        ['Cotton Fabric', '5208', '5%'],
-        ['Silk Fabric', '5007', '5%'],
-        ['Synthetic Fabric', '5407', '12%'],
-        ['Readymade Garments (> ₹1000)', '6201', '12%'],
-        ['Sarees & Dress Materials', 'Various', '5%']
-      ]},
+      {
+        type: 'table', headers: ['Product', 'HSN Code', 'GST Rate'], rows: [
+          ['Cotton Fabric', '5208', '5%'],
+          ['Silk Fabric', '5007', '5%'],
+          ['Synthetic Fabric', '5407', '12%'],
+          ['Readymade Garments (> ₹1000)', '6201', '12%'],
+          ['Sarees & Dress Materials', 'Various', '5%']
+        ]
+      },
       { type: 'h2', text: 'What Surat Textile Traders Need in Billing Software' },
       { type: 'p', text: 'Surat merchants need a billing platform that runs smoothly on mobile phones, supports wireless thermal printing, and auto-detects inter-state tax codes. A built-in HSN search database prevents tax classification errors during busy trade hours.' },
       { type: 'h2', text: 'Why Udyog Works for Surat Textile Businesses' },
       { type: 'p', text: 'Udyog is highly optimized for Surat\'s textile markets. Its voice assistant, Maya, allows traders to dictate invoices in Hindi/Hinglish (e.g., "10 meter georgette 150 rupaye meter ka bill banao Ramesh ko"), auto-detecting the client and generating the GST invoice instantly.' },
       { type: 'h2', text: 'How to Set Up Textile Billing in Udyog' },
-      { type: 'ol', items: [
-        'Add fabric products along with their HSN codes and default tax rates.',
-        'Set default billing units (meters, rolls, or pieces).',
-        'Enter wholesale customer GSTINs; Udyog automatically pulls their address and state details.',
-        'Generate invoices using Hinglish voice commands or the quick-add counter screen.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Add fabric products along with their HSN codes and default tax rates.',
+          'Set default billing units (meters, rolls, or pieces).',
+          'Enter wholesale customer GSTINs; Udyog automatically pulls their address and state details.',
+          'Generate invoices using Hinglish voice commands or the quick-add counter screen.'
+        ]
+      },
       { type: 'highlight', label: 'Maya AI in Surat', color: '#f59e0b', text: 'Maya AI understands regional business language, allowing you to say "Suresh Bhai Surat ko 50 meter cotton fabric 120 per meter ka bill banao" and get a draft invoice instantly.' },
       { type: 'cta', label: 'Try Udyog Free', text: 'Try Udyog free — perfect for Surat textile and fabric traders.' }
     ],
@@ -3242,12 +3284,14 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Mumbai, the commercial capital of India, hosts a massive range of trading hubs: from Dadar\'s wholesale garment shops to Lamington Road\'s electronics distributors and Dharavi\'s manufacturing units. Operating in Mumbai\'s fast-paced markets requires a billing system that handles high transaction volumes, works seamlessly on mobile devices, and integrates with local CA networks.' },
       { type: 'p', text: 'This guide reviews the billing requirements for Mumbai traders and highlights why a mobile-first approach is ideal for local business operations.' },
       { type: 'h2', text: 'Mumbai\'s Diverse Business Landscape' },
-      { type: 'ul', items: [
-        'Dadar & Crawford Market: Fast-paced wholesale environments requiring high-speed billing.',
-        'Lamington Road: Detailed inventory tracking for electronics components and technical HSN codes.',
-        'BKC & Service Agencies: Professional client invoices with custom headers and payment links.',
-        'Dharavi Manufacturers: Tracking production costs, raw materials, and wholesale B2B invoices.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Dadar & Crawford Market: Fast-paced wholesale environments requiring high-speed billing.',
+          'Lamington Road: Detailed inventory tracking for electronics components and technical HSN codes.',
+          'BKC & Service Agencies: Professional client invoices with custom headers and payment links.',
+          'Dharavi Manufacturers: Tracking production costs, raw materials, and wholesale B2B invoices.'
+        ]
+      },
       { type: 'h2', text: 'What Mumbai Businesses Need from Billing Software' },
       { type: 'p', text: 'Mumbai business owners need billing tools that are fast, support multiple operators on the go, work without local server hardware, and allow direct WhatsApp sharing of PDF invoices. Local language support (Hindi and Marathi) is also critical for counter assistants.' },
       { type: 'h2', text: 'GST Specifics for Maharashtra Businesses' },
@@ -3255,12 +3299,14 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Why Udyog Works for Mumbai Businesses' },
       { type: 'p', text: 'Udyog is designed for mobile-first business operations. Its voice assistant, Maya, lets users dictate invoices in Hinglish, while the direct CA portal eliminates the need to compile manual spreadsheets at month-end. At ₹149/month, it is a highly cost-effective option for Mumbai SMEs.' },
       { type: 'h2', text: 'Mumbai Business Types and Best Billing Setup' },
-      { type: 'table', headers: ['Business Type', 'Key Billing Need', 'Udyog Feature'], rows: [
-        ['Retail Counter', 'Speedy Checkout', 'Maya Voice Billing'],
-        ['Wholesale Trader', 'Inter-state Taxation', 'Auto State Detection'],
-        ['Rental Agency', 'Deposit Ledger', 'Rental Invoicing'],
-        ['Service Provider', 'CA Export sheets', 'CA Portal Access']
-      ]},
+      {
+        type: 'table', headers: ['Business Type', 'Key Billing Need', 'Udyog Feature'], rows: [
+          ['Retail Counter', 'Speedy Checkout', 'Maya Voice Billing'],
+          ['Wholesale Trader', 'Inter-state Taxation', 'Auto State Detection'],
+          ['Rental Agency', 'Deposit Ledger', 'Rental Invoicing'],
+          ['Service Provider', 'CA Export sheets', 'CA Portal Access']
+        ]
+      },
       { type: 'highlight', label: 'Maharashtra GST Rule', color: '#0ea5e9', text: 'Udyog auto-detects Maharashtra intra-state sales (state code 27) and applies the correct CGST and SGST splits automatically, ensuring compliance.' },
       { type: 'cta', label: 'Try Udyog Free', text: 'Try Udyog free — trusted by Mumbai traders and business owners.' }
     ],
@@ -3286,12 +3332,14 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Delhi NCR is one of India\'s largest commercial trading hubs, hosting famous wholesale markets like Chandni Chowk, Karol Bagh, Lajpat Nagar, and Sadar Bazar. Running a business here requires a billing system that handles rapid client volumes, operates on mobile phones, and manages inter-state sales to Uttar Pradesh and Haryana automatically.' },
       { type: 'p', text: 'This guide reviews the billing requirements for Delhi traders and highlights why a mobile-first, voice-enabled system is optimal for local markets.' },
       { type: 'h2', text: 'Delhi\'s Major Trading Hubs and Their Billing Needs' },
-      { type: 'ul', items: [
-        'Chandni Chowk: High-density wholesale electronics and spice trade requiring quick invoice entries.',
-        'Karol Bagh & Lajpat Nagar: Retail and wholesale garments requiring correct HSN tax code lookups.',
-        'Nehru Place: Electronics and IT hardware distribution requiring serial tracking.',
-        'Sadar Bazar: High-volume toys, cosmetics, and stationery trade needing mobile receipts.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Chandni Chowk: High-density wholesale electronics and spice trade requiring quick invoice entries.',
+          'Karol Bagh & Lajpat Nagar: Retail and wholesale garments requiring correct HSN tax code lookups.',
+          'Nehru Place: Electronics and IT hardware distribution requiring serial tracking.',
+          'Sadar Bazar: High-volume toys, cosmetics, and stationery trade needing mobile receipts.'
+        ]
+      },
       { type: 'h2', text: 'GST for Delhi Businesses' },
       { type: 'p', text: 'Delhi\'s GST state code is 07. Local sales within Delhi attract CGST and SGST, while sales to NCR regions like Noida (UP, code 09) or Gurugram (Haryana, code 06) attract IGST. A billing app must handle these regional tax codes automatically to prevent filing errors.' },
       { type: 'h2', text: 'Special Billing Challenge for Delhi' },
@@ -3299,12 +3347,14 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Why Udyog Works for Delhi Traders' },
       { type: 'p', text: 'Udyog is designed for local business practices. Its voice assistant, Maya, supports natural Hindi voice commands, and the direct CA portal eliminates the need to manually compile spreadsheets at the end of the month.' },
       { type: 'h2', text: 'Delhi Business Setup Guide' },
-      { type: 'ol', items: [
-        'Register your business profile in Udyog with your Delhi GSTIN (07XXXXX).',
-        'Add products along with their respective HSN codes.',
-        'Enter customer details; Udyog automatically identifies inter-state NCR accounts.',
-        'Tap the microphone icon and dictate bills in Hindi using Maya.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Register your business profile in Udyog with your Delhi GSTIN (07XXXXX).',
+          'Add products along with their respective HSN codes.',
+          'Enter customer details; Udyog automatically identifies inter-state NCR accounts.',
+          'Tap the microphone icon and dictate bills in Hindi using Maya.'
+        ]
+      },
       { type: 'highlight', label: 'NCR Tax Tip', color: '#10b981', text: 'Sales from Delhi to Noida or Gurugram must use IGST. Udyog handles this automatically based on the customer\'s GSTIN state code.' },
       { type: 'cta', label: 'Try Udyog Free', text: 'Try Udyog free — built for Delhi and NCR traders.' }
     ],
@@ -3330,12 +3380,14 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'For many Indian small business owners, the end of the month brings administrative stress. Compiling sales registers, verifying HSN codes, finding purchase bills, and sending files to a Chartered Accountant can take hours of manual work. However, with the right digital workflow, this process can be streamlined significantly.' },
       { type: 'p', text: 'This guide presents 7 practical ways to reduce your monthly GST compliance time, allowing you to focus on growing your business.' },
       { type: 'h2', text: 'Why GST Filing Takes So Long' },
-      { type: 'ul', items: [
-        'Manual Data Assembly: Compiling sales logs from paper registers or disconnected spreadsheets.',
-        'HSN Classification Errors: Correcting wrong HSN codes before filing GSTR-1 returns.',
-        'Delayed Expense Records: Scrambling to match supplier invoices for Input Tax Credit (ITC) reconciliation.',
-        'File Sharing Bottlenecks: Sending Excel sheets, exports, and PDF bills back and forth with your CA via WhatsApp.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Manual Data Assembly: Compiling sales logs from paper registers or disconnected spreadsheets.',
+          'HSN Classification Errors: Correcting wrong HSN codes before filing GSTR-1 returns.',
+          'Delayed Expense Records: Scrambling to match supplier invoices for Input Tax Credit (ITC) reconciliation.',
+          'File Sharing Bottlenecks: Sending Excel sheets, exports, and PDF bills back and forth with your CA via WhatsApp.'
+        ]
+      },
       { type: 'h2', text: 'Tip 1 — Use Billing Software That Auto-Generates GSTR-1' },
       { type: 'p', text: 'Every invoice you create in Udyog is automatically formatted for your GSTR-1 return. You can download the report in one click at the end of the month, eliminating manual compilation.' },
       { type: 'h2', text: 'Tip 2 — Give Your CA Direct Portal Access' },
@@ -3351,12 +3403,14 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Tip 7 — File Before the 10th, Not the 11th' },
       { type: 'p', text: 'Filing early avoids portal slowdowns and reduces the stress of last-minute corrections.' },
       { type: 'h2', text: 'Time Saved With the Right Setup' },
-      { type: 'table', headers: ['Task', 'Manual Method Time', 'With Udyog Time'], rows: [
-        ['Compiling GSTR-1 Data', '3 Hours', '5 Minutes'],
-        ['Sharing files with CA', '1 Hour', '0 Minutes (Portal Access)'],
-        ['ITC Reconciliation', '2 Hours', '30 Minutes'],
-        ['Resolving Amendments', '1 Hour', 'Rare']
-      ]},
+      {
+        type: 'table', headers: ['Task', 'Manual Method Time', 'With Udyog Time'], rows: [
+          ['Compiling GSTR-1 Data', '3 Hours', '5 Minutes'],
+          ['Sharing files with CA', '1 Hour', '0 Minutes (Portal Access)'],
+          ['ITC Reconciliation', '2 Hours', '30 Minutes'],
+          ['Resolving Amendments', '1 Hour', 'Rare']
+        ]
+      },
       { type: 'highlight', label: 'Compliance Impact', color: '#10b981', text: 'Businesses using Udyog alongside direct CA portal access report reducing their monthly GST prep time from over 6 hours to under 30 minutes.' },
       { type: 'cta', label: 'Get Started with Udyog', text: 'Set up Udyog + CA portal today — free 14 day trial.' }
     ],
@@ -3382,44 +3436,54 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'In India, WhatsApp is the primary communication channel for business. Customers expect invoices, estimates, and payment reminders sent directly to their WhatsApp chat, rather than via email or paper prints. Providing digital invoices on WhatsApp is faster, saves printing costs, and gives you instant delivery confirmation.' },
       { type: 'p', text: 'This guide explains how to share professional GST-compliant PDF invoices on WhatsApp directly from your billing app.' },
       { type: 'h2', text: 'Why WhatsApp Invoice Sharing Matters in India' },
-      { type: 'ul', items: [
-        'High Customer Preference: Over 90% of Indian buyers prefer receiving digital invoices on WhatsApp for easy storage.',
-        'Cost Savings: Eliminates paper, ink, and printer maintenance costs.',
-        'Faster Payments: Delivery is instant, allowing you to attach payment links for quick collections.',
-        'Clean Record Keeping: Provides a digital trail of sent invoices within your chat history.'
-      ]},
+      {
+        type: 'ul', items: [
+          'High Customer Preference: Over 90% of Indian buyers prefer receiving digital invoices on WhatsApp for easy storage.',
+          'Cost Savings: Eliminates paper, ink, and printer maintenance costs.',
+          'Faster Payments: Delivery is instant, allowing you to attach payment links for quick collections.',
+          'Clean Record Keeping: Provides a digital trail of sent invoices within your chat history.'
+        ]
+      },
       { type: 'h2', text: 'Method 1 — WhatsApp Share from Udyog (One Tap)' },
-      { type: 'ol', items: [
-        'Generate an invoice inside the Udyog app.',
-        'Tap the "Share" button on the preview screen.',
-        'Select WhatsApp; Udyog automatically populates the customer\'s mobile number and attaches the PDF invoice.',
-        'Tap send to deliver it instantly.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Generate an invoice inside the Udyog app.',
+          'Tap the "Share" button on the preview screen.',
+          'Select WhatsApp; Udyog automatically populates the customer\'s mobile number and attaches the PDF invoice.',
+          'Tap send to deliver it instantly.'
+        ]
+      },
       { type: 'h2', text: 'Method 2 — Download PDF and Share Manually' },
-      { type: 'ol', items: [
-        'Generate the invoice in your billing software and download it to your device as a PDF.',
-        'Open WhatsApp and navigate to the customer\'s contact chat.',
-        'Tap the attachment icon, select the PDF file, and send.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Generate the invoice in your billing software and download it to your device as a PDF.',
+          'Open WhatsApp and navigate to the customer\'s contact chat.',
+          'Tap the attachment icon, select the PDF file, and send.'
+        ]
+      },
       { type: 'h2', text: 'Method 3 — Share Invoice Link (Not PDF)' },
       { type: 'p', text: 'Some cloud software generates a secure browser link for invoices. You can share this link on WhatsApp, allowing the customer to view and download the invoice from their browser.' },
       { type: 'h2', text: 'Is WhatsApp Invoice Legally Valid for GST?' },
       { type: 'p', text: 'Yes. Under Indian GST law, digital invoices are fully valid. The delivery method is not restricted, provided the invoice contains all mandatory fields (such as GSTIN numbers, HSN codes, and signatures).' },
       { type: 'h2', text: 'What Your WhatsApp Invoice Must Include' },
-      { type: 'ul', items: [
-        'Your business name, address, and GSTIN code.',
-        'Buyer\'s name, shipping address, and GSTIN (for B2B sales).',
-        'Unique sequential invoice number and date.',
-        'Item description, HSN codes, quantity, and unit prices.',
-        'GST rate splits (CGST/SGST or IGST) and total taxable values.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Your business name, address, and GSTIN code.',
+          'Buyer\'s name, shipping address, and GSTIN (for B2B sales).',
+          'Unique sequential invoice number and date.',
+          'Item description, HSN codes, quantity, and unit prices.',
+          'GST rate splits (CGST/SGST or IGST) and total taxable values.'
+        ]
+      },
       { type: 'h2', text: 'Tips for Professional WhatsApp Invoice Sharing' },
-      { type: 'ul', items: [
-        'Always send invoices as PDF files, not images, to ensure clarity and professional formatting.',
-        'Include your business name in the filename (e.g., Udyog_Invoice_102.pdf) so the customer can find it easily.',
-        'Send follow-up payment links directly inside the chat for outstanding invoices.',
-        'Use a WhatsApp Business account to build customer trust.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Always send invoices as PDF files, not images, to ensure clarity and professional formatting.',
+          'Include your business name in the filename (e.g., Udyog_Invoice_102.pdf) so the customer can find it easily.',
+          'Send follow-up payment links directly inside the chat for outstanding invoices.',
+          'Use a WhatsApp Business account to build customer trust.'
+        ]
+      },
       { type: 'highlight', label: 'WhatsApp Feature', color: '#10b981', text: 'Udyog generates the invoice PDF and opens WhatsApp with the customer\'s contact number pre-filled, making sharing a single-tap process.' },
       { type: 'cta', label: 'Try WhatsApp Billing', text: 'Try Udyog — WhatsApp invoice sharing built in, free 14 day trial.' }
     ],
@@ -3445,56 +3509,72 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'While Tally is a powerful tool for professional accountants, many small business owners find its desktop-centric model administrative. It requires a specific PC, manual data backups, and lacks mobile access or voice invoicing. Moving to a cloud-based system allows you to bill from anywhere, share invoices instantly on WhatsApp, and coordinate easily with your accountant.' },
       { type: 'p', text: 'This migration guide explains how to transition your customer logs and inventory records from Tally to cloud software like Udyog without data loss.' },
       { type: 'h2', text: 'Why Businesses Are Leaving Tally' },
-      { type: 'ul', items: [
-        'Lack of Mobility: Desktop-only installation restricts billing to the physical shop counter.',
-        'High Licensing Fees: Standard Tally Prime costs around ₹18,000/year per single user.',
-        'No Voice Billing: Typing multi-item invoices manually takes time during busy hours.',
-        'Complicated Interface: Requires specialized training to manage simple daily invoice records.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Lack of Mobility: Desktop-only installation restricts billing to the physical shop counter.',
+          'High Licensing Fees: Standard Tally Prime costs around ₹18,000/year per single user.',
+          'No Voice Billing: Typing multi-item invoices manually takes time during busy hours.',
+          'Complicated Interface: Requires specialized training to manage simple daily invoice records.'
+        ]
+      },
       { type: 'h2', text: 'What You Need Before Migrating' },
-      { type: 'ul', items: [
-        'Customer Master Directory: Your customer list, including names, contact numbers, and GSTINs.',
-        'Product/Item Master Directory: Your inventory list, including HSN codes, tax rates, and prices.',
-        'Choose a Migration Date: Start of a new month is ideal for keeping clean financial records.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Customer Master Directory: Your customer list, including names, contact numbers, and GSTINs.',
+          'Product/Item Master Directory: Your inventory list, including HSN codes, tax rates, and prices.',
+          'Choose a Migration Date: Start of a new month is ideal for keeping clean financial records.'
+        ]
+      },
       { type: 'h2', text: 'Step 1 — Export Your Data from Tally' },
-      { type: 'ol', items: [
-        'Open Tally and navigate to Gateway of Tally → Display More Reports → List of Accounts.',
-        'Export your customer ledger directory as an Excel spreadsheet.',
-        'Navigate to Inventory Info → Stock Items, and export your product directory as an Excel spreadsheet.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Open Tally and navigate to Gateway of Tally → Display More Reports → List of Accounts.',
+          'Export your customer ledger directory as an Excel spreadsheet.',
+          'Navigate to Inventory Info → Stock Items, and export your product directory as an Excel spreadsheet.'
+        ]
+      },
       { type: 'h2', text: 'Step 2 — Prepare Your Import File' },
-      { type: 'ol', items: [
-        'Format your customer list in Excel with columns for Name, Phone, GSTIN, Address, and State.',
-        'Format your product list with columns for Product Name, HSN, GST Rate, Unit, and Selling Price.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Format your customer list in Excel with columns for Name, Phone, GSTIN, Address, and State.',
+          'Format your product list with columns for Product Name, HSN, GST Rate, Unit, and Selling Price.'
+        ]
+      },
       { type: 'h2', text: 'Step 3 — Import into Udyog' },
-      { type: 'ol', items: [
-        'Log into your Udyog account, go to Settings → Import Data.',
-        'Upload your formatted customer and product spreadsheets.',
-        'Verify the import mappings to ensure your records are populated correctly.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Log into your Udyog account, go to Settings → Import Data.',
+          'Upload your formatted customer and product spreadsheets.',
+          'Verify the import mappings to ensure your records are populated correctly.'
+        ]
+      },
       { type: 'h2', text: 'Step 4 — Configure GST Settings' },
-      { type: 'ol', items: [
-        'Enter your business GSTIN under Settings; Udyog will configure your local state prefix automatically.',
-        'Set your starting invoice number sequence and input your bank payment details.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Enter your business GSTIN under Settings; Udyog will configure your local state prefix automatically.',
+          'Set your starting invoice number sequence and input your bank payment details.'
+        ]
+      },
       { type: 'h2', text: 'Step 5 — Go Live' },
-      { type: 'ol', items: [
-        'Create your first invoice in Udyog and share it on WhatsApp.',
-        'Invite your CA to access your portal, and archive your old Tally files for historical reference.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Create your first invoice in Udyog and share it on WhatsApp.',
+          'Invite your CA to access your portal, and archive your old Tally files for historical reference.'
+        ]
+      },
       { type: 'h2', text: 'What Happens to Your Old Tally Data' },
       { type: 'p', text: 'Keep your Tally software installed as a read-only archive for historical auditing. You do not need to import old transaction histories; start fresh with your opening balances in Udyog, using Tally for reference when filing previous years\' taxes.' },
       { type: 'h2', text: 'Time Required for Migration' },
-      { type: 'table', headers: ['Task', 'Time'], rows: [
-        ['Exporting lists from Tally', '30 Minutes'],
-        ['Formatting spreadsheet columns', '1 Hour'],
-        ['Uploading files to Udyog', '20 Minutes'],
-        ['Configuring business profile & numbers', '30 Minutes'],
-        ['Testing first invoice', '10 Minutes'],
-        ['Total Time', '2.5 Hours']
-      ]},
+      {
+        type: 'table', headers: ['Task', 'Time'], rows: [
+          ['Exporting lists from Tally', '30 Minutes'],
+          ['Formatting spreadsheet columns', '1 Hour'],
+          ['Uploading files to Udyog', '20 Minutes'],
+          ['Configuring business profile & numbers', '30 Minutes'],
+          ['Testing first invoice', '10 Minutes'],
+          ['Total Time', '2.5 Hours']
+        ]
+      },
       { type: 'highlight', label: 'Data Security', color: '#6366f1', text: 'Your customer and inventory lists are migrated securely. Cloud systems store data with end-to-end encryption and perform daily automated backups, eliminating manual backup steps.' },
       { type: 'cta', label: 'Start Cloud Migration', text: 'Start your Tally migration today — Udyog free 14 day trial, full support team available.' }
     ],
@@ -3524,30 +3604,36 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Purchase Bill Se ITC Claim Kaise Hota Hai' },
       { type: 'p', text: 'Jab aap kisi GST-registered supplier se saaman khareedte hain, to aap unhe GST tax pay karte hain. Supplier jab apna GSTR-1 file karta hai, to woh tax amount aapke GST Portal ke GSTR-2B statement mein reflect hota hai. Apni monthly GSTR-3B return file karte waqt, aap is paid tax (ITC) ko apni total sales tax liability se minus kar sakte hain, jisse aapko net tax kam pay karna padta hai.' },
       { type: 'h2', text: 'Purchase Bill Mein Kya-Kya Hona Chahiye' },
-      { type: 'ul', items: [
-        'Supplier ka legal business name, address aur GSTIN.',
-        'Aapka business name aur GSTIN (as recipient).',
-        'Supplier ka invoice number aur invoice date.',
-        'Saaman ka description, HSN codes, quantity aur price.',
-        'Taxable value aur GST tax breakdown (CGST + SGST ya IGST).',
-        'Total billing amount aur payment terms.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Supplier ka legal business name, address aur GSTIN.',
+          'Aapka business name aur GSTIN (as recipient).',
+          'Supplier ka invoice number aur invoice date.',
+          'Saaman ka description, HSN codes, quantity aur price.',
+          'Taxable value aur GST tax breakdown (CGST + SGST ya IGST).',
+          'Total billing amount aur payment terms.'
+        ]
+      },
       { type: 'h2', text: 'Udyog Mein Purchase Bill Kaise Record Karein' },
-      { type: 'ol', items: [
-        'Udyog dashboard par jaakar "Purchase Bills" section par click karein.',
-        'New Purchase Bill select karein aur supplier ka naam list se choose karein (ya naya supplier add karein).',
-        'Supplier ka bill number aur date enter karein (jo supplier ke physical bill par likha hai).',
-        'Khareede gaye items select karein, quantity aur rate enter karein.',
-        'GST rate verify karein aur bill save karein. Aapka stock automatically update ho jayega.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Udyog dashboard par jaakar "Purchase Bills" section par click karein.',
+          'New Purchase Bill select karein aur supplier ka naam list se choose karein (ya naya supplier add karein).',
+          'Supplier ka bill number aur date enter karein (jo supplier ke physical bill par likha hai).',
+          'Khareede gaye items select karein, quantity aur rate enter karein.',
+          'GST rate verify karein aur bill save karein. Aapka stock automatically update ho jayega.'
+        ]
+      },
       { type: 'h2', text: 'GSTR-2B Se Match Kaise Karein' },
       { type: 'p', text: 'Har mahine ki 12-14 tarikh ko apne GST portal se GSTR-2B download karein aur use Udyog mein record kiye gaye purchase bills se compare karein. Agar kisi supplier ka bill GSTR-2B mein nahi dikh raha hai, to unse contact karein taaki aapka ITC miss na ho.' },
       { type: 'h2', text: 'Common Purchase Bill Mistakes' },
-      { type: 'ul', items: [
-        'Supplier ka GSTIN galat record karna, jisse data portal par mismatch ho jata hai.',
-        'Invoice date aur period ko galat financial month mein record karna.',
-        'Business expenses par eligible ITC claim na karna (jaise shop repairs ya computer purchase).'
-      ]},
+      {
+        type: 'ul', items: [
+          'Supplier ka GSTIN galat record karna, jisse data portal par mismatch ho jata hai.',
+          'Invoice date aur period ko galat financial month mein record karna.',
+          'Business expenses par eligible ITC claim na karna (jaise shop repairs ya computer purchase).'
+        ]
+      },
       { type: 'highlight', label: 'CA Portal Support', color: '#F97316', text: 'Udyog app mein aapka CA directly purchase bills aur GSTR-2B reports download kar sakta hai, jisse return filing bina kisi WhatsApp chat ya manual file sharing ke aasaan ho jaati hai.' },
       { type: 'cta', label: 'Udyog Free Trial', text: 'Udyog mein purchase bills track karo — free trial shuru karo.' }
     ],
@@ -3580,28 +3666,34 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Har product ya service ka government-approved HSN (Harmonized System of Nomenclature) code hota hai. Apne stock list ko software mein enter karte waqt sahi HSN code assign karein. Galat HSN code se wrong tax calculations ho sakti hain, jo auditing ke waqt penalty ka sabab banti hain.' },
       { type: 'h2', text: 'Step 4 — GSTR-1 Filing Schedule Samjho' },
       { type: 'p', text: 'GST returns aapko regular intervals par file karni hoti hain. GSTR-1 sales returns ke liye filing schedules aapke turnover par depend karte hain:' },
-      { type: 'table', headers: ['Turnover Slab', 'Filing Frequency', 'Standard Due Date'], rows: [
-        ['Turnover below ₹5 Crore (QRMP scheme)', 'Quarterly Filing', '13th of the month following quarter'],
-        ['Turnover above ₹5 Crore', 'Monthly Mandatory', '11th of the following month'],
-        ['All categories (GSTR-3B tax payment)', 'Monthly Mandatory', '20th of the following month']
-      ]},
+      {
+        type: 'table', headers: ['Turnover Slab', 'Filing Frequency', 'Standard Due Date'], rows: [
+          ['Turnover below ₹5 Crore (QRMP scheme)', 'Quarterly Filing', '13th of the month following quarter'],
+          ['Turnover above ₹5 Crore', 'Monthly Mandatory', '11th of the following month'],
+          ['All categories (GSTR-3B tax payment)', 'Monthly Mandatory', '20th of the following month']
+        ]
+      },
       { type: 'h2', text: 'Step 5 — CA Ko Portal Access Do' },
       { type: 'p', text: 'Month-end par bills ko compile karke emails ya WhatsApp par apne accountant ya Chartered Accountant (CA) ko bhejna kafi administrative hota hai. Udyog mein built-in CA portal access hai. Aap apne CA ko portal par invite kar sakte hain, jahan se wo bina kisi manual coordination ke GSTR summary aur sales registers directly export kar sakte hain.' },
       { type: 'h2', text: 'Common Mistakes New GST Businesses Make' },
-      { type: 'ul', items: [
-        'Wrong Invoice Numbering: Invoice number range change karte rehna, jo tracking ko mushkil banata hai.',
-        'Not Collecting Buyer GSTIN: B2B customers ka GSTIN miss karna, jisse unhe Input Tax Credit (ITC) nahi mil pata.',
-        'Wrong HSN Mapping: Tax rates mismatch hona aur audit warning flags trigger karna.',
-        'Missing Place of Supply: Inter-state aur intra-state tax rates ko identify na kar pana.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Wrong Invoice Numbering: Invoice number range change karte rehna, jo tracking ko mushkil banata hai.',
+          'Not Collecting Buyer GSTIN: B2B customers ka GSTIN miss karna, jisse unhe Input Tax Credit (ITC) nahi mil pata.',
+          'Wrong HSN Mapping: Tax rates mismatch hona aur audit warning flags trigger karna.',
+          'Missing Place of Supply: Inter-state aur intra-state tax rates ko identify na kar pana.'
+        ]
+      },
       { type: 'h2', text: 'GST Registration Ke Baad First Month Checklist' },
-      { type: 'ol', items: [
-        'Udyog billing software setup karke business details enter karein.',
-        'Sequential tax invoice numbering system register karein.',
-        'Apne inventory list mein sahi GST rates aur HSN codes assign karein.',
-        'Apne CA ko Udyog CA portal ka access token generate karke invite karein.',
-        'Monthly aur quarterly GSTR filing dates calendar mein set karein.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Udyog billing software setup karke business details enter karein.',
+          'Sequential tax invoice numbering system register karein.',
+          'Apne inventory list mein sahi GST rates aur HSN codes assign karein.',
+          'Apne CA ko Udyog CA portal ka access token generate karke invite karein.',
+          'Monthly aur quarterly GSTR filing dates calendar mein set karein.'
+        ]
+      },
       { type: 'highlight', label: 'Udyog Advantage', color: '#10b981', text: 'Udyog software aapka GSTIN verify karte hi state tax code (e.g., Delhi 07 or Maharashtra 27) auto-detect kar leta hai aur sales target ke hisab se CGST/SGST vs IGST automatically apply karta hai.' },
       { type: 'cta', label: 'Verify & Start Billing', text: 'GST registration ho gayi? Udyog mein 5 minute mein setup karein aur billing shuru karein — free 14 day trial.' }
     ],
@@ -3628,47 +3720,57 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Is article mein hum service sector ke liye GST billing format, common SAC codes, aur invoicing guidelines ko aasaan Hinglish mein samjhenge.' },
       { type: 'h2', text: 'Freelancer Ko GST Registration Kab Chahiye' },
       { type: 'p', text: 'Freelancers aur consultants ke liye GST registration mandatory hone ke standard slabs niche table mein diye gaye hain:' },
-      { type: 'table', headers: ['Service Category', 'Turnover Limit', 'GST Mandate Status'], rows: [
-        ['Intra-State services (Within same state)', 'Below ₹20 Lakh/year', 'Optional / Not Mandatory'],
-        ['Intra-State services (Within same state)', 'Above ₹20 Lakh/year', 'Mandatory Registration'],
-        ['Inter-State services (Client outside state)', 'Any Amount', 'Mandatory (unless qualifying under special IGST exemptions)']
-      ]},
+      {
+        type: 'table', headers: ['Service Category', 'Turnover Limit', 'GST Mandate Status'], rows: [
+          ['Intra-State services (Within same state)', 'Below ₹20 Lakh/year', 'Optional / Not Mandatory'],
+          ['Intra-State services (Within same state)', 'Above ₹20 Lakh/year', 'Mandatory Registration'],
+          ['Inter-State services (Client outside state)', 'Any Amount', 'Mandatory (unless qualifying under special IGST exemptions)']
+        ]
+      },
       { type: 'h2', text: 'Freelancer Invoice Mein Kaunsa SAC Code Use Karein' },
       { type: 'p', text: 'Services ko identify karne ke liye SAC (Services Accounting Code) use hota hai. Service-based freelancing par mostly 18% GST lagta hai. Niche common freelance activities ke codes diye gaye hain:' },
-      { type: 'table', headers: ['Freelance Service Type', 'SAC Code', 'GST Rate Split'], rows: [
-        ['IT & Software Development Services', '998314', '18% GST'],
-        ['Business Consulting & Management', '998311', '18% GST'],
-        ['Graphic Design & UI/UX Services', '998392', '18% GST'],
-        ['Content Writing, Copywriting, Editing', '998391', '18% GST'],
-        ['Accounting & Bookkeeping Services', '998222', '18% GST'],
-        ['Professional Training & Education', '999293', '18% GST']
-      ]},
+      {
+        type: 'table', headers: ['Freelance Service Type', 'SAC Code', 'GST Rate Split'], rows: [
+          ['IT & Software Development Services', '998314', '18% GST'],
+          ['Business Consulting & Management', '998311', '18% GST'],
+          ['Graphic Design & UI/UX Services', '998392', '18% GST'],
+          ['Content Writing, Copywriting, Editing', '998391', '18% GST'],
+          ['Accounting & Bookkeeping Services', '998222', '18% GST'],
+          ['Professional Training & Education', '999293', '18% GST']
+        ]
+      },
       { type: 'h2', text: 'Service Invoice Format Freelancers Ke Liye' },
       { type: 'p', text: 'Ek valid GST service invoice mein ye components hone zaroori hain:' },
-      { type: 'ul', items: [
-        'Seller details: Aapka naam, trading name (if any), address, aur active GSTIN.',
-        'Client details: Client ka name, billing address, aur unka GSTIN (B2B projects ke liye).',
-        'Invoice Metadata: Unique serial number, invoice date, aur service delivery period.',
-        'Line Items: Detailed service description, SAC code, flat price or hours worked, and rate split.',
-        'Tax Calculations: CGST (9%) + SGST (9%) for intra-state billing, or IGST (18%) for clients in other states.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Seller details: Aapka naam, trading name (if any), address, aur active GSTIN.',
+          'Client details: Client ka name, billing address, aur unka GSTIN (B2B projects ke liye).',
+          'Invoice Metadata: Unique serial number, invoice date, aur service delivery period.',
+          'Line Items: Detailed service description, SAC code, flat price or hours worked, and rate split.',
+          'Tax Calculations: CGST (9%) + SGST (9%) for intra-state billing, or IGST (18%) for clients in other states.'
+        ]
+      },
       { type: 'h2', text: 'CGST/SGST vs IGST — Freelancer Ke Liye Kya Lagega' },
       { type: 'p', text: 'Agar aapka office/billing location Delhi mein hai aur aapka client bhi Delhi ka hi hai, to invoice par CGST + SGST apply hoga. Agar aapka client Mumbai ka hai, to inter-state supply ke rules ke mutabik IGST charge kiya jayega. Udyog app client ka GSTIN verify karke automatically correct tax engine apply kar deta hai.' },
       { type: 'h2', text: 'Client Ko Invoice Kaise Bhejein' },
       { type: 'p', text: 'Invoices download karke emails par send karne ke bajaye modern freelancers WhatsApp sharing use karte hain. Udyog se aap one-tap par payment details aur clear PDF bill client ke WhatsApp chat pe deliver kar sakte hain, jisse faster approvals aur instant clear payments milti hain.' },
       { type: 'h2', text: 'B2B vs B2C Clients' },
-      { type: 'ul', items: [
-        'B2B Corporate Clients: Unhe GSTIN detail invoice chahiye taaki wo business expense par pay kiya gaya 18% tax credit claim kar sakein.',
-        'B2C Individual Clients: Unke invoices par client GSTIN block khali rahega, lekin tax rate split as-is calculate hoga.'
-      ]},
+      {
+        type: 'ul', items: [
+          'B2B Corporate Clients: Unhe GSTIN detail invoice chahiye taaki wo business expense par pay kiya gaya 18% tax credit claim kar sakein.',
+          'B2C Individual Clients: Unke invoices par client GSTIN block khali rahega, lekin tax rate split as-is calculate hoga.'
+        ]
+      },
       { type: 'h2', text: 'Udyog Mein Service Invoice Kaise Banaye' },
-      { type: 'ol', items: [
-        'Dashboard par jaakar New Invoice tab click karein.',
-        'Service Invoicing template select karein (is format mein quantity column hidden hota hai).',
-        'Client profile choose karein (ya corporate name aur state register karein).',
-        'Service specifications aur relative SAC code enter karein.',
-        'Total project/hourly rate put karein aur PDF save karke share karein.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Dashboard par jaakar New Invoice tab click karein.',
+          'Service Invoicing template select karein (is format mein quantity column hidden hota hai).',
+          'Client profile choose karein (ya corporate name aur state register karein).',
+          'Service specifications aur relative SAC code enter karein.',
+          'Total project/hourly rate put karein aur PDF save karke share karein.'
+        ]
+      },
       { type: 'highlight', label: 'Quick tip', color: '#6366f1', text: 'Udyog software mein service billing module templates integrated hain, jo automatic SAC databases updates aur digital signatures features support karte hain.' },
       { type: 'cta', label: 'Try Service Invoicing', text: 'Freelancer ho ya consultant — Udyog se service invoice banao 8 seconds mein. Free trial shuru karein.' }
     ],
@@ -3694,40 +3796,48 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Building materials aur hardware store chalana aam retail retail shops se bohot alag hai. Ek hardware store mein hazaron items hote hain jinki tracking units alag-alag hoti hain — jaise paint litres mein, cement bags mein, sariya (iron rods) weight/kg ya pieces mein, tiles square feet mein, aur PVC pipes meter mein. Iske alawa different products par different GST tax brackets (5%, 12%, 18%, aur 28%) apply hote hain. Manual calculations se billing speed slow hoti hai aur tax filing mistakes badh jati hain.' },
       { type: 'p', text: 'Is business guide mein hum baat karenge ki hardware store owners ko billing software kaise select karna chahiye aur Udyog unke calculations ko kaise streamline karta hai.' },
       { type: 'h2', text: 'Why Hardware Store Billing is Complex' },
-      { type: 'ul', items: [
-        'Diverse GST Brackets: Cement aur iron steel rods par maximum 28% GST lagta hai, jabki pipes aur switches par 18% lagta hai.',
-        'Multiple Measurement Units: Stock management units pieces, kg, bundles, square feet, aur metric tonnes mein calculate karni hoti hain.',
-        'Contractor Dues (Udhar): Hardware stores contractors ke credit balances track karte hain aur payments periodic collect karte hain.',
-        'HSN Verification: Hardware stocks ke generic codes matching check rakhna, audit compliance alerts se bachne ke liye zaroori hai.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Diverse GST Brackets: Cement aur iron steel rods par maximum 28% GST lagta hai, jabki pipes aur switches par 18% lagta hai.',
+          'Multiple Measurement Units: Stock management units pieces, kg, bundles, square feet, aur metric tonnes mein calculate karni hoti hain.',
+          'Contractor Dues (Udhar): Hardware stores contractors ke credit balances track karte hain aur payments periodic collect karte hain.',
+          'HSN Verification: Hardware stocks ke generic codes matching check rakhna, audit compliance alerts se bachne ke liye zaroori hai.'
+        ]
+      },
       { type: 'h2', text: 'Common GST HSN Codes for Hardware Products' },
       { type: 'p', text: 'Hardware inventory setups ke basic HSN codes niche detailed table mein bataye gaye hain:' },
-      { type: 'table', headers: ['Hardware Product Group', 'HSN Code', 'GST Rate applied'], rows: [
-        ['Portland Cement & Slag', '2523', '28% GST'],
-        ['Iron Steel bars/re-bars', '7214', '28% GST'],
-        ['Paints, Enamels & Varnishes', '3208', '18% GST'],
-        ['PVC & Plastic Pipes/Fittings', '3917', '18% GST'],
-        ['Ceramic floor & wall tiles', '6907', '18% GST'],
-        ['Sanitary ware & fittings', '3922', '18% GST'],
-        ['Insulated copper wires & cables', '8544', '18% GST']
-      ]},
+      {
+        type: 'table', headers: ['Hardware Product Group', 'HSN Code', 'GST Rate applied'], rows: [
+          ['Portland Cement & Slag', '2523', '28% GST'],
+          ['Iron Steel bars/re-bars', '7214', '28% GST'],
+          ['Paints, Enamels & Varnishes', '3208', '18% GST'],
+          ['PVC & Plastic Pipes/Fittings', '3917', '18% GST'],
+          ['Ceramic floor & wall tiles', '6907', '18% GST'],
+          ['Sanitary ware & fittings', '3922', '18% GST'],
+          ['Insulated copper wires & cables', '8544', '18% GST']
+        ]
+      },
       { type: 'h2', text: 'What Hardware Store Owners Need in Billing Software' },
-      { type: 'ul', items: [
-        'Dynamic Unit Support: Unit conversion calculations, jaise brass to bags ya metres to pieces weight ratios.',
-        'Party Ledger with Credit Tracking: Contractor profiles manage rakhna, billing ledger updates ke saath.',
-        'Low Stock Alerts: Cement aur fast-moving items ke stock position automatic notify karna.',
-        'WhatsApp PDF Sharing: Bill counter par queue avoid karne ke liye instant billing confirmations direct target numbers pe.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Dynamic Unit Support: Unit conversion calculations, jaise brass to bags ya metres to pieces weight ratios.',
+          'Party Ledger with Credit Tracking: Contractor profiles manage rakhna, billing ledger updates ke saath.',
+          'Low Stock Alerts: Cement aur fast-moving items ke stock position automatic notify karna.',
+          'WhatsApp PDF Sharing: Bill counter par queue avoid karne ke liye instant billing confirmations direct target numbers pe.'
+        ]
+      },
       { type: 'h2', text: 'How Udyog Handles Hardware Store Billing' },
       { type: 'p', text: 'Udyog hardware stores ke inventory complexity ko automatic resolve karta hai. Products input ke time unki measurement units aur relative standard HSN codes save karne hote hain. Billing screen par item add karte hi correct calculation filters system fetch kar leta hai. Contractor transactions record karte hi unke overall limits adjust ho jati hain.' },
       { type: 'h2', text: 'Contractor vs Retail Customer Billing' },
       { type: 'p', text: 'Retail walk-in customers B2C transactions hote hain, jahan customers billing custom headers ke bina bills receive karte hain. Contractors unke B2B invoice demands par GSTIN credit claims ke liye details track karte hain, jise Udyog clear split templates mein structure kar deta hai.' },
       { type: 'h2', text: 'Inventory Management for Hardware Stores' },
-      { type: 'ul', items: [
-        'Distributors invoices direct purchase items record updates karti hain.',
-        'Minimum stock thresholds specify karne par low stock reminders display ho jate hain.',
-        'Damage ya construction wastage adjustment entries inventory sheet par edit ho sakti hain.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Distributors invoices direct purchase items record updates karti hain.',
+          'Minimum stock thresholds specify karne par low stock reminders display ho jate hain.',
+          'Damage ya construction wastage adjustment entries inventory sheet par edit ho sakti hain.'
+        ]
+      },
       { type: 'h2', text: 'Voice Billing for Hardware Counter' },
       { type: 'p', text: 'Busy trade seasons mein counter lines control karne ke liye voice invoicing system check save karta hai. Udyog voice inputs parse kar sakta hai (e.g., "50 bag cement, 200 kg steel rods aur 10 tin paint Ramesh builder ko bill karo") aur draft bills instant generate karta hai.' },
       { type: 'highlight', label: 'GST Tax split alert', color: '#f59e0b', text: 'Different item sets single bill mein generate karte waqt, system automatically 28% aur 18% splits generate karta hai, aur clear subtotal report updates show karta hai.' },
@@ -3755,19 +3865,23 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Wholesale distribution businesses retail counters se bohot alag tareeqe se kaam karte hain. Ek wholesale distributor ko bulk products orders dispatch karne hote hain, dozens of small retailers ke outstanding balances maintain rakhne hote hain, bulk manufacturer purchases record karne hote hain, aur real-time accurate Input Tax Credit (ITC) match rakhna padta hai. High-volume billing workflows mein standard accounting softwares processing systems ko slow kar dete hain aur administrative overhead badhate hain.' },
       { type: 'p', text: 'Is business operations analysis mein hum distributors ke must-have tracking features aur modern cloud-based automation tools ki deep details check karenge.' },
       { type: 'h2', text: 'Unique Challenges for Wholesale Distributors' },
-      { type: 'ul', items: [
-        'High Invoice Volume: Daily dozens of bulk invoice print requirements, fast loading templates support ke bina manage karna mushkil hota hai.',
-        'Receivables Tracking (Udhar): Har retail route agent ke orders outstanding details real-time coordinate rakhna.',
-        'Purchase Reconciliations: Manufacturers tax uploads verify rakhna (GSTR-2B compliance) taaki maximum ITC refund safe rahe.',
-        'GSTR-1 JSON Exports: Large invoice sets direct GST portals par upload karne ke liye structured system format zaroori hai.'
-      ]},
+      {
+        type: 'ul', items: [
+          'High Invoice Volume: Daily dozens of bulk invoice print requirements, fast loading templates support ke bina manage karna mushkil hota hai.',
+          'Receivables Tracking (Udhar): Har retail route agent ke orders outstanding details real-time coordinate rakhna.',
+          'Purchase Reconciliations: Manufacturers tax uploads verify rakhna (GSTR-2B compliance) taaki maximum ITC refund safe rahe.',
+          'GSTR-1 JSON Exports: Large invoice sets direct GST portals par upload karne ke liye structured system format zaroori hai.'
+        ]
+      },
       { type: 'h2', text: 'Must-Have Features for Distributor Billing Software' },
-      { type: 'ul', items: [
-        'Bulk Order Invoicing: Multi-line inventory invoice templates jo single screens click par generate ho sakein.',
-        'Party-wise Credit Limits: Har store owner ke max balance caps settings, safety warnings features ke sath.',
-        'CA Cloud Portal: File sharing systems bypass karke remote accountant dashboard data exports access.',
-        'Instant WhatsApp invoice sharing: PDF bills route delivery agents aur shop owners ko automatically deliver karne ke liye.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Bulk Order Invoicing: Multi-line inventory invoice templates jo single screens click par generate ho sakein.',
+          'Party-wise Credit Limits: Har store owner ke max balance caps settings, safety warnings features ke sath.',
+          'CA Cloud Portal: File sharing systems bypass karke remote accountant dashboard data exports access.',
+          'Instant WhatsApp invoice sharing: PDF bills route delivery agents aur shop owners ko automatically deliver karne ke liye.'
+        ]
+      },
       { type: 'h2', text: 'How Udyog Handles Distributor Workflows' },
       { type: 'p', text: 'Udyog cloud database architecture distributors ko robust speed performance detaa hai. Har retailer details save karte hi, unka transaction history aur cumulative credit balance single screen par show hota hai. Route delivery managers local mobile phone web logins ke through counter bills clear kar sakte hain.' },
       { type: 'h2', text: 'Managing Retailer Credit (Udhar) at Scale' },
@@ -3803,12 +3917,14 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Indian markets credit rotation (Udhar trade) par chalte hain. Lekin small business owners aur traders ke liye sabse badi problem ye hoti hai ki becha gaya saaman ka paisa time par wapas nahi milta. Unpaid invoices aur lazy receivables cash flow cycle ko blocks kar dete hain, jisse naya stock purchase karne ya business expenses pay karne mein problems aati hain. Personal relationship kharab hone ke darr se kai business owners customer ko call karke paisa mangne mein hesitate karte hain.' },
       { type: 'p', text: 'Is guide mein hum un scientific methods aur tracking tips ke baare mein baat karenge jo unpaid bills cycle ko easily control kar sakte hain.' },
       { type: 'h2', text: 'Why Indian Businesses Struggle with Outstanding Recovery' },
-      { type: 'ul', items: [
-        'Lack of Centralised Record: Paper khata diaries ya simple sheets hone ke karan exact overdue balance timeline pata nahi hoti.',
-        'Hesitation in Personal Calls: Phone call par paisa mangna polite trade relations rules mein awkward feel karata hai.',
-        'Manual Follow-up Delays: Dozens of clients ke manual trackings schedule check rakhna system errors create karta hai.',
-        'Partial Records Confusion: Customer ke direct partial cash deposit dates ledger updates matching discrepancies.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Lack of Centralised Record: Paper khata diaries ya simple sheets hone ke karan exact overdue balance timeline pata nahi hoti.',
+          'Hesitation in Personal Calls: Phone call par paisa mangna polite trade relations rules mein awkward feel karata hai.',
+          'Manual Follow-up Delays: Dozens of clients ke manual trackings schedule check rakhna system errors create karta hai.',
+          'Partial Records Confusion: Customer ke direct partial cash deposit dates ledger updates matching discrepancies.'
+        ]
+      },
       { type: 'h2', text: 'Step 1 — Know Exactly Who Owes You What' },
       { type: 'p', text: 'Recovery shuru karne ke liye aapko har customer ka exact ledger account real-time clear hona chahiye. Udyog Party Ledger dashboard par cumulative receivables position, customer-wise credit age metrics (jaise 30, 60, ya 90+ days overdue balances) clean format mein check ho jati hain.' },
       { type: 'h2', text: 'Step 2 — Send WhatsApp Payment Reminders' },
@@ -3820,17 +3936,21 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Step 5 — Stop Giving Credit to Defaulters' },
       { type: 'p', text: 'Customer-wise outstanding charts check karte hi chronic late payers status verify ho jati hai, jiske bad aap business policy modify karke strict advance payments terms configure kar sakte hain.' },
       { type: 'h2', text: 'Sample WhatsApp Reminder Messages' },
-      { type: 'ul', items: [
-        'Friendly First Notice (Due Date + 3 days): "Dear Client, invoice INV-104 is due for payment. Kindly settle at your earliest convenience. Regards, [Business Name]."',
-        'Firm Second Notice (Due Date + 10 days): "Dear Client, this is a reminder for payment on INV-104. Balance amount: ₹[Amount]. Please update payment status. Regards, [Business Name]."',
-        'Strict Final Warning (Due Date + 30 days): "Dear Client, balance on invoice INV-104 is heavily overdue. Please clear dues immediately to avoid account suspension. Regards, [Business Name]."'
-      ]},
+      {
+        type: 'ul', items: [
+          'Friendly First Notice (Due Date + 3 days): "Dear Client, invoice INV-104 is due for payment. Kindly settle at your earliest convenience. Regards, [Business Name]."',
+          'Firm Second Notice (Due Date + 10 days): "Dear Client, this is a reminder for payment on INV-104. Balance amount: ₹[Amount]. Please update payment status. Regards, [Business Name]."',
+          'Strict Final Warning (Due Date + 30 days): "Dear Client, balance on invoice INV-104 is heavily overdue. Please clear dues immediately to avoid account suspension. Regards, [Business Name]."'
+        ]
+      },
       { type: 'h2', text: 'How Much Outstanding is Normal' },
-      { type: 'table', headers: ['Receivables Credit Age Slab', 'Risk Status classification', 'Necessary Management Action'], rows: [
-        ['Outstanding under 30 days', 'Low Risk - Normal', 'Standard automatic billing reminders'],
-        ['Outstanding 30-60 days', 'Medium Risk - Watch', 'Direct phone call validation checks'],
-        ['Outstanding above 60 days', 'High Risk - Warning', 'Stop credit deliveries and send legal notices']
-      ]},
+      {
+        type: 'table', headers: ['Receivables Credit Age Slab', 'Risk Status classification', 'Necessary Management Action'], rows: [
+          ['Outstanding under 30 days', 'Low Risk - Normal', 'Standard automatic billing reminders'],
+          ['Outstanding 30-60 days', 'Medium Risk - Watch', 'Direct phone call validation checks'],
+          ['Outstanding above 60 days', 'High Risk - Warning', 'Stop credit deliveries and send legal notices']
+        ]
+      },
       { type: 'highlight', label: 'Cash flow impact statistics', color: '#ef4444', text: 'Udyog clients reports target analysis show karke prove karte hain ki system notifications use karne ke bad outstanding collections parameters timeline average 40% speed-up hoti hai.' },
       { type: 'cta', label: 'Start Recovery Tracking', text: 'Track and recover outstanding payments with Udyog — free 14 day trial' }
     ],
@@ -3856,20 +3976,22 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Busy Accounting Indian markets mein especially North India regions ke manufacturing units aur medium-scale traders ke beech kafi established accounting software hai. Wahi Udyog ek modern cloud-connected mobile-first alternative hai jo business control processes ko simplified banata hai. Agar aap daily trade manage karte hain aur complex bookkeeping operations use nahi karte, to aapko heavy desktop packages ki zaroorat nahi hai.' },
       { type: 'p', text: 'Is standard head-to-head parameter reviews mein hum compare karenge Busy ERP system aur Udyog platform features, setup complexity, and costs to make choose easy.' },
       { type: 'h2', text: 'Quick Comparison Table' },
-      { type: 'table', headers: ['Feature list comparison', 'Busy Accounting Prime', 'Udyog software app'], rows: [
-        ['GST Billing Engine', 'Yes (Complex configurations)', 'Yes (Auto configuration)'],
-        ['Hinglish Voice Invoicing', 'No', 'Yes (Maya AI Assistant)'],
-        ['Cloud Platform syncing', 'Yes (Dual server setups paid)', 'Yes (Cloud-native default)'],
-        ['Mobile App entries', 'No (Third-party view-only)', 'Yes (Any device browsers entries)'],
-        ['CA portal integration', 'No', 'Yes (Direct CA logins)'],
-        ['Offline operations', 'Yes (Local-first)', 'Yes (Read-only search offline)'],
-        ['Inventory metrics', 'Yes (Deep ERP control)', 'Yes (Simple stock track)'],
-        ['Setup timeline', 'Requires IT technician install', '5 Minutes signup'],
-        ['Standard Price/year', '₹7,200 - ₹18,000+', '₹1,788 (₹149/month)'],
-        ['Free trial settings', 'Demo limited keys', '14-Day Free Access'],
-        ['Learning curve complexity', 'Steep training required', 'Zero - speak naturally'],
-        ['WhatsApp share link', 'Manual email attachments config', 'One-tap direct PDF share']
-      ]},
+      {
+        type: 'table', headers: ['Feature list comparison', 'Busy Accounting Prime', 'Udyog software app'], rows: [
+          ['GST Billing Engine', 'Yes (Complex configurations)', 'Yes (Auto configuration)'],
+          ['Hinglish Voice Invoicing', 'No', 'Yes (Maya AI Assistant)'],
+          ['Cloud Platform syncing', 'Yes (Dual server setups paid)', 'Yes (Cloud-native default)'],
+          ['Mobile App entries', 'No (Third-party view-only)', 'Yes (Any device browsers entries)'],
+          ['CA portal integration', 'No', 'Yes (Direct CA logins)'],
+          ['Offline operations', 'Yes (Local-first)', 'Yes (Read-only search offline)'],
+          ['Inventory metrics', 'Yes (Deep ERP control)', 'Yes (Simple stock track)'],
+          ['Setup timeline', 'Requires IT technician install', '5 Minutes signup'],
+          ['Standard Price/year', '₹7,200 - ₹18,000+', '₹1,788 (₹149/month)'],
+          ['Free trial settings', 'Demo limited keys', '14-Day Free Access'],
+          ['Learning curve complexity', 'Steep training required', 'Zero - speak naturally'],
+          ['WhatsApp share link', 'Manual email attachments config', 'One-tap direct PDF share']
+        ]
+      },
       { type: 'h2', text: 'Busy Accounting — Strengths and Weaknesses' },
       { type: 'p', text: 'Busy Accounting is strong in inventory tracking, batch expiry, multi-location warehouses, and tax forms details. Strengths: Deep manufacturing accounting support, multi-branch ledger sync, and offline database control. Weaknesses: Desktop system restriction, no clean native mobile app, steep operating learning curve, and high setup/support costs.' },
       { type: 'h2', text: 'Udyog — Strengths and Weaknesses' },
@@ -3877,25 +3999,31 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Pricing Comparison' },
       { type: 'p', text: 'Busy packages start around ₹7,200/year for single-user basic licenses, reaching over ₹18,000/year for multi-firm setups. Udyog plans start at ₹149/month, offering flexible monthly billing options to optimize cash flow.' },
       { type: 'h2', text: 'Who Uses Busy in India' },
-      { type: 'ul', items: [
-        'Manufacturers who need raw materials conversion tracking.',
-        'Large warehouses distributing goods across multiple state branches.',
-        'Businesses with dedicated, trained accountants managing local accounting systems.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Manufacturers who need raw materials conversion tracking.',
+          'Large warehouses distributing goods across multiple state branches.',
+          'Businesses with dedicated, trained accountants managing local accounting systems.'
+        ]
+      },
       { type: 'h2', text: 'Who Should Switch to Udyog' },
-      { type: 'ul', items: [
-        'Business owners who manage daily billing and invoicing themselves.',
-        'Retailers, mobile traders, kirana shops, and service agencies.',
-        'Firms requiring remote access to invoicing from mobile phones.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Business owners who manage daily billing and invoicing themselves.',
+          'Retailers, mobile traders, kirana shops, and service agencies.',
+          'Firms requiring remote access to invoicing from mobile phones.'
+        ]
+      },
       { type: 'h2', text: 'Which Should You Choose' },
-      { type: 'table', headers: ['Your Business Requirement', 'Recommended Winner'], rows: [
-        ['You need voice dictation billing in local language', 'Udyog'],
-        ['You require raw materials multi-stage manufacturing track', 'Busy Accounting'],
-        ['You need mobile phone invoicing updates on the go', 'Udyog'],
-        ['You want monthly payment plan without annual upfront contracts', 'Udyog'],
-        ['You have dedicated accountant on desktop offline systems', 'Busy / Tally Prime']
-      ]},
+      {
+        type: 'table', headers: ['Your Business Requirement', 'Recommended Winner'], rows: [
+          ['You need voice dictation billing in local language', 'Udyog'],
+          ['You require raw materials multi-stage manufacturing track', 'Busy Accounting'],
+          ['You need mobile phone invoicing updates on the go', 'Udyog'],
+          ['You want monthly payment plan without annual upfront contracts', 'Udyog'],
+          ['You have dedicated accountant on desktop offline systems', 'Busy / Tally Prime']
+        ]
+      },
       { type: 'highlight', label: 'Feature overlap alert', color: '#8b5cf6', text: 'Agar aap local accounting software ke less than 20% functions use kar rahe hain, to heavy subscription costs save karke Udyog cloud application select karna smart step hai.' },
       { type: 'cta', label: 'Try Udyog Free', text: 'Switch from Busy to Udyog — free 14 day trial, 5 minute setup' }
     ],
@@ -3921,36 +4049,44 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Stock management small businesses ke liye sabse bada challenge hai. Poor inventory planning se ya to capital fast-moving stocks over-purchases mein block ho jati hai, ya phir peak customer footfall ke waqt essential stockouts ho jate hain, jisse direct sales loss hota hai. Correct stock counts track rakhna stock leakages, damage rates, aur distributor pricing sheets tracking ko simplify karta hai.' },
       { type: 'p', text: 'Is detailed guide mein hum samjhenge ki small businesses simple cloud tracking methods use karke inventory management kaise perfect kar sakte hain.' },
       { type: 'h2', text: 'Why Inventory Management is Critical for Indian Businesses' },
-      { type: 'ul', items: [
-        'Prevent Stockouts: Fast-moving items demand levels identify rakhna peak seasons sale secure karne ke liye.',
-        'Optimize Cash Flow: Slow-moving items analysis track karke unnecessary purchases avoid karna.',
-        'Detect Leakages: Stock counts regular updates through manual staff adjustments errors aur theft track karna.',
-        'Supplier reconciliation: Distributer deliveries purchase listings pricing validation checks maintain rakhna.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Prevent Stockouts: Fast-moving items demand levels identify rakhna peak seasons sale secure karne ke liye.',
+          'Optimize Cash Flow: Slow-moving items analysis track karke unnecessary purchases avoid karna.',
+          'Detect Leakages: Stock counts regular updates through manual staff adjustments errors aur theft track karna.',
+          'Supplier reconciliation: Distributer deliveries purchase listings pricing validation checks maintain rakhna.'
+        ]
+      },
       { type: 'h2', text: 'Basic Inventory Management — What You Need to Track' },
-      { type: 'ul', items: [
-        'Opening Stock: Financial month start par items values count records.',
-        'Inward Stock (Purchases): Naye stocks purchase verification list updates.',
-        'Outward Stock (Sales): Customer billing complete hotey hi inventory count reductions.',
-        'Minimum Reorder Threshold: Items count caps limits alert updates triggers.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Opening Stock: Financial month start par items values count records.',
+          'Inward Stock (Purchases): Naye stocks purchase verification list updates.',
+          'Outward Stock (Sales): Customer billing complete hotey hi inventory count reductions.',
+          'Minimum Reorder Threshold: Items count caps limits alert updates triggers.'
+        ]
+      },
       { type: 'h2', text: 'Setting Up Inventory in Udyog' },
-      { type: 'ol', items: [
-        'Product details database add karein standard names, standard HSN codes, default GST rates, aur measurement units select karke.',
-        'Opening stock count metrics aur current pricing parameters enter karein.',
-        'Product settings menu select karke relative low-stock limits levels alerts configuration select karein.',
-        'Distributor receipts details entry page through dynamic track and match karein.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Product details database add karein standard names, standard HSN codes, default GST rates, aur measurement units select karke.',
+          'Opening stock count metrics aur current pricing parameters enter karein.',
+          'Product settings menu select karke relative low-stock limits levels alerts configuration select karein.',
+          'Distributor receipts details entry page through dynamic track and match karein.'
+        ]
+      },
       { type: 'h2', text: 'Low Stock Alerts — Never Run Out Again' },
       { type: 'p', text: 'Udyog software items quantity limits real-time calculate karta hai. Jab bhi stock level set kiya gaya threshold se niche girta hai, screen par instant notification display update ho jata hai. Isse correct stock orders place karne ki deadline delay nahi hoti.' },
       { type: 'h2', text: 'Purchase Bill Entry for Inventory Accuracy' },
       { type: 'p', text: 'Stock management verification safe rakhne ke liye suppliers invoices records correct timelines par save karein. Har inward items entry quantity updates stock ledger columns automatic refresh update karegi.' },
       { type: 'h2', text: 'Reading Your Inventory Reports' },
-      { type: 'ul', items: [
-        'Stock Position report: Real-time stock counts values sheet dynamic search lists.',
-        'Fast-Moving report: Top-selling products charts optimization.',
-        'Slow-Moving analysis: Blocked money margins tables updates reports.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Stock Position report: Real-time stock counts values sheet dynamic search lists.',
+          'Fast-Moving report: Top-selling products charts optimization.',
+          'Slow-Moving analysis: Blocked money margins tables updates reports.'
+        ]
+      },
       { type: 'h2', text: 'Handling Damaged and Expired Stock' },
       { type: 'p', text: 'Stock registers clean rakhne ke liye return registers, manufacturing damage, ya item expiration counts dynamic adjust updates select karein. Isse actual tax returns and book values margins clean calculations provide karti hain.' },
       { type: 'h2', text: 'Inventory vs Billing — How They Connect' },
@@ -3980,18 +4116,22 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Indian markets mein dynamic entrepreneurs multiple business firms simultaneously operate karte hain. Jaise single business team separate trading firm, rental service operations, ya manufacturing setup distinct GST numbers ke sath run karti hai. Aise multi-company scenarios mein alag-alag billing accounts manage karna, client directory profiles handle karna, aur monthly tax audits compile karna bohot complex ho jata hai.' },
       { type: 'p', text: 'Is operational guide mein hum detailed process check karenge ki single account environment use karke multi-firm billing system setup kaise work karta hai.' },
       { type: 'h2', text: 'Who Runs Multiple Businesses in India' },
-      { type: 'ul', items: [
-        'Family setups with different firms registered in separate family members names.',
-        'Traders maintaining separate wholesale B2B business and retail B2C storefronts.',
-        'Rental business owners dividing machinery rentals service GSTIN and materials sale GSTIN.',
-        'Consulting agents running distinct advisory operations alongside standard service firms.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Family setups with different firms registered in separate family members names.',
+          'Traders maintaining separate wholesale B2B business and retail B2C storefronts.',
+          'Rental business owners dividing machinery rentals service GSTIN and materials sale GSTIN.',
+          'Consulting agents running distinct advisory operations alongside standard service firms.'
+        ]
+      },
       { type: 'h2', text: 'The Problem with Managing Multiple Businesses Separately' },
-      { type: 'ul', items: [
-        'Multiple logins and passwords: Har business ke alag-alag desktop apps licenses track rakhna cost aur complexity badhata hai.',
-        'Data mixing risk: Customer bills coordinates and accounts listings mix-ups errors audit penalty call trigger kar sakti hain.',
-        'Unnecessary costs: Multiplied subscription bills monthly payment overhead constraints increase karte hain.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Multiple logins and passwords: Har business ke alag-alag desktop apps licenses track rakhna cost aur complexity badhata hai.',
+          'Data mixing risk: Customer bills coordinates and accounts listings mix-ups errors audit penalty call trigger kar sakti hain.',
+          'Unnecessary costs: Multiplied subscription bills monthly payment overhead constraints increase karte hain.'
+        ]
+      },
       { type: 'h2', text: 'How Udyog Enterprise Handles Multiple Businesses' },
       { type: 'p', text: 'Udyog Enterprise dashboard single credentials framework through login features simplify karta hai. User control panel se switch firm select karke up to 6 different business entities (separate GSTINs registers, separate invoice series ranges) seconds mein access aur control ho sakti hain.' },
       { type: 'h2', text: 'Switching Between Businesses' },
@@ -4001,11 +4141,13 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Separate Invoice Numbering Per Business' },
       { type: 'p', text: 'Firms compliance rules enforce rakhne ke liye, Udyog system automatic distinct invoicing prefixes ranges sets manage karta hai, jisse dynamic series overlap mistakes avoid ho jati hain.' },
       { type: 'h2', text: 'Who Should Use Udyog Enterprise' },
-      { type: 'ul', items: [
-        'Traders running up to 6 active firm registrations.',
-        'Business groups requiring isolated ledger tracking for multiple locations/firms.',
-        'CA networks coordinating multiple retail client businesses summaries outputs.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Traders running up to 6 active firm registrations.',
+          'Business groups requiring isolated ledger tracking for multiple locations/firms.',
+          'CA networks coordinating multiple retail client businesses summaries outputs.'
+        ]
+      },
       { type: 'highlight', label: 'Subscription savings details', color: '#F97316', text: 'Udyog Enterprise plan cost ₹499/month up to 6 businesses details maintain allow karta hai, jo separate single accounts subscriptions costs (₹149 × 6) se 45% cheaper padta hai.' },
       { type: 'cta', label: 'Try Multi-Firm Billing', text: 'Manage all your businesses from one account — try Udyog Enterprise free for 14 days' }
     ],
@@ -4032,31 +4174,37 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Is dynamic compliance guide mein hum cover karenge service provider bills format setup requirements, target fields, aur localized configurations.' },
       { type: 'h2', text: 'Service Invoice vs Product Invoice — Key Differences' },
       { type: 'p', text: 'Service vs product invoicing differences standard parameters niche table detailed outline show karte hain:' },
-      { type: 'table', headers: ['Billing Component parameters', 'Product Trading Invoice format', 'Service Professional Invoice format'], rows: [
-        ['Code Classifications', 'HSN (Harmonized Nomenclature code)', 'SAC (Services Accounting Code)'],
-        ['Billing Units mapping', 'Kg, Pieces, Metres, Litres', 'Hours, Project Milestones, Lumpsum'],
-        ['GST Rate structure ranges', '5%, 12%, 18%, 28% dynamic split', 'Standardised 18% GST sector rate'],
-        ['Logistics & Ship details', 'E-Way bill, shipping target address', 'Service location, Place of Supply metrics']
-      ]},
+      {
+        type: 'table', headers: ['Billing Component parameters', 'Product Trading Invoice format', 'Service Professional Invoice format'], rows: [
+          ['Code Classifications', 'HSN (Harmonized Nomenclature code)', 'SAC (Services Accounting Code)'],
+          ['Billing Units mapping', 'Kg, Pieces, Metres, Litres', 'Hours, Project Milestones, Lumpsum'],
+          ['GST Rate structure ranges', '5%, 12%, 18%, 28% dynamic split', 'Standardised 18% GST sector rate'],
+          ['Logistics & Ship details', 'E-Way bill, shipping target address', 'Service location, Place of Supply metrics']
+        ]
+      },
       { type: 'h2', text: 'Mandatory Fields in GST Service Invoice' },
-      { type: 'ul', items: [
-        'Seller Details: Legal business details, registered state, and active GSTIN.',
-        'Buyer/Client details: Billing address, active GSTIN (for corporate B2B ITC claims verification).',
-        'Invoice metadata: Sequential numbers, invoicing date, and place of supply identification.',
-        'Deliverables sheet: Project specifications descriptions, SAC codes database reference.',
-        'GST split columns: Intra-state (CGST 9% + SGST 9%) or Inter-state clients (IGST 18% calculations).'
-      ]},
+      {
+        type: 'ul', items: [
+          'Seller Details: Legal business details, registered state, and active GSTIN.',
+          'Buyer/Client details: Billing address, active GSTIN (for corporate B2B ITC claims verification).',
+          'Invoice metadata: Sequential numbers, invoicing date, and place of supply identification.',
+          'Deliverables sheet: Project specifications descriptions, SAC codes database reference.',
+          'GST split columns: Intra-state (CGST 9% + SGST 9%) or Inter-state clients (IGST 18% calculations).'
+        ]
+      },
       { type: 'h2', text: 'Most Common SAC Codes for Service Businesses' },
       { type: 'p', text: 'Service sector main dynamic categories relative SAC codes detailed lists coordinates:' },
-      { type: 'table', headers: ['Service Industry Segment', 'SAC Code mapping', 'GST Rate Split'], rows: [
-        ['IT & Software Professional services', '998314', '18% GST'],
-        ['Management consulting advisory', '998311', '18% GST'],
-        ['Legal representation services', '998211', '18% GST (RCM rules check)'],
-        ['Accounting, Audit & CA services', '998222', '18% GST'],
-        ['Marketing, PR & Advertising agency', '998361', '18% GST'],
-        ['Design services (Graphic, Interior, Web)', '998392', '18% GST'],
-        ['Educational classes, Training setups', '999293', '18% GST']
-      ]},
+      {
+        type: 'table', headers: ['Service Industry Segment', 'SAC Code mapping', 'GST Rate Split'], rows: [
+          ['IT & Software Professional services', '998314', '18% GST'],
+          ['Management consulting advisory', '998311', '18% GST'],
+          ['Legal representation services', '998211', '18% GST (RCM rules check)'],
+          ['Accounting, Audit & CA services', '998222', '18% GST'],
+          ['Marketing, PR & Advertising agency', '998361', '18% GST'],
+          ['Design services (Graphic, Interior, Web)', '998392', '18% GST'],
+          ['Educational classes, Training setups', '999293', '18% GST']
+        ]
+      },
       { type: 'h2', text: 'When to Charge CGST+SGST vs IGST on Services' },
       { type: 'p', text: 'Place of Supply logic determine karti hai. Agar aap Maharashtra registered service provider hain aur client bhi Maharashtra GST number uses record hold karta hai, CGST+SGST charge hoga. Agar client Karnataka based company hai, to direct IGST calculation split application lagti hai, jo Udyog automated calculate settings dynamic verify karta hai.' },
       { type: 'h2', text: 'Service Invoice for B2C Clients' },
@@ -4064,13 +4212,15 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Time of Supply for Services' },
       { type: 'p', text: 'GST regulations specify karti hain ki services delivery date/completion verification se within 30 days tax invoice generate hona mandatory hai, timeline ignore hone par non-compliance penal warnings face ho sakti hain.' },
       { type: 'h2', text: 'How to Create Service Invoice in Udyog' },
-      { type: 'ol', items: [
-        'Udyog profile open karke default settings → Invoicing type select karein.',
-        'Service Invoicing template choose karein (system physical count columns parameters hide kar deta hai).',
-        'Client detail settings select karke invoice profile load karein.',
-        'Project description specifications and SAC code definitions enter details.',
-        'Tax calculation subtotal verify karke PDF sharing trigger settings apply karein.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Udyog profile open karke default settings → Invoicing type select karein.',
+          'Service Invoicing template choose karein (system physical count columns parameters hide kar deta hai).',
+          'Client detail settings select karke invoice profile load karein.',
+          'Project description specifications and SAC code definitions enter details.',
+          'Tax calculation subtotal verify karke PDF sharing trigger settings apply karein.'
+        ]
+      },
       { type: 'highlight', label: 'Service module details', color: '#0ea5e9', text: 'Udyog software service industry requirements ke liye standard template adjustments and customized billing layouts pre-configures hold karta hai.' },
       { type: 'cta', label: 'Create Service Invoice', text: 'Create professional service invoices in 8 seconds — try Udyog free' }
     ],
@@ -4096,19 +4246,21 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'ProfitBooks India mein growing micro enterprises ke liye cloud bookkeeping and accounting tools verify karwane wala established name hai. Jabki Udyog dynamic business speed requirements, local language Hinglish voice inputs, and active CA coordination portals ke specific features par focus karke design kiya gaya tool hai. Dono products operations and target management approaches different business requirements satisfy karti hain.' },
       { type: 'p', text: 'Is comparison and standard dashboard evaluations reviews mein hum details analyze karenge ProfitBooks systems vs Udyog capabilities parameters.' },
       { type: 'h2', text: 'Feature Comparison Table' },
-      { type: 'table', headers: ['Operating Feature comparison sets', 'ProfitBooks cloud accounting', 'Udyog smart billing platform'], rows: [
-        ['Invoicing and Billing GST', 'Yes', 'Yes'],
-        ['Hinglish Voice command (Maya AI)', 'No', 'Yes (Maya AI default)'],
-        ['CA Collaboration Portal dashboards', 'No (Manual exports list)', 'Yes (Dedicated login access)'],
-        ['Equipment/AV Rental booking tracker', 'No', 'Yes (Built-in enterprise modules)'],
-        ['Payroll and Salary tracking module', 'Yes', 'No'],
-        ['Stock Ledger and Alerts', 'Yes (Advanced warehouse specs)', 'Yes (Simple low stock alerts)'],
-        ['Client ledger and WhatsApp shares', 'Yes (Partial)', 'Yes (One-tap PDF share)'],
-        ['Price entry level options/month', '₹999/month starting tier', '₹149/month starting tier'],
-        ['Free trial durations', 'Limited features trial keys', '14-Day Free Access key'],
-        ['Setup and configuration time', '1 Hour configuration settings', '5 Minutes quick launch'],
-        ['Offline operations access', 'No (Requires continuous sync)', 'Yes (Read-only search)']
-      ]},
+      {
+        type: 'table', headers: ['Operating Feature comparison sets', 'ProfitBooks cloud accounting', 'Udyog smart billing platform'], rows: [
+          ['Invoicing and Billing GST', 'Yes', 'Yes'],
+          ['Hinglish Voice command (Maya AI)', 'No', 'Yes (Maya AI default)'],
+          ['CA Collaboration Portal dashboards', 'No (Manual exports list)', 'Yes (Dedicated login access)'],
+          ['Equipment/AV Rental booking tracker', 'No', 'Yes (Built-in enterprise modules)'],
+          ['Payroll and Salary tracking module', 'Yes', 'No'],
+          ['Stock Ledger and Alerts', 'Yes (Advanced warehouse specs)', 'Yes (Simple low stock alerts)'],
+          ['Client ledger and WhatsApp shares', 'Yes (Partial)', 'Yes (One-tap PDF share)'],
+          ['Price entry level options/month', '₹999/month starting tier', '₹149/month starting tier'],
+          ['Free trial durations', 'Limited features trial keys', '14-Day Free Access key'],
+          ['Setup and configuration time', '1 Hour configuration settings', '5 Minutes quick launch'],
+          ['Offline operations access', 'No (Requires continuous sync)', 'Yes (Read-only search)']
+        ]
+      },
       { type: 'h2', text: 'ProfitBooks — What it Does Well' },
       { type: 'p', text: 'ProfitBooks double-entry bookkeeping, trial balance sheets, profit and loss reports, and multi-user configurations systems satisfy karta hai. Strengths: Advanced payroll manager, expense categories division rules, and complete local accounting structure formats. Weaknesses: Lacks speed-billing voice engine systems, more expensive pricing formats, and setup parameters require bookkeeping training.' },
       { type: 'h2', text: 'Udyog — What it Does Well' },
@@ -4116,13 +4268,15 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Pricing Comparison' },
       { type: 'p', text: 'ProfitBooks paid plans start around ₹999/month for full features configurations, making it a higher financial cap for micro setups. Udyog offers entry-level GST compliant invoicing start parameters at only ₹149/month (flexible pay-monthly models).' },
       { type: 'h2', text: 'Which Should You Choose' },
-      { type: 'table', headers: ['Your Business Priority parameters', 'Recommended Selection'], rows: [
-        ['You require dynamic invoice generation by voice Hindi', 'Udyog'],
-        ['You need integrated staff payroll and salaries registers', 'ProfitBooks'],
-        ['You want direct CA exports portal access links setup', 'Udyog'],
-        ['You require advanced double-entry accounting balance sheets', 'ProfitBooks / Tally Prime'],
-        ['You run a rental equipment business tracking security deposit logs', 'Udyog Enterprise']
-      ]},
+      {
+        type: 'table', headers: ['Your Business Priority parameters', 'Recommended Selection'], rows: [
+          ['You require dynamic invoice generation by voice Hindi', 'Udyog'],
+          ['You need integrated staff payroll and salaries registers', 'ProfitBooks'],
+          ['You want direct CA exports portal access links setup', 'Udyog'],
+          ['You require advanced double-entry accounting balance sheets', 'ProfitBooks / Tally Prime'],
+          ['You run a rental equipment business tracking security deposit logs', 'Udyog Enterprise']
+        ]
+      },
       { type: 'highlight', label: 'Decision parameters checklist', color: '#10b981', text: 'Agar aapko staff salaries control systems and manufacturing reports advanced entries chahiye to ProfitBooks use karein. Lekin agar daily invoices speed-up and CA data updates simplify karna priority hai, to Udyog offers better ROI.' },
       { type: 'cta', label: 'Try Udyog Free', text: 'Try Udyog free — voice billing, CA portal, ₹149/month. 14 day trial.' }
     ],
@@ -4148,29 +4302,35 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'India mein CAs aur tax consultants average 20-50 active trade clients manage karte hain. Har client ke monthly sales logs, purchase invoices entries collection, HSN mismatches verification, aur final return compilation (GSTR-1, GSTR-3B filings) ke liye har month-end data exchange coordination (messy WhatsApp files, email logs, mismatched excels sheets) bohot operational delay create karta hai. Manual coordination errors filing speed ko impact karti hain aur business relations and audit metrics damage kar sakti hain.' },
       { type: 'p', text: 'Is technical analysis guide mein hum details check karenge ki dynamic CA Portal dashboard workflows data verification aur filing operations ko kaise clean banata hai.' },
       { type: 'h2', text: 'The Problem with Traditional CA-Client Workflow' },
-      { type: 'ul', items: [
-        'Last-Minute WhatsApp Files: Client data screenshots format files last day target par share karte hain.',
-        'Mismatched HSN/GST rates: Data verification steps mismatch errors files clean check delays karti hain.',
-        'Audit queries blockings: Invoice-level checks clarification call operations are time-consuming.',
-        'Manual Data re-entries: CA assistants standard excel columns duplicate manual copy configurations karte hain.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Last-Minute WhatsApp Files: Client data screenshots format files last day target par share karte hain.',
+          'Mismatched HSN/GST rates: Data verification steps mismatch errors files clean check delays karti hain.',
+          'Audit queries blockings: Invoice-level checks clarification call operations are time-consuming.',
+          'Manual Data re-entries: CA assistants standard excel columns duplicate manual copy configurations karte hain.'
+        ]
+      },
       { type: 'h2', text: 'What CAs Actually Need from Billing Software' },
-      { type: 'ul', items: [
-        'Direct login access: Client permissions through invoices real-time view access control.',
-        'Auto-Generated GSTR-1 datasets: Government portal fields aligned registers sheet dynamic downloads.',
-        'Tally XML exports support: Data verification sheets Tally XML files format direct compatibility.',
-        'Read-only safety limits: Clients books security settings safety so CA assistants cannot modify transactions logs.'
-      ]},
+      {
+        type: 'ul', items: [
+          'Direct login access: Client permissions through invoices real-time view access control.',
+          'Auto-Generated GSTR-1 datasets: Government portal fields aligned registers sheet dynamic downloads.',
+          'Tally XML exports support: Data verification sheets Tally XML files format direct compatibility.',
+          'Read-only safety limits: Clients books security settings safety so CA assistants cannot modify transactions logs.'
+        ]
+      },
       { type: 'h2', text: 'How Udyog CA Portal Works' },
       { type: 'p', text: 'Udyog system CA Portal workspace design clean collaboration allow karta hai. Business owner CA email dynamic registry access settings customize karta hai, jiske bad Chartered Accountants remote dashboard se client sales logs, purchases files, GSTR tables summaries direct export kar sakte hain.' },
       { type: 'h2', text: 'Managing Multiple Clients as a CA' },
       { type: 'p', text: 'CAs multi-client control screen parameters verify rakh sakte hain. Switch profile drop-down menu lists selection complete karte hi, individual client data tables metrics isolated states refresh ho jate hain.' },
       { type: 'h2', text: 'GSTR Reports Available to CA' },
-      { type: 'ul', items: [
-        'GSTR-1 tables formats exports (B2B, B2C, HSN codes calculations sheets).',
-        'Inward purchase registers files GSTR-2B Input tax credit match analysis.',
-        'Customer balance ledger logs and detailed aging reports columns.'
-      ]},
+      {
+        type: 'ul', items: [
+          'GSTR-1 tables formats exports (B2B, B2C, HSN codes calculations sheets).',
+          'Inward purchase registers files GSTR-2B Input tax credit match analysis.',
+          'Customer balance ledger logs and detailed aging reports columns.'
+        ]
+      },
       { type: 'h2', text: 'Recommending Udyog to Your Clients' },
       { type: 'p', text: 'CAs client accounts Udyog platform par setup recommend karte hain. Is business alignment se monthly compliance collation timelines average 70% decrease parameters control karti hain, jisse advisory operations speed improve hoti hai.' },
       { type: 'h2', text: 'Tally Export from Udyog CA Portal' },
@@ -4200,11 +4360,13 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Pune Maharashtra state ka key industrial aur trading epicenter hai. Hinjewadi IT hubs, Pimpri-Chinchwad (PCMC) automotive and engineering manufacturing clusters, aur Pune City areas core trading routes (Market Yard wholesale, Laxmi Road retail) different sector business profiles hold karte hain. Har sector requirements like dynamic service invoicing, manufacturing purchase logs, inventory check thresholds separate billing setups specifications demand karti hain.' },
       { type: 'p', text: 'Is business guide reviews sets mein hum trace karenge Pune SMEs, startup structures, and retail storefronts relative billing software selection guidelines.' },
       { type: 'h2', text: 'Pune\'s Business Landscape' },
-      { type: 'ul', items: [
-        'IT & Service agencies (Hinjewadi, Baner, Viman Nagar areas): SAC code service templates, export profiles, professional layouts formats requirements.',
-        'Manufacturing & Engineering firms (Pimpri-Chinchwad): Multi-rate HSN codes product invoices, raw material stock entries.',
-        'Wholesale & retail distribution (Market Yard, Laxmi Road): Quick counter checkout transactions, Marathi/Hindi options, credit tracking.'
-      ]},
+      {
+        type: 'ul', items: [
+          'IT & Service agencies (Hinjewadi, Baner, Viman Nagar areas): SAC code service templates, export profiles, professional layouts formats requirements.',
+          'Manufacturing & Engineering firms (Pimpri-Chinchwad): Multi-rate HSN codes product invoices, raw material stock entries.',
+          'Wholesale & retail distribution (Market Yard, Laxmi Road): Quick counter checkout transactions, Marathi/Hindi options, credit tracking.'
+        ]
+      },
       { type: 'h2', text: 'GST for Maharashtra Businesses in Pune' },
       { type: 'p', text: 'Local sales within Pune (e.g., Pune to Pimpri, or Pune to Mumbai) intra-state transactions are subject to CGST + SGST (state code 27 prefix codes). Inter-state sales (Pune to Bangalore or Hyderabad) IGST calculation Split requirements hold karti hain, jise Udyog coordinates auto-calculates.' },
       { type: 'h2', text: 'Pune IT and Service Business Billing' },
@@ -4214,12 +4376,14 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Why Udyog Works for Pune Businesses' },
       { type: 'p', text: 'Udyog Localized operations support updates standard values match karwata hai. Iska Hinglish voice billing assistant counter checkout times reduce karta hai, aur client database coordination tools local support structure provide karte hain.' },
       { type: 'h2', text: 'Pune Business Setup in Udyog' },
-      { type: 'ol', items: [
-        'Maharashtra GSTIN (27 prefix codes) enter karke business profile validation updates set karein.',
-        'Default service SAC codes or inventory product tables import config verify.',
-        'Pune city local retailers and inter-state client lists upload columns.',
-        'Maya assistant voice setup dynamic calibrations test complete.'
-      ]},
+      {
+        type: 'ol', items: [
+          'Maharashtra GSTIN (27 prefix codes) enter karke business profile validation updates set karein.',
+          'Default service SAC codes or inventory product tables import config verify.',
+          'Pune city local retailers and inter-state client lists upload columns.',
+          'Maya assistant voice setup dynamic calibrations test complete.'
+        ]
+      },
       { type: 'highlight', label: 'Maharashtra tax setup tips', color: '#8b5cf6', text: 'Udyog Pune to Mumbai transactions logs par CGST+SGST split metrics lagata hai aur Pune to other states exports parameters settings verify automatically handle karta hai.' },
       { type: 'cta', label: 'Try Pune Billing App', text: 'Try Udyog free — trusted by Pune traders, IT companies, and manufacturers' }
     ],
