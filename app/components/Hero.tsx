@@ -103,47 +103,9 @@ export default function Hero() {
         .stat-inline-lbl { font-size: 13px; color: #64748b; margin-left: 6px; }
 
 
-        /* ── RIGHT — DASHBOARD ── */
-        .hero-right { position: relative; display: flex; align-items: center; justify-content: center; padding-bottom: 40px; }
-
-        /* Floating cards */
-        .float-gst {
-          position: absolute; bottom: -10px; left: -32px;
-          background: #fff; border-radius: 14px; padding: 14px 18px;
-          box-shadow: 0 12px 40px rgba(0,0,0,0.14), 0 0 0 1px rgba(0,0,0,0.04);
-          display: flex; align-items: center; gap: 12px;
-          animation: floatA 3.2s ease-in-out infinite; z-index: 20;
-          border: 1px solid rgba(249,115,22,0.15);
-        }
-        .float-invoice {
-          position: absolute; top: 60px; right: -28px;
-          background: #fff; border-radius: 14px; padding: 12px 16px;
-          box-shadow: 0 12px 40px rgba(0,0,0,0.14), 0 0 0 1px rgba(0,0,0,0.04);
-          display: flex; align-items: center; gap: 10px;
-          animation: floatB 3.8s ease-in-out infinite; z-index: 20;
-          border: 1px solid rgba(249,115,22,0.15);
-        }
-        .float-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .float-label { font-size: 10px; color: #94a3b8; font-weight: 500; }
-        .float-value { font-size: 16px; font-weight: 800; color: #0f172a; letter-spacing: -0.02em; }
-        .float-badge { background: #F97316; color: #fff; font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 100px; }
-
-        /* Pulse dot */
-        .gst-pulse { position: relative; }
-        .gst-pulse::after {
-          content: '';
-          position: absolute;
-          top: -2px; right: -2px;
-          width: 8px; height: 8px;
-          background: #22c55e;
-          border-radius: 50%;
-          border: 2px solid #fff;
-          animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-        @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
-        @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.3);opacity:0.7} }
+        /* ── RIGHT — PRODUCT MOCKUP ── */
+        .hero-right { position: relative; display: flex; align-items: center; justify-content: center; padding-bottom: 20px; }
+        .hero-mockup-container { position: relative; width: 100%; max-width: 660px; margin: 0 auto; }
 
         /* Trust bar */
         .trust-bar { background: #F8FAFC; border-top: 1px solid #E2E8F0; padding: 20px var(--section-px); margin-top: 56px; position: relative; z-index: 1; }
@@ -156,12 +118,9 @@ export default function Hero() {
         @media (max-width: 900px) {
           .hero-grid { grid-template-columns: 1fr; }
           .hero-right { margin-top: 32px; }
-          .scene-3d { transform: none !important; }
-          .float-invoice { display: none; }
         }
         @media (max-width: 600px) {
           .hero-btns { flex-direction: column; }
-          .float-gst { left: 0; }
           .stat-inline-div { display: none; }
           .stat-inline-item { padding: 0; width: 100%; margin-bottom: 4px; }
         }
@@ -227,67 +186,36 @@ export default function Hero() {
 
           {/* RIGHT */}
           <div className="hero-right">
-            {/* Orange glow behind dashboard */}
+            {/* Orange glow behind mockup */}
             <div style={{
               position: 'absolute',
-              width: '75%',
-              height: '60%',
+              width: '85%',
+              height: '70%',
               background: 'radial-gradient(ellipse at center, rgba(249,115,22,0.18) 0%, rgba(249,115,22,0.06) 50%, transparent 70%)',
               borderRadius: '50%',
-              top: '20%',
-              left: '12%',
+              top: '15%',
+              left: '8%',
               zIndex: 0,
               filter: 'blur(40px)',
               pointerEvents: 'none' as const,
             }} />
-            <div style={{
-              position: 'relative',
-              width: '100%',
-              maxWidth: '620px',
-              margin: '0 auto',
-            }}>
-              <div style={{
-                width: '100%',
-                borderRadius: '12px',
-                overflow: 'hidden',
-                boxShadow: '0 24px 60px rgba(0,0,0,0.15)',
-              }}>
-                <Image
-                  src="/dashboard-screenshot.png"
-                  alt="Udyog Dashboard"
-                  width={1457}
-                  height={822}
-                  quality={95}
-                  priority={true}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    display: 'block',
-                  }}
-                />
-              </div>
-
-              {/* Floating cards */}
-              <div className="float-gst">
-                <div className="float-icon gst-pulse" style={{ background: '#F0FDF4' }}>
-                  <ShieldCheck size={20} color="#16a34a" />
-                </div>
-                <div>
-                  <p className="float-label">GST Auto-calc</p>
-                  <p className="float-value">₹13,125</p>
-                </div>
-              </div>
-              <div className="float-invoice">
-                <div className="float-icon" style={{ background: '#FFF5E6' }}>
-                  <Mic size={18} color="#F97316" />
-                </div>
-                <div>
-                  <p className="float-label">Voice invoice</p>
-                  <p className="float-value" style={{ fontSize: 13 }}>Created in 3s</p>
-                  <span className="float-badge">Maya AI</span>
-                </div>
-              </div>
+            <div className="hero-mockup-container">
+              <Image
+                src="/hero-mockup.png"
+                alt="Udyog GST Billing Software on Desktop and Mobile"
+                width={1536}
+                height={1024}
+                quality={95}
+                priority={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 660px"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                  position: 'relative',
+                  zIndex: 1,
+                }}
+              />
             </div>
           </div>
         </div>
