@@ -106,7 +106,8 @@ export default function Navbar() {
         }
         .mobile-signin-link:hover { color: #f97316; }
         @media (max-width: 960px) {
-          .nav-links, .nav-actions > a { display: none !important; }
+          .nav-links { display: none !important; }
+          .nav-btn-download, .nav-cta, .nav-link-signin { display: none !important; }
           .hamburger { display: flex !important; }
         }
       `}</style>

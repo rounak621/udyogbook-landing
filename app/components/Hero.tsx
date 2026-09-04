@@ -160,7 +160,7 @@ export default function Hero() {
               </div>
               <div className="stat-inline-div" />
               <div className="stat-inline-item">
-                <span className="stat-inline-num">₹149</span>
+                <span className="stat-inline-num">₹67</span>
                 <span className="stat-inline-lbl">/mo</span>
               </div>
             </div>

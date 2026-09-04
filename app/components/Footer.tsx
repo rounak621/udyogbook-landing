@@ -81,7 +81,7 @@ export default function Footer() {
         <div className="footer-divider" />
         <div className="footer-bottom">
           <p className="footer-copy">
-            © 2026 Udyog Technologies Pvt. Ltd. · Made with ♥ in India
+            © 2026 UDYOG TECHNOLOGIES · Made with ♥ in India
           </p>
           <div className="footer-badges">
             <span className="footer-badge">
