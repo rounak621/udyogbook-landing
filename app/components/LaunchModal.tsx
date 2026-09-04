@@ -30,6 +30,15 @@ export default function LaunchModal({ isOpen, onClose }: LaunchModalProps) {
       <style suppressHydrationWarning>{`
         @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
         @keyframes slideUp { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
+        .modal-contact-link {
+          color: #F97316;
+          font-weight: 600;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        .modal-contact-link:hover {
+          text-decoration: underline;
+        }
       `}</style>
       <div
         onClick={e => e.stopPropagation()}
@@ -139,11 +148,11 @@ export default function LaunchModal({ isOpen, onClose }: LaunchModalProps) {
         {/* Contact info */}
         <p style={{ fontSize: 13, color: '#64748b' }}>
           Questions? Reach us at{' '}
-          <a href="mailto:contact@udyogbook.in" style={{ color: '#F97316', fontWeight: 600, textDecoration: 'none' }}>
+          <a href="mailto:contact@udyogbook.in" className="modal-contact-link">
             contact@udyogbook.in
           </a>
           {' '}or{' '}
-          <a href="tel:+917021922933" style={{ color: '#F97316', fontWeight: 600, textDecoration: 'none' }}>
+          <a href="tel:+917021922933" className="modal-contact-link">
             +91 70219 22933
           </a>
         </p>
