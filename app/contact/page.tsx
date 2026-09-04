@@ -109,7 +109,7 @@ export default function ContactPage() {
               <div className="contact-card-icon"><Phone size={20} color="#F97316" /></div>
               <div>
                 <p className="contact-card-title">Phone / WhatsApp</p>
-                <a href="tel:+917977422531" className="contact-card-value" style={{ textDecoration: 'none', color: '#0f172a' }}>+91 79774 22531</a>
+                <a href="tel:+917021922933" className="contact-card-value" style={{ textDecoration: 'none', color: '#0f172a' }}>+91 70219 22933</a>
                 <p className="contact-card-note">Call or WhatsApp us anytime</p>
               </div>
             </div>

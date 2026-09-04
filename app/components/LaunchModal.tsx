@@ -143,8 +143,8 @@ export default function LaunchModal({ isOpen, onClose }: LaunchModalProps) {
             contact@udyogbook.in
           </a>
           {' '}or{' '}
-          <a href="tel:+917977422531" style={{ color: '#F97316', fontWeight: 600, textDecoration: 'none' }}>
-            +91 79774 22531
+          <a href="tel:+917021922933" style={{ color: '#F97316', fontWeight: 600, textDecoration: 'none' }}>
+            +91 70219 22933
           </a>
         </p>
       </div>
