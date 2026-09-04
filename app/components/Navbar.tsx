@@ -1,11 +1,9 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { Smartphone } from 'lucide-react'
 import { useLaunchModal } from './LaunchModalProvider'
 import ComingSoonModal from './ComingSoonModal'
-
-const SIGN_UP_URL = 'https://app.udyogbook.in/sign-in'
-const LOGIN_URL = 'https://app.udyogbook.in/sign-in'
 
 const NAV_LINKS = [
   { label: 'Features', href: '/#features' },
@@ -44,28 +42,38 @@ export default function Navbar() {
           height: 76px;
         }
         .nav-logo { display: flex; align-items: center; text-decoration: none; }
-        .nav-links { display: flex; align-items: center; gap: 32px; }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
         .nav-link {
           font-size: 14px; font-weight: 500; color: #444;
           text-decoration: none; transition: color 0.2s;
         }
         .nav-link:hover { color: #f97316; }
         .nav-actions { display: flex; align-items: center; gap: 12px; }
-        .nav-login {
-          font-size: 14px; font-weight: 500; color: #444;
-          background: none; border: none; cursor: pointer;
-          font-family: var(--font-body); text-decoration: none;
-          transition: color 0.2s;
+        .nav-btn-download {
+          display: inline-flex; align-items: center; gap: 6px;
+          background: transparent; color: #0f172a;
+          border: 1.5px solid #cbd5e1;
+          padding: 8px 14px; border-radius: 8px;
+          font-size: 14px; font-weight: 600; font-family: var(--font-body);
+          transition: all 0.2s; text-decoration: none; white-space: nowrap;
         }
-        .nav-login:hover { color: #111; }
+        .nav-btn-download:hover {
+          border-color: #f97316; color: #f97316; background: #fff5e6;
+        }
         .nav-cta {
           background: #F97316; color: #fff;
-          border: none; padding: 10px 20px; border-radius: 8px;
+          border: none; padding: 9px 18px; border-radius: 8px;
           font-size: 14px; font-weight: 700; font-family: var(--font-body);
           cursor: pointer; transition: background 0.2s;
-          text-decoration: none; display: inline-block;
+          text-decoration: none; display: inline-block; white-space: nowrap;
         }
         .nav-cta:hover { background: #ea580c; }
+        .nav-link-signin {
+          font-size: 14px; font-weight: 600; color: #475569;
+          text-decoration: none; transition: color 0.2s; white-space: nowrap;
+          padding: 8px 6px;
+        }
+        .nav-link-signin:hover { color: #f97316; }
         .hamburger {
           display: none; flex-direction: column; gap: 5px;
           background: none; padding: 4px; cursor: pointer; border: none;
@@ -75,13 +83,30 @@ export default function Navbar() {
           display: none; position: fixed; top: 76px; left: 0; right: 0; bottom: 0;
           background: #fff; z-index: 199; padding: 24px var(--section-px);
           flex-direction: column; gap: 4px; border-top: 1px solid #f0f0f0;
+          overflow-y: auto;
         }
         .mobile-menu.open { display: flex; }
         .mobile-nav-link { font-size: 18px; font-weight: 500; padding: 14px 0; border-bottom: 1px solid #f5f5f5; color: #111; display: block; text-decoration: none; }
         .mobile-nav-link:hover { color: #f97316; background: rgba(249,115,22,0.05); }
-        .mobile-cta { margin-top: 20px; display: block; text-align: center; background: #F97316; color: #fff; padding: 14px; border-radius: 8px; font-weight: 700; text-decoration: none; }
-        @media (max-width: 700px) {
-          .nav-links, .nav-login { display: none !important; }
+        .mobile-download-btn {
+          display: flex; align-items: center; justify-content: center; gap: 8px;
+          background: transparent; color: #0f172a; border: 1.5px solid #cbd5e1;
+          padding: 12px; border-radius: 8px; font-weight: 600; font-size: 15px;
+          text-decoration: none; width: 100%; text-align: center;
+        }
+        .mobile-download-btn:hover { border-color: #f97316; color: #f97316; background: #fff5e6; }
+        .mobile-cta {
+          display: block; text-align: center; background: #F97316; color: #fff;
+          padding: 12px; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; width: 100%;
+        }
+        .mobile-cta:hover { background: #ea580c; }
+        .mobile-signin-link {
+          display: block; text-align: center; color: #475569; font-weight: 600; font-size: 15px;
+          padding: 10px; text-decoration: none; width: 100%;
+        }
+        .mobile-signin-link:hover { color: #f97316; }
+        @media (max-width: 960px) {
+          .nav-links, .nav-actions > a { display: none !important; }
           .hamburger { display: flex !important; }
         }
       `}</style>
@@ -106,8 +131,25 @@ export default function Navbar() {
           </div>
 
           <div className="nav-actions">
-            <a href="https://app.udyogbook.in/sign-up" className="nav-cta" style={{ cursor: 'pointer', marginRight: 8, background: 'transparent', border: '2px solid currentColor' }}>Sign Up</a>
-            <a href="https://app.udyogbook.in/sign-in" className="nav-cta" style={{ cursor: 'pointer' }}>Login</a>
+            <a
+              href="https://downloads.udyogbook.in/udyog.apk"
+              className="nav-btn-download"
+            >
+              <Smartphone size={16} />
+              <span>Download App</span>
+            </a>
+            <a
+              href="https://app.udyogbook.in/sign-up"
+              className="nav-cta"
+            >
+              Sign Up
+            </a>
+            <a
+              href="https://app.udyogbook.in/sign-in"
+              className="nav-link-signin"
+            >
+              Sign In
+            </a>
             <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
               <span style={{ transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
               <span style={{ opacity: menuOpen ? 0 : 1 }} />
@@ -121,10 +163,33 @@ export default function Navbar() {
         {NAV_LINKS.map(l => (
           <a key={l.label} href={l.href} className="mobile-nav-link" onClick={() => setMenuOpen(false)}>{l.label}</a>
         ))}
-        <a href="https://app.udyogbook.in/sign-up" className="mobile-cta" style={{ border: 'none', fontFamily: 'inherit', cursor: 'pointer', width: '100%', marginBottom: 8 }} onClick={() => setMenuOpen(false)}>Sign Up</a>
-        <a href="https://app.udyogbook.in/sign-in" className="mobile-cta" style={{ border: 'none', fontFamily: 'inherit', cursor: 'pointer', width: '100%' }} onClick={() => setMenuOpen(false)}>Login</a>
+        <div style={{ marginTop: 20, display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <a
+            href="https://downloads.udyogbook.in/udyog.apk"
+            className="mobile-download-btn"
+            onClick={() => setMenuOpen(false)}
+          >
+            <Smartphone size={18} />
+            <span>Download App</span>
+          </a>
+          <a
+            href="https://app.udyogbook.in/sign-up"
+            className="mobile-cta"
+            onClick={() => setMenuOpen(false)}
+          >
+            Sign Up
+          </a>
+          <a
+            href="https://app.udyogbook.in/sign-in"
+            className="mobile-signin-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            Sign In
+          </a>
+        </div>
       </div>
       <ComingSoonModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </>
   )
 }
+

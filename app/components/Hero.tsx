@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import { Mic, ShieldCheck, Zap, Star } from 'lucide-react'
+import { Mic, ShieldCheck, Zap, Star, Calendar } from 'lucide-react'
 import { useLaunchModal } from './LaunchModalProvider'
 import { useState } from 'react'
 import ComingSoonModal from './ComingSoonModal'
@@ -74,7 +74,7 @@ export default function Hero() {
         .hero-h1 .orange { color: #F97316; font-style: italic; }
         .hero-h1 .italic-black { font-style: italic; color: #334155; }
         .hero-p { font-size: clamp(15px, 1.6vw, 17px); color: #64748b; line-height: 1.75; margin-bottom: 32px; max-width: 400px; }
-        .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+        .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; align-items: center; }
         .btn-mango {
           background: #F97316; color: #fff; border: none; padding: 15px 30px; border-radius: 10px;
           font-size: 16px; font-weight: 700; font-family: var(--font-body); cursor: pointer;
@@ -84,8 +84,9 @@ export default function Hero() {
         .btn-mango:hover { background: #ea580c; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(249,115,22,0.5); }
         .btn-demo {
           background: transparent; color: #0f172a; border: 2px solid #e2e8f0;
-          padding: 15px 30px; border-radius: 10px; font-size: 16px; font-weight: 600;
+          padding: 15px 28px; border-radius: 10px; font-size: 16px; font-weight: 600;
           font-family: var(--font-body); cursor: pointer; transition: all 0.2s; white-space: nowrap;
+          text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
         }
         .btn-demo:hover { border-color: #F97316; color: #F97316; background: #FFF5E6; }
         .hero-fine { font-size: 12px; color: #94a3b8; margin-bottom: 28px; }
@@ -206,6 +207,15 @@ export default function Hero() {
             </div>
             <div className="hero-btns">
               <a href="https://app.udyogbook.in/sign-in" className="btn-mango">Start free trial →</a>
+              <a
+                href="https://cal.com/udyog-p8kpen/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-demo"
+              >
+                <Calendar size={18} />
+                <span>Book a Demo</span>
+              </a>
             </div>
             <p className="hero-fine">No credit card · 14-day free trial · Cancel anytime</p>
             <div className="hero-badges">
