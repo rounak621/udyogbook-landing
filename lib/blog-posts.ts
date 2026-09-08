@@ -2403,6 +2403,1169 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ]
   }
+,
+
+  // ─────────────────────────────────────────────
+  // POST 20 — gst-invoice-rules-2026-changes
+  // ─────────────────────────────────────────────
+  {
+    slug: "gst-invoice-rules-2026-changes",
+    category: "GST Guide",
+    color: "#10b981",
+    title: "GST Invoice Rules 2026: What Changed and How to Stay Compliant",
+    excerpt: "Complete guide to GST invoice rules in 2026. Learn e-invoicing thresholds, mandatory B2B fields, dynamic QR mandates, and how to avoid penalties under Rule 46.",
+    date: "8 Sep 2026",
+    readTime: "11 min read",
+    metaTitle: "GST Invoice Rules 2026: What Changed & Compliance | Udyog",
+    metaDescription: "Complete guide to GST invoice rules in 2026. Learn e-invoicing thresholds, mandatory B2B fields, dynamic QR mandates, and how to avoid penalties under Rule 46.",
+    keywords: "gst invoice rules 2026, e invoicing threshold 2026, rule 46 cgst rules, b2b gst invoice format, irn qr code invoice india",
+    content: [
+      {
+            "type": "p",
+            "text": "Under the updated GST invoice rules for 2026, all registered businesses with aggregate annual turnover exceeding \u20b95 crore must generate electronic invoices (e-invoices) with mandatory Invoice Reference Numbers (IRN) and signed QR codes under Rule 48(4). Furthermore, Rule 46 now strictly requires 6-digit HSN codes for businesses with turnover above \u20b95 crore, full recipient GSTIN validation, and standardized Place of Supply declarations on all B2B tax bills."
+      },
+      {
+            "type": "p",
+            "text": "Compliance standards set by the Central Board of Indirect Taxes and Customs (CBIC) have evolved significantly into 2026. What was once treated as minor clerical oversight\u2014such as omitting the customer's state code, using truncated 2-digit HSN codes, or failing to report credit notes within the statutory timeline\u2014now triggers automatic mismatch notices under Section 73, disallows your buyer's Input Tax Credit (ITC), and attracts mandatory late fees under Section 47."
+      },
+      {
+            "type": "p",
+            "text": "For Indian small and medium business owners, retailers, wholesalers, and service providers, keeping pace with frequent GST Council notifications can feel overwhelming. In this detailed 2026 compliance breakdown, we outline the exact legal changes governing invoicing, review the mandatory 16 fields under Rule 46, explore e-invoicing exemptions, and explain how to automate compliance using [Udyog GST billing software](/pricing)."
+      },
+      {
+            "type": "h2",
+            "text": "What are the major GST invoice rule changes effective in 2026?"
+      },
+      {
+            "type": "p",
+            "text": "The GST Council and CBIC have implemented several key procedural adjustments aimed at curbing fake invoicing, enhancing digital traceability, and synchronizing real-time tax data across the GST Portal and the e-Way Bill system. The most significant changes affecting regular businesses include:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Expansion of Mandatory E-Invoicing: Phase-wise implementation under Rule 48(4) mandates that any taxpayer whose aggregate turnover exceeded \u20b95 crore in any preceding financial year from 2017-18 onwards must generate e-invoices for all B2B supplies and exports via the Invoice Registration Portal (IRP).",
+                  "Strict 6-Digit HSN Enforcement: In accordance with Notification No. 78/2020-Central Tax, businesses with turnover exceeding \u20b95 crore must declare a minimum 6-digit HSN or SAC code on all tax invoices. Businesses with turnover up to \u20b95 crore must declare at least 4 digits on B2B invoices.",
+                  "Mandatory Recipient GSTIN Verification: Automated verification algorithms on the GST portal now reject GSTR-1 filings where the buyer's GSTIN is cancelled or suspended as of the invoice date.",
+                  "Stricter Time Limits for Credit Notes: Under Section 34(2), the deadline to declare credit notes for a financial year is November 30 following the end of the fiscal year, or the date of filing the annual return, whichever is earlier.",
+                  "Enhanced Dynamic QR Code for B2C Invoices: Entities with turnover above \u20b9500 crore issuing B2C bills must include a dynamic UPI QR code allowing cross-bank instant mobile payments."
+            ]
+      },
+      {
+            "type": "table",
+            "headers": [
+                  "Compliance Dimension",
+                  "Earlier Practice (Pre-2024)",
+                  "Mandatory Rule in 2026",
+                  "Applicable Legal Section / Rule"
+            ],
+            "rows": [
+                  [
+                        "E-Invoicing Turnover Threshold",
+                        "\u20b9100 Cr \u2192 \u20b950 Cr \u2192 \u20b920 Cr \u2192 \u20b910 Cr",
+                        "\u20b95 Crore aggregate turnover in any prior FY",
+                        "Rule 48(4) of CGST Rules, 2017"
+                  ],
+                  [
+                        "HSN Code Digits (Turnover > \u20b95 Cr)",
+                        "4 digits generally accepted",
+                        "6 digits mandatory for all goods & services",
+                        "Notification No. 78/2020-Central Tax"
+                  ],
+                  [
+                        "HSN Code Digits (Turnover \u2264 \u20b95 Cr)",
+                        "2 digits or item description",
+                        "4 digits mandatory on B2B supplies",
+                        "Notification No. 78/2020-Central Tax"
+                  ],
+                  [
+                        "Credit Note Reporting Deadline",
+                        "September 30 following fiscal year",
+                        "November 30 following fiscal year",
+                        "Section 34(2) of CGST Act, 2017"
+                  ],
+                  [
+                        "GSTR-2B Input Tax Credit Lock",
+                        "Provisional ITC allowed up to 5%",
+                        "100% strict match with GSTR-2B only",
+                        "Rule 36(4) of CGST Rules, 2017"
+                  ]
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "What are the 16 mandatory fields required on every GST tax invoice?"
+      },
+      {
+            "type": "p",
+            "text": "Under Rule 46 of the CGST Rules, every tax invoice issued by a registered supplier must contain specific statutory information. Missing even one mandatory field can render the invoice invalid, leading to penalty assessments under Section 122 and blocking your customer's input tax credit."
+      },
+      {
+            "type": "ol",
+            "items": [
+                  "Supplier Legal Name, Trade Name, Registered Address, and GSTIN.",
+                  "Consecutive Serial Number (alphanumeric, max 16 characters, unique for the financial year).",
+                  "Date of Invoice Issue.",
+                  "Recipient Legal Name, Delivery Address, and GSTIN/UIN (if registered).",
+                  "Recipient Name and Address with PIN Code and State Name if unregistered and invoice value is \u20b950,000 or more.",
+                  "Harmonized System of Nomenclature (HSN) Code or Accounting Code of Services (SAC).",
+                  "Full Description of Goods or Services supplied.",
+                  "Quantity in case of goods and unit or Unique Quantity Code (UQC).",
+                  "Total Value of supply of goods or services.",
+                  "Taxable Value of supply considering discounts or abatements.",
+                  "Rate of Tax (central tax, state tax, integrated tax, or cess).",
+                  "Amount of Tax charged shown separately (CGST, SGST, IGST).",
+                  "Place of Supply along with the name of the State (for inter-state supplies).",
+                  "Address of Delivery where different from the Place of Supply.",
+                  "Whether tax is payable on Reverse Charge basis (Yes/No indicator).",
+                  "Signature or Digital Signature of the supplier or authorized representative."
+            ]
+      },
+      {
+            "type": "highlight",
+            "label": "Audit Red Flag for Small Businesses",
+            "color": "#10b981",
+            "text": "A common mistake among Indian traders is failing to mention whether tax is payable under Reverse Charge (RCM). Even on standard sales invoices where RCM does not apply, Rule 46(p) requires an explicit 'No' indicator to verify that the supplier accounted for tax under forward charge."
+      },
+      {
+            "type": "h2",
+            "text": "How do interstate and intrastate invoice rules differ in 2026?"
+      },
+      {
+            "type": "p",
+            "text": "Determining whether a supply is intrastate or interstate governs which taxes appear on your bill. For an in-depth breakdown of tax calculations, read our companion guide on [interstate vs intrastate GST invoices](/blog/interstate-vs-intrastate-gst-invoice-cgst-sgst-igst)."
+      },
+      {
+            "type": "p",
+            "text": "When your warehouse location and the customer's Place of Supply are in the same state, you must bill equal portions of CGST and SGST. If goods are transported across state boundaries, you must levy IGST at the combined rate. Billing CGST and SGST on an interstate transaction\u2014or vice versa\u2014violates Section 77 of the CGST Act and Section 19 of the IGST Act, requiring you to pay the correct tax and claim a cumbersome refund for the incorrectly deposited amount."
+      },
+      {
+            "type": "h2",
+            "text": "What penalties apply to non-compliant GST invoices?"
+      },
+      {
+            "type": "p",
+            "text": "Issuing an improper invoice carries severe administrative and financial consequences under Chapter XIX of the CGST Act. Section 122(1)(i) imposes a penalty of \u20b910,000 or an amount equivalent to the tax evaded, whichever is higher, for issuing an invoice without supplying goods/services or issuing an incorrect invoice."
+      },
+      {
+            "type": "p",
+            "text": "Furthermore, if an e-invoice is mandatory for your turnover but you issue a standard paper bill without an IRN and QR code, that bill is legally invalid under Rule 48(5). The transport of goods under an invalid invoice exposes your consignment to vehicle detention, seizure under Section 129, and a penalty of 200% of the tax payable. Read our guide on [common GST invoice mistakes](/blog/gst-invoice-mistakes-itc-claim-rejected) to audit your current billing practices."
+      },
+      {
+            "type": "h2",
+            "text": "Why Indian businesses are switching to Udyog for 100% GST compliance"
+      },
+      {
+            "type": "p",
+            "text": "Keeping up with changing e-invoicing thresholds, HSN validations, and GSTR-2B reconciliation is impossible with paper bills or static spreadsheets. Udyog was engineered to handle all 2026 statutory rules automatically."
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Automated HSN & GSTIN Validation: Enter a buyer's 15-digit GSTIN or item name; Udyog auto-fills legal trade names, verifies active status, and assigns compliant HSN codes.",
+                  "Maya AI Voice Invoicing: Dictate invoices naturally in Hindi, Hinglish, or English ('Ramesh Traders 10 bag cement 380 rate bill banao') to produce compliant tax invoices in seconds.",
+                  "Built-in Rule 46 Compliance: Every mandatory field\u2014including Place of Supply codes, RCM flags, sequential numbers, and CGST/SGST/IGST splits\u2014is verified before PDF generation.",
+                  "Dedicated CA Collaboration Portal: Give your Chartered Accountant direct access to download reconciled sales registers and GSTR-1 summaries without emailing spreadsheets back and forth."
+            ]
+      },
+      {
+            "type": "cta",
+            "text": "Stay 100% compliant with 2026 GST invoice rules effortlessly. Generate Rule 46 tax invoices, validate HSN codes, and collaborate with your CA using Udyog.",
+            "label": "Start 14-Day Free Trial",
+            "url": "https://app.udyogbook.in/sign-up"
+      },
+    ],
+    faqs: [
+      {
+            "q": "What is the mandatory e-invoicing turnover threshold in India for 2026?",
+            "a": "In 2026, e-invoicing is mandatory under Rule 48(4) for any business whose aggregate annual turnover exceeded \u20b95 crore in any financial year from 2017-18 onwards, covering all B2B supplies and export transactions."
+      },
+      {
+            "q": "How many digits of HSN code are mandatory on a GST invoice in 2026?",
+            "a": "Businesses with turnover above \u20b95 crore must declare a minimum 6-digit HSN code on all supplies. Businesses with turnover up to \u20b95 crore must declare at least 4 digits on B2B invoices under Notification 78/2020."
+      },
+      {
+            "q": "What makes a GST invoice legally invalid under Rule 48(5)?",
+            "a": "If a business is mandated to generate e-invoices but issues a conventional invoice without an Invoice Reference Number (IRN) and signed QR code, the invoice is deemed legally invalid under Rule 48(5)."
+      },
+      {
+            "q": "What is the penalty for issuing an incorrect or non-compliant GST invoice?",
+            "a": "Under Section 122 of the CGST Act, issuing an incorrect or non-compliant invoice attracts a penalty of \u20b910,000 or an amount equal to the tax involved, whichever is higher, alongside potential input tax credit denial."
+      },
+      {
+            "q": "Can Udyog generate compliant GST invoices for businesses of all sizes?",
+            "a": "Yes, Udyog automatically formats invoices according to Rule 46, validates recipient GSTINs, checks Place of Supply rules, and assigns correct HSN codes with seamless WhatsApp sharing and CA portal access."
+      },
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 21 — create-gst-invoice-voice-60-seconds
+  // ─────────────────────────────────────────────
+  {
+    slug: "create-gst-invoice-voice-60-seconds",
+    category: "AI Billing",
+    color: "#10b981",
+    title: "How to Create a GST Invoice in Under 60 Seconds Using Voice",
+    excerpt: "Learn how to create a GST invoice in under 60 seconds using voice in Hindi or Hinglish. Cut counter billing time, avoid typing errors, and send on WhatsApp.",
+    date: "8 Sep 2026",
+    readTime: "11 min read",
+    metaTitle: "Create GST Invoice in 60 Seconds Using Voice | Udyog",
+    metaDescription: "Learn how to create a GST invoice in under 60 seconds using voice in Hindi or Hinglish. Cut counter billing time, avoid typing errors, and send on WhatsApp.",
+    keywords: "create gst invoice using voice, voice billing app india, maya ai voice invoice, speech to text billing software, fast gst billing mobile",
+    content: [
+      {
+            "type": "p",
+            "text": "To create a GST invoice in under 60 seconds using voice, open the Udyog mobile app, tap the Maya AI voice microphone, and dictate your customer name, item quantities, and prices naturally in Hindi or Hinglish. Maya AI automatically parses item rates, assigns correct HSN codes, calculates CGST and SGST splits, and compiles a finalized, shareable GST PDF invoice in under 8 seconds without manual typing."
+      },
+      {
+            "type": "p",
+            "text": "For Indian retail shopkeepers, wholesale distributors, hardware merchants, and service providers, counter billing is often the most stressful part of the business day. Long customer queues form at checkout, manual typing on small mobile keyboards leads to frequent spelling and price errors, and searching for 6-digit HSN codes slows transactions to a crawl. Voice-driven AI billing transforms this bottleneck into a seamless, high-speed advantage."
+      },
+      {
+            "type": "p",
+            "text": "In this operational walkthrough, we demonstrate how voice AI billing works under the hood, compare voice invoicing against traditional desktop and mobile keyboard entry, provide real dictation prompt examples, and show how to get started on [Udyog pricing plans](/pricing)."
+      },
+      {
+            "type": "h2",
+            "text": "How does voice AI billing work for Indian business owners?"
+      },
+      {
+            "type": "p",
+            "text": "Voice billing utilizes advanced natural language processing (NLP) specifically trained on Indian commercial vocabulary, mixed-language phrasing (Hinglish), regional accents, and localized trade terms. Unlike generic voice transcription tools like Google Speech or Siri, Udyog's Maya AI is built specifically for Indian business accounting."
+      },
+      {
+            "type": "ol",
+            "items": [
+                  "Voice Capture & Acoustic Parsing: You tap the microphone and speak naturally in conversational Hindi, English, or Hinglish without speaking like a robot.",
+                  "Entity Recognition (NER): The AI engine parses party names ('Sharmaji Hardware'), item descriptions ('Finolex 2.5 wire red'), quantities ('5 coil'), and rates ('1450 rupaye').",
+                  "Tax Master Matching: The system automatically matches items against your inventory catalog, pulls the pre-configured HSN code and GST tax slab (e.g., 18%), and verifies the customer's state code.",
+                  "Invoice Compilation: A complete Rule 46 compliant PDF bill is rendered with sub-totals, CGST/SGST breakdown, and payment QR codes in under 8 seconds."
+            ]
+      },
+      {
+            "type": "table",
+            "headers": [
+                  "Billing Step",
+                  "Traditional Desktop Software (Tally/Excel)",
+                  "Mobile Keyboard App (Vyapar/myBillBook)",
+                  "Maya AI Voice Billing (Udyog)"
+            ],
+            "rows": [
+                  [
+                        "Selecting Customer",
+                        "Type name, search drop-down (20-30s)",
+                        "Search contact list, select (15-25s)",
+                        "Speak customer name naturally (2s)"
+                  ],
+                  [
+                        "Adding 3 Inventory Items",
+                        "Search SKU, enter qty, rate (60-90s)",
+                        "Browse items, tap, type qty (45-60s)",
+                        "Dictate all items in one sentence (6s)"
+                  ],
+                  [
+                        "Tax & Discount Calculation",
+                        "Select tax ledger, apply (15-20s)",
+                        "Auto-calculated (5s)",
+                        "Auto-calculated instantly (0s)"
+                  ],
+                  [
+                        "Printing / WhatsApp Delivery",
+                        "Print paper or manual export (30s)",
+                        "Tap share button, choose app (15s)",
+                        "One-tap direct WhatsApp dispatch (3s)"
+                  ],
+                  [
+                        "Total Transaction Time",
+                        "2 to 3.5 Minutes per customer",
+                        "75 to 110 Seconds per customer",
+                        "Under 15 Seconds total"
+                  ]
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "What can you say to create a voice invoice in Udyog?"
+      },
+      {
+            "type": "p",
+            "text": "Maya AI understands natural Indian commercial speech. You do not need to memorize strict code words or syntax. Here are real-world dictation examples across different retail and wholesale trades:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Kirana & General Store: 'Ramesh bhai ko 5 packet Fortune tel 180 rupaye aur 10 kilo basmati chawal 95 rupaye bill banao.'",
+                  "Electrical & Hardware: 'Gupta Electricals ko 3 ceiling fan Orient 1650 rate aur 2 box modular switch 850 GST bill bana ke WhatsApp karo.'",
+                  "Textile & Garment Trader: 'Surat Fashion ko 20 piece cotton kurti 450 rate 5 percent GST par bill generate karo.'",
+                  "Service Consultant: 'Acme Technologies ko website maintenance charges 15000 rupaye SAC 998314 18 percent GST invoice banao.'"
+            ]
+      },
+      {
+            "type": "highlight",
+            "label": "Counter Speed Optimization",
+            "color": "#10b981",
+            "text": "Businesses using Maya AI voice billing report reducing customer checkout wait times by up to 75%, allowing a single cashier to process up to 180 invoices per hour during festive rush periods without keyboard fatigue."
+      },
+      {
+            "type": "h2",
+            "text": "How does Maya AI handle noisy shop environments and regional accents?"
+      },
+      {
+            "type": "p",
+            "text": "Retail shops in bustling Indian bazaars are rarely quiet. Background noise from street traffic, ceiling fans, customer chatter, and billing printers can disrupt generic speech recognition engines. Maya AI incorporates advanced directional acoustic filtering and commercial phoneme modeling."
+      },
+      {
+            "type": "p",
+            "text": "Even when spoken with localized Hindi, Gujarati, Marathi, Punjabi, or South Indian English accents, Maya evaluates the commercial context of your inventory. If you dictate 'dal chinni', the engine understands you mean cinnamon rather than confusion with pulse varieties, matching it to your grocery catalog instantly."
+      },
+      {
+            "type": "h2",
+            "text": "Case Study: How a Pune electrical distributor cut billing time by 80%"
+      },
+      {
+            "type": "p",
+            "text": "Mahalaxmi Electricals, an electrical hardware wholesaler in Pune managing over 1,200 active SKUs, previously operated two desktop computers with dedicated data entry operators. During peak morning contractor collection hours (8:30 AM to 11:30 AM), contractors experienced wait times exceeding 15 minutes while bills were manually typed."
+      },
+      {
+            "type": "p",
+            "text": "After deploying Udyog with Maya voice billing on three counter Android tablets, counter clerks began speaking item names as they pulled stock from shelves. Invoices were compiled, tax-verified, and dispatched to contractors' WhatsApp accounts before boxes were even loaded onto delivery three-wheelers. Checkout time plunged from 3.5 minutes to 22 seconds per bill, customer satisfaction soared, and billing operator overtime costs were eliminated completely."
+      },
+      {
+            "type": "h2",
+            "text": "How does voice billing ensure 100% GST accuracy?"
+      },
+      {
+            "type": "p",
+            "text": "A frequent concern among business owners is whether speaking quickly could introduce tax errors. In Udyog, voice AI handles data entry, but deterministic accounting rules govern mathematical computation."
+      },
+      {
+            "type": "p",
+            "text": "Maya matches spoken items against your pre-verified product master. If you dictate '10 packet surf excel', the software retrieves the exact HSN code (3402), unit price, and 18% GST slab previously validated in your account. The user reviews a visual preview card on screen before tapping 'Confirm & Share', ensuring zero risk of incorrect billing. Learn more about statutory mandates in our guide on [GST invoice rules in 2026](/blog/gst-invoice-rules-2026-changes)."
+      },
+      {
+            "type": "h2",
+            "text": "Why Indian retail shopkeepers are switching from typing to Maya voice billing"
+      },
+      {
+            "type": "p",
+            "text": "Traditional billing setups require a dedicated computer desk, uninterrupted power backup, and trained computer operators who demand higher monthly salaries. Small business owners cannot afford to sit glued to a keyboard while managing shop inventory."
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Bill on the Move: Walk around your store or warehouse and create bills from any budget Android smartphone while talking to your customer.",
+                  "Instant WhatsApp PDF Delivery: Customers receive a professional branded PDF with your business logo and embedded UPI QR code directly on WhatsApp.",
+                  "Multi-Language Audio Recognition: Maya understands Hindi, Hinglish, Marathi, Gujarati, Tamil, and English accents with 98.4% commercial accuracy.",
+                  "Zero Hardware Investment: No expensive POS terminals or thermal printers required\u2014though Udyog supports wireless Bluetooth thermal printers if paper receipts are needed."
+            ]
+      },
+      {
+            "type": "cta",
+            "text": "Cut your billing time from minutes to seconds. Experience India's first Hinglish voice billing assistant with Maya AI on Udyog.",
+            "label": "Start 14-Day Free Trial",
+            "url": "https://app.udyogbook.in/sign-up"
+      },
+    ],
+    faqs: [
+      {
+            "q": "How does voice billing work on the Udyog app?",
+            "a": "Voice billing on Udyog uses Maya AI to convert spoken natural Hindi or Hinglish dictation into complete GST invoices by auto-detecting items, customer names, quantities, HSN codes, and tax rates in under 8 seconds."
+      },
+      {
+            "q": "Does voice billing work accurately with mixed languages like Hinglish?",
+            "a": "Yes, Maya AI is trained specifically on Indian commercial trade terms and mixed Hinglish phrasing, allowing shopkeepers to speak naturally without needing formal English grammar or technical syntax."
+      },
+      {
+            "q": "Can I review and edit the invoice before sending it to the customer?",
+            "a": "Yes, after voice dictation, Udyog immediately displays a visual preview screen showing itemized quantities, rates, and tax calculations, allowing you to edit or confirm with a single tap before sharing."
+      },
+      {
+            "q": "Can voice-generated GST invoices be sent directly on WhatsApp?",
+            "a": "Yes, once confirmed, Udyog instantly generates a professional PDF tax invoice and sends it directly to the customer's WhatsApp number complete with an integrated UPI QR payment link."
+      },
+      {
+            "q": "Is voice billing available on all Udyog subscription plans?",
+            "a": "Yes, Maya AI voice billing is fully supported across mobile devices on all standard Udyog plans, backed by our 14-day free trial with no credit card required."
+      },
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 22 — interstate-vs-intrastate-gst-invoice-cgst-sgst-igst
+  // ─────────────────────────────────────────────
+  {
+    slug: "interstate-vs-intrastate-gst-invoice-cgst-sgst-igst",
+    category: "GST Guide",
+    color: "#10b981",
+    title: "Interstate vs Intrastate GST Invoice: CGST, SGST, IGST Explained Simply",
+    excerpt: "Interstate vs intrastate GST invoice explained simply: understand when to charge CGST+SGST versus IGST, place of supply rules, and how to prevent tax errors.",
+    date: "8 Sep 2026",
+    readTime: "11 min read",
+    metaTitle: "Interstate vs Intrastate GST Invoice: CGST SGST IGST | Udyog",
+    metaDescription: "Interstate vs intrastate GST invoice explained simply: understand when to charge CGST+SGST versus IGST, place of supply rules, and how to prevent tax errors.",
+    keywords: "interstate vs intrastate gst invoice, cgst sgst vs igst, place of supply rules gst, interstate billing rules india, section 7 8 igst act",
+    content: [
+      {
+            "type": "p",
+            "text": "The difference between an interstate and an intrastate GST invoice depends strictly on the supplier's location and the official Place of Supply defined under the IGST Act. When the supplier and the customer's place of supply are in the same state, the transaction is intrastate and attracts equal splits of CGST and SGST; when they are in different states, the supply is interstate and attracts Integrated GST (IGST) at the full combined tax rate."
+      },
+      {
+            "type": "p",
+            "text": "For Indian business owners, selecting the wrong tax structure on an invoice is among the most common and costly indirect tax errors. Charging CGST and SGST when shipping goods across state lines\u2014or billing IGST for a local customer\u2014violates statutory tax rules, complicates GSTR-1 filings, and prevents corporate buyers from claiming Input Tax Credit (ITC). To streamline your tax invoicing, review [Udyog pricing plans](/pricing)."
+      },
+      {
+            "type": "p",
+            "text": "In this guide, we demystify the legal definitions under Section 7 and Section 8 of the IGST Act, break down Place of Supply determination for goods and services, explain how to rectify incorrect tax payments under Section 77, and show how automated billing tools eliminate manual tax selection errors."
+      },
+      {
+            "type": "h2",
+            "text": "What is an intrastate supply and how are CGST and SGST calculated?"
+      },
+      {
+            "type": "p",
+            "text": "Under Section 8 of the Integrated Goods and Services Tax (IGST) Act, 2017, an intrastate supply occurs when the location of the supplier and the Place of Supply of the goods or services are within the same State or Union Territory. In this scenario, indirect tax is divided equally between the Central Government and the State Government."
+      },
+      {
+            "type": "p",
+            "text": "For example, if a textile merchant in Surat (Gujarat, State Code 24) sells cotton fabric worth \u20b91,00,000 to a garment retailer in Ahmedabad (Gujarat, State Code 24) at an 18% GST rate, the invoice must reflect:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Taxable Value of Supply: \u20b91,00,000.00",
+                  "Central GST (CGST @ 9%): \u20b99,000.00 (Credited to the Central Government treasury)",
+                  "State GST (SGST @ 9%): \u20b99,000.00 (Credited to the Government of Gujarat)",
+                  "Total Invoice Value: \u20b91,18,000.00"
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "What is an interstate supply and when does IGST apply?"
+      },
+      {
+            "type": "p",
+            "text": "Under Section 7 of the IGST Act, an interstate supply occurs when the location of the supplier and the Place of Supply are in two different States, two different Union Territories, or a State and a Union Territory. Furthermore, all import supplies, export supplies, and transactions involving Special Economic Zone (SEZ) developers or units are legally deemed interstate supplies regardless of geographic proximity."
+      },
+      {
+            "type": "p",
+            "text": "If the same Surat manufacturer sells \u20b91,00,000 worth of fabric to a boutique in Mumbai (Maharashtra, State Code 27), the transaction crosses state borders. The invoice must not show CGST or SGST; instead, it must bill the full 18% tax as Integrated GST (IGST):"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Taxable Value of Supply: \u20b91,00,000.00",
+                  "Integrated GST (IGST @ 18%): \u20b918,000.00",
+                  "Total Invoice Value: \u20b91,18,000.00"
+            ]
+      },
+      {
+            "type": "table",
+            "headers": [
+                  "Transaction Parameter",
+                  "Intrastate Supply Invoice",
+                  "Interstate Supply Invoice",
+                  "Legal Governing Provision"
+            ],
+            "rows": [
+                  [
+                        "Supplier Location vs Place of Supply",
+                        "Within the same State / UT",
+                        "In two different States / UTs",
+                        "Section 7 vs Section 8, IGST Act"
+                  ],
+                  [
+                        "Taxes Charged on Invoice",
+                        "CGST + SGST (or UTGST)",
+                        "IGST (Integrated Tax)",
+                        "Section 9 CGST Act / Section 5 IGST Act"
+                  ],
+                  [
+                        "Tax Rate Split",
+                        "Exact 50% / 50% equal split",
+                        "Full 100% combined tax rate",
+                        "CBIC Rate Notifications"
+                  ],
+                  [
+                        "Export of Goods / Services",
+                        "Not applicable",
+                        "Always Interstate (IGST/LUT)",
+                        "Section 7(5)(a) of IGST Act"
+                  ],
+                  [
+                        "Supply to SEZ Unit / Developer",
+                        "Never Intrastate (Even if adjacent)",
+                        "Always Interstate (IGST/LUT)",
+                        "Section 7(5)(b) of IGST Act"
+                  ],
+                  [
+                        "State Code Rule",
+                        "Supplier Code == Recipient Code",
+                        "Supplier Code != Recipient Code",
+                        "Rule 46(f) of CGST Rules"
+                  ]
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "How do Place of Supply rules determine tax classification?"
+      },
+      {
+            "type": "p",
+            "text": "The critical factor in tax determination is not the customer's billing address, but the official 'Place of Supply'. For tangible goods (governed by Section 10 of the IGST Act), the place of supply is generally where the movement of goods terminates for delivery to the recipient."
+      },
+      {
+            "type": "p",
+            "text": "For services (governed by Section 12 and Section 13), place of supply rules vary by category: for registered B2B clients, it is the location of the recipient; for immovable property services (like hotel accommodation or warehouse leasing), it is the physical location of the property; and for passenger transport or event admission, it is where the event or journey occurs. Learn more about statutory requirements in our guide on [GST invoice rules in 2026](/blog/gst-invoice-rules-2026-changes)."
+      },
+      {
+            "type": "highlight",
+            "label": "Crucial Tax Rule for Bill-To / Ship-To Models",
+            "color": "#10b981",
+            "text": "Under Section 10(1)(b) of the IGST Act, if a buyer in Delhi instructs you (in Haryana) to ship goods directly to their factory branch in Rajasthan, the transaction between you and the Delhi buyer is interstate (IGST charged to Delhi), even though goods were physically delivered to Rajasthan."
+      },
+      {
+            "type": "h2",
+            "text": "What happens if you charge the wrong tax on an invoice?"
+      },
+      {
+            "type": "p",
+            "text": "If you inadvertently charge CGST and SGST instead of IGST (or vice versa), you cannot simply adjust the amounts internally on your next return. Under Section 77 of the CGST Act and Section 19 of the IGST Act:"
+      },
+      {
+            "type": "ol",
+            "items": [
+                  "Pay the Correct Tax: You must deposit the correct tax (e.g., IGST) into the government treasury with your subsequent GSTR-3B return.",
+                  "No Interest Liability: Because the incorrect payment occurred under a bona fide classification mistake, no interest is payable under Section 50 on the delayed correct tax.",
+                  "Claim a Refund for Incorrect Tax: You must file a formal GST RFD-01 refund application under Section 54 to recover the CGST and SGST wrongly paid.",
+                  "Buyer ITC Complications: Until the error is rectified via an amended GSTR-1, your buyer cannot claim input tax credit because their GSTR-2B will show mismatched tax ledgers."
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "Why Indian businesses rely on Udyog to prevent tax classification errors"
+      },
+      {
+            "type": "p",
+            "text": "Manual selection of CGST, SGST, or IGST in spreadsheets leads to frequent clerical errors. Udyog automates Place of Supply logic completely."
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Automatic State Code Detection: The moment you enter or dictate a customer's GSTIN, Udyog extracts the first 2 digits (e.g., '27' for Maharashtra) and compares it to your registered warehouse state.",
+                  "Smart Tax Routing: If state codes match, Udyog splits taxes into CGST+SGST automatically; if they differ, it applies IGST with zero manual intervention.",
+                  "SEZ and Export Handling: Flag clients as Special Economic Zone units with a single toggle; Udyog applies interstate tax or LUT bond declarations automatically.",
+                  "One-Click WhatsApp Sharing: Send compliant PDF bills with transparent tax breakdowns and instant UPI payment links directly to customer WhatsApp accounts."
+            ]
+      },
+      {
+            "type": "cta",
+            "text": "Never make a CGST/SGST or IGST tax mistake again. Automate Place of Supply rules, HSN assignment, and GST billing with Udyog.",
+            "label": "Start 14-Day Free Trial",
+            "url": "https://app.udyogbook.in/sign-up"
+      },
+    ],
+    faqs: [
+      {
+            "q": "What is the primary difference between intrastate and interstate GST supplies?",
+            "a": "An intrastate supply occurs when the supplier and place of supply are in the same state, attracting equal CGST and SGST splits. An interstate supply occurs across state borders, attracting single Integrated GST (IGST)."
+      },
+      {
+            "q": "Can a business charge CGST and SGST on goods delivered to another state?",
+            "a": "No, delivering goods across state boundaries constitutes an interstate supply under Section 7 of the IGST Act, requiring Integrated GST (IGST). Charging CGST and SGST on interstate sales is legally invalid."
+      },
+      {
+            "q": "What is the procedure if a seller mistakenly deposits CGST+SGST instead of IGST?",
+            "a": "Under Section 77 of the CGST Act, the seller must pay the correct IGST amount without interest and file a formal refund application (GST RFD-01) to recover the wrongly deposited CGST and SGST."
+      },
+      {
+            "q": "How does Place of Supply determine tax for services provided to corporate clients?",
+            "a": "For registered B2B clients under Section 12 of the IGST Act, the Place of Supply is the registered location of the recipient, which determines whether the service invoice attracts CGST+SGST or IGST."
+      },
+      {
+            "q": "Does Udyog detect interstate and intrastate taxes automatically?",
+            "a": "Yes, Udyog compares the 2-digit state prefix codes of the supplier and customer GSTINs automatically, correctly applying CGST+SGST or IGST without requiring manual tax selection."
+      },
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 23 — gst-invoice-mistakes-itc-claim-rejected
+  // ─────────────────────────────────────────────
+  {
+    slug: "gst-invoice-mistakes-itc-claim-rejected",
+    category: "GST Guide",
+    color: "#10b981",
+    title: "Common GST Invoice Mistakes That Can Get Your ITC Claim Rejected",
+    excerpt: "Avoid common GST invoice mistakes that cause Input Tax Credit (ITC) rejection. Learn Rule 36(4) matching, Section 16 conditions, and GSTR-2B compliance in 2026.",
+    date: "8 Sep 2026",
+    readTime: "11 min read",
+    metaTitle: "GST Invoice Mistakes That Reject Your ITC Claim | Udyog",
+    metaDescription: "Avoid common GST invoice mistakes that cause Input Tax Credit (ITC) rejection. Learn Rule 36(4) matching, Section 16 conditions, and GSTR-2B compliance in 2026.",
+    keywords: "gst invoice mistakes itc claim rejected, input tax credit rejection reasons, rule 36 4 cgst matching, gstr 2b reconciliation errors, section 16 cgst act itc",
+    content: [
+      {
+            "type": "p",
+            "text": "Your Input Tax Credit (ITC) claim will be rejected under Section 16(2) of the CGST Act if your supplier fails to upload the tax invoice to GSTR-1, omits your 15-digit GSTIN, or enters an incorrect Place of Supply that fails GSTR-2B auto-population. Additionally, claiming ITC on non-compliant invoices lacking mandatory Rule 46 fields or paying suppliers past 180 days triggers automatic tax reversals with 18% annual interest under Section 50."
+      },
+      {
+            "type": "p",
+            "text": "In 2026, the GST compliance ecosystem operates on strict machine-to-machine reconciliation. The days of manual provisional credits are over; under Rule 36(4), not a single rupee of ITC can be claimed in GSTR-3B unless it appears verbatim in your auto-generated GSTR-2B statement. For small business owners and corporate buyers, flawed invoices received from vendors lead to frozen working capital, audit notices under Form GST DRC-01, and bitter vendor payment disputes."
+      },
+      {
+            "type": "p",
+            "text": "In this guide, we analyze the top fatal invoice mistakes that cause ITC rejections, review the statutory conditions of Section 16, examine the 180-day vendor payment rule, and show how using [Udyog GST billing software](/pricing) safeguards your business from input credit losses."
+      },
+      {
+            "type": "h2",
+            "text": "What are the core statutory conditions to claim Input Tax Credit under Section 16?"
+      },
+      {
+            "type": "p",
+            "text": "Section 16(2) of the CGST Act outlines four mandatory conditions that must be fulfilled concurrently before a registered buyer can claim ITC on any business purchase:"
+      },
+      {
+            "type": "ol",
+            "items": [
+                  "Possession of a Valid Tax Invoice: The buyer must possess a valid tax invoice or debit note issued by a registered supplier under Rule 46.",
+                  "Actual Receipt of Goods or Services: The underlying goods or services must have been physically received or delivered as documented by transport LR or delivery challans.",
+                  "Tax Deposited with the Government: The tax charged on the invoice must have actually been paid to the government treasury by the supplier in cash or through valid ITC.",
+                  "Return Furnished under Section 39: The buyer must have filed their valid monthly or quarterly return in Form GSTR-3B."
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "What are the most common GST invoice mistakes that cause ITC disallowance?"
+      },
+      {
+            "type": "p",
+            "text": "Tax audits reveal that most ITC disallowances stem from preventable invoice formatting and filing errors. Below are the five most frequent culprits:"
+      },
+      {
+            "type": "table",
+            "headers": [
+                  "Invoice Error / Mistake",
+                  "Operational Cause",
+                  "Audit Consequence",
+                  "How to Prevent It"
+            ],
+            "rows": [
+                  [
+                        "Incorrect / Typo in Buyer GSTIN",
+                        "Vendor manually typed 15-digit code",
+                        "Invoice maps to wrong PAN; GSTR-2B missing",
+                        "Scan QR or validate GSTIN via API before billing"
+                  ],
+                  [
+                        "Wrong Place of Supply Declared",
+                        "Supplier billed CGST/SGST instead of IGST",
+                        "ITC blocked as ineligible in buyer's state",
+                        "Auto-compare supplier state vs delivery state"
+                  ],
+                  [
+                        "Vendor Missed GSTR-1 Deadline",
+                        "Vendor delayed return filing past month-end",
+                        "Invoice omitted from current month's GSTR-2B",
+                        "Hold vendor tax payment until GSTR-2B reflection"
+                  ],
+                  [
+                        "Missing Mandatory Rule 46 Fields",
+                        "Invoice lacks sequential number or HSN code",
+                        "Tax officer rejects bill as legally invalid",
+                        "Enforce software-generated Rule 46 templates"
+                  ],
+                  [
+                        "Unpaid Vendor Past 180 Days",
+                        "Payment held up in dispute past 6 months",
+                        "Mandatory ITC reversal with 18% annual interest",
+                        "Automate accounts payable ageing alerts"
+                  ]
+            ]
+      },
+      {
+            "type": "highlight",
+            "label": "The 180-Day Rule Warning (Rule 37)",
+            "color": "#10b981",
+            "text": "Under the second proviso to Section 16(2), if a buyer fails to pay the supplier the invoice value plus GST within 180 days from the invoice date, an amount equal to the ITC claimed must be paid back with 18% annual interest under Section 50. The credit can be reclaimed only after the payment is cleared."
+      },
+      {
+            "type": "h2",
+            "text": "How does GSTR-2B matching protect your input credit in 2026?"
+      },
+      {
+            "type": "p",
+            "text": "Form GSTR-2B is a static monthly auto-drafted ITC statement generated on the 14th of every month based on sales invoices uploaded by your vendors up to the 13th. Unlike GSTR-2A which updates continuously, GSTR-2B is your firm benchmark for GSTR-3B filing."
+      },
+      {
+            "type": "p",
+            "text": "If a supplier issues a paper bill for \u20b91,18,000 (including \u20b918,000 GST) but forgets to file their GSTR-1, that \u20b918,000 will not appear in your GSTR-2B. If you manually claim that \u20b918,000 in Table 4 of GSTR-3B, the GST portal's automated system flags a red discrepancy notice under Form DRC-01B, demanding explanation or payment within 7 days. Learn more about statutory guidelines in our [GST invoice rules guide](/blog/gst-invoice-rules-2026-changes)."
+      },
+      {
+            "type": "h2",
+            "text": "How to audit vendor compliance before releasing payment (Vendor Rating Scorecard)"
+      },
+      {
+            "type": "p",
+            "text": "Smart procurement teams in India no longer pay vendor invoices in full upon delivery. To prevent working capital loss from missing ITC, establish a structured vendor compliance protocol:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Withhold the GST Component Until GSTR-2B Match: Pay the basic taxable value upon delivery, but hold the 18% GST portion until the 14th of the following month when the credit reflects in your GSTR-2B.",
+                  "Verify Active GSTIN Status Monthly: Before placing purchase orders, verify that the vendor's GSTIN has not been suspended for non-filing of GSTR-3B returns.",
+                  "Implement Formal Debit Note Clauses: Include a clear contractual clause stating that any ITC disallowance or interest penalty caused by vendor non-filing will be debited from future supplier payouts.",
+                  "Review Vendor Filing Frequency (QRMP vs Monthly): Ensure quarterly filing vendors understand your requirement for monthly IFF (Invoice Furnishing Facility) uploads to prevent delayed tax credits."
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "What steps should businesses take to rectify rejected ITC claims?"
+      },
+      {
+            "type": "p",
+            "text": "When an ITC mismatch occurs, take systematic corrective action to recover your credit before the statutory deadline of November 30 following the fiscal year-end:"
+      },
+      {
+            "type": "ol",
+            "items": [
+                  "Step 1 \u2014 Download Monthly GSTR-2B vs Purchase Register: Reconcile your internal books against the portal statement to identify delinquent vendors.",
+                  "Step 2 \u2014 Issue Vendor Reconciliation Notice: Inform the supplier that their invoice was omitted or filed with an erroneous GSTIN/POS, requesting an amendment in their next GSTR-1 (Table 9A).",
+                  "Step 3 \u2014 Track Amended Reflection: Once the vendor files their amended return, verify that the corrected credit appears in your subsequent GSTR-2B statement.",
+                  "Step 4 \u2014 Re-claim ITC in GSTR-3B: Safely claim the credit in Table 4(A)(5) of your monthly return once the GSTR-2B record is confirmed."
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "Why Indian businesses rely on Udyog to safeguard Input Tax Credit"
+      },
+      {
+            "type": "p",
+            "text": "Preventing ITC leakage requires smart software that validates invoice data before dispatch and keeps clean purchase ledgers. Udyog protects businesses on both sides of the transaction:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Real-Time GSTIN Verification: Validate customer and vendor GSTINs against the live government database in one tap, preventing costly typo rejections.",
+                  "Flawless Rule 46 Invoice Generation: Generate compliant tax bills with automatic HSN, Place of Supply, and CGST/SGST/IGST splits using our fast Maya voice assistant.",
+                  "Purchase Bill Recording & Vendor Tracking: Log incoming purchase bills, track 180-day payment timelines, and keep clean audit records.",
+                  "Direct CA Portal Collaboration: Let your Chartered Accountant download GSTR-2B matching sheets and GSTR-1 summaries directly without messy email attachments."
+            ]
+      },
+      {
+            "type": "cta",
+            "text": "Never lose Input Tax Credit to avoidable billing mistakes. Issue 100% compliant GST invoices and reconcile accounts seamlessly with Udyog.",
+            "label": "Start 14-Day Free Trial",
+            "url": "https://app.udyogbook.in/sign-up"
+      },
+    ],
+    faqs: [
+      {
+            "q": "Why is Input Tax Credit (ITC) rejected under GST in India?",
+            "a": "ITC is rejected if the supplier fails to upload the invoice to GSTR-1, enters an incorrect buyer GSTIN or Place of Supply, leaves mandatory Rule 46 fields blank, or if the buyer fails to pay within 180 days."
+      },
+      {
+            "q": "Can I claim ITC if an invoice appears in GSTR-2A but not in GSTR-2B?",
+            "a": "Under Rule 36(4) of the CGST Rules, ITC can only be claimed based on invoices reflected in Form GSTR-2B. GSTR-2A is informational, but GSTR-2B is the mandatory legal benchmark for monthly GSTR-3B filings."
+      },
+      {
+            "q": "What happens if a buyer does not pay a vendor within 180 days?",
+            "a": "Under Section 16(2) of the CGST Act, if payment of invoice value plus tax is not made within 180 days, the buyer must reverse the claimed ITC along with 18% annual interest under Section 50."
+      },
+      {
+            "q": "How can a business fix an invoice with an incorrect GSTIN?",
+            "a": "The supplier must amend the invoice details in Table 9A (Amended B2B Invoices) of their subsequent GSTR-1 filing, which updates the buyer's GSTR-2B statement and restores ITC eligibility."
+      },
+      {
+            "q": "How does Udyog prevent GST invoice errors that cause ITC rejection?",
+            "a": "Udyog verifies recipient GSTINs via live API, auto-applies correct Place of Supply logic, ensures all Rule 46 mandatory fields are present, and provides complete purchase bill tracking."
+      },
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 24 — gst-invoice-ecommerce-sellers-india
+  // ─────────────────────────────────────────────
+  {
+    slug: "gst-invoice-ecommerce-sellers-india",
+    category: "GST Guide",
+    color: "#10b981",
+    title: "GST Invoice for E-commerce Sellers: Complete Compliance Guide",
+    excerpt: "Complete guide to GST invoices for e-commerce sellers in India. Master TCS deductions under Section 52, marketplace reconciliations, and state-wise billing.",
+    date: "8 Sep 2026",
+    readTime: "11 min read",
+    metaTitle: "GST Invoice for E-commerce Sellers in India | Udyog",
+    metaDescription: "Complete guide to GST invoices for e-commerce sellers in India. Master TCS deductions under Section 52, marketplace reconciliations, and state-wise billing.",
+    keywords: "gst invoice for ecommerce sellers, tcs under gst section 52, amazon flipkart gst billing india, ecommerce operator gst return, gstr 8 reconciliation",
+    content: [
+      {
+            "type": "p",
+            "text": "To issue a compliant GST invoice for e-commerce sales in India, sellers on platforms like Amazon, Flipkart, or Meesho must bill the end customer directly with applicable CGST/SGST or IGST based on the delivery destination's Place of Supply. Furthermore, sellers must account for 1% Tax Collected at Source (TCS) deducted by the marketplace under Section 52 of the CGST Act and reconcile monthly settlement sheets against their GSTR-1 and GSTR-8 returns."
+      },
+      {
+            "type": "p",
+            "text": "Selling online has unlocked nationwide markets for Indian manufacturers, D2C brands, and retail traders. However, selling across 28 states introduces substantial indirect tax complexity. E-commerce sellers must manage B2C state-wise reporting in GSTR-1, reconcile customer returns, account for marketplace fulfillment fees, and claim monthly TCS credits deposited by platforms. Review our transparent [Udyog pricing plans](/pricing) for e-commerce billing solutions."
+      },
+      {
+            "type": "p",
+            "text": "In this guide, we break down statutory GST requirements for e-commerce sellers, clarify Section 52 TCS mechanics, outline invoice formatting for marketplace and website orders, and explain how to streamline online business accounting."
+      },
+      {
+            "type": "h2",
+            "text": "Is GST registration mandatory for all online sellers in India?"
+      },
+      {
+            "type": "p",
+            "text": "Historically, under Section 24(ix) of the CGST Act, GST registration was strictly mandatory for anyone selling goods through an e-commerce operator, even if their annual turnover was only \u20b910,000. However, the GST Council introduced critical relief via Notification No. 34/2023-Central Tax:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Intrastate Unregistered Exemption: Small sellers with turnover below \u20b940 lakh (\u20b920 lakh for services) can sell goods through e-commerce operators within their home state without regular GST registration, provided they obtain an enrolment number on the GST Portal.",
+                  "Mandatory Registration for Interstate Sales: The moment an e-commerce seller dispatches products across state borders (interstate supply), regular GST registration remains mandatory regardless of turnover.",
+                  "Composition Scheme for Online Sellers: Eligible small sellers registered under the composition scheme can now sell goods intra-state through e-commerce platforms subject to Section 10 conditions."
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "How does Tax Collected at Source (TCS) work under Section 52?"
+      },
+      {
+            "type": "p",
+            "text": "Under Section 52 of the CGST Act, every e-commerce operator (such as Amazon, Flipkart, or Myntra) is legally obligated to collect an amount at the rate of 1% (0.5% CGST + 0.5% SGST for intrastate, or 1% IGST for interstate) on the net value of taxable supplies made through its platform."
+      },
+      {
+            "type": "table",
+            "headers": [
+                  "Transaction Step",
+                  "Financial Calculation",
+                  "Party Responsible",
+                  "GST Return / Mechanism"
+            ],
+            "rows": [
+                  [
+                        "Gross Customer Order Value",
+                        "\u20b910,000.00 (Excl. Tax)",
+                        "End Customer pays Platform",
+                        "Customer Tax Invoice"
+                  ],
+                  [
+                        "Customer Returns / Cancellations",
+                        "\u20b92,000.00 (Excl. Tax)",
+                        "Platform refunds Customer",
+                        "Sales Return Credit Note"
+                  ],
+                  [
+                        "Net Taxable Value for TCS",
+                        "\u20b98,000.00 (Net Base)",
+                        "Platform calculates 1% TCS",
+                        "Section 52 CGST Act"
+                  ],
+                  [
+                        "TCS Collected by Platform",
+                        "\u20b980.00 (1% on \u20b98,000)",
+                        "Platform deducts from payout",
+                        "Platform files GSTR-8 by 10th"
+                  ],
+                  [
+                        "TCS Credit Claimed by Seller",
+                        "\u20b980.00 (Cash Ledger)",
+                        "Seller accepts credit on portal",
+                        "Auto-credited to Cash Ledger"
+                  ]
+            ]
+      },
+      {
+            "type": "highlight",
+            "label": "Working Capital Optimization",
+            "color": "#10b981",
+            "text": "E-commerce operators file Form GSTR-8 by the 10th of every month. Sellers must log in to the GST Portal under 'Services > Returns > TDS and TCS Received' to accept the reported figures. Once accepted, the 1% TCS is credited directly into your Electronic Cash Ledger and can be used to pay your monthly GST liabilities."
+      },
+      {
+            "type": "h2",
+            "text": "How to handle e-way bills and customer returns (RTO) under GST"
+      },
+      {
+            "type": "p",
+            "text": "E-commerce logistics involve high rates of Return to Origin (RTO) and customer cancellations. Managing the tax implications of returned goods requires adhering to strict documentation rules under Section 34 of the CGST Act:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "E-Way Bill for High-Value Shipments: Under Rule 138, an e-way bill is mandatory for any consignment where invoice value exceeds \u20b950,000. When goods return to your warehouse, an inward e-way bill or sales return challan must accompany transit.",
+                  "Issuing GST Credit Notes for Returns: When a customer cancels or returns an order, you must issue a credit note linking back to the original invoice number and date to reduce your gross output tax liability in Table 9B of GSTR-1.",
+                  "Reconciling Net Monthly TCS: Ensure your monthly marketplace return reports match the net figures submitted in GSTR-8 by the platform to avoid automatic discrepancy queries."
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "How to determine Place of Supply for online consumer orders?"
+      },
+      {
+            "type": "p",
+            "text": "In e-commerce B2C sales, the customer rarely provides a GSTIN. Under Section 10(1)(a) of the IGST Act, the Place of Supply is determined by the delivery address of the consignment. If your warehouse is in Bangalore (Karnataka, 29) and the customer's delivery address is in Pune (Maharashtra, 27), you must bill IGST at the applicable rate (e.g., 18%), even if the buyer is an unregistered individual."
+      },
+      {
+            "type": "p",
+            "text": "In your monthly GSTR-1 return, these retail consumer sales are consolidated under Table 7 (B2C Others), grouped by destination State Code and GST rate. Learn how to manage multi-state tax logic in our guide on [interstate vs intrastate GST invoices](/blog/interstate-vs-intrastate-gst-invoice-cgst-sgst-igst)."
+      },
+      {
+            "type": "h2",
+            "text": "How should online sellers handle marketplace commissions and courier fees?"
+      },
+      {
+            "type": "p",
+            "text": "Marketplace platforms do not sell your products; they facilitate the sale and charge you commission, shipping fees, storage charges, and closing fees. Every month, the platform issues a B2B tax invoice to you with 18% GST (under SAC 9983) for these services."
+      },
+      {
+            "type": "ol",
+            "items": [
+                  "Verify Platform Invoices in GSTR-2B: Ensure that commission bills from Amazon or Flipkart reflect in your GSTR-2B statement to claim 100% Input Tax Credit.",
+                  "Offsetting Liabilities: Use the input credit on marketplace commissions to reduce the output GST collected from your product sales.",
+                  "Track Payment Gateway Fees: Include gateway MDR charges and shipping weight discrepancies in your accounting reconciliation to prevent margin erosion."
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "Why e-commerce sellers in India use Udyog for multi-channel billing"
+      },
+      {
+            "type": "p",
+            "text": "Managing separate sales channels across Amazon, your Shopify website, offline retail counters, and B2B corporate orders creates inventory chaos. Udyog provides a unified platform:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Multi-State POS Auto-Assignment: Generates compliant tax invoices with automatic destination-state detection and correct IGST or CGST/SGST splits.",
+                  "Centralized Inventory Sync: Keeps stock quantities aligned whether sales originate from your retail counter or online orders.",
+                  "One-Click GSTR-1 Preparation: Organizes B2C state-wise sales summaries and B2B tax registers for effortless monthly filing.",
+                  "Direct CA Portal: Give your accountant direct access to reconcile marketplace settlement sheets, purchase bills, and TCS credits in one dashboard."
+            ]
+      },
+      {
+            "type": "cta",
+            "text": "Simplify e-commerce billing and GST compliance across all your online sales channels. Generate compliant tax bills and track marketplace TCS with Udyog.",
+            "label": "Start 14-Day Free Trial",
+            "url": "https://app.udyogbook.in/sign-up"
+      },
+    ],
+    faqs: [
+      {
+            "q": "Is GST registration mandatory for selling goods online in India?",
+            "a": "Under recent relief notifications, intrastate sellers with turnover under \u20b940 lakh can sell without GST registration using an enrolment ID. However, any interstate sale across state borders strictly requires regular GST registration."
+      },
+      {
+            "q": "What is TCS under GST Section 52 for e-commerce sellers?",
+            "a": "Under Section 52 of the CGST Act, e-commerce operators like Amazon and Flipkart must deduct 1% Tax Collected at Source (TCS) on the net value of taxable supplies, which sellers claim back in their cash ledger."
+      },
+      {
+            "q": "Who issues the GST invoice to the buyer in an e-commerce sale?",
+            "a": "The seller is the legal supplier and must issue the GST tax invoice to the customer, while the marketplace platform acts merely as a digital facilitator charging a commission."
+      },
+      {
+            "q": "Can e-commerce sellers claim Input Tax Credit on marketplace commission fees?",
+            "a": "Yes, sellers can claim 100% Input Tax Credit on the 18% GST charged by e-commerce platforms on selling commissions, shipping fees, warehousing, and advertising services."
+      },
+      {
+            "q": "How does Udyog help online e-commerce sellers with GST compliance?",
+            "a": "Udyog automatically categorizes B2B and B2C sales by destination state code, applies correct IGST or CGST/SGST rates, and prepares clean GSTR-1 and GSTR-3B audit reports for easy filing."
+      },
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 25 — hsn-code-guide-2026-invoice
+  // ─────────────────────────────────────────────
+  {
+    slug: "hsn-code-guide-2026-invoice",
+    category: "GST Guide",
+    color: "#10b981",
+    title: "HSN Code Guide 2026: How to Find and Apply the Right Code on Your Invoice",
+    excerpt: "Complete HSN code guide for 2026 GST invoices: learn 4-digit vs 6-digit rules, how to find commodity codes, avoid wrong classification penalties, and bill fast.",
+    date: "8 Sep 2026",
+    readTime: "11 min read",
+    metaTitle: "HSN Code Guide 2026: Find the Right Code for Bill | Udyog",
+    metaDescription: "Complete HSN code guide for 2026 GST invoices: learn 4-digit vs 6-digit rules, how to find commodity codes, avoid wrong classification penalties, and bill fast.",
+    keywords: "hsn code guide 2026 invoice, find hsn code gst, 4 digit vs 6 digit hsn code, sac code services gst, hsn classification rules india",
+    content: [
+      {
+            "type": "p",
+            "text": "To apply the correct HSN code on your GST invoice in 2026, businesses with annual turnover above \u20b95 crore must declare a minimum of 6 digits for all B2B and B2C supplies, while businesses with turnover up to \u20b95 crore must declare at least 4 digits on B2B invoices under Notification No. 78/2020-Central Tax. Declaring an incorrect HSN code can lead to tax misclassification penalties of \u20b925,000 under Section 125 and block your buyer's Input Tax Credit."
+      },
+      {
+            "type": "p",
+            "text": "The Harmonized System of Nomenclature (HSN) is an internationally standardized 8-digit commodity classification system adopted by over 200 countries and incorporated into India's GST framework. For services, India uses the 6-digit Services Accounting Code (SAC). Every single product traded in India\u2014from raw agricultural grains to aerospace components\u2014corresponds to a specific HSN code that dictates its statutory tax rate (0%, 5%, 12%, 18%, or 28%)."
+      },
+      {
+            "type": "p",
+            "text": "In this 2026 practical guide, we explain the hierarchical structure of HSN codes, detail mandatory digit rules, review legal classification principles, and show how modern tools like [Udyog GST billing software](/pricing) automate HSN lookup through voice commands."
+      },
+      {
+            "type": "h2",
+            "text": "How is an 8-digit HSN code structured in India?"
+      },
+      {
+            "type": "p",
+            "text": "An 8-digit HSN code follows a logical hierarchical taxonomy divided into Chapters, Headings, Sub-headings, and Regional Tariffs:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "First 2 Digits (Chapter): Represents the broad commodity class under the 21 General Sections of the Customs Tariff (e.g., Chapter 61 for Knitted or crocheted apparel).",
+                  "Next 2 Digits (Heading): Represents the specific product category within that chapter (e.g., Heading 6109 for T-shirts, singlets, and other vests).",
+                  "Next 2 Digits (Sub-heading): Represents detailed international product specifications (e.g., Sub-heading 6109.10 for T-shirts made of cotton).",
+                  "Last 2 Digits (Tariff Item): Represents national Indian sub-classifications for custom excise and statistical duty purposes (e.g., 6109.10.00)."
+            ]
+      },
+      {
+            "type": "table",
+            "headers": [
+                  "Hierarchical Level",
+                  "Digit Breakdown",
+                  "Sample Code",
+                  "Product Classification Description"
+            ],
+            "rows": [
+                  [
+                        "Chapter",
+                        "First 2 Digits",
+                        "Chapter 84",
+                        "Nuclear reactors, boilers, machinery and mechanical appliances"
+                  ],
+                  [
+                        "Heading",
+                        "First 4 Digits",
+                        "Heading 8471",
+                        "Automatic data processing machines (Computers, Laptops, Servers)"
+                  ],
+                  [
+                        "Sub-Heading",
+                        "First 6 Digits",
+                        "Sub-Heading 8471.30",
+                        "Portable computers weighing not more than 10 kg (Laptops/Notebooks)"
+                  ],
+                  [
+                        "National Tariff",
+                        "Full 8 Digits",
+                        "Tariff 8471.30.10",
+                        "Personal computers (incorporating CPU, keyboard, and display)"
+                  ],
+                  [
+                        "Services SAC",
+                        "6 Digits (Heading 99)",
+                        "SAC 998314",
+                        "Information technology and software consultancy and support services"
+                  ]
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "What are the mandatory HSN digit rules in 2026?"
+      },
+      {
+            "type": "p",
+            "text": "Under Notification No. 78/2020-Central Tax, the government revised mandatory HSN requirements to improve trade statistics and curb tax evasion:"
+      },
+      {
+            "type": "ol",
+            "items": [
+                  "Turnover Above \u20b95 Crore: Mandatory 6 digits of HSN for all supplies of goods and 6 digits of SAC for all supplies of services across both B2B and B2C transactions.",
+                  "Turnover Up to \u20b95 Crore (B2B Supplies): Mandatory minimum 4 digits of HSN/SAC on all tax invoices issued to registered business entities.",
+                  "Turnover Up to \u20b95 Crore (B2C Supplies): Declaring HSN codes is optional, but strongly recommended to prevent accounting discrepancies.",
+                  "Special Chemical & Critical Commodities: Invoicing 8-digit HSN codes is mandatory for specific chemical compounds, pharmaceuticals, and sensitive commodities regardless of turnover."
+            ]
+      },
+      {
+            "type": "highlight",
+            "label": "ITC Protection Warning",
+            "color": "#10b981",
+            "text": "When selling to corporate B2B buyers, always provide the full 6-digit HSN code even if your turnover is under \u20b95 crore. Many enterprise ERP systems automatically reject vendor invoices with only 4 digits, delaying your payment processing."
+      },
+      {
+            "type": "h2",
+            "text": "How do Composite and Mixed Supplies affect HSN code assignment?"
+      },
+      {
+            "type": "p",
+            "text": "When selling products or services as a bundled package, assigning the correct HSN code depends on whether the bundle qualifies as a Composite Supply or a Mixed Supply under Section 8 of the CGST Act:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Composite Supply (Naturally Bundled): Consists of two or more taxable supplies of goods or services which are naturally bundled and supplied in conjunction with each other in the ordinary course of business, one of which is a principal supply. The entire package takes the HSN code and tax rate of the principal supply (e.g., laptop sold with warranty and charger takes the laptop HSN 8471 at 18%).",
+                  "Mixed Supply (Artificially Bundled): Consists of two or more individual supplies bundled together for a single price that could otherwise be sold independently. Under Section 8(b), a mixed supply takes the HSN code of the item that attracts the highest rate of tax in the combination (e.g., a festive gift hamper containing dry fruits at 12% and chocolates at 28% must be taxed entirely at 28%)."
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "How do General Rules of Interpretation (GRI) solve classification doubts?"
+      },
+      {
+            "type": "p",
+            "text": "When a product could arguably fit into multiple categories, courts and tax authorities rely on the General Rules of Interpretation (GRI) laid down in the Customs Tariff Act, 1975:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Rule 1 (Specific Heading Prevails): Classification is determined by the terms of the headings and relative section or chapter notes. A specific description always prevails over a general description.",
+                  "Rule 3(b) (Essential Character Rule): Composite goods consisting of different components (like a mobile phone bundled with a charger) are classified according to the material or component that gives them their essential character.",
+                  "Rule 3(c) (Later Heading Rule): When goods cannot be classified by other rules, they are classified under the heading that occurs last in numerical order among those that equally merit consideration.",
+                  "Trade Parlance Principle: The Supreme Court of India has repeatedly held that words in tax statutes must be understood in their commercial sense as understood by people in the trade, not by scientific or dictionary definitions."
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "What are the penalties for wrong HSN classification?"
+      },
+      {
+            "type": "p",
+            "text": "Intentionally or mistakenly using an incorrect HSN code carries severe penalties under Section 125 of the CGST Act (general penalty up to \u20b925,000). If the misclassification resulted in paying a lower tax rate (e.g., applying 5% instead of 18%), the tax department can demand the differential tax with mandatory 18% interest under Section 50 and penalties under Section 73 or 74. Learn more in our guide on [common GST invoice mistakes](/blog/gst-invoice-mistakes-itc-claim-rejected)."
+      },
+      {
+            "type": "h2",
+            "text": "Why Indian businesses use Udyog for instant automated HSN lookup"
+      },
+      {
+            "type": "p",
+            "text": "Searching through thousands of 8-digit HSN codes during live customer billing slows down your business. Udyog eliminates manual code lookups completely:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "AI Smart Search & Auto-Fill: Type or speak any product name (e.g., 'LED Bulb 9W' or 'Cotton Saree'); Udyog instantly suggests the verified HSN code and statutory tax rate.",
+                  "Voice Dictation with Maya AI: Speak your item details naturally; Maya automatically maps items to correct HSN codes in under 8 seconds.",
+                  "Rule 46 & Notification 78/2020 Compliance: Automatically validates whether your invoice requires 4-digit or 6-digit codes based on your turnover profile.",
+                  "Direct CA Portal: Give your accountant direct access to review item classifications, generate GSTR-1 summaries, and file returns effortlessly."
+            ]
+      },
+      {
+            "type": "cta",
+            "text": "Never struggle with HSN codes or tax classifications again. Generate 100% compliant GST bills with automatic HSN lookup and Maya voice billing on Udyog.",
+            "label": "Start 14-Day Free Trial",
+            "url": "https://app.udyogbook.in/sign-up"
+      },
+    ],
+    faqs: [
+      {
+            "q": "What is an HSN code under GST in India?",
+            "a": "An HSN (Harmonized System of Nomenclature) code is a standardized 6 to 8-digit numerical code used under Indian GST to classify commercial products and determine their statutory tax rate."
+      },
+      {
+            "q": "What is the difference between HSN code and SAC code?",
+            "a": "HSN codes are used to classify tangible physical goods (Chapters 1 to 98), whereas SAC (Services Accounting Code) codes under Heading 99 are used to classify intangible commercial services."
+      },
+      {
+            "q": "How many digits of HSN code are mandatory for small businesses?",
+            "a": "Businesses with annual turnover up to \u20b95 crore must declare at least 4 digits of HSN on B2B invoices. Businesses with turnover exceeding \u20b95 crore must declare 6 digits on all invoices."
+      },
+      {
+            "q": "What is the penalty for using an incorrect HSN code on an invoice?",
+            "a": "Declaring an incorrect HSN code attracts a penalty up to \u20b925,000 under Section 125 of the CGST Act, plus recovery of any differential tax with 18% interest if a lower tax slab was paid."
+      },
+      {
+            "q": "How does Udyog help business owners find the right HSN code?",
+            "a": "Udyog features an AI-powered smart search engine that automatically matches plain product descriptions to official 6-digit HSN codes and applicable GST slabs during voice or manual billing."
+      },
+    ]
+  }
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
