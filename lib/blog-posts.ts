@@ -3566,6 +3566,755 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ]
   }
+,
+
+  // ─────────────────────────────────────────────
+  // POST 26 — non-gst-bill-format-small-business
+  // ─────────────────────────────────────────────
+  {
+    slug: "non-gst-bill-format-small-business",
+    category: "Billing Guide",
+    color: "#3b82f6",
+    title: "Non-GST Bill Format: Free Template & Rules for Small Businesses",
+    excerpt: "Complete legal guide to non-GST bill format in India. Learn mandatory fields, PAN requirements, threshold limits, and how to create valid commercial bills.",
+    date: "8 Sep 2026",
+    readTime: "11 min read",
+    metaTitle: "Non-GST Bill Format: Free Template & Rules | Udyog",
+    metaDescription: "Download non-GST bill formats for small businesses in India. Learn legal requirements, threshold limits under Section 22, mandatory fields, and PAN rules.",
+    keywords: "non gst bill format, non gst invoice template, commercial bill format india, billing without gst, small business invoice without gst",
+    content: [
+      {
+            "type": "p",
+            "text": "A non-GST bill is a legally recognized commercial invoice issued by an unregistered business whose annual aggregate turnover falls below statutory GST registration thresholds. Under Section 22 of the CGST Act, small businesses with annual turnover under \u20b940 lakh for goods or \u20b920 lakh for services can lawfully issue commercial bills provided they omit tax components like CGST, SGST, or IGST and clearly state their Permanent Account Number (PAN)."
+      },
+      {
+            "type": "p",
+            "text": "Millions of small shopkeepers, freelance service professionals, boutique artisans, home bakers, and micro-enterprises across India operate legitimately without GST registration. However, widespread confusion persists regarding how an unregistered enterprise should bill retail and corporate clients. Many business owners mistakenly copy GST tax invoice templates and erase the GSTIN, while others fail to include essential commercial declarations, creating documentation disputes and payment delays."
+      },
+      {
+            "type": "p",
+            "text": "Operating without GST registration does not mean operating outside commercial contract law. Every sales transaction requires an enforceable evidentiary record under the Indian Contract Act, 1872 and the Income Tax Act, 1961. In this guide, we break down the legal rules governing non-GST billing, detail mandatory invoice components, contrast non-GST bills with official Bills of Supply, and demonstrate how to generate compliant bills using [Udyog small business billing software](/pricing)."
+      },
+      {
+            "type": "h2",
+            "text": "Who is legally allowed to issue a non-GST bill in India?"
+      },
+      {
+            "type": "p",
+            "text": "Under the Goods and Services Tax framework, mandatory registration is tied directly to aggregate annual turnover and transaction nature. An enterprise is entirely permitted to issue non-GST commercial bills under the following statutory circumstances:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Turnover Below Statutory Threshold: Under Section 22(1) of the CGST Act, businesses engaged purely in intra-state supply of goods with annual turnover up to \u20b940 lakh (\u20b920 lakh in special category northeastern and hill states) are exempt from registration. For service providers, the exemption threshold is \u20b920 lakh (\u20b910 lakh in special category states).",
+                  "Dealing Exclusively in Exempt Supplies: If your business sells goods or services that are wholly exempt from GST under Section 11 (such as fresh fruits, unbranded agricultural grains, fresh milk, or curd), you are not required to obtain GST registration regardless of turnover under Section 23(1)(a).",
+                  "Service Providers with Limited Interstate Turnover: Under Notification No. 10/2017-Integrated Tax, individual service providers and freelancers supplying inter-state services are exempt from mandatory registration under Section 24(i) provided their aggregate all-India turnover does not exceed \u20b920 lakh."
+            ]
+      },
+      {
+            "type": "p",
+            "text": "However, if you supply goods across state borders (inter-state supply of goods) or sell through e-commerce operator portals that collect TCS under Section 52, you lose threshold exemptions and must register under Section 24, rendering non-GST billing impermissible."
+      },
+      {
+            "type": "h2",
+            "text": "Mandatory fields required on a legal non-GST commercial bill"
+      },
+      {
+            "type": "p",
+            "text": "Unlike GST tax invoices governed strictly by Rule 46 of the CGST Rules, non-GST bills are governed by general commercial law and income tax documentation standards. To ensure that your bill is legally enforceable in court and acceptable to your client's accounting department, it must contain nine vital elements:"
+      },
+      {
+            "type": "ol",
+            "items": [
+                  "Document Title: Must clearly display 'Commercial Invoice', 'Retail Bill', or 'Bill of Sale'. Never use the title 'Tax Invoice'\u2014using 'Tax Invoice' without a valid GSTIN is an offense under Section 122 of the CGST Act.",
+                  "Seller Identification: Your trade name, legal entity name, full physical business address, active mobile number, and email contact.",
+                  "Permanent Account Number (PAN): Under Section 139A of the Income Tax Act, displaying your PAN is essential for high-value transactions and enables corporate clients to process TDS deductions correctly under Section 194C or 194J.",
+                  "Unique Sequential Serial Number: A consecutive invoice number unique for each financial year (e.g., INV/2026-27/001). Sequential tracking prevents audit discrepancies.",
+                  "Invoice Date: The exact date of document generation and supply of goods or performance of service.",
+                  "Buyer Identification: Client's full name, billing address, phone number, and PAN or GSTIN (if the buyer is a registered business).",
+                  "Detailed Item Description: Itemized description of products or services, unit measurement, quantity supplied, agreed unit rate, and total gross value.",
+                  "Total Amount Payable: Grand total expressed in both numerical figures and formal words to prevent alteration or ambiguity.",
+                  "Statutory Non-GST Declaration: A standardized disclaimer affirming non-liability, such as: 'Issued by an unregistered supplier whose turnover is within statutory GST exemption limits. No tax charged.'"
+            ]
+      },
+      {
+            "type": "highlight",
+            "label": "Tax Warning",
+            "text": "Never collect GST or show separate tax line items (CGST, SGST, IGST) on a non-GST bill. Collecting tax without GST registration is an illegal act under Section 76 of the CGST Act, mandating immediate confiscation of collected funds and 100% penalty."
+      },
+      {
+            "type": "h2",
+            "text": "Comparing Tax Invoice, Bill of Supply, and Non-GST Commercial Bill"
+      },
+      {
+            "type": "p",
+            "text": "Business owners frequently confuse non-GST bills with Bills of Supply. While both documents omit GST charges, their legal origins, eligible issuers, and regulatory requirements differ significantly:"
+      },
+      {
+            "type": "table",
+            "headers": [
+                  "Comparison Parameter",
+                  "Tax Invoice",
+                  "Bill of Supply",
+                  "Non-GST Commercial Bill"
+            ],
+            "rows": [
+                  [
+                        "Who Can Issue",
+                        "Regular registered taxpayers under GST",
+                        "Composition dealers & exempt goods suppliers",
+                        "Unregistered businesses below turnover limits"
+                  ],
+                  [
+                        "Governing Section",
+                        "Section 31(1) & (2) of CGST Act",
+                        "Section 31(3)(c) of CGST Act",
+                        "Indian Contract Act & Income Tax Act"
+                  ],
+                  [
+                        "GSTIN Display",
+                        "Mandatory (15-digit GSTIN)",
+                        "Mandatory (Issuer holds active GSTIN)",
+                        "Prohibited (Seller has no GSTIN; PAN used)"
+                  ],
+                  [
+                        "Tax Collection",
+                        "Allowed (CGST, SGST, IGST charged)",
+                        "Strictly prohibited by law",
+                        "Strictly prohibited by law"
+                  ],
+                  [
+                        "Input Tax Credit (ITC)",
+                        "Buyer can claim full ITC against bill",
+                        "Buyer cannot claim any ITC",
+                        "Buyer cannot claim any ITC"
+                  ],
+                  [
+                        "Mandatory Header",
+                        "'Tax Invoice'",
+                        "'Bill of Supply'",
+                        "'Commercial Bill' or 'Invoice'"
+                  ],
+                  [
+                        "Turnover Restrictions",
+                        "Any turnover (mandatory above threshold)",
+                        "Composition up to \u20b91.5 Cr; or exempt supplies",
+                        "Turnover strictly below \u20b940L/\u20b920L threshold"
+                  ]
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "How to handle TDS when billing corporate clients without GST"
+      },
+      {
+            "type": "p",
+            "text": "When an unregistered freelancer or micro-vendor bills a registered private limited company or partnership firm, corporate clients frequently deduct Tax Deducted at Source (TDS) under the Income Tax Act. For technical or professional services, corporate accounts teams deduct 10% (or 2% for specified technical services) under Section 194J. For contractual works or maintenance labor, TDS of 1% (for individuals/proprietorships) or 2% (for corporate entities) is deducted under Section 194C."
+      },
+      {
+            "type": "p",
+            "text": "If your non-GST bill omits your PAN, the client's accounts team is legally required under Section 206AA of the Income Tax Act to deduct TDS at a punitive rate of 20%. By including your PAN clearly on your commercial bill header, you ensure standard deduction rates and receive Form 16A certificates to claim tax refunds during your annual Income Tax Return (ITR) filing."
+      },
+      {
+            "type": "h2",
+            "text": "Common mistakes small businesses make on non-GST bills"
+      },
+      {
+            "type": "p",
+            "text": "Avoiding routine documentation errors safeguards your business against client payment hold-ups and tax scrutiny. Ensure your commercial bills avoid these frequent pitfalls:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Using Unofficial GSTINs: Never print an Aadhaar number or temporary registration number in place of a GSTIN. If unregistered, leave the GSTIN field entirely absent.",
+                  "Failing to Maintain Continuous Invoicing Sequence: Resetting invoice numbers randomly or reusing invoice numbers creates suspicion during income tax scrutiny.",
+                  "Omitting Payment Bank Details: Every professional non-GST bill should feature clear NEFT/RTGS bank details and an instant dynamic UPI QR code to facilitate immediate settlement.",
+                  "Neglecting to Track Cumulative Turnover: Operating unregistered requires diligent quarterly tracking. Once aggregate turnover crosses \u20b920 lakh for services or \u20b940 lakh for goods, you have exactly 30 days under Section 25(1) to apply for GST registration.",
+                  "Charging VAT or Obsolete Taxes: Erroneously adding legacy service tax or VAT codes to modern bills confuses accountants and delays payments."
+            ]
+      },
+      {
+            "type": "p",
+            "text": "For small business owners seeking modern, professional billing tools, [Udyog](/pricing) provides seamless switching between non-GST commercial invoicing and full GST tax billing. As your business scales and crosses registration thresholds, Udyog smoothly updates your templates without disrupting client accounts or historical sales ledgers."
+      },
+      {
+            "type": "cta",
+            "text": "Create elegant, legally compliant non-GST commercial bills in seconds. Start your 14-day free trial with Udyog\u2014no credit card required.",
+            "label": "Start Free Trial",
+            "url": "https://app.udyogbook.in/sign-in"
+      },
+    ],
+    faqs: [
+      {
+            "q": "Can I legally issue an invoice if I do not have a GST number?",
+            "a": "Yes, you can legally issue a commercial invoice or bill of sale without a GST number provided your annual turnover is below the mandatory GST threshold (\u20b940 lakh for goods, \u20b920 lakh for services). You must display your PAN and cannot charge any GST."
+      },
+      {
+            "q": "What happens if I write 'Tax Invoice' on a bill without having a GST number?",
+            "a": "Labeling an invoice as a 'Tax Invoice' without possessing a valid GST registration is an offense under Section 122 of the CGST Act. Unregistered businesses must use titles such as 'Commercial Bill', 'Invoice', or 'Bill of Sale'."
+      },
+      {
+            "q": "Can corporate clients accept non-GST bills as legitimate business expenses?",
+            "a": "Yes, registered companies can accept non-GST bills as legitimate commercial business expenses for income tax deductions. They will record the gross bill amount as an expense and may deduct applicable TDS under Section 194C or 194J based on your PAN."
+      },
+      {
+            "q": "Do I need to put HSN or SAC codes on a non-GST bill?",
+            "a": "No, HSN and SAC codes are statutory requirements under GST Rule 46. Because non-GST bills are not governed by GST rules, declaring HSN or SAC codes is not mandatory, though providing clear item descriptions is legally necessary."
+      },
+      {
+            "q": "Can a buyer claim Input Tax Credit on a non-GST bill?",
+            "a": "No, a buyer cannot claim Input Tax Credit (ITC) on a non-GST bill because no GST is charged. Registered buyers who need ITC must purchase from GST-registered suppliers who issue statutory tax invoices."
+      },
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 27 — service-invoice-vs-sales-invoice-india
+  // ─────────────────────────────────────────────
+  {
+    slug: "service-invoice-vs-sales-invoice-india",
+    category: "GST Guide",
+    color: "#10b981",
+    title: "Service Invoice vs Sales Invoice: Key Differences in India",
+    excerpt: "Understand key differences between service and sales invoices in India. Compare SAC vs HSN codes, time of supply rules, deadlines, and GST compliance standards.",
+    date: "8 Sep 2026",
+    readTime: "11 min read",
+    metaTitle: "Service Invoice vs Sales Invoice in India: Rules | Udyog",
+    metaDescription: "Compare service invoice vs sales invoice under GST in India. Understand SAC vs HSN codes, Section 12 vs 13 time of supply, Rule 47 deadlines, and formats.",
+    keywords: "service invoice vs sales invoice, difference between goods and service invoice, sac code vs hsn code, time of supply gst, rule 47 cgst rules",
+    content: [
+      {
+            "type": "p",
+            "text": "The primary difference between a service invoice and a sales invoice under Indian GST lies in the nature of supply, statutory classification codes, and mandatory issuance timelines. While a sales invoice bills physical goods using HSN codes and must be issued on or before goods dispatch under Section 31(1), a service invoice bills intangible professional or commercial services using SAC codes and can be issued within 30 days of service completion under Section 31(2) and Rule 47."
+      },
+      {
+            "type": "p",
+            "text": "In the Indian commercial ecosystem, businesses frequently operate across blurry lines. IT agencies supply software licenses bundled with ongoing maintenance; commercial equipment vendors supply machinery combined with multi-year installation and operating service contracts; interior decorators provide furniture alongside architecture consultancy. Applying sales invoice rules to service deliveries\u2014or vice versa\u2014leads to severe tax mismatches, late fee penalties under Section 47, and disallowed Input Tax Credit (ITC) for clients."
+      },
+      {
+            "type": "p",
+            "text": "Mastering the legal and operational divergence between goods and service invoicing is critical for maintaining spotless accounting ledgers. In this guide, we analyze the statutory distinctions under the CGST Act, examine Time of Supply triggers under Sections 12 and 13, clarify Place of Supply criteria, and show how [Udyog multi-category billing software](/pricing) automates both workflows effortlessly."
+      },
+      {
+            "type": "h2",
+            "text": "Core statutory differences between service and sales invoices"
+      },
+      {
+            "type": "p",
+            "text": "Under the Central Goods and Services Tax (CGST) Act, 2017, goods and services are treated under distinct legal definitions and compliance mechanics. Section 2(52) defines goods as every kind of movable property other than money and securities, whereas Section 2(102) defines services as anything other than goods, money, and securities."
+      },
+      {
+            "type": "p",
+            "text": "These legal boundaries dictate specific invoicing requirements across six core dimensions:"
+      },
+      {
+            "type": "table",
+            "headers": [
+                  "Operational Dimension",
+                  "Sales Invoice (Goods)",
+                  "Service Invoice (Services)",
+                  "Statutory Reference"
+            ],
+            "rows": [
+                  [
+                        "Classification Code",
+                        "Harmonized System of Nomenclature (HSN)",
+                        "Services Accounting Code (SAC)",
+                        "Rule 46(g) CGST Rules"
+                  ],
+                  [
+                        "Issuance Deadline",
+                        "On or before removal/delivery of goods",
+                        "Within 30 days from completion of service",
+                        "Section 31(1) vs Rule 47"
+                  ],
+                  [
+                        "Time of Supply Trigger",
+                        "Earliest of invoice issue date or last due date",
+                        "Earliest of invoice date, completion, or payment",
+                        "Section 12 vs Section 13"
+                  ],
+                  [
+                        "Advance Payment Tax",
+                        "Exempt from GST on advances (Notif. 66/2017)",
+                        "GST mandatory on advance payment receipt",
+                        "Section 13(2) & Rule 50"
+                  ],
+                  [
+                        "E-Way Bill Requirement",
+                        "Mandatory for consignment value > \u20b950,000",
+                        "Never applicable (no physical movement)",
+                        "Rule 138 CGST Rules"
+                  ],
+                  [
+                        "Continuous Supply Rule",
+                        "Invoice issued when account statement is signed",
+                        "Invoice issued on or before periodic payment date",
+                        "Section 31(4) vs Section 31(5)"
+                  ]
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "Timing rules: When must each invoice be generated?"
+      },
+      {
+            "type": "p",
+            "text": "The statutory deadline for invoice generation is one of the most strictly audited compliance areas in GST. Failing to generate an invoice within statutory timeframes alters the tax liability period, triggering mandatory 18% per annum interest under Section 50."
+      },
+      {
+            "type": "p",
+            "text": "For physical goods (sales invoices), Section 31(1) mandates that the invoice must be issued either before or at the time of removal of goods for supply to the recipient, or delivery of goods to the recipient. If goods leave your warehouse on March 28, the invoice cannot be dated April 2."
+      },
+      {
+            "type": "p",
+            "text": "For commercial services (service invoices), Rule 47 of the CGST Rules provides greater operational flexibility. A tax invoice must be issued within 30 days from the date of the completion of service (extended to 45 days for banking companies, financial institutions, and NBFCs). If an engineering consultancy project finishes on June 15, the firm has until July 15 to finalize hours and deliver the official tax invoice."
+      },
+      {
+            "type": "highlight",
+            "label": "Critical Distinction on Advances",
+            "text": "Under Notification No. 66/2017-Central Tax, suppliers of goods are exempt from paying GST on advance customer payments. Conversely, service providers MUST pay GST on advances received under Section 13(2), issuing a statutory Receipt Voucher under Section 31(3)(d)."
+      },
+      {
+            "type": "h2",
+            "text": "Determining Place of Supply: Goods vs Services"
+      },
+      {
+            "type": "p",
+            "text": "Determining whether an invoice attracts CGST + SGST (intra-state) or IGST (inter-state) depends on the Place of Supply (POS) provisions under the Integrated Goods and Services Tax (IGST) Act, 2017:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Place of Supply for Goods: Governed by Section 10 of the IGST Act. Where the supply involves movement of goods, the POS is the location where the goods terminate for delivery to the recipient. If a Mumbai seller delivers goods to a factory in Surat, Gujarat, the POS is Gujarat, requiring an IGST charge.",
+                  "Place of Supply for Services: Governed by Section 12 of the IGST Act (for domestic supplies). For B2B supplies, the default POS is the location of the registered recipient. For B2C supplies, the POS is the recipient's location on record, or the supplier's location if the address is absent.",
+                  "Special Immovable Property Rules: For architecture, interior design, construction, and hotel lodging, Section 12(3) mandates that the POS is the physical location of the immovable property, regardless of where the client's corporate headquarters resides."
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "Credit notes and e-invoicing: Goods vs services requirements"
+      },
+      {
+            "type": "p",
+            "text": "When financial adjustments occur post-billing, Section 34 of the CGST Act dictates strict procedures. For sales invoices covering tangible goods, credit notes are routinely triggered by physical goods returns, stock transit breakages, or secondary turnover discounts. The supplier must reflect the credit note in GSTR-1, and if the consignment value exceeds \u20b950,000, an e-Way Bill may be required to transport returned inventory back to the warehouse."
+      },
+      {
+            "type": "p",
+            "text": "For service invoices, physical return is impossible. Credit notes are issued exclusively for deficiency in service, agreed rate reductions, or milestone cancellations. Under Section 34(2), all credit notes for either goods or services must be reported in monthly returns no later than November 30 following the end of the financial year to ensure the buyer's ITC is legitimately reduced without tax disputes."
+      },
+      {
+            "type": "h2",
+            "text": "Bundled contracts: Composite vs Mixed supplies"
+      },
+      {
+            "type": "p",
+            "text": "Modern enterprises frequently bill both goods and services on the same commercial bill. Under Section 8 of the CGST Act, Indian tax law classifies multi-element transactions into two categories:"
+      },
+      {
+            "type": "ol",
+            "items": [
+                  "Composite Supply: Two or more taxable supplies naturally bundled and supplied together in the ordinary course of business, where one is principal. A classic example is selling a commercial server (principal supply, goods) with installation service. The entire composite supply takes the tax rate of the principal supply under Section 8(a).",
+                  "Mixed Supply: Two or more individual supplies bundled together for a single price that do not constitute a composite supply. For example, selling a promotional package containing office stationery (goods) and executive business coaching (service) for a single combined fee. Under Section 8(b), the entire package is taxed at the highest GST rate among the items."
+            ]
+      },
+      {
+            "type": "p",
+            "text": "By utilizing [Udyog smart invoicing](/pricing), Indian businesses can configure hybrid line items, auto-detect appropriate HSN/SAC codes, and enforce correct tax splitting without tedious manual calculation."
+      },
+      {
+            "type": "cta",
+            "text": "Effortlessly manage sales and service invoices in one unified GST platform. Start your 14-day free trial of Udyog today.",
+            "label": "Try Udyog Free",
+            "url": "https://app.udyogbook.in/sign-in"
+      },
+    ],
+    faqs: [
+      {
+            "q": "Can I bill both goods and services on the same GST invoice?",
+            "a": "Yes, you can bill both goods and services on a single GST tax invoice. You must provide the applicable HSN code for physical goods items and the appropriate SAC code for service items, applying each line item's specific tax rate."
+      },
+      {
+            "q": "How many days do I have to issue a service invoice after completing work?",
+            "a": "Under Rule 47 of the CGST Rules, you must issue a tax invoice for services within 30 days of service completion. For banking companies, financial institutions, and insurance providers, this deadline is extended to 45 days."
+      },
+      {
+            "q": "Do I have to generate an e-Way Bill for a service invoice?",
+            "a": "No, e-Way Bills apply strictly to the physical movement of tangible goods under Rule 138 of the CGST Rules. Because services involve intangible performance without freight consignment, e-Way Bills are never generated for pure service invoices."
+      },
+      {
+            "q": "What is the difference between an HSN code and a SAC code?",
+            "a": "An HSN (Harmonized System of Nomenclature) code classifies physical tangible products (goods). A SAC (Services Accounting Code) is a 6-digit classification scheme created by CBIC specifically to categorize commercial, professional, and intangible services."
+      },
+      {
+            "q": "Is GST payable on advance payments received for goods versus services?",
+            "a": "GST is payable on advance receipts for services under Section 13(2). However, for physical goods, Notification No. 66/2017-Central Tax exempts all suppliers from paying GST on advances; tax is payable only upon invoice issuance."
+      },
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 28 — bill-clients-without-gst-registration-legally
+  // ─────────────────────────────────────────────
+  {
+    slug: "bill-clients-without-gst-registration-legally",
+    category: "Billing Guide",
+    color: "#3b82f6",
+    title: "How to Bill Clients Without GST Registration (100% Legally)",
+    excerpt: "Learn how to legally invoice clients in India without a GST registration. Understand turnover thresholds, interstate service rules, TDS, and PAN declarations.",
+    date: "8 Sep 2026",
+    readTime: "11 min read",
+    metaTitle: "How to Bill Clients Without GST Legally in India | Udyog",
+    metaDescription: "Learn how to bill clients without GST registration legally in India. Understand Section 22 limits, interstate service exemptions, PAN rules, and TDS processing.",
+    keywords: "bill clients without gst, invoice without gst legally india, freelance billing without gst, billing unregistered business, gst threshold limits india",
+    content: [
+      {
+            "type": "p",
+            "text": "To bill clients legally without GST registration in India, your annual aggregate turnover must remain below statutory thresholds (\u20b920 lakh for services or \u20b940 lakh for goods under Section 22), and your invoice must feature your Permanent Account Number (PAN) without charging any GST. Corporate clients can lawfully accept these commercial invoices as valid business expenditure, provided no tax components are listed."
+      },
+      {
+            "type": "p",
+            "text": "A common misconception among Indian freelancers, graphic designers, software developers, and early-stage startup consultants is that a GSTIN is mandatory before issuing your very first client invoice. In reality, the Goods and Services Tax Act was deliberately designed with turnover thresholds to protect micro-enterprises and solo professionals from onerous compliance burdens until their commercial operations achieve financial scale."
+      },
+      {
+            "type": "p",
+            "text": "However, billing without GST requires strict adherence to statutory boundaries. One erroneous line item, an illegal tax charge, or an overlooked interstate sale of physical goods can expose an entrepreneur to severe tax penalties. In this comprehensive guide, we unpack the exact legal mechanisms for billing without GST, explain interstate service exemptions, review TDS deductions under the Income Tax Act, and show how to issue professional bills using [Udyog](/pricing)."
+      },
+      {
+            "type": "h2",
+            "text": "The statutory framework: When are you exempt from GST registration?"
+      },
+      {
+            "type": "p",
+            "text": "Section 22(1) of the CGST Act establishes that every supplier is liable to be registered under GST in the State or Union territory from where they make taxable supplies, only if aggregate turnover in a financial year exceeds the specified threshold limit:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "Service Providers & Freelancers: Aggregate turnover threshold is \u20b920 lakh per financial year (\u20b910 lakh for special category states: Manipur, Mizoram, Nagaland, and Tripura).",
+                  "Suppliers of Physical Goods: The standard threshold is \u20b940 lakh for intra-state suppliers of goods (\u20b920 lakh in special category states), provided the business does not manufacture ice cream, pan masala, or tobacco products.",
+                  "Interstate Service Exemption: While Section 24(i) mandates GST registration for anyone making inter-state taxable supplies, the CBIC issued Notification No. 10/2017-Integrated Tax exempting service providers supplying across state borders whose aggregate turnover is below \u20b920 lakh."
+            ]
+      },
+      {
+            "type": "p",
+            "text": "Crucial distinction: The interstate exemption under Notification No. 10/2017 applies EXCLUSIVELY to services. If you sell physical products across state boundaries, Section 24(i) applies strictly\u2014you must register for GST from rupee one, regardless of turnover."
+      },
+      {
+            "type": "h2",
+            "text": "How to structure an invoice when you don't have GSTIN"
+      },
+      {
+            "type": "p",
+            "text": "An unregistered bill must maintain strict commercial professionalism while avoiding any representation of being a tax invoice. Structure your bill using these standardized components:"
+      },
+      {
+            "type": "table",
+            "headers": [
+                  "Invoice Section",
+                  "What to Include",
+                  "Legal Significance",
+                  "What to Avoid"
+            ],
+            "rows": [
+                  [
+                        "Document Header",
+                        "'Commercial Invoice' or 'Bill of Sale'",
+                        "Clarifies non-tax nature",
+                        "Never write 'Tax Invoice'"
+                  ],
+                  [
+                        "Seller Credentials",
+                        "Your Name / Trade Name & Address",
+                        "Establishes contracting party",
+                        "Do not invent fake GST numbers"
+                  ],
+                  [
+                        "Tax Identity",
+                        "Permanent Account Number (PAN)",
+                        "Enables normal TDS rates",
+                        "Omitting PAN attracts 20% TDS"
+                  ],
+                  [
+                        "Registration ID",
+                        "Udyam MSME Registration Number",
+                        "Grants MSME Samadhaan protection",
+                        "Do not claim registered GST status"
+                  ],
+                  [
+                        "Tax Rows",
+                        "Completely absent ($0 tax / No rows)",
+                        "Mandatory under Section 76",
+                        "Never charge CGST, SGST, or IGST"
+                  ],
+                  [
+                        "Statutory Note",
+                        "Declaration of threshold exemption",
+                        "Prevents client accounting queries",
+                        "Do not omit legal declaration"
+                  ]
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "Navigating corporate TDS deductions under Section 194J and 194C"
+      },
+      {
+            "type": "p",
+            "text": "When you bill private limited companies, LLP firms, or public institutions, their finance team is statutorily mandated to deduct income tax at source before remitting your funds. As an unregistered entity, understanding these deductions prevents panic when receiving net payments:"
+      },
+      {
+            "type": "p",
+            "text": "Under Section 194J of the Income Tax Act, fees for professional or technical services are subject to 10% TDS (or 2% for purely technical services or call center operations). Under Section 194C, contractual payments for advertising, catering, or transport are subject to 1% TDS for individuals and proprietorships. The client deposits this deducted tax directly with the Income Tax Department against your PAN."
+      },
+      {
+            "type": "highlight",
+            "label": "PAN Disclosure Mandate",
+            "text": "Under Section 206AA of the Income Tax Act, failure to furnish a valid PAN to your corporate client forces them to deduct TDS at a punitive 20% flat rate. Always include your 10-digit PAN prominently on every bill."
+      },
+      {
+            "type": "h2",
+            "text": "Does your registered client have to pay Reverse Charge GST?"
+      },
+      {
+            "type": "p",
+            "text": "Clients occasionally hesitate to engage unregistered freelancers or vendors out of fear that they will be forced to pay Reverse Charge Mechanism (RCM) GST under Section 9(4) of the CGST Act. You can immediately reassure their accounting department with the statutory facts."
+      },
+      {
+            "type": "p",
+            "text": "While Section 9(4) originally imposed universal RCM on purchases from unregistered vendors, the Government suspended this broad provision in 2017 and subsequently amended the law. Today, Section 9(4) applies strictly to specified classes of registered persons and specified goods (primarily real estate promoters procuring cement or capital goods from unregistered suppliers). Standard commercial services, consulting, IT development, and retail supplies are entirely exempt from unregistered RCM."
+      },
+      {
+            "type": "h2",
+            "text": "Billing international clients without GST: FIRC and zero-rating"
+      },
+      {
+            "type": "p",
+            "text": "Indian software developers, copywriters, digital marketers, and remote consultants frequently ask whether they can bill foreign clients across the US, UK, Europe, or Middle East without registering for GST. Under Section 2(6) of the IGST Act, export of services is legally classified as a zero-rated supply. However, there is a crucial regulatory catch regarding threshold exemptions."
+      },
+      {
+            "type": "p",
+            "text": "Under Section 24(i) of the CGST Act, any entity engaging in inter-state taxable supply is normally forced to register. While Notification No. 10/2017-Integrated Tax grants a \u20b920 lakh exemption for domestic inter-state services, CBIC clarified in Circular No. 107/26/2019-GST that service providers exporting services without a Letter of Undertaking (LUT) must track their \u20b920 lakh threshold carefully. If your turnover remains below \u20b920 lakh, you can bill international clients directly in foreign currency, receiving inward remittances through formal banking channels with a Foreign Inward Remittance Advice (FIRA)."
+      },
+      {
+            "type": "h2",
+            "text": "When are you legally required to stop non-GST billing?"
+      },
+      {
+            "type": "p",
+            "text": "Unregistered billing is a stepping stone, not a permanent status for a flourishing enterprise. Under Section 25(1) of the CGST Act, the moment your cumulative turnover across India exceeds \u20b920 lakh (or \u20b940 lakh for eligible goods sellers), you have exactly 30 days to submit a GST registration application on the GST Portal."
+      },
+      {
+            "type": "p",
+            "text": "Once your GSTIN is issued, you must immediately transition to issuing formal Tax Invoices governed by Rule 46. Using modern billing platforms like [Udyog](/pricing) ensures this transition is instantaneous\u2014all existing customer databases, product lists, and historical ledgers carry forward without data loss."
+      },
+      {
+            "type": "cta",
+            "text": "Create polished, professional commercial invoices with automatic PAN and MSME declarations. Try Udyog free for 14 days.",
+            "label": "Start Free Today",
+            "url": "https://app.udyogbook.in/sign-in"
+      },
+    ],
+    faqs: [
+      {
+            "q": "Can a private limited company pay an unregistered freelancer legally?",
+            "a": "Yes, private limited companies can lawfully pay unregistered freelancers. The company records the invoice as an allowable business expense and deducts standard TDS under Section 194J against the freelancer's PAN. No GST is charged or claimed."
+      },
+      {
+            "q": "Can I bill clients in another state without having a GST number?",
+            "a": "Yes, if you provide services, Notification No. 10/2017-Integrated Tax permits interstate service billing without GST registration provided your aggregate turnover stays under \u20b920 lakh. However, physical goods cannot be supplied interstate without mandatory GST registration."
+      },
+      {
+            "q": "How do I get the TDS money back that my client deducted?",
+            "a": "When clients deduct TDS, they deposit it under your PAN, reflecting in your Form 26AS and AIS. When filing your annual Income Tax Return (ITR), if your total tax liability is less than the TDS deducted, the Income Tax Department refunds the excess amount to your bank account."
+      },
+      {
+            "q": "Is Udyam MSME registration necessary to bill clients without GST?",
+            "a": "Udyam registration is not legally mandatory to bill clients, but it is highly recommended. Listing your Udyam registration number gives you statutory payment protection under Section 15 of the MSMED Act, requiring clients to pay within 45 days."
+      },
+      {
+            "q": "What is the penalty if I charge GST on my invoice without a GSTIN?",
+            "a": "Collecting GST without holding a valid GSTIN is an offense under Section 76 and Section 122 of the CGST Act. The government can seize the entire amount collected, impose a minimum penalty of \u20b910,000 or 100% of the tax collected, and initiate prosecution."
+      },
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 29 — composition-scheme-billing-non-gst-invoices
+  // ─────────────────────────────────────────────
+  {
+    slug: "composition-scheme-billing-non-gst-invoices",
+    category: "GST Guide",
+    color: "#10b981",
+    title: "Composition Scheme Billing: Bill of Supply Rules & Format",
+    excerpt: "Complete guide to composition scheme billing in India. Learn Bill of Supply rules under Rule 49, mandatory declarations, tax rates, and invoicing workflows.",
+    date: "8 Sep 2026",
+    readTime: "11 min read",
+    metaTitle: "Composition Scheme Billing: Bill of Supply Format | Udyog",
+    metaDescription: "Master GST composition scheme billing rules in India. Learn Bill of Supply format under Rule 49, mandatory declarations, tax rates, and quarterly filing tips.",
+    keywords: "composition scheme billing, bill of supply format, gst composition invoice rules, rule 49 cgst rules, composition scheme tax rates india",
+    content: [
+      {
+            "type": "p",
+            "text": "Under the GST Composition Scheme, registered businesses cannot issue a tax invoice or collect any GST from buyers, but must instead issue a Bill of Supply under Section 31(3)(c) of the CGST Act. Rule 49 and Rule 5(1)(f) strictly mandate that every composition bill must prominently state: 'Composition taxable person, not eligible to collect tax on supplies' on the top of the invoice."
+      },
+      {
+            "type": "p",
+            "text": "The GST Composition Scheme was created under Section 10 of the CGST Act to simplify tax compliance for small manufacturers, retail traders, restaurants, and service providers. Instead of filing monthly detailed invoices and maintaining complex Input Tax Credit (ITC) reconciliation, composition dealers pay a small, fixed percentage of their quarterly turnover directly to the government through Form CMP-08."
+      },
+      {
+            "type": "p",
+            "text": "However, this simplified structure comes with rigid invoicing restrictions. Hundreds of composition taxpayers receive compliance notices every year because they accidentally print GST percentage columns, collect tax from unsuspecting consumers, or fail to print mandatory statutory headers on their bills. In this comprehensive guide, we unpack the exact legal mechanics of composition billing, examine Bill of Supply rules under Rule 49, outline turnover eligibility, and demonstrate how [Udyog](/pricing) automates composition compliance."
+      },
+      {
+            "type": "h2",
+            "text": "Composition scheme eligibility and tax rates in 2026"
+      },
+      {
+            "type": "p",
+            "text": "To opt for and maintain composition status under Section 10, a taxpayer's aggregate turnover during the preceding financial year must not exceed statutory ceilings:"
+      },
+      {
+            "type": "table",
+            "headers": [
+                  "Business Category",
+                  "Turnover Ceiling",
+                  "Applicable GST Rate",
+                  "Breakdown (CGST + SGST)"
+            ],
+            "rows": [
+                  [
+                        "Manufacturers of Goods",
+                        "Up to \u20b91.5 Crore (\u20b975L in Special States)",
+                        "1% of Total Turnover",
+                        "0.5% CGST + 0.5% SGST"
+                  ],
+                  [
+                        "Traders & Retailers of Goods",
+                        "Up to \u20b91.5 Crore (\u20b975L in Special States)",
+                        "1% of Taxable Turnover",
+                        "0.5% CGST + 0.5% SGST"
+                  ],
+                  [
+                        "Restaurants (Non-Alcoholic)",
+                        "Up to \u20b91.5 Crore (\u20b975L in Special States)",
+                        "5% of Total Turnover",
+                        "2.5% CGST + 2.5% SGST"
+                  ],
+                  [
+                        "Service Providers (Section 10(2A))",
+                        "Up to \u20b950 Lakh",
+                        "6% of Total Turnover",
+                        "3.0% CGST + 3.0% SGST"
+                  ]
+            ]
+      },
+      {
+            "type": "p",
+            "text": "Note on special category states: For Arunachal Pradesh, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura, and Uttarakhand, the turnover limit for goods composition is \u20b975 lakh. For Assam, Himachal Pradesh, and Jammu & Kashmir, the threshold is \u20b91.5 crore."
+      },
+      {
+            "type": "h2",
+            "text": "Mandatory components of a Bill of Supply under Rule 49"
+      },
+      {
+            "type": "p",
+            "text": "Because a composition taxpayer cannot issue a 'Tax Invoice', they are statutorily required under Section 31(3)(c) to issue a 'Bill of Supply'. Rule 49 of the CGST Rules specifies eight mandatory fields:"
+      },
+      {
+            "type": "ol",
+            "items": [
+                  "Mandatory Header Text: The document must be clearly titled 'Bill of Supply' at the top center.",
+                  "Mandatory Statutory Notice: Under Rule 5(1)(f), the words 'Composition taxable person, not eligible to collect tax on supplies' must appear prominently at the very top of every invoice.",
+                  "Supplier Identification: Legal entity name, trade name, registered address, and active 15-digit GSTIN.",
+                  "Consecutive Serial Number: A unique consecutive serial number containing only alphabets, numerals, and special characters (hyphen or slash), unique for each financial year.",
+                  "Date of Issue: The calendar date on which the Bill of Supply is generated.",
+                  "Recipient Details: Name, address, and GSTIN or Unique Identity Number (UIN) if the recipient is registered under GST.",
+                  "HSN or SAC Code: Harmonized System of Nomenclature code for goods or Accounting Code for services, as prescribed under statutory turnover thresholds.",
+                  "Description and Value: Clear itemized description of goods or services, quantity, rate per unit, gross value, and net value payable after applicable commercial discounts."
+            ]
+      },
+      {
+            "type": "highlight",
+            "label": "Strict Invoicing Prohibition",
+            "text": "Under Section 10(4) of the CGST Act, a composition dealer shall not collect any tax from the recipient on supplies made by him, nor shall he be entitled to any credit of input tax. Printing CGST, SGST, or IGST line items is an explicit violation of the law."
+      },
+      {
+            "type": "h2",
+            "text": "Restrictions on composition taxpayers: What you CANNOT do"
+      },
+      {
+            "type": "p",
+            "text": "While the composition scheme reduces administrative overhead, businesses must understand its strict statutory limitations before selecting this tax regime:"
+      },
+      {
+            "type": "ul",
+            "items": [
+                  "No Interstate Outward Supplies: Under Section 10(2)(c), a composition dealer cannot supply goods or services across state lines. All sales must be strictly intra-state.",
+                  "No E-Commerce Sales: Under Section 10(2)(d), composition taxpayers cannot supply goods through e-commerce operators like Amazon or Flipkart who are required to collect TCS under Section 52.",
+                  "Zero Input Tax Credit: You cannot claim ITC on any purchases made for your business. The GST charged by your suppliers becomes an added operational expense.",
+                  "B2B Buyers Cannot Claim ITC: Because your Bill of Supply carries no GST charge, corporate and registered B2B buyers cannot claim any tax credit, making composition dealers less attractive to enterprise clients.",
+                  "Prohibited Goods: Manufacturers of ice cream, pan masala, tobacco, brick kilns, and aerated water are legally ineligible for the composition scheme."
+            ]
+      },
+      {
+            "type": "h2",
+            "text": "Transition rules: Switching between Regular and Composition regimes"
+      },
+      {
+            "type": "p",
+            "text": "Businesses do not remain static; changing market conditions often necessitate migrating between the regular GST scheme and the composition scheme. Under Section 18(4) of the CGST Act and Rule 44, when a regular taxpayer shifts to composition, they must calculate and reverse the Input Tax Credit availed on stock, semi-finished goods, and capital assets held in inventory on the date of transition via Form GST ITC-03."
+      },
+      {
+            "type": "p",
+            "text": "Conversely, when a composition dealer opts out\u2014either voluntarily via Form GST CMP-04 or automatically upon exceeding the \u20b91.5 crore turnover threshold\u2014Section 18(1)(c) allows them to claim Input Tax Credit on inputs held in stock and capital goods (reduced by 5% per quarter) via Form GST ITC-01 within 30 days. From the exact date of opting out, the taxpayer must immediately stop issuing Bills of Supply and begin issuing standard Rule 46 Tax Invoices."
+      },
+      {
+            "type": "h2",
+            "text": "Quarterly payment and annual compliance: CMP-08 and GSTR-4"
+      },
+      {
+            "type": "p",
+            "text": "Invoicing under the composition scheme connects directly to a simplified filing routine. Instead of filing monthly GSTR-1 and GSTR-3B returns, composition taxpayers follow a streamlined two-tier process:"
+      },
+      {
+            "type": "p",
+            "text": "First, taxpayers file Form CMP-08 quarterly by the 18th day of the month following each quarter (e.g., July 18 for the April\u2013June quarter). This return summarizes aggregate turnover, computes the fixed composition tax rate (e.g., 1% or 5%), and remits the tax liability via online challan. Second, taxpayers file a single comprehensive annual return using Form GSTR-4 by April 30 following the close of the financial year."
+      },
+      {
+            "type": "p",
+            "text": "Using [Udyog billing software](/pricing), composition dealers can automate Bill of Supply creation, ensure strict compliance with Rule 49 wording, and auto-aggregate quarterly turnover numbers ready for instant CMP-08 filing."
+      },
+      {
+            "type": "cta",
+            "text": "Simplify your composition scheme invoicing with compliant Bill of Supply templates and auto-calculated CMP-08 reports. Try Udyog free for 14 days.",
+            "label": "Start Free Trial",
+            "url": "https://app.udyogbook.in/sign-in"
+      },
+    ],
+    faqs: [
+      {
+            "q": "Can a composition dealer collect GST from customers?",
+            "a": "No, Section 10(4) of the CGST Act explicitly prohibits composition dealers from collecting GST from customers. The composition tax (1%, 5%, or 6%) must be paid by the business owner out of their own pocket based on quarterly turnover."
+      },
+      {
+            "q": "What happens if a composition dealer does not print the mandatory declaration?",
+            "a": "Failing to print 'Composition taxable person, not eligible to collect tax on supplies' on your Bill of Supply violates Rule 5(1)(f) of the CGST Rules. It attracts general penalties up to \u20b925,000 under Section 125 and may trigger cancellation of composition status."
+      },
+      {
+            "q": "Can a B2B buyer claim Input Tax Credit on a Bill of Supply?",
+            "a": "No, a business buyer cannot claim Input Tax Credit on a Bill of Supply. Because composition dealers do not charge GST, there is no tax component to pass on to the buyer as credit."
+      },
+      {
+            "q": "Can a composition dealer sell goods to customers in other states?",
+            "a": "No, under Section 10(2)(c) of the CGST Act, composition taxpayers cannot make interstate outward supplies of goods. If you make even a single interstate sale, your composition eligibility is immediately revoked."
+      },
+      {
+            "q": "How often do composition dealers file GST returns?",
+            "a": "Composition dealers file a simplified statement-cum-challan in Form CMP-08 quarterly (by the 18th of the following month) to pay taxes. They file a comprehensive annual return in Form GSTR-4 by April 30 after the financial year ends."
+      },
+    ]
+  }
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
