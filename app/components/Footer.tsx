@@ -48,6 +48,7 @@ export default function Footer() {
             <a href="/#features" className="footer-link">Features</a>
             <a href="/#how-it-works" className="footer-link">Voice Billing</a>
             <a href="/pricing" className="footer-link">Pricing</a>
+            <a href="/custom-solutions" className="footer-link">Custom Solutions</a>
             <a href="/#features" className="footer-link">CA Portal</a>
           </div>
 
