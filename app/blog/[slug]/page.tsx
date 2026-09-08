@@ -33,6 +33,33 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
+function parseTextWithLinks(text?: string) {
+  if (!text) return null
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g
+  if (!regex.test(text)) return text
+  regex.lastIndex = 0
+  const parts = []
+  let lastIndex = 0
+  let match
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index))
+    }
+    const label = match[1]
+    const url = match[2]
+    parts.push(
+      <a key={match.index} href={url} style={{ color: '#F97316', fontWeight: 600, textDecoration: 'underline' }}>
+        {label}
+      </a>
+    )
+    lastIndex = regex.lastIndex
+  }
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex))
+  }
+  return parts
+}
+
 function renderSection(section: BlogSection, index: number) {
   switch (section.type) {
     case 'h2':
@@ -56,7 +83,7 @@ function renderSection(section: BlogSection, index: number) {
     case 'p':
       return (
         <p key={index} style={{ fontSize: 16, color: '#475569', lineHeight: 1.85, marginBottom: 16 }}>
-          {section.text}
+          {parseTextWithLinks(section.text)}
         </p>
       )
     case 'ul':
@@ -65,7 +92,7 @@ function renderSection(section: BlogSection, index: number) {
           {section.items?.map((item, i) => (
             <li key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', padding: '6px 0', fontSize: 15, color: '#475569', lineHeight: 1.7 }}>
               <span style={{ color: '#10b981', flexShrink: 0, marginTop: 3, fontSize: 14 }}>•</span>
-              <span>{item}</span>
+              <span>{parseTextWithLinks(item)}</span>
             </li>
           ))}
         </ul>
@@ -78,7 +105,7 @@ function renderSection(section: BlogSection, index: number) {
               <span style={{ background: '#F97316', color: '#fff', borderRadius: '50%', width: 24, height: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 700, flexShrink: 0, marginTop: 1 }}>
                 {i + 1}
               </span>
-              <span>{item}</span>
+              <span>{parseTextWithLinks(item)}</span>
             </li>
           ))}
         </ol>
@@ -112,14 +139,14 @@ function renderSection(section: BlogSection, index: number) {
           {section.label && (
             <p style={{ fontSize: 12, fontWeight: 700, color: section.color || '#F97316', marginBottom: 6, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{section.label}</p>
           )}
-          <p style={{ fontSize: 15, color: '#334155', lineHeight: 1.75, margin: 0 }}>{section.text}</p>
+          <p style={{ fontSize: 15, color: '#334155', lineHeight: 1.75, margin: 0 }}>{parseTextWithLinks(section.text)}</p>
         </div>
       )
     case 'cta':
       return (
         <div key={index} style={{ background: '#0F172A', borderRadius: 16, padding: 'clamp(24px,4vw,36px)', textAlign: 'center', margin: '36px 0' }}>
-          <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: 20 }}>{section.text}</p>
-          <a href="https://app.udyogbook.in/sign-in" style={{ display: 'inline-block', background: '#F97316', color: '#fff', padding: '12px 28px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
+          <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: 20 }}>{parseTextWithLinks(section.text)}</p>
+          <a href={section.url || "https://app.udyogbook.in/sign-in"} style={{ display: 'inline-block', background: '#F97316', color: '#fff', padding: '12px 28px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
             {section.label || 'Try Udyog Free'} →
           </a>
         </div>
