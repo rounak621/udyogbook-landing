@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: 'Features', href: '/#features' },
   { label: 'How it works', href: '/#how-it-works' },
   { label: 'Pricing', href: '/pricing' },
+  { label: 'Custom Billing', href: '/custom-solutions' },
   { label: 'Free Tools', href: '/tools/digital-signature' },
   { label: 'FAQ', href: '/#faq' },
   { label: 'Contact', href: '/contact' },
@@ -42,7 +43,7 @@ export default function Navbar() {
           height: 76px;
         }
         .nav-logo { display: flex; align-items: center; text-decoration: none; }
-        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links { display: flex; align-items: center; gap: clamp(14px, 1.8vw, 24px); }
         .nav-link {
           font-size: 14px; font-weight: 500; color: #444;
           text-decoration: none; transition: color 0.2s;
@@ -105,6 +106,11 @@ export default function Navbar() {
           padding: 10px; text-decoration: none; width: 100%;
         }
         .mobile-signin-link:hover { color: #f97316; }
+        @media (max-width: 1160px) and (min-width: 961px) {
+          .nav-links { gap: 12px; }
+          .nav-link { font-size: 13px; }
+          .nav-btn-download { display: none !important; }
+        }
         @media (max-width: 960px) {
           .nav-links { display: none !important; }
           .nav-btn-download, .nav-cta, .nav-link-signin { display: none !important; }
