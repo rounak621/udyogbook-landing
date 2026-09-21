@@ -66,7 +66,7 @@ export const PRICING_PLANS: PlanData[] = [
     cta: 'Start free trial',
     features: [
       { text: '6 Businesses Limit', included: true },
-      { text: '1 CA Collaboration Access', included: true },
+      { text: '2 CAs Collaboration Access', included: true },
       { text: 'Maya AI Voice Billing', included: true },
       { text: 'Core GST Billing & Invoicing', included: true },
     ],
@@ -140,7 +140,7 @@ export const PRICING_PLANS: PlanData[] = [
     features: [
       { text: 'All Pro features', included: true },
       { text: 'One-Click GST Reports', included: true },
-      { text: 'CA Collaboration Portal', included: true },
+      { text: '1 CA Collaboration Access', included: true },
       { text: 'Profit & Loss Statements', included: true },
       { text: 'Advanced Staff Permissions', included: true },
       { text: 'Rental Business', included: false },
