@@ -247,21 +247,26 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </section>
         )}
 
-        {/* Related posts */}
+        {/* Related articles */}
         <section style={{ padding: 'clamp(40px,5vw,64px) var(--section-px)' }}>
           <div style={{ maxWidth: 760, margin: '0 auto' }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, color: '#0f172a', marginBottom: 24 }}>More from Udyog Blog</h2>
+            <h2 style={{ fontSize: 20, fontWeight: 700, color: '#0f172a', marginBottom: 24 }}>Related articles</h2>
             <style suppressHydrationWarning>{`
-              .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+              .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
               @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
             `}</style>
             <div className="related-grid">
-              {BLOG_POSTS.filter(p => p.slug !== post.slug && p.content.length > 1).slice(0, 2).map(related => (
-                <a key={related.slug} href={`/blog/${related.slug}`} style={{ textDecoration: 'none', background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: '18px 20px', display: 'block' }}>
-                  <span style={{ fontSize: 11, fontWeight: 700, color: related.color, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{related.category}</span>
-                  <p style={{ fontSize: 14, fontWeight: 600, color: '#0f172a', marginTop: 6, marginBottom: 0, lineHeight: 1.4 }}>{related.title}</p>
-                </a>
-              ))}
+              {(() => {
+                const sameCategory = BLOG_POSTS.filter(p => p.slug !== post.slug && p.category === post.category)
+                const otherCategory = BLOG_POSTS.filter(p => p.slug !== post.slug && p.category !== post.category)
+                const relatedPosts = [...sameCategory, ...otherCategory].slice(0, 4)
+                return relatedPosts.map(related => (
+                  <a key={related.slug} href={`/blog/${related.slug}`} style={{ textDecoration: 'none', background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: '18px 20px', display: 'block' }}>
+                    <span style={{ fontSize: 11, fontWeight: 700, color: related.color, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{related.category}</span>
+                    <p style={{ fontSize: 14, fontWeight: 600, color: '#0f172a', marginTop: 6, marginBottom: 0, lineHeight: 1.4 }}>{related.title}</p>
+                  </a>
+                ))
+              })()}
             </div>
           </div>
         </section>

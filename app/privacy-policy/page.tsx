@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Udyog',
+  title: 'Privacy Policy',
   description: 'Privacy Policy for Udyog — how we collect, use, and protect your data.',
 }
 

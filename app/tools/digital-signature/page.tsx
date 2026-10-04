@@ -5,7 +5,7 @@ import DigitalSignatureTool from './DigitalSignatureTool'
 import SEOContent from './SEOContent'
 
 export const metadata: Metadata = {
-  title: 'Free Digital Signature Maker Online | Create Transparent PNG — Udyog',
+  title: 'Free Digital Signature Maker Online | Create Transparent PNG',
   description: 'Create your free digital signature online in seconds. Draw, type or upload your signature. Download as transparent PNG — perfect for GST invoices, contracts and business documents. No signup required.',
   keywords: 'free digital signature maker, digital signature generator online, create digital signature online, transparent signature PNG, signature for GST invoice, digital signature kaise banaye, free signature maker india',
   openGraph: {

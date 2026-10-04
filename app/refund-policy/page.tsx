@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Refund Policy — Udyog',
+  title: 'Refund Policy',
   description: 'Refund policy for Udyog billing software subscriptions.',
 }
 

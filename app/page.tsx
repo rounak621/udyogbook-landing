@@ -8,15 +8,33 @@ import HowItWorks from './components/HowItWorks'
 import Industries from './components/Industries'
 import Testimonials from './components/Testimonials'
 import ComparisonTable from './components/ComparisonTable'
+import LatestGuides from './components/LatestGuides'
 import FAQ from './components/FAQ'
 import DarkCTA from './components/DarkCTA'
 import CTABanner from './components/CTABanner'
 import Footer from './components/Footer'
 import FreeTools from './components/FreeTools'
 
+const homepageSoftwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Udyog',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Android, Web',
+  offers: {
+    '@type': 'Offer',
+    price: '799',
+    priceCurrency: 'INR',
+  },
+}
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSoftwareSchema) }}
+      />
       <Navbar />
       <main>
         <div style={{
@@ -47,6 +65,7 @@ export default function Home() {
         <Industries />
         <Testimonials />
         <ComparisonTable />
+        <LatestGuides />
         <FAQ />
         <FreeTools />
         <DarkCTA />

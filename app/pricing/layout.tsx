@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pricing Plans — Affordable GST Billing Software | Udyog',
+  title: 'Pricing Plans — Affordable GST Billing Software',
   description: 'Simple, transparent pricing for Udyog GST billing software. Plans start at ₹149/month with a 14-day free trial. Compare Basic, Pro, Premium, and Enterprise.',
   alternates: {
     canonical: 'https://udyogbook.in/pricing',

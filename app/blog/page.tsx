@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { BLOG_POSTS } from '../../lib/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Blog — GST Guides, Billing Tips & Business Insights | Udyog',
+  title: 'Blog — GST Guides, Billing Tips & Business Insights',
   description: 'Tips, guides, and insights for Indian small businesses on GST, billing, voice invoicing, and business growth. Written by the Udyog team.',
   openGraph: {
     title: 'Udyog Blog — GST Guides & Billing Tips for Indian Businesses',
