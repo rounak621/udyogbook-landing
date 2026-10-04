@@ -137,7 +137,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               alternateName: ['UdyogBook'],
               url: 'https://udyogbook.in',
               logo: 'https://udyogbook.in/udyog-logo.png',
-              sameAs: [],
+              sameAs: [
+                'https://play.google.com/store/apps/details?id=com.udyog.udyogmobile',
+              ],
             }),
           }}
         />

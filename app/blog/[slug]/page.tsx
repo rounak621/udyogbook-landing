@@ -8,6 +8,15 @@ export async function generateStaticParams() {
   return getAllSlugs().map(slug => ({ slug }))
 }
 
+function formatIsoDate(dateStr: string): string {
+  const d = new Date(dateStr)
+  if (isNaN(d.getTime())) return dateStr
+  const year = d.getFullYear()
+  const month = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = getPostBySlug(params.slug)
   if (!post) return {}
@@ -20,7 +29,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description: post.metaDescription,
       url: `https://udyogbook.in/blog/${post.slug}`,
       type: 'article',
-      publishedTime: post.date,
+      publishedTime: formatIsoDate(post.date),
     },
     twitter: {
       card: 'summary_large_image',
@@ -170,12 +179,16 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     }))
   } : null
 
+  const isoPublished = formatIsoDate(post.date)
+  const isoModified = (post as any).dateModified ? formatIsoDate((post as any).dateModified) : isoPublished
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
     "description": post.metaDescription,
-    "datePublished": post.date,
+    "datePublished": isoPublished,
+    "dateModified": isoModified,
     "author": { "@type": "Organization", "name": "Udyog" },
     "publisher": {
       "@type": "Organization",
