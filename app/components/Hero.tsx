@@ -142,7 +142,7 @@ export default function Hero() {
               <span className="hero-stars-text">4.9/5 · 5,000+ businesses</span>
             </div>
             <h1 className="hero-h1">
-              Bill banao, <span className="orange">bolke.</span><br />
+              Udyog: Bill banao, <span className="orange">bolke.</span><br />
               <span className="italic-black">Sirf</span> ek awaaz mein.
             </h1>
             <p className="hero-p">

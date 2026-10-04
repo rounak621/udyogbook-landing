@@ -40,6 +40,34 @@ export default function Footer() {
             <p className="footer-tagline">
               Udyog is built to simplify business operations and make GST compliance effortless through a NextGen, technology-first, voice-first, and India-first approach where all business data is available in real-time for both the owner and their CA.
             </p>
+            <div style={{ marginTop: 16 }}>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.udyog.udyogmobile"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 8,
+                  padding: '8px 14px',
+                  borderRadius: 8,
+                  border: '1px solid rgba(255,255,255,0.15)',
+                  background: 'rgba(255,255,255,0.05)',
+                  color: '#fff',
+                  fontSize: 13,
+                  fontWeight: 500,
+                  textDecoration: 'none',
+                }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 01-.61-1.636V3.45c0-.627.227-1.218.61-1.636z" fill="#00C1A6"/>
+                  <path d="M17.25 8.542l-3.458 3.458 3.458 3.458 3.882-2.203c1.107-.628 1.107-1.65 0-2.277L17.25 8.542z" fill="#FFD400"/>
+                  <path d="M13.792 12L3.61 1.814c.435-.472 1.077-.735 1.767-.735.632 0 1.25.215 1.77.51l10.103 5.733L13.792 12z" fill="#00F076"/>
+                  <path d="M13.792 12l3.458 3.458-10.103 5.734c-.52.294-1.138.51-1.77.51-.69 0-1.332-.263-1.767-.736L13.792 12z" fill="#F4374D"/>
+                </svg>
+                <span>Google Play</span>
+              </a>
+            </div>
           </div>
 
           {/* Product column */}

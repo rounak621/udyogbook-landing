@@ -8,6 +8,15 @@ export async function generateStaticParams() {
   return getAllSlugs().map(slug => ({ slug }))
 }
 
+function formatIsoDate(dateStr: string): string {
+  const d = new Date(dateStr)
+  if (isNaN(d.getTime())) return dateStr
+  const year = d.getFullYear()
+  const month = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = getPostBySlug(params.slug)
   if (!post) return {}
@@ -20,7 +29,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description: post.metaDescription,
       url: `https://udyogbook.in/blog/${post.slug}`,
       type: 'article',
-      publishedTime: post.date,
+      publishedTime: formatIsoDate(post.date),
     },
     twitter: {
       card: 'summary_large_image',
@@ -170,12 +179,16 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     }))
   } : null
 
+  const isoPublished = formatIsoDate(post.date)
+  const isoModified = (post as any).dateModified ? formatIsoDate((post as any).dateModified) : isoPublished
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
     "description": post.metaDescription,
-    "datePublished": post.date,
+    "datePublished": isoPublished,
+    "dateModified": isoModified,
     "author": { "@type": "Organization", "name": "Udyog" },
     "publisher": {
       "@type": "Organization",
@@ -247,21 +260,26 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </section>
         )}
 
-        {/* Related posts */}
+        {/* Related articles */}
         <section style={{ padding: 'clamp(40px,5vw,64px) var(--section-px)' }}>
           <div style={{ maxWidth: 760, margin: '0 auto' }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, color: '#0f172a', marginBottom: 24 }}>More from Udyog Blog</h2>
+            <h2 style={{ fontSize: 20, fontWeight: 700, color: '#0f172a', marginBottom: 24 }}>Related articles</h2>
             <style suppressHydrationWarning>{`
-              .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+              .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
               @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
             `}</style>
             <div className="related-grid">
-              {BLOG_POSTS.filter(p => p.slug !== post.slug && p.content.length > 1).slice(0, 2).map(related => (
-                <a key={related.slug} href={`/blog/${related.slug}`} style={{ textDecoration: 'none', background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: '18px 20px', display: 'block' }}>
-                  <span style={{ fontSize: 11, fontWeight: 700, color: related.color, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{related.category}</span>
-                  <p style={{ fontSize: 14, fontWeight: 600, color: '#0f172a', marginTop: 6, marginBottom: 0, lineHeight: 1.4 }}>{related.title}</p>
-                </a>
-              ))}
+              {(() => {
+                const sameCategory = BLOG_POSTS.filter(p => p.slug !== post.slug && p.category === post.category)
+                const otherCategory = BLOG_POSTS.filter(p => p.slug !== post.slug && p.category !== post.category)
+                const relatedPosts = [...sameCategory, ...otherCategory].slice(0, 4)
+                return relatedPosts.map(related => (
+                  <a key={related.slug} href={`/blog/${related.slug}`} style={{ textDecoration: 'none', background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: '18px 20px', display: 'block' }}>
+                    <span style={{ fontSize: 11, fontWeight: 700, color: related.color, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{related.category}</span>
+                    <p style={{ fontSize: 14, fontWeight: 600, color: '#0f172a', marginTop: 6, marginBottom: 0, lineHeight: 1.4 }}>{related.title}</p>
+                  </a>
+                ))
+              })()}
             </div>
           </div>
         </section>

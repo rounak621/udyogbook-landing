@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import InvoiceTemplateClient from './ClientPage'
 
 export const metadata: Metadata = {
-  title: 'Free GST Invoice Format Download — Excel & PDF Templates 2026 | Udyog',
+  title: 'Free GST Invoice Format Download — Excel & PDF Templates 2026',
   description: 'Download free GST invoice format in Excel and PDF for Indian businesses. Includes all mandatory fields: GSTIN, HSN code, CGST/SGST/IGST, place of supply. Ready to use.',
   keywords: 'gst invoice format download, gst invoice template excel, gst bill format pdf, free invoice template india, gst invoice format 2026',
   alternates: {

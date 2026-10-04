@@ -1,9 +1,9 @@
 import { MetadataRoute } from 'next'
-import { getAllSlugs } from '../lib/blog-posts'
+import { BLOG_POSTS } from '../lib/blog-posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://udyogbook.in'
-    const lastModified = new Date()
+    const lastModified = new Date('2026-09-08')
 
     // Static pages
     const staticPages: MetadataRoute.Sitemap = [
@@ -20,12 +20,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${baseUrl}/privacy-policy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
         { url: `${baseUrl}/terms-of-service`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
         { url: `${baseUrl}/refund-policy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
+        { url: `${baseUrl}/cookie-policy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
     ]
 
     // Dynamic blog pages
-    const blogPages: MetadataRoute.Sitemap = getAllSlugs().map(slug => ({
-        url: `${baseUrl}/blog/${slug}`,
-        lastModified,
+    const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map(post => ({
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: new Date(post.date),
         changeFrequency: 'monthly' as const,
         priority: 0.8,
     }))

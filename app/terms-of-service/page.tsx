@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service — Udyog',
+  title: 'Terms of Service',
   description: 'Terms of Service for Udyog billing software.',
 }
 

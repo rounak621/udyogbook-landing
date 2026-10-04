@@ -4,7 +4,7 @@ import LaunchModalProvider from './components/LaunchModalProvider'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Udyog — GST Billing Software for Indian Businesses',
+    default: 'Udyog – GST Billing & Invoicing Software for Indian Businesses',
     template: '%s | Udyog'
   },
   description: 'Create GST invoices in seconds with voice billing, manage inventory, track payments, and collaborate with your CA. Built for Indian retailers, traders, and MSMEs.',
@@ -120,13 +120,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'SoftwareApplication',
+              '@type': 'WebSite',
               name: 'Udyog',
-              applicationCategory: 'BusinessApplication',
-              operatingSystem: 'Web',
-              description: 'GST billing software for Indian businesses',
-              offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
-              aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '2300' },
+              alternateName: ['UdyogBook', 'Udyog Book', 'udyogbook.in'],
+              url: 'https://udyogbook.in',
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Udyog',
+              alternateName: ['UdyogBook'],
+              url: 'https://udyogbook.in',
+              logo: 'https://udyogbook.in/udyog-logo.png',
+              sameAs: [
+                'https://play.google.com/store/apps/details?id=com.udyog.udyogmobile',
+              ],
             }),
           }}
         />

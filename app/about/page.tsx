@@ -33,7 +33,7 @@ export default function AboutPage() {
               What is Udyog?
             </h2>
             <p style={{ fontSize: 16, color: '#64748b', lineHeight: 1.8, marginBottom: 32 }}>
-              Udyog is India's next-generation GST-ready billing and business management platform built specially for retailers, traders, MSMEs, and Chartered Accountants. We bring together billing, inventory, GST compliance, CA collaboration, and rental business management into one powerful, easy-to-use platform — designed for how Indian businesses actually operate. No complexity. No unnecessary features. Everything you need, nothing you don't.
+              Udyog is the GST billing app at udyogbook.in, by Udyog Technologies, Mumbai. Built specially for Indian retailers, traders, MSMEs, and Chartered Accountants, Udyog brings together billing, inventory, GST compliance, CA collaboration, and rental business management into one powerful, easy-to-use platform — designed for how Indian businesses actually operate. No complexity. No unnecessary features. Everything you need, nothing you don't.
             </p>
             {/* 3-column stat row */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexWrap: 'wrap', gap: '8px 0', marginTop: 32 }}>

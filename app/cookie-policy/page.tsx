@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy — Udyog | How We Use Cookies',
+  title: 'Cookie Policy — How We Use Cookies',
   description: 'Learn how Udyog uses cookies to improve your experience. We use essential, analytics, and preference cookies. You can control cookie settings at any time.',
   keywords: 'udyog cookie policy, cookies billing software, cookie consent india',
 }
