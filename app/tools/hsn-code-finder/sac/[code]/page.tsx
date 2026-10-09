@@ -93,39 +93,40 @@ export default function SACDetailPage({
   return (
     <>
       <Navbar />
-      <main style={{ paddingTop: 68, minHeight: '100vh', background: '#F8FAFC' }}>
+      <main style={{ paddingTop: 76, minHeight: '100vh', background: '#F8FAFC' }}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
         {/* Hero Section */}
-        <div style={{ background: '#0F172A', color: '#fff', padding: '24px var(--section-px, 20px) 32px' }}>
+        <div style={{ background: '#0F172A', color: '#FFFFFF', padding: '36px clamp(16px,4vw,24px) 44px' }}>
           <div style={{ maxWidth: 1040, margin: '0 auto' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: '#94A3B8', marginBottom: 16, flexWrap: 'wrap' }}>
-              <Link href="/tools" style={{ color: '#94A3B8', textDecoration: 'none' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: '#E2E8F0', marginBottom: 20, flexWrap: 'wrap' }}>
+              <Link href="/tools" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
                 Free Tools
               </Link>
               <span>/</span>
-              <Link href="/tools/hsn-code-finder" style={{ color: '#94A3B8', textDecoration: 'none' }}>
+              <Link href="/tools/hsn-code-finder" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
                 HSN & SAC Code Finder
               </Link>
               <span>/</span>
-              <span style={{ color: '#0284C7' }}>Group {headingCode}</span>
+              <span style={{ color: '#FED7AA', fontWeight: 600 }}>Group {headingCode}</span>
               <span>/</span>
-              <span style={{ color: '#fff', fontWeight: 600 }}>SAC {sac.c}</span>
+              <span style={{ color: '#FFFFFF', fontWeight: 700 }}>SAC {sac.c}</span>
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14, flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16, flexWrap: 'wrap' }}>
               <span
                 style={{
-                  background: '#0284C7',
-                  color: '#fff',
+                  background: '#0F172A',
+                  color: '#FFFFFF',
                   fontFamily: 'monospace',
                   fontSize: 18,
                   fontWeight: 800,
                   padding: '6px 16px',
-                  borderRadius: 8,
+                  borderRadius: 6,
+                  border: '1.5px solid #334155',
                   letterSpacing: '0.05em',
                 }}
               >
@@ -136,10 +137,11 @@ export default function SACDetailPage({
                 style={{
                   fontSize: 12,
                   fontWeight: 700,
-                  color: '#BAE6FD',
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  padding: '4px 10px',
+                  color: '#FFFFFF',
+                  background: '#1E293B',
+                  padding: '5px 12px',
                   borderRadius: 6,
+                  border: '1px solid #334155',
                 }}
               >
                 6-Digit Service Code
@@ -153,62 +155,62 @@ export default function SACDetailPage({
                 fontWeight: 400,
                 lineHeight: 1.25,
                 margin: '0 0 12px 0',
-                color: '#fff',
+                color: '#FFFFFF',
               }}
             >
               SAC Code {sac.c}: {cleanDesc} — Service Accounting Code
             </h1>
 
             {heading && (
-              <p style={{ fontSize: 14, color: '#CBD5E1', margin: 0, lineHeight: 1.6 }}>
-                <strong>Service Group {headingCode}:</strong> {heading.d}
+              <p style={{ fontSize: 15, color: '#E2E8F0', margin: 0, lineHeight: 1.6 }}>
+                <strong style={{ color: '#FFFFFF' }}>Service Group {headingCode}:</strong> {heading.d}
               </p>
             )}
           </div>
         </div>
 
         {/* Content Area */}
-        <div style={{ maxWidth: 1040, margin: '0 auto', padding: '32px var(--section-px, 20px)' }}>
+        <div style={{ maxWidth: 1040, margin: '0 auto', padding: '36px clamp(16px,4vw,24px)' }}>
           {/* Rate Source Banner */}
           <div
             style={{
-              background: '#FFF7ED',
-              border: '1px solid #FED7AA',
+              background: '#F1F5F9',
+              border: '1px solid #CBD5E1',
               borderRadius: 12,
-              padding: '12px 16px',
+              padding: '14px 18px',
               marginBottom: 28,
               display: 'flex',
               alignItems: 'flex-start',
-              gap: 10,
-              fontSize: 13,
-              color: '#9A3412',
-              lineHeight: 1.5,
+              gap: 12,
+              fontSize: 14,
+              color: '#0F172A',
+              lineHeight: 1.6,
             }}
           >
-            <Info size={18} style={{ flexShrink: 0, marginTop: 1, color: '#EA580C' }} />
+            <Info size={20} style={{ flexShrink: 0, marginTop: 2, color: '#EA580C' }} />
             <div>{RATE_SOURCE_BANNER}</div>
           </div>
 
           {/* Classification Details */}
           <div
             style={{
-              background: '#fff',
-              borderRadius: 18,
-              border: '1.5px solid #E2E8F0',
+              background: '#FFFFFF',
+              borderRadius: 16,
+              border: '1px solid #D1D5DB',
               padding: '28px 24px',
-              boxShadow: '0 4px 16px rgba(15, 23, 42, 0.04)',
+              boxShadow: '0 1px 4px rgba(0, 0, 0, 0.05)',
               marginBottom: 32,
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
-              <Briefcase size={20} color="#0284C7" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+              <Briefcase size={22} color="#0F172A" />
               <h2 style={{ fontSize: 20, fontWeight: 700, color: '#0F172A', margin: 0 }}>
                 Service Classification
               </h2>
             </div>
 
-            <div style={{ background: '#F8FAFC', borderRadius: 12, padding: '16px 20px', border: '1px solid #E2E8F0', marginBottom: 20 }}>
-              <p style={{ fontSize: 13, color: '#64748B', margin: '0 0 6px 0', fontWeight: 600 }}>
+            <div style={{ background: '#F8FAFC', borderRadius: 12, padding: '16px 20px', border: '1px solid #D1D5DB', marginBottom: 24 }}>
+              <p style={{ fontSize: 13, color: '#4B5563', margin: '0 0 6px 0', fontWeight: 700 }}>
                 Classification Chain:
               </p>
               <p style={{ fontSize: 15, color: '#0F172A', margin: 0, lineHeight: 1.6 }}>
@@ -219,17 +221,17 @@ export default function SACDetailPage({
             {/* Official GST Portal Lookup notice */}
             <div
               style={{
-                background: '#F0F9FF',
-                borderRadius: 14,
+                background: '#F8FAFC',
+                borderRadius: 12,
                 padding: '24px',
-                border: '1px solid #BAE6FD',
+                border: '1px solid #D1D5DB',
               }}
             >
-              <h3 style={{ fontSize: 17, fontWeight: 700, color: '#0369A1', margin: '0 0 8px 0' }}>
+              <h3 style={{ fontSize: 18, fontWeight: 700, color: '#0F172A', margin: '0 0 8px 0' }}>
                 GST Rates for Services
               </h3>
-              <p style={{ fontSize: 14, color: '#0C4A6E', margin: '0 0 16px 0', lineHeight: 1.6 }}>
-                Service rates are being added to our direct search database. You can check the current applicable notification rates directly on the official GST portal.
+              <p style={{ fontSize: 15, color: '#374151', margin: '0 0 18px 0', lineHeight: 1.6 }}>
+                Service rates are being added to our direct search database. You can check current applicable rates on the official GST portal.
               </p>
               <a
                 href="https://www.gst.gov.in"
@@ -239,8 +241,8 @@ export default function SACDetailPage({
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: 8,
-                  background: '#0284C7',
-                  color: '#fff',
+                  background: '#0F172A',
+                  color: '#FFFFFF',
                   fontWeight: 700,
                   fontSize: 14,
                   padding: '12px 22px',
@@ -257,11 +259,11 @@ export default function SACDetailPage({
           {siblings.length > 0 && (
             <div
               style={{
-                background: '#fff',
-                borderRadius: 18,
-                border: '1.5px solid #E2E8F0',
+                background: '#FFFFFF',
+                borderRadius: 16,
+                border: '1px solid #D1D5DB',
                 padding: '28px 24px',
-                boxShadow: '0 4px 16px rgba(15, 23, 42, 0.04)',
+                boxShadow: '0 1px 4px rgba(0, 0, 0, 0.05)',
                 marginBottom: 32,
               }}
             >
@@ -281,7 +283,7 @@ export default function SACDetailPage({
                     href={`/tools/hsn-code-finder/sac/${sib.c}`}
                     style={{
                       background: '#F8FAFC',
-                      border: '1px solid #E2E8F0',
+                      border: '1px solid #D1D5DB',
                       borderRadius: 10,
                       padding: '12px 14px',
                       textDecoration: 'none',
@@ -293,12 +295,12 @@ export default function SACDetailPage({
                     }}
                   >
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                      <span style={{ fontFamily: 'monospace', fontWeight: 700, color: '#0284C7', fontSize: 14 }}>
+                      <span style={{ fontFamily: 'monospace', fontWeight: 700, color: '#C2410C', fontSize: 15 }}>
                         SAC {sib.c}
                       </span>
-                      <ArrowRight size={14} color="#94A3B8" />
+                      <ArrowRight size={15} color="#0F172A" />
                     </div>
-                    <span style={{ fontSize: 12, color: '#475569', lineHeight: 1.4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    <span style={{ fontSize: 13, color: '#374151', lineHeight: 1.4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                       {sib.d}
                     </span>
                   </Link>
@@ -315,8 +317,8 @@ export default function SACDetailPage({
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 6,
-                color: '#F97316',
-                fontSize: 14,
+                color: '#C2410C',
+                fontSize: 15,
                 fontWeight: 700,
                 textDecoration: 'none',
               }}
@@ -328,29 +330,30 @@ export default function SACDetailPage({
           <div
             style={{
               background: '#0F172A',
-              borderRadius: 18,
+              borderRadius: 16,
               padding: 'clamp(36px,5vw,56px) 28px',
               textAlign: 'center',
-              color: '#fff',
+              color: '#FFFFFF',
             }}
           >
-            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,3vw,30px)', fontWeight: 400, margin: '0 0 12px 0' }}>
+            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,3vw,30px)', fontWeight: 400, color: '#FFFFFF', margin: '0 0 12px 0' }}>
               Create GST invoices with SAC {sac.c} automatically in Udyog
             </h3>
-            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)', maxWidth: 560, margin: '0 auto 24px', lineHeight: 1.6 }}>
+            <p style={{ fontSize: 16, color: '#E2E8F0', maxWidth: 580, margin: '0 auto 24px', lineHeight: 1.6 }}>
               Issue compliant tax invoices for professional, consulting, and contractor services with automated SAC rate mapping.
             </p>
             <a
               href="https://app.udyogbook.in/sign-in?utm_source=hsn_finder"
               style={{
                 display: 'inline-block',
-                background: '#F97316',
-                color: '#fff',
-                padding: '12px 28px',
+                background: '#C2410C',
+                color: '#FFFFFF',
+                padding: '14px 32px',
                 borderRadius: 8,
                 fontWeight: 700,
-                fontSize: 14,
+                fontSize: 15,
                 textDecoration: 'none',
+                boxShadow: '0 4px 14px rgba(194, 65, 12, 0.3)',
               }}
             >
               Start Free Trial in Udyog →

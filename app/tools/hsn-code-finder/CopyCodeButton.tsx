@@ -18,14 +18,14 @@ export default function CopyCodeButton({ code }: { code: string }) {
       style={{
         display: 'inline-flex',
         alignItems: 'center',
-        gap: 4,
-        padding: '4px 8px',
+        gap: 6,
+        padding: '6px 12px',
         borderRadius: 6,
-        border: '1px solid #CBD5E1',
-        background: '#fff',
-        fontSize: 11,
-        fontWeight: 600,
-        color: copied ? '#16A34A' : '#475569',
+        border: '1px solid #0F172A',
+        background: copied ? '#FFFFFF' : '#0F172A',
+        color: copied ? '#0F172A' : '#FFFFFF',
+        fontSize: 12,
+        fontWeight: 700,
         cursor: 'pointer',
         transition: 'all 0.15s ease',
       }}
@@ -33,11 +33,11 @@ export default function CopyCodeButton({ code }: { code: string }) {
     >
       {copied ? (
         <>
-          <Check size={12} color="#16A34A" /> Copied
+          <Check size={13} strokeWidth={2.5} color="#0F172A" /> Copied
         </>
       ) : (
         <>
-          <Copy size={12} /> Copy
+          <Copy size={13} strokeWidth={2} color="#FFFFFF" /> Copy code
         </>
       )}
     </button>
