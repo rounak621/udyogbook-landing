@@ -160,6 +160,30 @@ function renderSection(section: BlogSection, index: number) {
           </a>
         </div>
       )
+    case 'image':
+      return (
+        <figure key={index} style={{ margin: '28px 0', textAlign: 'center' }}>
+          <img
+            src={section.src || section.url}
+            alt={section.alt || ''}
+            width={section.width}
+            height={section.height}
+            style={{
+              maxWidth: '100%',
+              height: 'auto',
+              borderRadius: 8,
+              border: '1px solid #D1D5DB',
+              display: 'block',
+              margin: '0 auto',
+            }}
+          />
+          {section.caption && (
+            <figcaption style={{ fontSize: 13, color: '#475569', marginTop: 8, fontStyle: 'italic' }}>
+              {section.caption}
+            </figcaption>
+          )}
+        </figure>
+      )
     default:
       return null
   }
@@ -251,7 +275,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                   </p>
                   <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
                     <p style={{ fontSize: 15, color: '#475569', lineHeight: 1.8, margin: 0 }} itemProp="text">
-                      {faq.a}
+                      {parseTextWithLinks(faq.a)}
                     </p>
                   </div>
                 </div>

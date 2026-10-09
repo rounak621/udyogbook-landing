@@ -4,6 +4,7 @@ export type BlogPost = {
   title: string
   excerpt: string
   date: string
+  dateModified?: string
   readTime: string
   color: string
   content: BlogSection[]
@@ -14,9 +15,14 @@ export type BlogPost = {
 }
 
 export type BlogSection = {
-  type: 'h2' | 'h3' | 'p' | 'ul' | 'ol' | 'table' | 'cta' | 'highlight'
+  type: 'h2' | 'h3' | 'p' | 'ul' | 'ol' | 'table' | 'cta' | 'highlight' | 'image'
   text?: string
   url?: string
+  src?: string
+  alt?: string
+  caption?: string
+  width?: number
+  height?: number
   items?: string[]
   headers?: string[]
   rows?: string[][]
@@ -6476,7 +6482,288 @@ export const BLOG_POSTS: BlogPost[] = [
             "a": "By eliminating 15 to 20 hours of administrative spreadsheet reconciliation per week and speeding up retail cashier checkouts, most businesses recover their custom solution investment in 2 to 4 months."
       },
     ]
-  }
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 42 — new-gst-rates-what-changed-22-september-2025
+  // ─────────────────────────────────────────────
+  {
+    slug: 'new-gst-rates-what-changed-22-september-2025',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'New GST Rates 2026: What Changed on 22 September 2025',
+    excerpt: 'GST slabs changed on 22 Sept 2025: now 5%, 18% and 40%. See what changed, rate conditions (₹2,500 clothes rule) and a billing checklist.',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '8 min read',
+    metaTitle: 'New GST Rates 2026: What Changed & Billing Checklist | Udyog',
+    metaDescription: 'GST slabs changed on 22 Sept 2025: now 5%, 18% and 40%. See what changed, rate conditions (₹2,500 clothes rule) and a billing checklist.',
+    keywords: 'new GST rates 2026, GST rate change 22 September 2025, GST 2.0 changes, GST 5% 18% 40% slab, GST rate on clothes above 2500',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026. Rates from the CBIC rate notifications and the Ministry of Finance release on the 56th GST Council decisions.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'On **22 September 2025**, India moved from four main GST slabs (5%, 12%, 18%, 28%) to a **two-rate structure: 5% and 18%**, plus a **40% rate** on a small list of luxury and "sin" goods. Many goods also became **0% (Nil)**.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Most things that were **12%** are now **5%**.',
+          'Most things that were **28%** are now **18%**. Luxury items like big cars, aerated drinks, and tobacco moved to **40%**.',
+          'Some rates have **conditions**. The same item can be 5% in one case and 18% in another (for example, clothes under and over ₹2,500).',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'If you send invoices, you have to update your item rates. The checklist is further down.',
+      },
+      {
+        type: 'h2',
+        text: 'The new slabs in one table',
+      },
+      {
+        type: 'table',
+        headers: ['Slab', 'What it covers'],
+        rows: [
+          ['0% (Nil)', 'Basic food like loose rice and flour, paneer, UHT milk, roti, notebooks, individual life and health insurance, 33 life-saving drugs'],
+          ['5%', 'Most items that were 12% earlier (butter, ghee, namkeen, most medicines, toothpaste, hair oil) and many daily-use goods'],
+          ['18%', 'The standard rate: ACs, TVs, cement, small cars, most other goods and services'],
+          ['40%', 'Big cars, motorcycles above 350cc, aerated and caffeinated drinks, pan masala and tobacco products (tobacco from 1 February 2026), yachts, private aircraft'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Gold, silver and jewellery stay at **3%**. Rough diamonds and precious stones keep their special low rates.',
+      },
+      {
+        type: 'h2',
+        text: 'What changed: before and after',
+      },
+      {
+        type: 'p',
+        text: 'These are the common items small businesses bill most often.',
+      },
+      {
+        type: 'table',
+        headers: ['Item', 'Old rate', 'New rate'],
+        rows: [
+          ['Butter, ghee, cheese', '12%', '5%'],
+          ['Namkeen, bhujia, sauces, pasta', '12% / 18%', '5%'],
+          ['Chocolates, ice cream, cornflakes', '18%', '5%'],
+          ['Packaged paneer, UHT milk', '5%', '0%'],
+          ['Chapati, roti', '5%', '0%'],
+          ['Hair oil, shampoo, toothpaste, toilet soap', '18%', '5%'],
+          ['Most medicines', '12%', '5%'],
+          ['33 life-saving drugs', '12%', '0%'],
+          ['Notebooks, exercise books', '12%', '0%'],
+          ['Air conditioners, TVs, dishwashers', '28%', '18%'],
+          ['Cement', '28%', '18%'],
+          ['Small cars (petrol/CNG up to 1200cc, diesel up to 1500cc, length up to 4000 mm)', '28%', '18%'],
+          ['Motorcycles up to 350cc', '28%', '18%'],
+          ['Motorcycles above 350cc, big cars', '28%', '40%'],
+          ['Aerated and caffeinated drinks', '28% / 18%', '40%'],
+          ['Hotel rooms up to ₹7,500 per day', '12%', '5%'],
+          ['Salons, gyms, yoga centres', '18%', '5%'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'A few things went **up**: coal moved from 5% to 18%, and clothes priced above ₹2,500 per piece moved from 12% to 18%.',
+      },
+      {
+        type: 'h2',
+        text: 'Rates with conditions (where most mistakes happen)',
+      },
+      {
+        type: 'p',
+        text: 'The new rate depends on the product description, the price, or how it is sold. Check the condition before you choose a rate.',
+      },
+      {
+        type: 'h3',
+        text: 'Clothes and footwear: the ₹2,500 rule',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Apparel and made-up textiles up to **₹2,500 per piece**: **5%**.',
+          'Above **₹2,500 per piece**: **18%**.',
+          'Footwear up to **₹2,500 per pair**: **5%**. Above that: **18%**.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'A shirt sold at ₹2,400 and a shirt sold at ₹2,600 take different rates. Look up your product in our [HSN finder for T-shirts (6109)](/tools/hsn-code-finder/hsn/6109) or [footwear (6403)](/tools/hsn-code-finder/hsn/6403).',
+      },
+      {
+        type: 'h3',
+        text: 'Rice, flour and pulses: packed or loose',
+      },
+      {
+        type: 'ul',
+        items: [
+          '**Pre-packed and labelled** rice, wheat flour, and pulses: **5%**.',
+          '**Loose** (not pre-packed and labelled): **0%**.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'See [rice (1006)](/tools/hsn-code-finder/hsn/1006) and [wheat flour (1101)](/tools/hsn-code-finder/hsn/1101).',
+      },
+      {
+        type: 'h3',
+        text: 'Paneer and cheese',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Paneer and chena: **0%**.',
+          'Cheese: **5%**.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Both sit under the same four-digit code, 0406, so check the description. See [heading 0406](/tools/hsn-code-finder/hsn/0406).',
+      },
+      {
+        type: 'h3',
+        text: 'Cars',
+      },
+      {
+        type: 'p',
+        text: 'Cars sit under heading 8703 and have several rates:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Small cars within the engine and length limits: **18%**.',
+          'Other motor cars: **40%**.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Look at the engine size and body length before you bill. See [heading 8703](/tools/hsn-code-finder/hsn/8703).',
+      },
+      {
+        type: 'h3',
+        text: 'Tobacco and pan masala',
+      },
+      {
+        type: 'p',
+        text: 'Pan masala and tobacco products stayed at 28% plus compensation cess for a while after 22 September 2025. From **1 February 2026**, the compensation cess on these goods ended and the GST rate on them moved to **40%**, with GST charged on the retail sale price printed on the pack.',
+      },
+      {
+        type: 'h2',
+        text: 'What did not change',
+      },
+      {
+        type: 'ul',
+        items: [
+          '**Gold, silver and jewellery:** 3%.',
+          '**Precious stones:** special low rates stay.',
+          '**Registration limits for goods:** unchanged.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Billing checklist after the GST rate change',
+      },
+      {
+        type: 'p',
+        text: 'Do these in your billing software so your invoices stay correct.',
+      },
+      {
+        type: 'image',
+        src: '/blog/gst-item-edit.png',
+        alt: 'Udyog edit item screen showing HSN code and GST rate fields',
+        caption: 'Udyog: set the HSN code and GST rate on each item',
+        width: 886,
+        height: 1530,
+      },
+      {
+        type: 'ol',
+        items: [
+          '**Update the GST % on your items.** Go through your item list, starting with your top 20 sellers. Change items that were 12% to 5%, and items that were 28% to 18%, as per the table above.',
+          '**Check the HSN code on each item.** The right rate depends on the HSN code and its conditions. Use the [free HSN code finder](/tools/hsn-code-finder) to confirm.',
+          '**Fix items with conditions.** Clothes and footwear (price per piece), packed and loose food, and cars need extra care. Use two separate items if the same product is sold under two conditions, for example "Rice – loose" and "Rice – packed".',
+          "**Check the time of supply for bills around 22 September 2025.** If goods or services were supplied before the change but invoiced after it, the GST time-of-supply rules decide the rate. As per the Finance Ministry's FAQ, if payment was received before the change, the time of supply is the date of payment. For edge cases, ask your CA.",
+          '**Check old stock.** Stock bought at the old rate is sold at the new rate. The tax you charge on the sale follows the rate on the date of supply.',
+          '**Review credit notes and returns.** Make sure old invoices and their returns match the rate of the original invoice.',
+          '**Re-check your GSTR-1.** The HSN summary in GSTR-1 must match the codes and rates on your invoices.',
+        ],
+      },
+      {
+        type: 'image',
+        src: '/blog/gst-invoice-5-percent.png',
+        alt: 'Udyog tax invoice showing a cotton T-shirt at 5% GST, HSN 6109, with CGST 2.5% and SGST 2.5%',
+        caption: 'Sample Udyog invoice: HSN 6109, GST 5%',
+        width: 1582,
+        height: 1240,
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes after the change',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Still billing at **12%** or **28%** because an old item rate was never updated.',
+          'Using one rate for both packed and loose goods.',
+          'Billing clothes at 5% without checking the **₹2,500 per piece** limit.',
+          'Using a four-digit code that is too general, so the wrong condition applies.',
+          'Applying the new rate to a bill for a supply made before 22 September 2025.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Find the GST rate of any product',
+      },
+      {
+        type: 'p',
+        text: 'Search any product name or HSN code in the [free HSN & SAC code finder](/tools/hsn-code-finder). It shows the code, the GST rate, and the conditions from the official CBIC schedule. You can also browse by chapter, for example [clothing: chapter 61](/tools/hsn-code-finder/chapter/61).',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest CBIC notifications or your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'What are the new GST slabs in India?',
+        a: 'The main rates are **5% and 18%**. A **40%** rate applies to a short list of luxury and sin goods. Many basic items are **0%**. The old 12% and 28% slabs were removed for most goods.',
+      },
+      {
+        q: 'From which date do the new GST rates apply?',
+        a: '**22 September 2025**. Pan masala, cigarettes and other tobacco products followed later, with the new rate from **1 February 2026**.',
+      },
+      {
+        q: 'Is GST on AC, TV and cement now 18%?',
+        a: 'Yes. Air conditioners, televisions, dishwashers and cement moved from 28% to **18%**.',
+      },
+      {
+        q: 'What is the GST rate on clothes now?',
+        a: 'Clothes up to ₹2,500 per piece are taxed at **5%**. Clothes above ₹2,500 per piece are taxed at **18%**.',
+      },
+      {
+        q: 'Which rate applies if I supplied goods before the change but billed after it?',
+        a: "The rate depends on the **time of supply**. As per the Finance Ministry's FAQ, if you received payment before the change, the time of supply is the date of payment. If the supply was made before the change but both the invoice and the payment came after it, the time of supply is the earlier of the payment date and the invoice date. Advances follow Section 14 of the CGST Act. For unusual cases, check with your CA.",
+      },
+      {
+        q: 'Do I need to cancel e-way bills that were already generated?',
+        a: "No. The Finance Ministry's FAQ says existing e-way bills do not need to be cancelled and generated again. They stay valid for their original period.",
+      },
+      {
+        q: 'Where can I check the HSN code and rate of my product?',
+        a: 'Use the [HSN & SAC code finder](/tools/hsn-code-finder), or check the CBIC rate notifications on the official portal.',
+      },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
