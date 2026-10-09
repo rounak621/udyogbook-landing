@@ -8,6 +8,7 @@ import {
   getAll6DigitSACCodes,
   getSACDetails,
   getSACPageSummary,
+  sentenceCase,
   RATE_SOURCE_BANNER,
 } from '../../../../../lib/hsn-data'
 import { Info, ArrowLeft, ArrowRight, ExternalLink, Briefcase } from 'lucide-react'
@@ -40,6 +41,11 @@ export async function generateMetadata({
       description: summary.metaDescription,
       url: `https://udyogbook.in/tools/hsn-code-finder/sac/${sac.c}`,
       type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: summary.metaTitle,
+      description: summary.metaDescription,
     },
   }
 }
@@ -84,7 +90,7 @@ export default function SACDetailPage({
           {
             '@type': 'ListItem',
             position: 4,
-            name: `SAC ${sac.c}`,
+            name: `SAC ${sac.c} (${summary.breadcrumbName})`,
             item: `https://udyogbook.in/tools/hsn-code-finder/sac/${sac.c}`,
           },
         ],
@@ -169,7 +175,7 @@ export default function SACDetailPage({
                 wordBreak: 'break-word',
               }}
             >
-              SAC Code {sac.c}: {cleanDesc} — Service Accounting Code
+              {summary.h1}
             </h1>
 
             {/* Generated Plain-Language Intro Paragraph */}
@@ -189,7 +195,7 @@ export default function SACDetailPage({
 
             {heading && (
               <p style={{ fontSize: 14, color: '#CBD5E1', margin: 0, lineHeight: 1.6, overflowWrap: 'anywhere' }}>
-                <strong style={{ color: '#FFFFFF' }}>Service Group {headingCode}:</strong> {heading.d}
+                <strong style={{ color: '#FFFFFF' }}>Service Group {headingCode}:</strong> {sentenceCase(heading.d)}
               </p>
             )}
           </div>

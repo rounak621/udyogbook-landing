@@ -43,6 +43,11 @@ export async function generateMetadata({
       url: `https://udyogbook.in/tools/hsn-code-finder/chapter/${details.chapter.c}`,
       type: 'article',
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: summary.metaTitle,
+      description: summary.metaDescription,
+    },
   }
 }
 
@@ -90,7 +95,7 @@ export default function ChapterDetailPage({
           {
             '@type': 'ListItem',
             position: 4,
-            name: `Chapter ${chapterCode}`,
+            name: `Chapter ${chapterCode} (${summary.breadcrumbName})`,
             item: `https://udyogbook.in/tools/hsn-code-finder/chapter/${chapterCode}`,
           },
         ],
@@ -184,7 +189,7 @@ export default function ChapterDetailPage({
                 wordBreak: 'break-word',
               }}
             >
-              HSN Codes Chapter {chapterCode}: {cleanChapterDesc}
+              {summary.h1}
             </h1>
 
             {/* Generated Plain-Language Intro Paragraph */}

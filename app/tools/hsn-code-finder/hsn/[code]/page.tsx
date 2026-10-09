@@ -8,6 +8,7 @@ import {
   getAllHSNHeadings,
   getHSNHeadingDetails,
   getHSNPageSummary,
+  sentenceCase,
   formatRateDisplay,
   RATE_SOURCE_BANNER,
   RESIDUAL_RATE_TITLE,
@@ -45,6 +46,11 @@ export async function generateMetadata({
       description: summary.metaDescription,
       url: `https://udyogbook.in/tools/hsn-code-finder/hsn/${heading.c}`,
       type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: summary.metaTitle,
+      description: summary.metaDescription,
     },
   }
 }
@@ -94,7 +100,7 @@ export default function HSNHeadingDetailPage({
           {
             '@type': 'ListItem',
             position: 5,
-            name: `HSN ${heading.c}`,
+            name: `HSN ${heading.c} (${summary.breadcrumbName})`,
             item: `https://udyogbook.in/tools/hsn-code-finder/hsn/${heading.c}`,
           },
         ],
@@ -193,7 +199,7 @@ export default function HSNHeadingDetailPage({
                 wordBreak: 'break-word',
               }}
             >
-              HSN Code {heading.c}: {cleanHeadingDesc} — GST Rate
+              {summary.h1}
             </h1>
 
             {/* Generated Plain-Language Intro Paragraph */}
@@ -222,7 +228,7 @@ export default function HSNHeadingDetailPage({
                   </Link>
                   :
                 </strong>{' '}
-                {chapter.d}
+                {sentenceCase(chapter.d)}
               </p>
             )}
           </div>
