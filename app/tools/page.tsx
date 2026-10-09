@@ -5,11 +5,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Free Business & GST Tools for Indian MSMEs | Udyog',
-  description: '100% free online business and GST tools by Udyog: GST Calculator, GST Invoice Templates (Excel & PDF), and Digital Signature Maker. No signup required.',
-  keywords: 'free gst tools, free billing tools, gst calculator, gst invoice templates, digital signature maker india, free tools for msme',
+  description: '100% free online business and GST tools by Udyog: GST Calculator, GST Invoice Templates (Excel & PDF), Digital Signature Maker, and HSN & SAC Code Finder. No signup required.',
+  keywords: 'free gst tools, free billing tools, gst calculator, gst invoice templates, digital signature maker india, hsn code finder, sac code finder, free tools for msme',
   openGraph: {
     title: 'Free Business & GST Tools for Indian MSMEs — Udyog',
-    description: 'Free online tools: GST Calculator, GST Invoice Templates, and Digital Signature Maker. 100% free with no signup needed.',
+    description: 'Free online tools: GST Calculator, GST Invoice Templates, Digital Signature Maker, and HSN & SAC Code Finder. 100% free with no signup needed.',
     url: 'https://udyogbook.in/tools',
     type: 'website',
   },
@@ -62,6 +62,19 @@ const TOOLS = [
       </svg>
     ),
   },
+  {
+    name: 'HSN & SAC Code Finder',
+    badge: 'GST RATES',
+    description: 'Search 21,000+ official CBIC HSN goods codes and SAC service codes with current tax rates and Hinglish search.',
+    href: '/tools/hsn-code-finder',
+    cta: 'Find HSN & SAC Rates',
+    icon: (
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+    ),
+  },
 ]
 
 export default function ToolsHubPage() {
@@ -69,7 +82,7 @@ export default function ToolsHubPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Free Business & GST Tools — Udyog",
-    "description": "Free online tools for Indian businesses: GST Calculator, Invoice Templates, and Digital Signature Maker.",
+    "description": "Free online tools for Indian businesses: GST Calculator, Invoice Templates, Digital Signature Maker, and HSN & SAC Code Finder.",
     "url": "https://udyogbook.in/tools",
     "mainEntity": {
       "@type": "ItemList",

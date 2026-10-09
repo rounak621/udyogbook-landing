@@ -86,6 +86,7 @@ export default function Footer() {
             <a href="/tools/digital-signature" className="footer-link">Digital Signature Maker</a>
             <a href="/tools/gst-calculator" className="footer-link">GST Calculator</a>
             <a href="/tools/invoice-template" className="footer-link">Invoice Templates</a>
+            <a href="/tools/hsn-code-finder" className="footer-link">HSN Code Finder</a>
           </div>
 
           {/* Company column */}
