@@ -4,12 +4,12 @@ import Footer from '../components/Footer'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Free Business & GST Tools for Indian MSMEs | Udyog',
+  title: 'Free Business & GST Tools for MSMEs',
   description: '100% free online business and GST tools by Udyog: GST Calculator, GST Invoice Templates (Excel & PDF), Digital Signature Maker, and HSN & SAC Code Finder. No signup required.',
   keywords: 'free gst tools, free billing tools, gst calculator, gst invoice templates, digital signature maker india, hsn code finder, sac code finder, free tools for msme',
   openGraph: {
-    title: 'Free Business & GST Tools for Indian MSMEs — Udyog',
-    description: 'Free online tools: GST Calculator, GST Invoice Templates, Digital Signature Maker, and HSN & SAC Code Finder. 100% free with no signup needed.',
+    title: 'Free Business & GST Tools for MSMEs',
+    description: '100% free online business and GST tools by Udyog: GST Calculator, GST Invoice Templates, Digital Signature Maker, and HSN & SAC Code Finder. No signup required.',
     url: 'https://udyogbook.in/tools',
     type: 'website',
   },
@@ -22,7 +22,7 @@ const TOOLS = [
   {
     name: 'GST Calculator',
     badge: 'FREE',
-    description: 'Calculate CGST, SGST, and IGST inclusive or exclusive amounts instantly across all GST slabs (5%, 12%, 18%, 28%).',
+    description: 'Calculate CGST, SGST, and IGST inclusive or exclusive amounts instantly across all GST slabs (0%, 5%, 18% and 40%).',
     href: '/tools/gst-calculator',
     cta: 'Open GST Calculator',
     icon: (
@@ -127,6 +127,8 @@ export default function ToolsHubPage() {
           justify-content: space-between;
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
           transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+          overflow-wrap: anywhere;
+          word-break: break-word;
         }
         .tool-card:hover {
           border-color: #EA580C;

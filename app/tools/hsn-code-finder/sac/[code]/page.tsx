@@ -7,6 +7,7 @@ import CopyCodeButton from '../../CopyCodeButton'
 import {
   getAll6DigitSACCodes,
   getSACDetails,
+  getSACPageSummary,
   RATE_SOURCE_BANNER,
 } from '../../../../../lib/hsn-data'
 import { Info, ArrowLeft, ArrowRight, ExternalLink, Briefcase } from 'lucide-react'
@@ -24,19 +25,19 @@ export async function generateMetadata({
   const details = getSACDetails(params.code)
   if (!details) return {}
 
-  const { sac } = details
-  const cleanDesc = sac.d.replace(/\s+/g, ' ').trim()
+  const { sac, heading, headingCode, siblings } = details
+  const summary = getSACPageSummary(sac, heading, headingCode, siblings)
 
   return {
-    title: `SAC Code ${sac.c}: ${cleanDesc} — Service Accounting Code | Udyog`,
-    description: `Check SAC Code ${sac.c} (${cleanDesc}). View official GST Services Accounting Code classification, service group, and GST rate lookup.`,
-    keywords: `sac code ${sac.c}, gst sac ${sac.c}, service accounting code ${sac.c}, ${cleanDesc} gst rate`,
+    title: summary.metaTitle,
+    description: summary.metaDescription,
+    keywords: `sac code ${sac.c}, gst sac ${sac.c}, service accounting code ${sac.c}`,
     alternates: {
       canonical: `https://udyogbook.in/tools/hsn-code-finder/sac/${sac.c}`,
     },
     openGraph: {
-      title: `SAC Code ${sac.c}: ${cleanDesc} — Service Accounting Code`,
-      description: `Official Service Accounting Code classification for SAC ${sac.c}.`,
+      title: summary.metaTitle,
+      description: summary.metaDescription,
       url: `https://udyogbook.in/tools/hsn-code-finder/sac/${sac.c}`,
       type: 'article',
     },
@@ -54,6 +55,7 @@ export default function SACDetailPage({
   const { sac, headingCode, heading, siblings } = details
   const cleanDesc = sac.d.replace(/\s+/g, ' ').trim()
   const fullChain = [...sac.p, sac.d].filter(Boolean).join(' > ')
+  const summary = getSACPageSummary(sac, heading, headingCode, siblings)
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -128,6 +130,10 @@ export default function SACDetailPage({
                   borderRadius: 6,
                   border: '1.5px solid #334155',
                   letterSpacing: '0.05em',
+                  minHeight: 44,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  boxSizing: 'border-box',
                 }}
               >
                 SAC {sac.c}
@@ -142,6 +148,9 @@ export default function SACDetailPage({
                   padding: '5px 12px',
                   borderRadius: 6,
                   border: '1px solid #334155',
+                  minHeight: 36,
+                  display: 'inline-flex',
+                  alignItems: 'center',
                 }}
               >
                 6-Digit Service Code
@@ -154,15 +163,32 @@ export default function SACDetailPage({
                 fontSize: 'clamp(24px,3.8vw,36px)',
                 fontWeight: 400,
                 lineHeight: 1.25,
-                margin: '0 0 12px 0',
+                margin: '0 0 14px 0',
                 color: '#FFFFFF',
+                overflowWrap: 'anywhere',
+                wordBreak: 'break-word',
               }}
             >
               SAC Code {sac.c}: {cleanDesc} — Service Accounting Code
             </h1>
 
+            {/* Generated Plain-Language Intro Paragraph */}
+            <p
+              style={{
+                fontSize: 16,
+                color: '#E2E8F0',
+                lineHeight: 1.7,
+                margin: '0 0 16px 0',
+                maxWidth: 880,
+                overflowWrap: 'anywhere',
+                wordBreak: 'break-word',
+              }}
+            >
+              {summary.introParagraph}
+            </p>
+
             {heading && (
-              <p style={{ fontSize: 15, color: '#E2E8F0', margin: 0, lineHeight: 1.6 }}>
+              <p style={{ fontSize: 14, color: '#CBD5E1', margin: 0, lineHeight: 1.6, overflowWrap: 'anywhere' }}>
                 <strong style={{ color: '#FFFFFF' }}>Service Group {headingCode}:</strong> {heading.d}
               </p>
             )}
@@ -185,6 +211,8 @@ export default function SACDetailPage({
               fontSize: 14,
               color: '#0F172A',
               lineHeight: 1.6,
+              overflowWrap: 'anywhere',
+              wordBreak: 'break-word',
             }}
           >
             <Info size={20} style={{ flexShrink: 0, marginTop: 2, color: '#EA580C' }} />
@@ -197,9 +225,11 @@ export default function SACDetailPage({
               background: '#FFFFFF',
               borderRadius: 16,
               border: '1px solid #D1D5DB',
-              padding: '28px 24px',
+              padding: '28px 20px',
               boxShadow: '0 1px 4px rgba(0, 0, 0, 0.05)',
               marginBottom: 32,
+              overflowWrap: 'anywhere',
+              wordBreak: 'break-word',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
@@ -240,14 +270,17 @@ export default function SACDetailPage({
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
+                  justifyContent: 'center',
                   gap: 8,
                   background: '#0F172A',
                   color: '#FFFFFF',
                   fontWeight: 700,
                   fontSize: 14,
+                  minHeight: 44,
                   padding: '12px 22px',
                   borderRadius: 8,
                   textDecoration: 'none',
+                  boxSizing: 'border-box',
                 }}
               >
                 Check service GST rate on the official GST portal <ExternalLink size={16} />
@@ -262,7 +295,7 @@ export default function SACDetailPage({
                 background: '#FFFFFF',
                 borderRadius: 16,
                 border: '1px solid #D1D5DB',
-                padding: '28px 24px',
+                padding: '28px 20px',
                 boxShadow: '0 1px 4px rgba(0, 0, 0, 0.05)',
                 marginBottom: 32,
               }}
@@ -291,6 +324,10 @@ export default function SACDetailPage({
                       display: 'flex',
                       flexDirection: 'column',
                       gap: 4,
+                      minHeight: 44,
+                      boxSizing: 'border-box',
+                      overflowWrap: 'anywhere',
+                      wordBreak: 'break-word',
                       transition: 'border-color 0.15s ease',
                     }}
                   >
@@ -316,11 +353,16 @@ export default function SACDetailPage({
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: 6,
+                gap: 8,
                 color: '#C2410C',
                 fontSize: 15,
                 fontWeight: 700,
                 textDecoration: 'none',
+                minHeight: 44,
+                padding: '8px 14px',
+                borderRadius: 8,
+                border: '1px solid #D1D5DB',
+                boxSizing: 'border-box',
               }}
             >
               <ArrowLeft size={16} /> Search all 21,000+ HSN & SAC codes
@@ -331,7 +373,7 @@ export default function SACDetailPage({
             style={{
               background: '#0F172A',
               borderRadius: 16,
-              padding: 'clamp(36px,5vw,56px) 28px',
+              padding: 'clamp(36px,5vw,56px) 24px',
               textAlign: 'center',
               color: '#FFFFFF',
             }}
@@ -345,15 +387,19 @@ export default function SACDetailPage({
             <a
               href="https://app.udyogbook.in/sign-in?utm_source=hsn_finder"
               style={{
-                display: 'inline-block',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
                 background: '#C2410C',
                 color: '#FFFFFF',
-                padding: '14px 32px',
+                minHeight: 44,
+                padding: '12px 32px',
                 borderRadius: 8,
                 fontWeight: 700,
                 fontSize: 15,
                 textDecoration: 'none',
                 boxShadow: '0 4px 14px rgba(194, 65, 12, 0.3)',
+                boxSizing: 'border-box',
               }}
             >
               Start Free Trial in Udyog →

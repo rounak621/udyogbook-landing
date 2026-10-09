@@ -113,12 +113,11 @@ export default function FinderClient() {
     if (r.gst === 18) {
       return { background: '#C2410C', color: '#FFFFFF' }
     }
-    // 28%, 40%, or cess
     return { background: '#991B1B', color: '#FFFFFF' }
   }
 
   return (
-    <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
+    <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', boxSizing: 'border-box' }}>
       <style>{`
         .hsn-search-input::placeholder {
           color: #4B5563;
@@ -140,6 +139,8 @@ export default function FinderClient() {
           fontSize: 14,
           color: '#0F172A',
           lineHeight: 1.6,
+          overflowWrap: 'anywhere',
+          wordBreak: 'break-word',
         }}
       >
         <Info size={20} style={{ flexShrink: 0, marginTop: 2, color: '#EA580C' }} />
@@ -208,14 +209,14 @@ export default function FinderClient() {
                 background: '#0F172A',
                 border: 'none',
                 borderRadius: '50%',
-                width: 24,
-                height: 24,
+                width: 28,
+                height: 28,
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#FFFFFF',
-                fontSize: 12,
+                fontSize: 13,
                 fontWeight: 'bold',
               }}
               title="Clear search"
@@ -240,7 +241,8 @@ export default function FinderClient() {
                 background: '#FFFFFF',
                 border: '1px solid #D1D5DB',
                 borderRadius: 20,
-                padding: '6px 14px',
+                minHeight: 38,
+                padding: '8px 14px',
                 fontSize: 13,
                 color: '#1F2937',
                 cursor: 'pointer',
@@ -263,13 +265,15 @@ export default function FinderClient() {
       </div>
 
       {/* Tabs for Goods (HSN) and Services (SAC) */}
-      <div style={{ display: 'flex', gap: 12, marginBottom: 20, borderBottom: '1px solid #D1D5DB', paddingBottom: 12 }}>
+      <div style={{ display: 'flex', gap: 12, marginBottom: 20, borderBottom: '1px solid #D1D5DB', paddingBottom: 12, flexWrap: 'wrap' }}>
         <button
           onClick={() => setActiveTab('hsn')}
           style={{
             display: 'flex',
             alignItems: 'center',
+            justifyContent: 'center',
             gap: 8,
+            minHeight: 44,
             padding: '10px 20px',
             borderRadius: 8,
             border: activeTab === 'hsn' ? '2px solid #0F172A' : '1px solid #D1D5DB',
@@ -302,7 +306,9 @@ export default function FinderClient() {
           style={{
             display: 'flex',
             alignItems: 'center',
+            justifyContent: 'center',
             gap: 8,
+            minHeight: 44,
             padding: '10px 20px',
             borderRadius: 8,
             border: activeTab === 'sac' ? '2px solid #0F172A' : '1px solid #D1D5DB',
@@ -332,7 +338,7 @@ export default function FinderClient() {
       </div>
 
       {/* Results Header */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14, flexWrap: 'wrap', gap: 8 }}>
         <p style={{ fontSize: 14, color: '#374151', margin: 0, fontWeight: 600 }}>
           {query.trim()
             ? `Showing top ${results.length} result${results.length === 1 ? '' : 's'} for "${query}"`
@@ -358,7 +364,7 @@ export default function FinderClient() {
         >
           <AlertCircle size={40} color="#4B5563" style={{ marginBottom: 14 }} />
           <h3 style={{ fontSize: 18, color: '#0F172A', fontWeight: 700, marginBottom: 8 }}>No matching codes found</h3>
-          <p style={{ fontSize: 15, color: '#374151', maxWidth: 480, margin: '0 auto 20px', lineHeight: 1.6 }}>
+          <p style={{ fontSize: 15, color: '#374151', maxWidth: 480, margin: '0 auto 20px', lineHeight: 1.6, overflowWrap: 'anywhere' }}>
             We could not find any {activeTab === 'hsn' ? 'goods heading' : 'service code'} matching &ldquo;{query}&rdquo;. Try another term, spelling, or chapter number.
           </p>
           <div style={{ background: '#F8FAFC', borderRadius: 10, padding: '16px 20px', maxWidth: 540, margin: '0 auto', textAlign: 'left', border: '1px solid #D1D5DB' }}>
@@ -387,12 +393,14 @@ export default function FinderClient() {
                   background: '#FFFFFF',
                   borderRadius: 16,
                   border: '1px solid #D1D5DB',
-                  padding: '24px 22px',
+                  padding: '24px 20px',
                   boxShadow: '0 1px 3px rgba(0, 0, 0, 0.06)',
+                  overflowWrap: 'anywhere',
+                  wordBreak: 'break-word',
                 }}
               >
                 {/* Card Top: Code Pill, Type, Copy Button, Detail Link */}
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 12, marginBottom: 12 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12, marginBottom: 14 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
                     <span
                       style={{
@@ -401,9 +409,13 @@ export default function FinderClient() {
                         fontFamily: 'monospace',
                         fontSize: 16,
                         fontWeight: 700,
-                        padding: '6px 14px',
-                        borderRadius: 6,
+                        padding: '10px 14px',
+                        borderRadius: 8,
                         letterSpacing: '0.05em',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        minHeight: 44,
+                        boxSizing: 'border-box',
                       }}
                     >
                       {item.t.toUpperCase()} {item.c}
@@ -418,8 +430,11 @@ export default function FinderClient() {
                         textTransform: 'uppercase',
                         color: '#FFFFFF',
                         background: item.t === 'hsn' ? '#0F172A' : '#0369A1',
-                        padding: '4px 10px',
+                        padding: '8px 12px',
                         borderRadius: 6,
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        minHeight: 36,
                       }}
                     >
                       {item.t === 'hsn' ? '4-Digit Heading' : 'Service Code'}
@@ -431,19 +446,24 @@ export default function FinderClient() {
                     style={{
                       display: 'inline-flex',
                       alignItems: 'center',
-                      gap: 4,
+                      gap: 6,
                       fontSize: 14,
                       fontWeight: 700,
                       color: '#C2410C',
                       textDecoration: 'none',
+                      minHeight: 44,
+                      padding: '8px 12px',
+                      borderRadius: 8,
+                      border: '1px solid #D1D5DB',
+                      boxSizing: 'border-box',
                     }}
                   >
-                    View Tariff Page <ExternalLink size={14} />
+                    View Tariff Page <ExternalLink size={15} />
                   </Link>
                 </div>
 
                 {/* Description Header */}
-                <h3 style={{ fontSize: 18, fontWeight: 700, color: '#0F172A', margin: '0 0 8px 0', lineHeight: 1.4 }}>
+                <h3 style={{ fontSize: 18, fontWeight: 700, color: '#0F172A', margin: '0 0 10px 0', lineHeight: 1.4 }}>
                   <Link href={detailUrl} style={{ color: 'inherit', textDecoration: 'none' }}>
                     {item.d}
                   </Link>
@@ -470,43 +490,43 @@ export default function FinderClient() {
                               key={rIdx}
                               style={{
                                 display: 'flex',
-                                alignItems: 'flex-start',
-                                gap: 12,
+                                flexDirection: 'column',
+                                gap: 6,
                                 paddingBottom: rIdx < item.r.length - 1 ? 12 : 0,
                                 borderBottom: rIdx < item.r.length - 1 ? '1px dashed #D1D5DB' : 'none',
                               }}
                             >
-                              <div style={{ flexShrink: 0 }}>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
                                 <span
                                   style={{
                                     display: 'inline-block',
                                     ...getRatePillStyle(r),
                                     fontWeight: 800,
                                     fontSize: 13,
-                                    padding: '4px 10px',
+                                    padding: '6px 12px',
                                     borderRadius: 6,
+                                    lineHeight: 1.3,
                                   }}
                                 >
                                   {formatRateHeadline(r)}
                                 </span>
                                 {r.isSubCode && (
-                                  <div
+                                  <span
                                     style={{
                                       display: 'inline-block',
                                       background: '#B45309',
                                       color: '#FFFFFF',
                                       fontSize: 11,
                                       fontWeight: 700,
-                                      padding: '2px 8px',
+                                      padding: '3px 8px',
                                       borderRadius: 4,
-                                      marginTop: 4,
                                     }}
                                   >
                                     Applies to some sub-codes
-                                  </div>
+                                  </span>
                                 )}
                               </div>
-                              <div style={{ fontSize: 14, color: '#1F2937', lineHeight: 1.6, flex: 1 }}>
+                              <div style={{ fontSize: 14, color: '#1F2937', lineHeight: 1.6, overflowWrap: 'anywhere', wordBreak: 'break-word' }}>
                                 {r.d}
                               </div>
                             </div>
@@ -522,7 +542,7 @@ export default function FinderClient() {
                               border: '1px solid #D1D5DB',
                               padding: '12px 14px',
                               marginTop: 12,
-                              fontSize: 13,
+                              fontSize: 14,
                               color: '#1F2937',
                               lineHeight: 1.5,
                             }}
@@ -539,7 +559,7 @@ export default function FinderClient() {
                               background: '#FFFFFF',
                               border: '1px solid #D1D5DB',
                               borderRadius: 8,
-                              padding: '12px 16px',
+                              padding: '8px 14px',
                             }}
                           >
                             <summary
@@ -549,11 +569,15 @@ export default function FinderClient() {
                                 fontSize: 14,
                                 color: '#0F172A',
                                 userSelect: 'none',
+                                minHeight: 44,
+                                display: 'flex',
+                                alignItems: 'center',
+                                width: '100%',
                               }}
                             >
                               Other entries in this chapter ({item.o.length})
                             </summary>
-                            <p style={{ fontSize: 13, color: '#374151', margin: '8px 0 12px 0' }}>
+                            <p style={{ fontSize: 13, color: '#374151', margin: '4px 0 12px 0' }}>
                               These apply only if your goods match the description.
                             </p>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -562,27 +586,27 @@ export default function FinderClient() {
                                   key={oIdx}
                                   style={{
                                     display: 'flex',
-                                    alignItems: 'flex-start',
-                                    gap: 12,
-                                    fontSize: 13,
+                                    flexDirection: 'column',
+                                    gap: 6,
                                     paddingTop: oIdx > 0 ? 10 : 0,
                                     borderTop: oIdx > 0 ? '1px dashed #D1D5DB' : 'none',
                                   }}
                                 >
-                                  <span
-                                    style={{
-                                      display: 'inline-block',
-                                      ...getRatePillStyle(oRate),
-                                      fontWeight: 800,
-                                      fontSize: 12,
-                                      padding: '3px 8px',
-                                      borderRadius: 4,
-                                      flexShrink: 0,
-                                    }}
-                                  >
-                                    {formatRateHeadline(oRate)}
-                                  </span>
-                                  <span style={{ color: '#1F2937', lineHeight: 1.5, flex: 1 }}>
+                                  <div>
+                                    <span
+                                      style={{
+                                        display: 'inline-block',
+                                        ...getRatePillStyle(oRate),
+                                        fontWeight: 800,
+                                        fontSize: 12,
+                                        padding: '4px 10px',
+                                        borderRadius: 4,
+                                      }}
+                                    >
+                                      {formatRateHeadline(oRate)}
+                                    </span>
+                                  </div>
+                                  <span style={{ color: '#1F2937', fontSize: 14, lineHeight: 1.5, overflowWrap: 'anywhere', wordBreak: 'break-word' }}>
                                     {oRate.d}
                                   </span>
                                 </div>
@@ -596,7 +620,7 @@ export default function FinderClient() {
                         <span style={{ fontWeight: 700, color: '#0F172A' }}>
                           Not specifically listed in the rate schedules. Residual entry: 18%
                         </span>
-                        <p style={{ margin: '6px 0 0 0', fontSize: 13, color: '#374151', lineHeight: 1.6 }}>
+                        <p style={{ margin: '6px 0 0 0', fontSize: 14, color: '#374151', lineHeight: 1.6 }}>
                           Goods not specified elsewhere are taxed at 18% (CGST 9% + SGST 9%) as per Schedule II, S. No. 639
                         </p>
                       </div>
@@ -605,7 +629,7 @@ export default function FinderClient() {
                 ) : (
                   /* SAC Services Rate Notice */
                   <div style={{ background: '#F8FAFC', borderRadius: 12, padding: '16px', border: '1px solid #D1D5DB' }}>
-                    <p style={{ fontSize: 14, color: '#1F2937', margin: '0 0 12px 0', lineHeight: 1.6 }}>
+                    <p style={{ fontSize: 14, color: '#1F2937', margin: '0 0 14px 0', lineHeight: 1.6 }}>
                       Service GST rates are being added to our direct search database. You can check current rates on the official GST portal.
                     </p>
                     <a
@@ -615,14 +639,17 @@ export default function FinderClient() {
                       style={{
                         display: 'inline-flex',
                         alignItems: 'center',
-                        gap: 6,
+                        justifyContent: 'center',
+                        gap: 8,
                         background: '#0F172A',
                         color: '#FFFFFF',
                         fontSize: 14,
                         fontWeight: 700,
-                        padding: '10px 18px',
+                        minHeight: 44,
+                        padding: '12px 20px',
                         borderRadius: 8,
                         textDecoration: 'none',
+                        boxSizing: 'border-box',
                       }}
                     >
                       Check service GST rate on the official GST portal <ExternalLink size={15} />

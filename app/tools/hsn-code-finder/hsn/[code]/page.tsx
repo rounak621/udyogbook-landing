@@ -7,6 +7,7 @@ import CopyCodeButton from '../../CopyCodeButton'
 import {
   getAllHSNHeadings,
   getHSNHeadingDetails,
+  getHSNPageSummary,
   formatRateDisplay,
   RATE_SOURCE_BANNER,
   RESIDUAL_RATE_TITLE,
@@ -29,19 +30,19 @@ export async function generateMetadata({
   const details = getHSNHeadingDetails(params.code)
   if (!details) return {}
 
-  const { heading } = details
-  const cleanDesc = heading.d.replace(/\s+/g, ' ').trim()
+  const { heading, rateResult, children } = details
+  const summary = getHSNPageSummary(heading, rateResult, children)
 
   return {
-    title: `HSN Code ${heading.c}: ${cleanDesc} — GST Rate | Udyog`,
-    description: `Check GST rate for HSN Code ${heading.c} (${cleanDesc}). View official CBIC rates, CGST/SGST split, conditions, and all child tariff codes under heading ${heading.c}.`,
-    keywords: `hsn code ${heading.c}, gst rate ${heading.c}, hsn ${heading.c} gst rate, ${cleanDesc} gst rate`,
+    title: summary.metaTitle,
+    description: summary.metaDescription,
+    keywords: `hsn code ${heading.c}, gst rate ${heading.c}, hsn ${heading.c} gst rate`,
     alternates: {
       canonical: `https://udyogbook.in/tools/hsn-code-finder/hsn/${heading.c}`,
     },
     openGraph: {
-      title: `HSN Code ${heading.c}: ${cleanDesc} — GST Rate`,
-      description: `Official GST rates and tariff breakdown for HSN heading ${heading.c}.`,
+      title: summary.metaTitle,
+      description: summary.metaDescription,
       url: `https://udyogbook.in/tools/hsn-code-finder/hsn/${heading.c}`,
       type: 'article',
     },
@@ -58,6 +59,7 @@ export default function HSNHeadingDetailPage({
 
   const { heading, chapterCode, chapter, children, siblings, rateResult } = details
   const cleanHeadingDesc = heading.d.replace(/\s+/g, ' ').trim()
+  const summary = getHSNPageSummary(heading, rateResult, children)
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -86,6 +88,12 @@ export default function HSNHeadingDetailPage({
           {
             '@type': 'ListItem',
             position: 4,
+            name: `Chapter ${chapterCode}`,
+            item: `https://udyogbook.in/tools/hsn-code-finder/chapter/${chapterCode}`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
             name: `HSN ${heading.c}`,
             item: `https://udyogbook.in/tools/hsn-code-finder/hsn/${heading.c}`,
           },
@@ -128,7 +136,9 @@ export default function HSNHeadingDetailPage({
                 HSN Code Finder
               </Link>
               <span>/</span>
-              <span style={{ color: '#FED7AA', fontWeight: 600 }}>Chapter {chapterCode}</span>
+              <Link href={`/tools/hsn-code-finder/chapter/${chapterCode}`} style={{ color: '#FED7AA', textDecoration: 'none', fontWeight: 600 }}>
+                Chapter {chapterCode}
+              </Link>
               <span>/</span>
               <span style={{ color: '#FFFFFF', fontWeight: 700 }}>HSN {heading.c}</span>
             </div>
@@ -144,6 +154,10 @@ export default function HSNHeadingDetailPage({
                   padding: '6px 16px',
                   borderRadius: 6,
                   letterSpacing: '0.05em',
+                  minHeight: 44,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  boxSizing: 'border-box',
                 }}
               >
                 HSN {heading.c}
@@ -158,6 +172,9 @@ export default function HSNHeadingDetailPage({
                   padding: '5px 12px',
                   borderRadius: 6,
                   border: '1px solid #334155',
+                  minHeight: 36,
+                  display: 'inline-flex',
+                  alignItems: 'center',
                 }}
               >
                 4-Digit Heading
@@ -170,16 +187,42 @@ export default function HSNHeadingDetailPage({
                 fontSize: 'clamp(24px,3.8vw,38px)',
                 fontWeight: 400,
                 lineHeight: 1.25,
-                margin: '0 0 12px 0',
+                margin: '0 0 14px 0',
                 color: '#FFFFFF',
+                overflowWrap: 'anywhere',
+                wordBreak: 'break-word',
               }}
             >
               HSN Code {heading.c}: {cleanHeadingDesc} — GST Rate
             </h1>
 
+            {/* Generated Plain-Language Intro Paragraph */}
+            <p
+              style={{
+                fontSize: 16,
+                color: '#E2E8F0',
+                lineHeight: 1.7,
+                margin: '0 0 16px 0',
+                maxWidth: 880,
+                overflowWrap: 'anywhere',
+                wordBreak: 'break-word',
+              }}
+            >
+              {summary.introParagraph}
+            </p>
+
             {chapter && (
-              <p style={{ fontSize: 15, color: '#E2E8F0', margin: 0, lineHeight: 1.6 }}>
-                <strong style={{ color: '#FFFFFF' }}>Chapter {chapterCode}:</strong> {chapter.d}
+              <p style={{ fontSize: 14, color: '#CBD5E1', margin: 0, lineHeight: 1.6, overflowWrap: 'anywhere' }}>
+                <strong style={{ color: '#FFFFFF' }}>
+                  <Link
+                    href={`/tools/hsn-code-finder/chapter/${chapterCode}`}
+                    style={{ color: '#FED7AA', textDecoration: 'underline' }}
+                  >
+                    Chapter {chapterCode}
+                  </Link>
+                  :
+                </strong>{' '}
+                {chapter.d}
               </p>
             )}
           </div>
@@ -201,6 +244,8 @@ export default function HSNHeadingDetailPage({
               fontSize: 14,
               color: '#0F172A',
               lineHeight: 1.6,
+              overflowWrap: 'anywhere',
+              wordBreak: 'break-word',
             }}
           >
             <Info size={20} style={{ flexShrink: 0, marginTop: 2, color: '#EA580C' }} />
@@ -213,9 +258,11 @@ export default function HSNHeadingDetailPage({
               background: '#FFFFFF',
               borderRadius: 16,
               border: '1px solid #D1D5DB',
-              padding: '28px 24px',
+              padding: '28px 20px',
               boxShadow: '0 1px 4px rgba(0, 0, 0, 0.05)',
               marginBottom: 32,
+              overflowWrap: 'anywhere',
+              wordBreak: 'break-word',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
@@ -238,16 +285,20 @@ export default function HSNHeadingDetailPage({
                           borderRadius: 12,
                           border: '1px solid #D1D5DB',
                           padding: '18px 20px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          gap: 8,
                         }}
                       >
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 10, flexWrap: 'wrap' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
                           <span
                             style={{
                               ...getRatePillStyle(r),
                               fontWeight: 800,
-                              fontSize: 15,
-                              padding: '5px 14px',
+                              fontSize: 14,
+                              padding: '6px 14px',
                               borderRadius: 6,
+                              lineHeight: 1.3,
                             }}
                           >
                             {display.headline}
@@ -270,10 +321,10 @@ export default function HSNHeadingDetailPage({
                             </span>
                           )}
                         </div>
-                        <p style={{ fontSize: 14, color: '#1F2937', lineHeight: 1.6, margin: '0 0 8px 0' }}>
+                        <p style={{ fontSize: 14, color: '#1F2937', lineHeight: 1.6, margin: 0 }}>
                           {r.d}
                         </p>
-                        <div style={{ fontSize: 13, color: '#4B5563' }}>
+                        <div style={{ fontSize: 13, color: '#4B5563', marginTop: 2 }}>
                           Reference: Schedule {r.sch}, S. No. {r.sn} {r.spec ? `(Spec: ${r.spec})` : ''}
                         </div>
                       </div>
@@ -307,7 +358,7 @@ export default function HSNHeadingDetailPage({
                       background: '#FFFFFF',
                       border: '1px solid #D1D5DB',
                       borderRadius: 12,
-                      padding: '16px 20px',
+                      padding: '12px 18px',
                     }}
                   >
                     <summary
@@ -317,11 +368,15 @@ export default function HSNHeadingDetailPage({
                         fontSize: 15,
                         color: '#0F172A',
                         userSelect: 'none',
+                        minHeight: 44,
+                        display: 'flex',
+                        alignItems: 'center',
+                        width: '100%',
                       }}
                     >
                       {TIER2_COLLAPSED_TITLE} ({rateResult.tier2.length})
                     </summary>
-                    <p style={{ fontSize: 13, color: '#374151', margin: '8px 0 16px 0', lineHeight: 1.5 }}>
+                    <p style={{ fontSize: 13, color: '#374151', margin: '4px 0 16px 0', lineHeight: 1.5 }}>
                       {TIER2_COLLAPSED_LINE}
                     </p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -335,9 +390,12 @@ export default function HSNHeadingDetailPage({
                               borderRadius: 10,
                               border: '1px solid #D1D5DB',
                               padding: '14px 16px',
+                              display: 'flex',
+                              flexDirection: 'column',
+                              gap: 6,
                             }}
                           >
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8, flexWrap: 'wrap' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
                               <span
                                 style={{
                                   ...getRatePillStyle(r),
@@ -353,10 +411,10 @@ export default function HSNHeadingDetailPage({
                                 {display.split}
                               </span>
                             </div>
-                            <p style={{ fontSize: 14, color: '#1F2937', lineHeight: 1.5, margin: '0 0 6px 0' }}>
+                            <p style={{ fontSize: 14, color: '#1F2937', lineHeight: 1.5, margin: 0 }}>
                               {r.d}
                             </p>
-                            <div style={{ fontSize: 12, color: '#4B5563' }}>
+                            <div style={{ fontSize: 12, color: '#4B5563', marginTop: 2 }}>
                               Reference: Schedule {r.sch}, S. No. {r.sn} {r.spec ? `(Spec: ${r.spec})` : ''}
                             </div>
                           </div>
@@ -391,9 +449,11 @@ export default function HSNHeadingDetailPage({
               background: '#FFFFFF',
               borderRadius: 16,
               border: '1px solid #D1D5DB',
-              padding: '28px 24px',
+              padding: '28px 20px',
               boxShadow: '0 1px 4px rgba(0, 0, 0, 0.05)',
               marginBottom: 32,
+              overflowWrap: 'anywhere',
+              wordBreak: 'break-word',
             }}
           >
             <h2 style={{ fontSize: 20, fontWeight: 700, color: '#0F172A', margin: '0 0 6px 0' }}>
@@ -424,7 +484,7 @@ export default function HSNHeadingDetailPage({
                       }}
                     >
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
                           <span
                             style={{
                               fontFamily: 'monospace',
@@ -433,8 +493,12 @@ export default function HSNHeadingDetailPage({
                               color: '#0F172A',
                               background: '#FFFFFF',
                               border: '1px solid #CBD5E1',
-                              padding: '3px 10px',
+                              padding: '6px 12px',
                               borderRadius: 6,
+                              minHeight: 44,
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              boxSizing: 'border-box',
                             }}
                           >
                             {ch.c}
@@ -445,7 +509,7 @@ export default function HSNHeadingDetailPage({
                               fontWeight: 700,
                               color: '#FFFFFF',
                               background: isLeaf8 ? '#15803D' : is6 ? '#0F172A' : '#374151',
-                              padding: '2px 8px',
+                              padding: '4px 10px',
                               borderRadius: 4,
                             }}
                           >
@@ -475,7 +539,7 @@ export default function HSNHeadingDetailPage({
                 background: '#FFFFFF',
                 borderRadius: 16,
                 border: '1px solid #D1D5DB',
-                padding: '28px 24px',
+                padding: '28px 20px',
                 boxShadow: '0 1px 4px rgba(0, 0, 0, 0.05)',
                 marginBottom: 32,
               }}
@@ -504,6 +568,10 @@ export default function HSNHeadingDetailPage({
                       display: 'flex',
                       flexDirection: 'column',
                       gap: 4,
+                      minHeight: 44,
+                      boxSizing: 'border-box',
+                      overflowWrap: 'anywhere',
+                      wordBreak: 'break-word',
                       transition: 'border-color 0.15s ease',
                     }}
                   >
@@ -529,11 +597,16 @@ export default function HSNHeadingDetailPage({
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: 6,
+                gap: 8,
                 color: '#C2410C',
                 fontSize: 15,
                 fontWeight: 700,
                 textDecoration: 'none',
+                minHeight: 44,
+                padding: '8px 14px',
+                borderRadius: 8,
+                border: '1px solid #D1D5DB',
+                boxSizing: 'border-box',
               }}
             >
               <ArrowLeft size={16} /> Search all 21,000+ HSN & SAC codes
@@ -544,7 +617,7 @@ export default function HSNHeadingDetailPage({
             style={{
               background: '#0F172A',
               borderRadius: 16,
-              padding: 'clamp(36px,5vw,56px) 28px',
+              padding: 'clamp(36px,5vw,56px) 24px',
               textAlign: 'center',
               color: '#FFFFFF',
             }}
@@ -558,15 +631,19 @@ export default function HSNHeadingDetailPage({
             <a
               href="https://app.udyogbook.in/sign-in?utm_source=hsn_finder"
               style={{
-                display: 'inline-block',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
                 background: '#C2410C',
                 color: '#FFFFFF',
-                padding: '14px 32px',
+                minHeight: 44,
+                padding: '12px 32px',
                 borderRadius: 8,
                 fontWeight: 700,
                 fontSize: 15,
                 textDecoration: 'none',
                 boxShadow: '0 4px 14px rgba(194, 65, 12, 0.3)',
+                boxSizing: 'border-box',
               }}
             >
               Start Free Trial in Udyog →

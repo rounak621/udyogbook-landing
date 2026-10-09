@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { BLOG_POSTS } from '../lib/blog-posts'
-import { getAllHSNHeadings, getAll6DigitSACCodes } from '../lib/hsn-data'
+import { getAllHSNChapters, getAllHSNHeadings, getAll6DigitSACCodes } from '../lib/hsn-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://udyogbook.in'
@@ -34,6 +34,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }))
 
+    // HSN 2-digit chapter pages
+    const chapterPages: MetadataRoute.Sitemap = getAllHSNChapters().map(ch => ({
+        url: `${baseUrl}/tools/hsn-code-finder/chapter/${ch.c}`,
+        lastModified,
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+    }))
+
     // HSN 4-digit heading pages
     const hsnPages: MetadataRoute.Sitemap = getAllHSNHeadings().map(h => ({
         url: `${baseUrl}/tools/hsn-code-finder/hsn/${h.c}`,
@@ -50,5 +58,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.7,
     }))
 
-    return [...staticPages, ...blogPages, ...hsnPages, ...sacPages]
+    return [...staticPages, ...blogPages, ...chapterPages, ...hsnPages, ...sacPages]
 }

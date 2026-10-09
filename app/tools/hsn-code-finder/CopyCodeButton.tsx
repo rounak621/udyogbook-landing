@@ -18,26 +18,29 @@ export default function CopyCodeButton({ code }: { code: string }) {
       style={{
         display: 'inline-flex',
         alignItems: 'center',
+        justifyContent: 'center',
         gap: 6,
-        padding: '6px 12px',
-        borderRadius: 6,
-        border: '1px solid #0F172A',
+        minHeight: 44,
+        padding: '10px 14px',
+        borderRadius: 8,
+        border: '1.5px solid #0F172A',
         background: copied ? '#FFFFFF' : '#0F172A',
         color: copied ? '#0F172A' : '#FFFFFF',
-        fontSize: 12,
+        fontSize: 13,
         fontWeight: 700,
         cursor: 'pointer',
         transition: 'all 0.15s ease',
+        boxSizing: 'border-box',
       }}
       title="Copy code to clipboard"
     >
       {copied ? (
         <>
-          <Check size={13} strokeWidth={2.5} color="#0F172A" /> Copied
+          <Check size={14} strokeWidth={2.5} color="#0F172A" /> Copied
         </>
       ) : (
         <>
-          <Copy size={13} strokeWidth={2} color="#FFFFFF" /> Copy code
+          <Copy size={14} strokeWidth={2} color="#FFFFFF" /> Copy code
         </>
       )}
     </button>

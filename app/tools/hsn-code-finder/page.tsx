@@ -1,25 +1,42 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import FinderClient from './FinderClient'
+import {
+  getAllHSNHeadings,
+  getAll6DigitSACCodes,
+  getAllHSNChapters,
+} from '../../../lib/hsn-data'
 
 export const metadata: Metadata = {
-  title: 'HSN Code Finder & GST Rate Search 2026 | Free Online Tool — Udyog',
+  title: 'HSN Code Finder & GST Rates 2026',
   description:
-    'Search 21,000+ HSN codes and SAC codes with official CBIC GST rates (5%, 12%, 18%, 28%). Search by product name, Hinglish keywords, or 4-digit/8-digit tariff code.',
+    'Search 21,000+ HSN and SAC codes with official CBIC GST rates (0%, 5%, 18% and 40%). Search by product name, Hinglish keywords, or 4-digit tariff code.',
   keywords:
     'hsn code finder, gst rate finder, sac code list, hsn search online, cbic gst rates, gst goods rates 2026, sac code search india',
   alternates: {
     canonical: 'https://udyogbook.in/tools/hsn-code-finder',
   },
   openGraph: {
-    title: 'HSN Code Finder & GST Rate Search 2026 — Udyog',
+    title: 'HSN Code Finder & GST Rates 2026',
     description:
-      'Search 21,000+ HSN codes and SAC codes with official CBIC GST rates and Hinglish search support.',
+      'Search 21,000+ HSN and SAC codes with official CBIC GST rates (0%, 5%, 18% and 40%). Search by product name, Hinglish keywords, or 4-digit tariff code.',
     url: 'https://udyogbook.in/tools/hsn-code-finder',
     type: 'website',
   },
 }
+
+const MOST_SEARCHED_HSN_CODES = [
+  '6109', '6105', '6203', '6204', '6403', '1006', '1101', '1701', '1905', '0902',
+  '0401', '0406', '2106', '2202', '3004', '3401', '3304', '3305', '8517', '8471',
+  '8528', '8703', '8711', '7113', '7108', '7208', '7210', '2523', '6907', '9403',
+  '9401', '4820', '4802', '3923', '8504', '8536', '8539', '8415', '8418', '8450',
+]
+
+const POPULAR_SAC_CODES = [
+  '998311', '998313', '998314', '998315', '998361', '997212', '996331', '995411',
+]
 
 const FAQS = [
   {
@@ -41,6 +58,36 @@ const FAQS = [
 ]
 
 export default function HSNCodeFinderPage() {
+  const allHeadings = getAllHSNHeadings()
+  const allSacs = getAll6DigitSACCodes()
+  const allChapters = getAllHSNChapters()
+
+  const mostSearchedHsns = MOST_SEARCHED_HSN_CODES.map(code => {
+    const item = allHeadings.find(h => h.c === code)
+    if (!item) return null
+    const clean = item.d.replace(/\s+/g, ' ').trim()
+    const rawClause = clean.split(/[;:\n]/)[0].trim().replace(/\.$/, '')
+    const shortDesc = rawClause.length > 40 ? rawClause.slice(0, 39).trim() + '…' : rawClause
+    return {
+      code,
+      label: `${code} - ${shortDesc}`,
+      href: `/tools/hsn-code-finder/hsn/${code}`,
+    }
+  }).filter(Boolean) as { code: string; label: string; href: string }[]
+
+  const popularSacs = POPULAR_SAC_CODES.map(code => {
+    const item = allSacs.find(s => s.c === code)
+    if (!item) return null
+    const clean = item.d.replace(/\s+/g, ' ').trim()
+    const rawClause = clean.split(/[;:\n]/)[0].trim().replace(/\.$/, '')
+    const shortDesc = rawClause.length > 40 ? rawClause.slice(0, 39).trim() + '…' : rawClause
+    return {
+      code,
+      label: `${code} - ${shortDesc}`,
+      href: `/tools/hsn-code-finder/sac/${code}`,
+    }
+  }).filter(Boolean) as { code: string; label: string; href: string }[]
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -156,11 +203,182 @@ export default function HSNCodeFinderPage() {
           <FinderClient />
         </section>
 
-        {/* Educational Content: HSN vs SAC & Turnover Rules */}
+        {/* Most Searched HSN Codes & Popular SAC Codes (Server-Rendered Plain Links) */}
         <section
           style={{
             background: '#FFFFFF',
             borderTop: '1px solid #D1D5DB',
+            borderBottom: '1px solid #D1D5DB',
+            padding: 'clamp(44px,6vw,64px) clamp(16px,4vw,24px)',
+          }}
+        >
+          <div style={{ maxWidth: 1040, margin: '0 auto' }}>
+            {/* HSN Heading Links */}
+            <div style={{ marginBottom: 36 }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 16 }}>
+                <div>
+                  <h2 style={{ fontSize: 22, fontWeight: 700, color: '#0F172A', margin: '0 0 6px 0' }}>
+                    Most Searched HSN Codes
+                  </h2>
+                  <p style={{ fontSize: 14, color: '#4B5563', margin: 0 }}>
+                    Direct links to popular 4-digit tariff headings with current GST rates and child codes.
+                  </p>
+                </div>
+                <a
+                  href="#browse-chapters"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 6,
+                    color: '#C2410C',
+                    fontSize: 14,
+                    fontWeight: 700,
+                    textDecoration: 'none',
+                    minHeight: 44,
+                    padding: '8px 14px',
+                    borderRadius: 8,
+                    border: '1px solid #D1D5DB',
+                    boxSizing: 'border-box',
+                  }}
+                >
+                  Browse all chapters ↓
+                </a>
+              </div>
+
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                  gap: 10,
+                }}
+              >
+                {mostSearchedHsns.map(item => (
+                  <Link
+                    key={item.code}
+                    href={item.href}
+                    style={{
+                      background: '#F8FAFC',
+                      border: '1px solid #D1D5DB',
+                      borderRadius: 8,
+                      padding: '10px 14px',
+                      textDecoration: 'none',
+                      color: '#0F172A',
+                      fontSize: 13,
+                      fontWeight: 600,
+                      display: 'flex',
+                      alignItems: 'center',
+                      minHeight: 44,
+                      boxSizing: 'border-box',
+                      overflowWrap: 'anywhere',
+                      wordBreak: 'break-word',
+                      transition: 'border-color 0.15s ease',
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Popular SAC Code Links */}
+            <div style={{ marginBottom: 36 }}>
+              <h2 style={{ fontSize: 22, fontWeight: 700, color: '#0F172A', margin: '0 0 6px 0' }}>
+                Popular Service Codes (SAC)
+              </h2>
+              <p style={{ fontSize: 14, color: '#4B5563', margin: '0 0 16px 0' }}>
+                Direct links to frequently invoiced professional, IT, consulting, and rental service codes.
+              </p>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                  gap: 10,
+                }}
+              >
+                {popularSacs.map(item => (
+                  <Link
+                    key={item.code}
+                    href={item.href}
+                    style={{
+                      background: '#F8FAFC',
+                      border: '1px solid #D1D5DB',
+                      borderRadius: 8,
+                      padding: '10px 14px',
+                      textDecoration: 'none',
+                      color: '#0F172A',
+                      fontSize: 13,
+                      fontWeight: 600,
+                      display: 'flex',
+                      alignItems: 'center',
+                      minHeight: 44,
+                      boxSizing: 'border-box',
+                      overflowWrap: 'anywhere',
+                      wordBreak: 'break-word',
+                      transition: 'border-color 0.15s ease',
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Browse All Chapters Section */}
+            <div id="browse-chapters" style={{ paddingTop: 16 }}>
+              <h2 style={{ fontSize: 22, fontWeight: 700, color: '#0F172A', margin: '0 0 6px 0' }}>
+                Browse All 98 HSN Chapters
+              </h2>
+              <p style={{ fontSize: 14, color: '#4B5563', margin: '0 0 16px 0' }}>
+                Explore complete 4-digit tariff headings by chapter from Chapter 01 to Chapter 98.
+              </p>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+                  gap: 8,
+                }}
+              >
+                {allChapters.map(ch => {
+                  const clean = ch.d.replace(/\s+/g, ' ').trim()
+                  const rawClause = clean.split(/[;:\n]/)[0].trim().replace(/\.$/, '')
+                  const shortDesc = rawClause.length > 28 ? rawClause.slice(0, 27).trim() + '…' : rawClause
+                  return (
+                    <Link
+                      key={ch.c}
+                      href={`/tools/hsn-code-finder/chapter/${ch.c}`}
+                      style={{
+                        background: '#FFFFFF',
+                        border: '1px solid #D1D5DB',
+                        borderRadius: 6,
+                        padding: '10px 12px',
+                        textDecoration: 'none',
+                        color: '#0F172A',
+                        fontSize: 13,
+                        fontWeight: 600,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        minHeight: 44,
+                        boxSizing: 'border-box',
+                        overflowWrap: 'anywhere',
+                        wordBreak: 'break-word',
+                      }}
+                    >
+                      <span>
+                        <strong style={{ color: '#C2410C' }}>Ch. {ch.c}</strong> — {shortDesc}
+                      </span>
+                    </Link>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Educational Content: HSN vs SAC & Turnover Rules */}
+        <section
+          style={{
+            background: '#FFFFFF',
             borderBottom: '1px solid #D1D5DB',
             padding: 'clamp(48px,6vw,72px) clamp(16px,4vw,24px)',
           }}
@@ -186,32 +404,34 @@ export default function HSNCodeFinderPage() {
                   HSN Digit Requirements by Turnover
                 </h2>
                 <div style={{ border: '1px solid #D1D5DB', borderRadius: 12, overflow: 'hidden' }}>
-                  <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
-                    <thead>
-                      <tr style={{ background: '#F1F5F9', borderBottom: '1px solid #D1D5DB' }}>
-                        <th style={{ padding: '12px 14px', textAlign: 'left', fontWeight: 700, color: '#0F172A' }}>Annual Turnover</th>
-                        <th style={{ padding: '12px 14px', textAlign: 'left', fontWeight: 700, color: '#0F172A' }}>Mandatory Digits</th>
-                        <th style={{ padding: '12px 14px', textAlign: 'left', fontWeight: 700, color: '#0F172A' }}>Applicability</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr style={{ borderBottom: '1px solid #D1D5DB' }}>
-                        <td style={{ padding: '12px 14px', color: '#0F172A', fontWeight: 600 }}>Up to ₹5 Crore</td>
-                        <td style={{ padding: '12px 14px', color: '#C2410C', fontWeight: 800 }}>4 Digits</td>
-                        <td style={{ padding: '12px 14px', color: '#374151' }}>Mandatory on B2B invoices; optional on B2C</td>
-                      </tr>
-                      <tr style={{ borderBottom: '1px solid #D1D5DB' }}>
-                        <td style={{ padding: '12px 14px', color: '#0F172A', fontWeight: 600 }}>Above ₹5 Crore</td>
-                        <td style={{ padding: '12px 14px', color: '#C2410C', fontWeight: 800 }}>6 Digits</td>
-                        <td style={{ padding: '12px 14px', color: '#374151' }}>Mandatory on all B2B and B2C tax invoices</td>
-                      </tr>
-                      <tr>
-                        <td style={{ padding: '12px 14px', color: '#0F172A', fontWeight: 600 }}>Import / Export</td>
-                        <td style={{ padding: '12px 14px', color: '#C2410C', fontWeight: 800 }}>8 Digits</td>
-                        <td style={{ padding: '12px 14px', color: '#374151' }}>Mandatory regardless of annual turnover</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', width: '100%' }}>
+                    <table style={{ width: '100%', minWidth: 460, borderCollapse: 'collapse', fontSize: 14 }}>
+                      <thead>
+                        <tr style={{ background: '#F1F5F9', borderBottom: '1px solid #D1D5DB' }}>
+                          <th style={{ padding: '12px 14px', textAlign: 'left', fontWeight: 700, color: '#0F172A' }}>Annual Turnover</th>
+                          <th style={{ padding: '12px 14px', textAlign: 'left', fontWeight: 700, color: '#0F172A' }}>Mandatory Digits</th>
+                          <th style={{ padding: '12px 14px', textAlign: 'left', fontWeight: 700, color: '#0F172A' }}>Applicability</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr style={{ borderBottom: '1px solid #D1D5DB' }}>
+                          <td style={{ padding: '12px 14px', color: '#0F172A', fontWeight: 600 }}>Up to ₹5 Crore</td>
+                          <td style={{ padding: '12px 14px', color: '#C2410C', fontWeight: 800 }}>4 Digits</td>
+                          <td style={{ padding: '12px 14px', color: '#374151' }}>Mandatory on B2B invoices; optional on B2C</td>
+                        </tr>
+                        <tr style={{ borderBottom: '1px solid #D1D5DB' }}>
+                          <td style={{ padding: '12px 14px', color: '#0F172A', fontWeight: 600 }}>Above ₹5 Crore</td>
+                          <td style={{ padding: '12px 14px', color: '#C2410C', fontWeight: 800 }}>6 Digits</td>
+                          <td style={{ padding: '12px 14px', color: '#374151' }}>Mandatory on all B2B and B2C tax invoices</td>
+                        </tr>
+                        <tr>
+                          <td style={{ padding: '12px 14px', color: '#0F172A', fontWeight: 600 }}>Import / Export</td>
+                          <td style={{ padding: '12px 14px', color: '#C2410C', fontWeight: 800 }}>8 Digits</td>
+                          <td style={{ padding: '12px 14px', color: '#374151' }}>Mandatory regardless of annual turnover</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>

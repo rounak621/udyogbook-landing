@@ -3387,6 +3387,12 @@ export const BLOG_POSTS: BlogPost[] = [
     keywords: "hsn code guide 2026 invoice, find hsn code gst, 4 digit vs 6 digit hsn code, sac code services gst, hsn classification rules india",
     content: [
       {
+        type: 'highlight',
+        label: 'Quick Tool',
+        text: 'Looking for the GST rate of a specific item? Use our free [HSN and SAC code finder](/tools/hsn-code-finder) to search by product name or 4-digit code.',
+        color: '#10b981',
+      },
+      {
             "type": "p",
             "text": "To apply the correct HSN code on your GST invoice in 2026, businesses with annual turnover above \u20b95 crore must declare a minimum of 6 digits for all B2B and B2C supplies, while businesses with turnover up to \u20b95 crore must declare at least 4 digits on B2B invoices under Notification No. 78/2020-Central Tax. Declaring an incorrect HSN code can lead to tax misclassification penalties of \u20b925,000 under Section 125 and block your buyer's Input Tax Credit."
       },
