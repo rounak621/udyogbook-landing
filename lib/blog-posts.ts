@@ -6516,7 +6516,7 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'ul',
         items: [
           'Most things that were **12%** are now **5%**.',
-          'Most things that were **28%** are now **18%**. Luxury items like big cars, aerated drinks, and tobacco moved to **40%**.',
+          'Most things that were **28%** are now **18%**. Luxury items like big cars and aerated drinks moved to **40%**.',
           'Some rates have **conditions**. The same item can be 5% in one case and 18% in another (for example, clothes under and over ₹2,500).',
         ],
       },
@@ -6535,7 +6535,7 @@ export const BLOG_POSTS: BlogPost[] = [
           ['0% (Nil)', 'Basic food like loose rice and flour, paneer, UHT milk, roti, notebooks, individual life and health insurance, 33 life-saving drugs'],
           ['5%', 'Most items that were 12% earlier (butter, ghee, namkeen, most medicines, toothpaste, hair oil) and many daily-use goods'],
           ['18%', 'The standard rate: ACs, TVs, cement, small cars, most other goods and services'],
-          ['40%', 'Big cars, motorcycles above 350cc, aerated and caffeinated drinks, pan masala and tobacco products (tobacco from 1 February 2026), yachts, private aircraft'],
+          ['40%', 'Big cars, motorcycles above 350cc, aerated and caffeinated drinks, yachts, private aircraft'],
         ],
       },
       {
@@ -6651,14 +6651,6 @@ export const BLOG_POSTS: BlogPost[] = [
         text: 'Look at the engine size and body length before you bill. See [heading 8703](/tools/hsn-code-finder/hsn/8703).',
       },
       {
-        type: 'h3',
-        text: 'Tobacco and pan masala',
-      },
-      {
-        type: 'p',
-        text: 'Pan masala and tobacco products stayed at 28% plus compensation cess for a while after 22 September 2025. From **1 February 2026**, the compensation cess on these goods ended and the GST rate on them moved to **40%**, with GST charged on the retail sale price printed on the pack.',
-      },
-      {
         type: 'h2',
         text: 'What did not change',
       },
@@ -6740,7 +6732,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: 'From which date do the new GST rates apply?',
-        a: '**22 September 2025**. Pan masala, cigarettes and other tobacco products followed later, with the new rate from **1 February 2026**.',
+        a: '**22 September 2025**.',
       },
       {
         q: 'Is GST on AC, TV and cement now 18%?',
