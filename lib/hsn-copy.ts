@@ -24,6 +24,110 @@ export const ACRONYMS = [
 ]
 
 /**
+ * Hand-written override map for HSN Chapter numbers (01-97) to short names.
+ * Each name is at most 36 characters so "HSN Chapter NN: {name} | Udyog" stays <= 60 chars.
+ * Chapters 77 and 98 are omitted from this map and use the dynamic fallback logic.
+ */
+export const CHAPTER_NAMES: Record<string, string> = {
+  '01': 'Live animals',
+  '02': 'Meat and edible meat offal',
+  '03': 'Fish and seafood',
+  '04': 'Dairy, eggs and honey',
+  '05': 'Other animal products',
+  '06': 'Live plants and flowers',
+  '07': 'Vegetables',
+  '08': 'Fruit and nuts',
+  '09': 'Coffee, tea and spices',
+  '10': 'Cereals',
+  '11': 'Milling products, flour, starch',
+  '12': 'Oil seeds, grains and fruits',
+  '13': 'Lac, gums and resins',
+  '14': 'Vegetable plaiting materials',
+  '15': 'Animal and vegetable fats, oils',
+  '16': 'Meat and fish preparations',
+  '17': 'Sugars and confectionery',
+  '18': 'Cocoa and chocolate',
+  '19': 'Bakery, cereal and pasta products',
+  '20': 'Preserved vegetables and fruit',
+  '21': 'Miscellaneous edible preparations',
+  '22': 'Beverages, spirits and vinegar',
+  '23': 'Food industry residues, animal feed',
+  '24': 'Tobacco',
+  '25': 'Salt, sulphur, stone, cement',
+  '26': 'Ores, slag and ash',
+  '27': 'Mineral fuels and oils',
+  '28': 'Inorganic chemicals',
+  '29': 'Organic chemicals',
+  '30': 'Pharmaceutical products',
+  '31': 'Fertilisers',
+  '32': 'Dyes, paints, inks and tanning',
+  '33': 'Cosmetics and perfumery',
+  '34': 'Soap, candles and waxes',
+  '35': 'Glues, enzymes and albuminoids',
+  '36': 'Explosives, matches, fireworks',
+  '37': 'Photographic goods',
+  '38': 'Miscellaneous chemical products',
+  '39': 'Plastics and plastic articles',
+  '40': 'Rubber and rubber articles',
+  '41': 'Raw hides, skins and leather',
+  '42': 'Leather articles, bags, wallets',
+  '43': 'Furskins and artificial fur',
+  '44': 'Wood and wood articles',
+  '45': 'Cork and cork articles',
+  '46': 'Straw and basketware',
+  '47': 'Pulp of wood, waste paper',
+  '48': 'Paper, paperboard and articles',
+  '49': 'Books, newspapers, printed matter',
+  '50': 'Silk',
+  '51': 'Wool and animal hair',
+  '52': 'Cotton',
+  '53': 'Other vegetable textile fibres',
+  '54': 'Man-made filaments',
+  '55': 'Man-made staple fibres',
+  '56': 'Wadding, felt, nonwovens, cordage',
+  '57': 'Carpets and floor coverings',
+  '58': 'Special woven fabrics and lace',
+  '59': 'Coated and laminated textile fabrics',
+  '60': 'Knitted or crocheted fabrics',
+  '61': 'Knitted apparel and clothing',
+  '62': 'Woven apparel and clothing',
+  '63': 'Made-up textile articles, rags',
+  '64': 'Footwear',
+  '65': 'Headgear and hats',
+  '66': 'Umbrellas and walking sticks',
+  '67': 'Feathers, artificial flowers, wigs',
+  '68': 'Stone, plaster, cement articles',
+  '69': 'Ceramic products',
+  '70': 'Glass and glassware',
+  '71': 'Pearls, gems, gold and jewellery',
+  '72': 'Iron and steel',
+  '73': 'Iron and steel articles',
+  '74': 'Copper and copper articles',
+  '75': 'Nickel and nickel articles',
+  '76': 'Aluminium and aluminium articles',
+  '78': 'Lead and lead articles',
+  '79': 'Zinc and zinc articles',
+  '80': 'Tin and tin articles',
+  '81': 'Other base metals, cermets',
+  '82': 'Tools, cutlery, spoons, forks',
+  '83': 'Miscellaneous base metal articles',
+  '84': 'Machinery and mechanical appliances',
+  '85': 'Electrical machinery and electronics',
+  '86': 'Railway locomotives, rolling stock',
+  '87': 'Vehicles, cars, motorcycles',
+  '88': 'Aircraft and spacecraft',
+  '89': 'Ships, boats and floating structures',
+  '90': 'Optical and medical instruments',
+  '91': 'Clocks and watches',
+  '92': 'Musical instruments',
+  '93': 'Arms and ammunition',
+  '94': 'Furniture, bedding, lamps',
+  '95': 'Toys, games and sports goods',
+  '96': 'Miscellaneous manufactured articles',
+  '97': 'Works of art and antiques',
+}
+
+/**
  * Checks if a string is predominantly Title Case (most words starting with a capital letter).
  */
 export function isMostlyTitleCase(text: string): boolean {
@@ -116,6 +220,48 @@ export function cleanTrailingWordsAndPunct(str: string): string {
       changed = true
     }
   }
+  return s
+}
+
+/**
+ * Rule 4: getCappedDescription(text)
+ * Cap the description used in intro sentence 1 and in the H1 source.
+ * 1. Takes the description in sentence case.
+ * 2. Cuts at the first of: ':', ';', ' : '.
+ * 3. If neither found, cuts at the first of: ', including' or ', other than'.
+ * 4. If still longer than 180 characters, cuts at the last comma before 180.
+ * 5. Cleans trailing punctuation and stop words. Never cuts mid-word and never adds '…'.
+ */
+export function getCappedDescription(text: string): string {
+  let s = sentenceCase(text)
+  if (!s) return ''
+
+  // Step 1: cut at first of ':', ';', ' : '
+  const colonMatch = s.search(/[\s]*[:;]/)
+  if (colonMatch !== -1) {
+    s = s.slice(0, colonMatch)
+  } else {
+    // Step 2: then ', including' or ', other than'
+    const incMatch = s.search(/,\s*(?:including|other than)\b/i)
+    if (incMatch !== -1) {
+      s = s.slice(0, incMatch)
+    }
+  }
+
+  s = cleanTrailingWordsAndPunct(s)
+
+  // Step 3: if still longer than 180 characters, cut at the last comma before 180
+  if (s.length > 180) {
+    const lastComma = s.lastIndexOf(',', 180)
+    if (lastComma !== -1) {
+      s = s.slice(0, lastComma)
+    } else {
+      // If no comma, cut at last full word before 180
+      s = shortenByWholeWords(s, 180)
+    }
+    s = cleanTrailingWordsAndPunct(s)
+  }
+
   return s
 }
 
@@ -269,7 +415,7 @@ export interface HSNPageCopy {
 }
 
 /**
- * Generates all copy for an HSN Heading page (Rules D, E, F, G, J).
+ * Generates all copy for an HSN Heading page (Rules D, E, F, G, J + Problem 3 & 4).
  */
 export function getHSNCopy(
   heading: HSNItem,
@@ -277,13 +423,18 @@ export function getHSNCopy(
   children: HSNItem[]
 ): HSNPageCopy {
   const code = heading.c
-  const sName = shortName(heading.d)
+  // Problem 4: Cap the description used in intro sentence 1 and in the H1 source
+  const cappedDesc = getCappedDescription(heading.d)
+  const sName = shortName(cappedDesc)
   const rSum = getRateSummary(rateResult.mainRates)
 
   // Rule D: HSN title before " | Udyog" (max 52 chars, total <= 60 chars)
   const baseTitle = `HSN ${code} GST Rate (${rSum})`
   const maxNameInTitle = 52 - baseTitle.length - 3 // 3 for " – "
-  const sNameForTitle = shortenByWholeWords(sName, maxNameInTitle)
+  let sNameForTitle = shortenByWholeWords(sName, maxNameInTitle)
+  while (sNameForTitle && (`${baseTitle} – ${sNameForTitle} | Udyog`.replace(/'/g, '&#x27;').length > 60)) {
+    sNameForTitle = shortenByWholeWords(sNameForTitle, sNameForTitle.length - 1)
+  }
   const metaTitle = sNameForTitle ? `${baseTitle} – ${sNameForTitle}` : baseTitle
 
   // Rule E: HSN H1 (max 90 chars)
@@ -314,9 +465,22 @@ export function getHSNCopy(
     }
   }
 
-  // Rule G: HSN intro paragraph under H1 (full text, no truncation anywhere)
-  const sentence1 = `HSN ${code} covers ${lowerFirstUnlessAcronym(heading.d)}.`
+  while (metaDescription.replace(/'/g, '&#x27;').length > 155) {
+    const baseWithoutB = `HSN ${code} (): ${gstPart} (effective 22 Sep 2025).`
+    const maxNameWithoutB = 155 - baseWithoutB.replace(/'/g, '&#x27;').length
+    const shortenedNameWithoutB = shortenByWholeWords(sName, maxNameWithoutB)
+    if (shortenedNameWithoutB) {
+      metaDescription = `HSN ${code} (${shortenedNameWithoutB}): ${gstPart} (effective 22 Sep 2025).`
+    } else {
+      metaDescription = `HSN ${code}: ${gstPart} (effective 22 Sep 2025).`
+      break
+    }
+  }
 
+  // Rule G & Problem 4: Intro sentence 1 uses cappedDesc
+  const sentence1 = `HSN ${code} covers ${lowerFirstUnlessAcronym(cappedDesc)}.`
+
+  // Rule G & Problem 3: Sentence 2 uses "depending on the conditions listed below"
   const distinctRates: string[] = []
   if (rateResult.mainRates && rateResult.mainRates.length > 0) {
     for (const r of rateResult.mainRates) {
@@ -366,7 +530,7 @@ export interface SACPageCopy {
 }
 
 /**
- * Generates all copy for an SAC Code page (Rules H, J).
+ * Generates all copy for an SAC Code page (Problem 2).
  */
 export function getSACCopy(
   sac: SACItem,
@@ -375,40 +539,80 @@ export function getSACCopy(
   siblings: SACItem[]
 ): SACPageCopy {
   const code = sac.c
-  const sName = shortName(sac.d)
+  const ownDesc = sentenceCase(sac.d)
+  const rawGroup = (sac.p && sac.p.length > 0) ? sac.p[sac.p.length - 1] : (heading?.d || '')
+  const groupName = sentenceCase(rawGroup)
 
-  // Rule H: Title "SAC {code}: {shortName}" within 60 chars total (<= 52 before " | Udyog")
+  // Title (before " | Udyog", max 52 chars so total with " | Udyog" is <= 60 chars):
+  // If the code's own description is 30 characters or fewer, "SAC {code}: {own description}".
+  // Otherwise "SAC {code}: {group name}" (shortened by whole words if needed).
   const baseTitle = `SAC ${code}: `
   const maxNameInTitle = 52 - baseTitle.length
-  const sNameForTitle = shortenByWholeWords(sName, maxNameInTitle)
-  const metaTitle = sNameForTitle ? `${baseTitle}${sNameForTitle}` : `SAC ${code}`
+  let titleName = ''
+  if (ownDesc.length <= 30) {
+    titleName = ownDesc
+  } else {
+    titleName = shortenByWholeWords(groupName, maxNameInTitle)
+  }
+  while (titleName && (`${baseTitle}${titleName} | Udyog`.replace(/'/g, '&#x27;').length > 60)) {
+    titleName = shortenByWholeWords(titleName, titleName.length - 1)
+  }
+  const metaTitle = titleName ? `${baseTitle}${titleName}` : `SAC ${code}`
 
-  // Rule H: H1 "SAC {code}: {shortName} – Service Code"
-  const baseH1 = `SAC ${code}: `
-  const suffixH1 = ` – Service Code`
-  const maxNameInH1 = 90 - baseH1.length - suffixH1.length
-  const sNameForH1 = shortenByWholeWords(sName, maxNameInH1)
-  const h1 = `${baseH1}${sNameForH1 || sName}${suffixH1}`
+  // H1: If the own description is 100 characters or fewer and total H1 <= 120:
+  // "SAC {code}: {full own description} – Service Code".
+  // Otherwise "SAC {code}: {group name} – Service Code". Never cut a description mid-phrase.
+  const suffixH1 = ' – Service Code'
+  let h1 = ''
+  const ownH1Candidate = `SAC ${code}: ${ownDesc}${suffixH1}`
+  if (ownDesc.length <= 100 && ownH1Candidate.length <= 120) {
+    h1 = ownH1Candidate
+  } else {
+    let gH1 = groupName
+    if (`SAC ${code}: ${gH1}${suffixH1}`.length > 120) {
+      gH1 = gH1.split(';')[0].trim()
+    }
+    if (`SAC ${code}: ${gH1}${suffixH1}`.length > 120) {
+      gH1 = shortenByWholeWords(gH1, 120 - baseTitle.length - suffixH1.length)
+    }
+    h1 = `SAC ${code}: ${gH1}${suffixH1}`
+  }
 
-  // Rule H: Meta description (at most 155 chars, no mid-word cut)
+  // Meta description (155 or less):
+  // "SAC {code} is the service accounting code for {own description in lower case}. Check the GST rate for this service on the official GST portal."
+  // If longer than 155, use group name instead of own description. Never cut mid-word or mid-phrase.
   const basePrefix = `SAC ${code} is the service accounting code for `
-  const baseSuffix = `. Check the GST rate for this service on the official GST portal.`
-  const maxNameInMeta = 155 - basePrefix.length - baseSuffix.length
-  const sNameForMeta = shortenByWholeWords(lowerFirstUnlessAcronym(sName), maxNameInMeta)
-  const metaDescription = sNameForMeta ? `${basePrefix}${sNameForMeta}${baseSuffix}` : `${basePrefix.trim()}${baseSuffix}`
+  const baseSuffix = '. Check the GST rate for this service on the official GST portal.'
+  const lowerOwn = lowerFirstUnlessAcronym(ownDesc)
+  const lowerGroup = lowerFirstUnlessAcronym(groupName)
 
-  // Rule H: Intro paragraph (full description, no truncation)
+  let metaDescription = `${basePrefix}${lowerOwn}${baseSuffix}`
+  if (metaDescription.length > 155) {
+    metaDescription = `${basePrefix}${lowerGroup}${baseSuffix}`
+  }
+  if (metaDescription.length > 155) {
+    metaDescription = `${basePrefix}${lowerGroup}.`
+  }
+  if (metaDescription.length > 155) {
+    const clause = lowerGroup.split(';')[0].trim()
+    metaDescription = `${basePrefix}${clause}.`
+  }
+
+  // Intro paragraph: keep current text without truncation
   const headingDesc = heading ? sentenceCase(heading.d) : ''
   const groupText = headingDesc ? `service group ${headingCode} (${headingDesc})` : `service group ${headingCode}`
   const introParagraph = `SAC ${code} is the Services Accounting Code for ${lowerFirstUnlessAcronym(sac.d)}. It belongs to ${groupText} with ${siblings.length} related service codes.`
 
+  // Breadcrumb name: short, readable label
+  const breadcrumbName = ownDesc.length <= 30 ? ownDesc : shortenByWholeWords(groupName, 35)
+
   return {
-    shortName: sName,
+    shortName: ownDesc.length <= 30 ? ownDesc : groupName,
     metaTitle,
     h1,
     metaDescription,
     introParagraph,
-    breadcrumbName: sName,
+    breadcrumbName,
   }
 }
 
@@ -422,32 +626,38 @@ export interface ChapterPageCopy {
 }
 
 /**
- * Generates all copy for an HSN Chapter hub page (Rules I, J).
+ * Generates all copy for an HSN Chapter hub page (Problem 1).
  */
 export function getChapterCopy(chapter: HSNItem, headingsCount: number): ChapterPageCopy {
   const ch = chapter.c
-  const sName = shortName(chapter.d)
+  // Problem 1: Hand-written override map for chapters 01-97, fallback for 77 & 98
+  const sName = CHAPTER_NAMES[ch] || shortName(chapter.d)
 
-  // Rule I: Title "HSN Chapter {ch}: {shortName of chapter title}" within 60 chars total (<= 52 before " | Udyog")
+  // Title: "HSN Chapter {ch}: {shortName}" within 60 chars total (<= 52 before " | Udyog")
   const baseTitle = `HSN Chapter ${ch}: `
   const maxNameInTitle = 52 - baseTitle.length
-  const sNameForTitle = shortenByWholeWords(sName, maxNameInTitle)
+  let sNameForTitle = shortenByWholeWords(sName, maxNameInTitle)
+  while (sNameForTitle && (`${baseTitle}${sNameForTitle} | Udyog`.replace(/'/g, '&#x27;').length > 60)) {
+    sNameForTitle = shortenByWholeWords(sNameForTitle, sNameForTitle.length - 1)
+  }
   const metaTitle = sNameForTitle ? `${baseTitle}${sNameForTitle}` : `HSN Chapter ${ch}`
 
-  // Rule I: H1 "HSN Codes Chapter {ch}: {shortName}" (max 90 chars)
+  // H1: "HSN Codes Chapter {ch}: {short name}"
   const baseH1 = `HSN Codes Chapter ${ch}: `
   const maxNameInH1 = 90 - baseH1.length
   const sNameForH1 = shortenByWholeWords(sName, maxNameInH1)
   const h1 = `${baseH1}${sNameForH1 || sName}`
 
-  // Rule I: Meta description (at most 155 chars, no mid-word cut, no "…")
+  // Meta description (<= 155 chars, keeping acronyms, unique, no "…"):
+  // "HSN Chapter {ch} covers {short name in lower case, keeping acronyms}. Explore all {n} headings with official CBIC GST rates effective 22 September 2025."
+  const lowerShortName = lowerFirstUnlessAcronym(sName)
   const basePrefix = `HSN Chapter ${ch} covers `
   const baseSuffix = `. Explore all ${headingsCount} headings with official CBIC GST rates effective 22 September 2025.`
   const maxNameInMeta = 155 - basePrefix.length - baseSuffix.length
-  const sNameForMeta = shortenByWholeWords(lowerFirstUnlessAcronym(sName), maxNameInMeta)
-  const metaDescription = sNameForMeta ? `${basePrefix}${sNameForMeta}${baseSuffix}` : `${basePrefix.trim()}${baseSuffix}`
+  const sNameForMeta = shortenByWholeWords(lowerShortName, maxNameInMeta)
+  const metaDescription = `${basePrefix}${sNameForMeta || lowerShortName}${baseSuffix}`
 
-  // Rule I: Intro paragraph (full chapter title in sentence case, no truncation)
+  // Intro paragraph: keeps the full official chapter title in sentence case (no cut)
   const introParagraph = `Chapter ${ch} of the GST HSN tariff classifies ${lowerFirstUnlessAcronym(chapter.d)}. This chapter contains ${headingsCount} 4-digit tariff heading${headingsCount === 1 ? '' : 's'} with applicable GST rates effective 22 September 2025.`
 
   return {

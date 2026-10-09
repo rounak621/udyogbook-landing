@@ -533,7 +533,7 @@ export default function HSNHeadingDetailPage({
               </div>
             ) : (
               <p style={{ fontSize: 14, color: '#374151', margin: 0 }}>
-                No further sub-headings are defined under this 4-digit heading. Heading {heading.c} is the primary tariff reference.
+                No further sub-headings are defined under this 4-digit heading. Heading {heading.c} ({cleanHeadingDesc}) is the primary tariff reference.
               </p>
             )}
           </div>
