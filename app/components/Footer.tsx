@@ -84,8 +84,8 @@ export default function Footer() {
           <div>
             <p className="footer-col-title">Free Tools</p>
             <a href="/tools/digital-signature" className="footer-link">Digital Signature Maker</a>
-            <a href="/gst-calculator" className="footer-link">GST Calculator</a>
-            <a href="/invoice-template" className="footer-link">Invoice Templates</a>
+            <a href="/tools/gst-calculator" className="footer-link">GST Calculator</a>
+            <a href="/tools/invoice-template" className="footer-link">Invoice Templates</a>
           </div>
 
           {/* Company column */}

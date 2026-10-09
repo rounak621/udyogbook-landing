@@ -6,7 +6,13 @@ export const metadata: Metadata = {
   description: 'Free online GST calculator for India. Calculate GST inclusive and exclusive amounts, CGST/SGST/IGST breakdown, for all GST slabs — 5%, 12%, 18%, 28%. Instant results.',
   keywords: 'gst calculator, gst calculator india, cgst sgst calculator, igst calculator, gst calculation online, 18% gst calculator',
   alternates: {
-    canonical: 'https://udyogbook.in/gst-calculator',
+    canonical: 'https://udyogbook.in/tools/gst-calculator',
+  },
+  openGraph: {
+    title: 'Free GST Calculator India 2026 — Calculate CGST, SGST, IGST Instantly',
+    description: 'Free online GST calculator for India. Calculate GST inclusive and exclusive amounts, CGST/SGST/IGST breakdown, for all GST slabs — 5%, 12%, 18%, 28%. Instant results.',
+    url: 'https://udyogbook.in/tools/gst-calculator',
+    type: 'website',
   },
 }
 

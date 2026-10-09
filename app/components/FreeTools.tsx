@@ -39,7 +39,7 @@ export default function FreeTools() {
         <div className={`fade-up d1${visible ? ' visible' : ''}`} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24 }}>
 
           {/* GST Calculator */}
-          <a href="/gst-calculator" style={{ textDecoration: 'none' }}>
+          <a href="/tools/gst-calculator" style={{ textDecoration: 'none' }}>
             <div style={{
               background: '#fff', borderRadius: 20, border: '1.5px solid #e5e7eb',
               padding: '32px 28px', height: '100%', boxSizing: 'border-box',
@@ -87,7 +87,7 @@ export default function FreeTools() {
           </a>
 
           {/* Free Invoice Templates */}
-          <a href="/invoice-template" style={{ textDecoration: 'none' }}>
+          <a href="/tools/invoice-template" style={{ textDecoration: 'none' }}>
             <div style={{
               background: '#fff', borderRadius: 20, border: '1.5px solid #e5e7eb',
               padding: '32px 28px', height: '100%', boxSizing: 'border-box',
