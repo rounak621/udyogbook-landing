@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { BLOG_POSTS } from '../lib/blog-posts'
+import { getAllHSNHeadings, getAll6DigitSACCodes } from '../lib/hsn-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://udyogbook.in'
@@ -14,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${baseUrl}/tools/gst-calculator`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
         { url: `${baseUrl}/tools/invoice-template`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
         { url: `${baseUrl}/tools/digital-signature`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+        { url: `${baseUrl}/tools/hsn-code-finder`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
         { url: `${baseUrl}/about`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
         { url: `${baseUrl}/contact`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
         { url: `${baseUrl}/blog`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
@@ -32,5 +34,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }))
 
-    return [...staticPages, ...blogPages]
+    // HSN 4-digit heading pages
+    const hsnPages: MetadataRoute.Sitemap = getAllHSNHeadings().map(h => ({
+        url: `${baseUrl}/tools/hsn-code-finder/hsn/${h.c}`,
+        lastModified,
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+    }))
+
+    // SAC 6-digit code pages
+    const sacPages: MetadataRoute.Sitemap = getAll6DigitSACCodes().map(s => ({
+        url: `${baseUrl}/tools/hsn-code-finder/sac/${s.c}`,
+        lastModified,
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+    }))
+
+    return [...staticPages, ...blogPages, ...hsnPages, ...sacPages]
 }

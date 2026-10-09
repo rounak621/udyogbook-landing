@@ -183,6 +183,53 @@ export default function FreeTools() {
             </div>
           </a>
 
+          {/* HSN & SAC Code Finder */}
+          <a href="/tools/hsn-code-finder" style={{ textDecoration: 'none' }}>
+            <div style={{
+              background: '#fff', borderRadius: 20, border: '1.5px solid #e5e7eb',
+              padding: '32px 28px', height: '100%', boxSizing: 'border-box',
+              transition: 'all 0.2s', cursor: 'pointer',
+              boxShadow: '0 2px 12px rgba(0,0,0,0.04)',
+            }}
+            onMouseEnter={e => {
+              const el = e.currentTarget as HTMLElement
+              el.style.borderColor = '#f97316'
+              el.style.boxShadow = '0 8px 32px rgba(249,115,22,0.12)'
+              el.style.transform = 'translateY(-2px)'
+            }}
+            onMouseLeave={e => {
+              const el = e.currentTarget as HTMLElement
+              el.style.borderColor = '#e5e7eb'
+              el.style.boxShadow = '0 2px 12px rgba(0,0,0,0.04)'
+              el.style.transform = 'translateY(0)'
+            }}
+            >
+              <div style={{
+                width: 56, height: 56, background: 'linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)',
+                borderRadius: 16, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                marginBottom: 20, border: '1px solid #fed7aa',
+              }}>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
+                <h3 style={{ fontSize: 18, fontWeight: 700, color: '#111827', margin: 0 }}>HSN Code Finder</h3>
+                <span style={{ background: '#f0fdf4', color: '#16a34a', fontSize: 11, fontWeight: 700, padding: '3px 8px', borderRadius: 20, border: '1px solid #bbf7d0' }}>FREE</span>
+              </div>
+              <p style={{ fontSize: 14, color: '#6b7280', lineHeight: 1.7, marginBottom: 24 }}>
+                Search 21,000+ official CBIC HSN & SAC codes with GST tax rates, Hinglish search, and notification details.
+              </p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#f97316', fontSize: 14, fontWeight: 600 }}>
+                Find HSN / SAC Code
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
