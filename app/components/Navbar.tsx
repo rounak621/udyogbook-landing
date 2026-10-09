@@ -10,7 +10,7 @@ const NAV_LINKS = [
   { label: 'How it works', href: '/#how-it-works' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Custom Billing', href: '/custom-solutions' },
-  { label: 'Free Tools', href: '/tools/digital-signature' },
+  { label: 'Free Tools', href: '/tools' },
   { label: 'FAQ', href: '/#faq' },
   { label: 'Contact', href: '/contact' },
 ]
