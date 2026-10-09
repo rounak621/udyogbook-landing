@@ -11,6 +11,8 @@ import {
   RATE_SOURCE_BANNER,
   RESIDUAL_RATE_TITLE,
   RESIDUAL_RATE_NOTE,
+  TIER2_COLLAPSED_TITLE,
+  TIER2_COLLAPSED_LINE,
 } from '../../../../../lib/hsn-data'
 import { Info, ArrowLeft, ArrowRight, ShieldCheck, Tag } from 'lucide-react'
 
@@ -54,7 +56,7 @@ export default function HSNHeadingDetailPage({
   const details = getHSNHeadingDetails(params.code)
   if (!details) notFound()
 
-  const { heading, chapterCode, chapter, children, siblings, rates } = details
+  const { heading, chapterCode, chapter, children, siblings, rates, rateResult } = details
   const cleanHeadingDesc = heading.d.replace(/\s+/g, ' ').trim()
 
   const jsonLd = {
@@ -209,61 +211,150 @@ export default function HSNHeadingDetailPage({
               </h2>
             </div>
 
-            {rates.length > 0 ? (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-                {rates.map((r, idx) => {
-                  const display = formatRateDisplay(r)
-                  return (
-                    <div
-                      key={idx}
-                      style={{
-                        background: '#F8FAFC',
-                        borderRadius: 12,
-                        border: '1px solid #E2E8F0',
-                        padding: '18px 20px',
-                      }}
-                    >
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8, flexWrap: 'wrap' }}>
-                        <span
-                          style={{
-                            background: r.gst === 0 ? '#ECFDF5' : r.cess ? '#FEF2F2' : '#FFF7ED',
-                            color: r.gst === 0 ? '#059669' : r.cess ? '#DC2626' : '#C2410C',
-                            border: `1px solid ${r.gst === 0 ? '#A7F3D0' : r.cess ? '#FECACA' : '#FED7AA'}`,
-                            fontWeight: 800,
-                            fontSize: 16,
-                            padding: '4px 12px',
-                            borderRadius: 6,
-                          }}
-                        >
-                          {display.headline}
-                        </span>
-                        <span style={{ fontSize: 13, color: '#475569', fontWeight: 600 }}>
-                          {display.split}
-                        </span>
-                        {r.isSubCode && (
+            {rateResult.mainRates.length > 0 ? (
+              <div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                  {rateResult.mainRates.map((r, idx) => {
+                    const display = formatRateDisplay(r)
+                    return (
+                      <div
+                        key={idx}
+                        style={{
+                          background: '#F8FAFC',
+                          borderRadius: 12,
+                          border: '1px solid #E2E8F0',
+                          padding: '18px 20px',
+                        }}
+                      >
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8, flexWrap: 'wrap' }}>
                           <span
                             style={{
-                              background: '#FEF3C7',
-                              color: '#92400E',
-                              fontSize: 11,
-                              fontWeight: 700,
-                              padding: '2px 8px',
-                              borderRadius: 4,
+                              background: r.gst === 0 ? '#ECFDF5' : r.cess ? '#FEF2F2' : '#FFF7ED',
+                              color: r.gst === 0 ? '#059669' : r.cess ? '#DC2626' : '#C2410C',
+                              border: `1px solid ${r.gst === 0 ? '#A7F3D0' : r.cess ? '#FECACA' : '#FED7AA'}`,
+                              fontWeight: 800,
+                              fontSize: 16,
+                              padding: '4px 12px',
+                              borderRadius: 6,
                             }}
                           >
-                            Applies to some sub-codes
+                            {display.headline}
                           </span>
-                        )}
+                          <span style={{ fontSize: 13, color: '#475569', fontWeight: 600 }}>
+                            {display.split}
+                          </span>
+                          {r.isSubCode && (
+                            <span
+                              style={{
+                                background: '#FEF3C7',
+                                color: '#92400E',
+                                fontSize: 11,
+                                fontWeight: 700,
+                                padding: '2px 8px',
+                                borderRadius: 4,
+                              }}
+                            >
+                              Applies to some sub-codes
+                            </span>
+                          )}
+                        </div>
+                        <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.6, margin: '0 0 6px 0' }}>
+                          {r.d}
+                        </p>
+                        <div style={{ fontSize: 12, color: '#64748B' }}>
+                          Reference: Schedule {r.sch}, S. No. {r.sn} {r.spec ? `(Spec: ${r.spec})` : ''}
+                        </div>
                       </div>
-                      <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.6, margin: '0 0 6px 0' }}>
-                        {r.d}
-                      </p>
-                      <div style={{ fontSize: 12, color: '#64748B' }}>
-                        Reference: Schedule {r.sch}, S. No. {r.sn} {r.spec ? `(Spec: ${r.spec})` : ''}
-                      </div>
+                    )
+                  })}
+                </div>
+
+                {/* If Tier 2 was shown as main because Tier 1 was empty (Rule 3) */}
+                {rateResult.isTier2Main && (
+                  <div
+                    style={{
+                      background: '#F8FAFC',
+                      borderRadius: 10,
+                      border: '1px solid #E2E8F0',
+                      padding: '14px 16px',
+                      marginTop: 18,
+                      fontSize: 13,
+                      color: '#475569',
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    {rateResult.residualNote || 'If none of these descriptions fit your goods, the residual rate is 18% (Schedule II, S. No. 639).'}
+                  </div>
+                )}
+
+                {/* If Tier 1 exists and Tier 2 has rows: show collapsed section (Rule 2) */}
+                {rateResult.hasTier1 && rateResult.hasTier2 && rateResult.tier2.length > 0 && (
+                  <details
+                    style={{
+                      marginTop: 24,
+                      background: '#F8FAFC',
+                      border: '1px solid #E2E8F0',
+                      borderRadius: 12,
+                      padding: '16px 20px',
+                    }}
+                  >
+                    <summary
+                      style={{
+                        cursor: 'pointer',
+                        fontWeight: 700,
+                        fontSize: 15,
+                        color: '#0F172A',
+                        userSelect: 'none',
+                      }}
+                    >
+                      {TIER2_COLLAPSED_TITLE} ({rateResult.tier2.length})
+                    </summary>
+                    <p style={{ fontSize: 13, color: '#64748B', margin: '8px 0 16px 0', lineHeight: 1.5 }}>
+                      {TIER2_COLLAPSED_LINE}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                      {rateResult.tier2.map((r, idx) => {
+                        const display = formatRateDisplay(r)
+                        return (
+                          <div
+                            key={idx}
+                            style={{
+                              background: '#fff',
+                              borderRadius: 10,
+                              border: '1px solid #E2E8F0',
+                              padding: '14px 16px',
+                            }}
+                          >
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6, flexWrap: 'wrap' }}>
+                              <span
+                                style={{
+                                  background: r.gst === 0 ? '#ECFDF5' : r.cess ? '#FEF2F2' : '#FFF7ED',
+                                  color: r.gst === 0 ? '#059669' : r.cess ? '#DC2626' : '#C2410C',
+                                  border: `1px solid ${r.gst === 0 ? '#A7F3D0' : r.cess ? '#FECACA' : '#FED7AA'}`,
+                                  fontWeight: 800,
+                                  fontSize: 13,
+                                  padding: '3px 10px',
+                                  borderRadius: 6,
+                                }}
+                              >
+                                {display.headline}
+                              </span>
+                              <span style={{ fontSize: 12, color: '#475569', fontWeight: 600 }}>
+                                {display.split}
+                              </span>
+                            </div>
+                            <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.5, margin: '0 0 6px 0' }}>
+                              {r.d}
+                            </p>
+                            <div style={{ fontSize: 11, color: '#94A3B8' }}>
+                              Reference: Schedule {r.sch}, S. No. {r.sn} {r.spec ? `(Spec: ${r.spec})` : ''}
+                            </div>
+                          </div>
+                        )
+                      })}
                     </div>
-                  )
-                })}
+                  </details>
+                )}
               </div>
             ) : (
               <div

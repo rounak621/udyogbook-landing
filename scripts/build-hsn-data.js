@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const zlib = require('zlib')
+const { matchHSNRates } = require('../lib/rate-matcher')
 
 const ROOT = path.join(__dirname, '..')
 const DATA_DIR = path.join(ROOT, 'data/hsn-source')
@@ -23,58 +24,6 @@ const hinglishMap = mapMatches.map(m => ({
   hinglish: eval(m[1]),
   english: eval(m[2]),
 }))
-
-// Rate matching logic
-function getRatesForHSN(code) {
-  const cleanCode = String(code).trim().replace(/\D/g, '')
-  if (!cleanCode) return []
-  const matches = []
-
-  for (const row of rates) {
-    if (!row.codes || row.codes.length === 0) continue
-    const spec = (row.spec || '').toLowerCase()
-    // Ignore catch-all rows
-    if (/any\s*chapter/i.test(row.spec) || /a\s*n\s*y\s*chapter/i.test(row.spec) || spec.includes('all goods')) {
-      continue
-    }
-
-    let matchedCode = null
-    let isSubCode = false
-    let isParentOrExact = false
-
-    for (const c of row.codes) {
-      if (cleanCode.startsWith(c)) {
-        isParentOrExact = true
-        if (!matchedCode || c.length > matchedCode.length) matchedCode = c
-      } else if (c.startsWith(cleanCode)) {
-        if (!matchedCode || c.length > matchedCode.length) matchedCode = c
-      }
-    }
-
-    if (matchedCode) {
-      isSubCode = !isParentOrExact
-      matches.push({
-        sch: row.sch,
-        sn: row.sn,
-        spec: row.spec,
-        gst: row.gst,
-        cgst: row.cgst,
-        cess: row.cess,
-        d: row.d,
-        matchedCode,
-        isSubCode,
-        matchSpecificity: matchedCode.length,
-      })
-    }
-  }
-
-  matches.sort((a, b) => {
-    if (b.matchSpecificity !== a.matchSpecificity) return b.matchSpecificity - a.matchSpecificity
-    return (a.sn || 0) - (b.sn || 0)
-  })
-
-  return matches
-}
 
 // 3. Map child descriptions to 4-digit heading
 const hsnChildrenMap = new Map()
@@ -106,7 +55,8 @@ for (const item of hsnHeadings) {
     }
   }
 
-  const ratesForHeading = getRatesForHSN(item.c).map(r => ({
+  const matchResult = matchHSNRates(item.c, rates)
+  const ratesForHeading = matchResult.mainRates.map(r => ({
     gst: r.gst,
     cgst: r.cgst,
     cess: r.cess,
@@ -115,6 +65,17 @@ for (const item of hsnHeadings) {
     isSubCode: r.isSubCode,
   }))
 
+  const otherRates =
+    matchResult.hasTier1 && matchResult.hasTier2
+      ? matchResult.tier2.map(r => ({
+          gst: r.gst,
+          cgst: r.cgst,
+          cess: r.cess,
+          d: r.d,
+          spec: r.spec,
+        }))
+      : []
+
   searchIndex.push({
     c: item.c,
     d: item.d,
@@ -122,6 +83,8 @@ for (const item of hsnHeadings) {
     t: 'hsn',
     s: (item.c + ' ' + item.d + ' ' + (item.p || []).join(' ') + ' ' + childDescs + ' ' + [...extraKeywords].join(' ')).toLowerCase(),
     r: ratesForHeading,
+    o: otherRates,
+    t2Main: matchResult.isTier2Main,
   })
 }
 
@@ -146,6 +109,8 @@ for (const item of sac) {
     t: 'sac',
     s: (item.c + ' ' + item.d + ' ' + (item.p || []).join(' ') + ' ' + [...extraKeywords].join(' ')).toLowerCase(),
     r: [],
+    o: [],
+    t2Main: false,
   })
 }
 

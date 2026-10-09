@@ -20,6 +20,8 @@ interface IndexItem {
   t: 'hsn' | 'sac'
   s: string
   r: RateItem[]
+  o?: RateItem[]
+  t2Main?: boolean
 }
 
 const RATE_SOURCE_BANNER =
@@ -467,44 +469,126 @@ export default function FinderClient() {
                       Applicable GST Rates & Conditions
                     </div>
                     {item.r && item.r.length > 0 ? (
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                        {item.r.map((r, rIdx) => (
+                      <div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                          {item.r.map((r, rIdx) => (
+                            <div
+                              key={rIdx}
+                              style={{
+                                display: 'flex',
+                                alignItems: 'flex-start',
+                                gap: 12,
+                                paddingBottom: rIdx < item.r.length - 1 ? 10 : 0,
+                                borderBottom: rIdx < item.r.length - 1 ? '1px dashed #CBD5E1' : 'none',
+                              }}
+                            >
+                              <div style={{ flexShrink: 0 }}>
+                                <span
+                                  style={{
+                                    display: 'inline-block',
+                                    background: r.gst === 0 ? '#ECFDF5' : r.cess ? '#FEF2F2' : '#FFF7ED',
+                                    color: r.gst === 0 ? '#059669' : r.cess ? '#DC2626' : '#C2410C',
+                                    border: `1px solid ${r.gst === 0 ? '#A7F3D0' : r.cess ? '#FECACA' : '#FED7AA'}`,
+                                    fontWeight: 800,
+                                    fontSize: 13,
+                                    padding: '4px 10px',
+                                    borderRadius: 6,
+                                  }}
+                                >
+                                  {formatRateHeadline(r)}
+                                </span>
+                                {r.isSubCode && (
+                                  <div style={{ fontSize: 10, color: '#D97706', fontWeight: 600, marginTop: 3 }}>
+                                    Applies to some sub-codes
+                                  </div>
+                                )}
+                              </div>
+                              <div style={{ fontSize: 13, color: '#334155', lineHeight: 1.5, flex: 1 }}>
+                                {r.d}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* If Tier 2 was shown as main because Tier 1 was empty (Rule 3) */}
+                        {item.t2Main && (
                           <div
-                            key={rIdx}
                             style={{
-                              display: 'flex',
-                              alignItems: 'flex-start',
-                              gap: 12,
-                              paddingBottom: rIdx < item.r.length - 1 ? 10 : 0,
-                              borderBottom: rIdx < item.r.length - 1 ? '1px dashed #CBD5E1' : 'none',
+                              background: '#fff',
+                              borderRadius: 8,
+                              border: '1px solid #E2E8F0',
+                              padding: '10px 12px',
+                              marginTop: 12,
+                              fontSize: 12,
+                              color: '#475569',
+                              lineHeight: 1.5,
                             }}
                           >
-                            <div style={{ flexShrink: 0 }}>
-                              <span
-                                style={{
-                                  display: 'inline-block',
-                                  background: r.gst === 0 ? '#ECFDF5' : r.cess ? '#FEF2F2' : '#FFF7ED',
-                                  color: r.gst === 0 ? '#059669' : r.cess ? '#DC2626' : '#C2410C',
-                                  border: `1px solid ${r.gst === 0 ? '#A7F3D0' : r.cess ? '#FECACA' : '#FED7AA'}`,
-                                  fontWeight: 800,
-                                  fontSize: 13,
-                                  padding: '4px 10px',
-                                  borderRadius: 6,
-                                }}
-                              >
-                                {formatRateHeadline(r)}
-                              </span>
-                              {r.isSubCode && (
-                                <div style={{ fontSize: 10, color: '#D97706', fontWeight: 600, marginTop: 3 }}>
-                                  Applies to some sub-codes
-                                </div>
-                              )}
-                            </div>
-                            <div style={{ fontSize: 13, color: '#334155', lineHeight: 1.5, flex: 1 }}>
-                              {r.d}
-                            </div>
+                            If none of these descriptions fit your goods, the residual rate is 18% (Schedule II, S. No. 639).
                           </div>
-                        ))}
+                        )}
+
+                        {/* If Tier 1 has rows and Tier 2 has rows: collapsed section (Rule 2) */}
+                        {item.o && item.o.length > 0 && (
+                          <details
+                            style={{
+                              marginTop: 14,
+                              background: '#fff',
+                              border: '1px solid #E2E8F0',
+                              borderRadius: 8,
+                              padding: '10px 14px',
+                            }}
+                          >
+                            <summary
+                              style={{
+                                cursor: 'pointer',
+                                fontWeight: 600,
+                                fontSize: 13,
+                                color: '#475569',
+                                userSelect: 'none',
+                              }}
+                            >
+                              Other entries in this chapter ({item.o.length})
+                            </summary>
+                            <p style={{ fontSize: 12, color: '#64748B', margin: '6px 0 10px 0' }}>
+                              These apply only if your goods match the description.
+                            </p>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                              {item.o.map((oRate, oIdx) => (
+                                <div
+                                  key={oIdx}
+                                  style={{
+                                    display: 'flex',
+                                    alignItems: 'flex-start',
+                                    gap: 10,
+                                    fontSize: 12,
+                                    paddingTop: oIdx > 0 ? 8 : 0,
+                                    borderTop: oIdx > 0 ? '1px dashed #E2E8F0' : 'none',
+                                  }}
+                                >
+                                  <span
+                                    style={{
+                                      display: 'inline-block',
+                                      background: oRate.gst === 0 ? '#ECFDF5' : oRate.cess ? '#FEF2F2' : '#FFF7ED',
+                                      color: oRate.gst === 0 ? '#059669' : oRate.cess ? '#DC2626' : '#C2410C',
+                                      border: `1px solid ${oRate.gst === 0 ? '#A7F3D0' : oRate.cess ? '#FECACA' : '#FED7AA'}`,
+                                      fontWeight: 700,
+                                      fontSize: 11,
+                                      padding: '2px 8px',
+                                      borderRadius: 4,
+                                      flexShrink: 0,
+                                    }}
+                                  >
+                                    {formatRateHeadline(oRate)}
+                                  </span>
+                                  <span style={{ color: '#334155', lineHeight: 1.4 }}>
+                                    {oRate.d}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          </details>
+                        )}
                       </div>
                     ) : (
                       <div style={{ fontSize: 13, color: '#475569' }}>
