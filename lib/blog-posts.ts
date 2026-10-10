@@ -7387,6 +7387,320 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+
+  // ─────────────────────────────────────────────
+  // POST 46 — bill-banane-wala-app-invoice-maker-mobile
+  // ─────────────────────────────────────────────
+  {
+    slug: 'bill-banane-wala-app-invoice-maker-mobile',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'Bill Banane Wala App: Invoice Maker for Mobile',
+    excerpt: 'Looking for a bill banane wala app? See the types of bills, what an invoice maker app should do, and make your first bill on mobile. 14-day free trial.',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '3 min read',
+    metaTitle: 'Bill Banane Wala App: Invoice Maker for Mobile | Udyog',
+    metaDescription: 'Looking for a bill banane wala app? See the types of bills, what an invoice maker app should do, and make your first bill on mobile. 14-day free trial.',
+    keywords: 'bill banane wala app, invoice maker app, bill maker app for mobile, invoice generator app India, bill banane ka app',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'A bill banane wala app is an invoice maker for your phone. You add your customer and items, the app adds up the total and the tax, and you send the bill as a PDF on WhatsApp. Udyog is one such app. It makes GST, non-GST and service bills in seconds, and it has a 14-day free trial.',
+      },
+      {
+        type: 'p',
+        text: '[Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in).',
+      },
+      {
+        type: 'h2',
+        text: 'What a bill maker app does for you',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Fills your business name, address and GSTIN on every bill.',
+          'Numbers your bills in order, so you never repeat a bill number.',
+          'Adds up the total and calculates the GST for you.',
+          'Saves every bill, so you can find it later.',
+          'Sends the bill on WhatsApp or email as a PDF.',
+          'Shows who has paid and who has not.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Types of bills you may need',
+      },
+      {
+        type: 'p',
+        text: 'Not every bill is a GST bill. The right type depends on your business.',
+      },
+      {
+        type: 'table',
+        headers: ['Bill type', 'Who uses it', 'GST charged?'],
+        rows: [
+          ['Tax invoice', 'GST-registered businesses selling taxable goods or services', 'Yes'],
+          ['Bill of supply', 'Composition dealers, and sellers of exempt goods or services', 'No'],
+          ['Ordinary bill (non-GST bill)', 'Businesses that are not registered for GST', 'No'],
+          ['Quotation or estimate', 'Anyone giving a price before the sale', 'No, it is not a tax invoice'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'If you are not sure which one you need, ask your CA once and then set it up in your app.',
+      },
+      {
+        type: 'h2',
+        text: 'What to look for in an invoice maker app',
+      },
+      {
+        type: 'ul',
+        items: [
+          'It makes the bill types you need: GST, non-GST and service bills.',
+          'It is quick on a phone, with few taps per bill.',
+          'It shares the bill on WhatsApp in one or two taps.',
+          'It keeps your customer list and your item list, so you do not retype them.',
+          'It shows your sales and what customers owe you.',
+          'Your data is safe and works on more than one device.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'For a longer checklist, read [how to choose the best billing app for a small shop](/blog/best-billing-app-for-small-shops-india).',
+      },
+      {
+        type: 'h2',
+        text: 'Make your first bill in 3 steps',
+      },
+      {
+        type: 'ol',
+        items: [
+          'Install the app, sign up and add your business details once.',
+          'Create a new bill, pick or add the customer, and add your items with the price and quantity.',
+          'Save the bill and share it on WhatsApp.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'For the full guide with GST details, read [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye).',
+      },
+      {
+        type: 'h2',
+        text: 'Which bill should I make?',
+      },
+      {
+        type: 'ul',
+        items: [
+          'You have a GST number and sell taxable goods or services: make a tax invoice.',
+          'You are a composition dealer: make a bill of supply.',
+          'You do not have a GST number: make an ordinary bill, without GST.',
+          'A customer asks for a price first: make a quotation.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'If you sell goods under GST, find the right HSN code and GST rate with our free [HSN code finder](/tools/hsn-code-finder).',
+      },
+      {
+        type: 'h2',
+        text: 'Try it with real bills',
+      },
+      {
+        type: 'p',
+        text: 'Start your 14-day free trial: [Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). See the [Udyog pricing page](/pricing) for plans after the trial.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'Which is the best bill banane wala app?',
+        a: 'The best one is the app that makes the bill type you need, works fast on your phone, and shares bills on WhatsApp. Try it with real bills during a free trial before you decide.',
+      },
+      {
+        q: 'Can I make a bill on my mobile without GST?',
+        a: 'Yes. If you are not registered for GST, you can make an ordinary bill without GST. Udyog supports non-GST bills.',
+      },
+      {
+        q: 'Is a bill made in an app valid?',
+        a: 'A bill made in an app is valid when it has the details required for that type of bill. A GST tax invoice must include your GSTIN, the invoice number and date, the HSN code and the tax split.',
+      },
+      {
+        q: 'Can I send the bill to my customer on WhatsApp?',
+        a: 'Yes. Save the bill and share the PDF on WhatsApp or email from the app.',
+      },
+      {
+        q: 'Is the Udyog app free?',
+        a: 'Udyog has a 14-day free trial. After that, you choose a plan on the [pricing page](/pricing).',
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 47 — whatsapp-pe-bill-kaise-bheje-send-invoice
+  // ─────────────────────────────────────────────
+  {
+    slug: 'whatsapp-pe-bill-kaise-bheje-send-invoice',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'WhatsApp Pe Bill Kaise Bheje: Send Invoice (2026)',
+    excerpt: 'WhatsApp pe bill kaise bheje? Send a GST invoice as a PDF from your phone in 3 steps, with ready-to-copy messages for bills and payment reminders.',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '3 min read',
+    metaTitle: 'WhatsApp Pe Bill Kaise Bheje: Send Invoice (2026) | Udyog',
+    metaDescription: 'WhatsApp pe bill kaise bheje? Send a GST invoice as a PDF from your phone in 3 steps, with ready-to-copy messages for bills and payment reminders.',
+    keywords: 'whatsapp pe bill kaise bheje, send invoice on WhatsApp, share bill on WhatsApp, send GST invoice on WhatsApp, WhatsApp invoice message format',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'WhatsApp pe bill kaise bheje? Make the bill in a billing app, save it, tap Share, and choose WhatsApp. The bill goes to your customer as a PDF with all the details. It takes a few seconds. You do not need to take a screenshot or type the amounts.',
+      },
+      {
+        type: 'p',
+        text: 'Udyog lets you share a bill on WhatsApp or email straight from the app. [Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in). There is a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'How to send a bill on WhatsApp in 3 steps',
+      },
+      {
+        type: 'h3',
+        text: 'Step 1: Make and save the bill',
+      },
+      {
+        type: 'p',
+        text: 'Add your customer and your items, check the total, and save the bill. If you need help with the GST part, read [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye).',
+      },
+      {
+        type: 'h3',
+        text: 'Step 2: Tap Share',
+      },
+      {
+        type: 'p',
+        text: 'Open the saved bill and tap the share option.',
+      },
+      {
+        type: 'h3',
+        text: 'Step 3: Choose WhatsApp and the customer',
+      },
+      {
+        type: 'p',
+        text: "Pick WhatsApp, select the customer's chat, and send. The customer gets the bill as a PDF that they can open, save and forward to their CA.",
+      },
+      {
+        type: 'h2',
+        text: 'Why send a PDF and not a screenshot',
+      },
+      {
+        type: 'ul',
+        items: [
+          'A PDF shows all bill details clearly, including GSTIN, HSN code and tax split.',
+          'Your customer can save it and use it for their records.',
+          'A business customer needs the proper invoice to claim input tax credit. A photo of a bill may be unclear.',
+          'The bill looks professional, and it has your business name on it.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Ready-to-copy WhatsApp messages',
+      },
+      {
+        type: 'p',
+        text: 'Use these with the PDF. Change the names and amounts.',
+      },
+      {
+        type: 'p',
+        text: 'Message with the bill:\nHello Rahul, thank you for your order. Your bill no. 1024 for Rs 5,400 is attached. Please check the details and let me know if anything needs a change. Thank you.',
+      },
+      {
+        type: 'p',
+        text: 'Payment reminder (polite):\nHello Rahul, this is a reminder for bill no. 1024 of Rs 5,400, dated 2 October. Please share the payment today or tomorrow. The bill is attached again for your reference. Thank you.',
+      },
+      {
+        type: 'p',
+        text: 'Thank you after payment:\nHello Rahul, we have received your payment of Rs 5,400 for bill no. 1024. Thank you for your business.',
+      },
+      {
+        type: 'h2',
+        text: 'Tips for sending bills on WhatsApp',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Send the bill on the same day, while the customer remembers the order.',
+          "Check that you are in the right chat before you send, because a bill has your customer's details.",
+          'Keep one chat per customer, so you can find old bills in the chat and in the app.',
+          'For business customers, make sure their GSTIN is on the bill before you send it.',
+          'Note your payment details on the bill, so customers know how to pay.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Keep track of who has paid',
+      },
+      {
+        type: 'p',
+        text: 'Sending the bill is half the work. You also need to know who has paid. In Udyog, you can see the payment status of your bills and what each customer owes, so you know whom to remind.',
+      },
+      {
+        type: 'h2',
+        text: 'Try it',
+      },
+      {
+        type: 'p',
+        text: 'Send your first bill on WhatsApp today. [Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). Your 14-day free trial starts when you sign up. Not sure which app to use? Read [how to choose the best billing app for a small shop](/blog/best-billing-app-for-small-shops-india).',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I send a bill on WhatsApp?',
+        a: 'Save the bill in your billing app, tap Share, choose WhatsApp, and pick the customer. The bill goes as a PDF.',
+      },
+      {
+        q: 'Is a bill sent on WhatsApp valid?',
+        a: 'A bill sent as a PDF is valid if it has all the details required for that type of bill. For a GST tax invoice, that includes your GSTIN, the invoice number and date, the HSN code and the tax split.',
+      },
+      {
+        q: 'Can I send a GST invoice on WhatsApp?',
+        a: 'Yes. Make the GST invoice in the app and share the PDF on WhatsApp.',
+      },
+      {
+        q: 'Should I send a screenshot or a PDF?',
+        a: 'Send a PDF. It is clearer, it can be saved, and a business customer can use it for their records.',
+      },
+      {
+        q: 'How do I remind a customer to pay?',
+        a: 'Send a short, polite message with the bill attached again. Use the payment reminder message above.',
+      },
+      {
+        q: 'Can I share the bill by email too?',
+        a: 'Yes. Udyog lets you share bills on WhatsApp or by email.',
+      },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
