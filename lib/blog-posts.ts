@@ -6762,6 +6762,216 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+
+  // ─────────────────────────────────────────────
+  // POST 43 — hsn-code-digits-gst-invoice-4-or-6-digits
+  // ─────────────────────────────────────────────
+  {
+    slug: 'hsn-code-digits-gst-invoice-4-or-6-digits',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'HSN Code Digits in GST Invoice: 4 or 6 Digits? (2026)',
+    excerpt: 'How many HSN digits must you print on a GST invoice? Up to Rs 5 crore turnover: 4 digits. Above Rs 5 crore: 6 digits. See B2B, B2C and GSTR-1 rules.',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '4 min read',
+    metaTitle: 'HSN Code Digits in GST Invoice: 4 or 6 Digits? (2026) | Udyog',
+    metaDescription: 'How many HSN digits must you print on a GST invoice? Up to Rs 5 crore turnover: 4 digits. Above Rs 5 crore: 6 digits. See B2B, B2C and GSTR-1 rules.',
+    keywords: 'HSN code digits required in GST invoice, 4 digit or 6 digit HSN code, HSN code limit by turnover, HSN code mandatory for B2C, HSN code GSTR-1 table 12',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026. Based on Notification No. 78/2020-Central Tax and the GSTN advisories on GSTR-1 Table 12.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'The number of HSN digits on your invoice depends on your **turnover in the previous financial year**:',
+      },
+      {
+        type: 'ul',
+        items: [
+          '**Up to ₹5 crore:** 4 digits.',
+          '**Above ₹5 crore:** 6 digits.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'If your turnover is up to ₹5 crore, you can skip the HSN code on invoices to **unregistered customers (B2C)**. Above ₹5 crore, 6 digits are needed on all invoices, B2B and B2C.',
+      },
+      {
+        type: 'p',
+        text: 'This rule is in force since **1 April 2021**.',
+      },
+      {
+        type: 'h2',
+        text: 'How many digits do you need? (table)',
+      },
+      {
+        type: 'table',
+        headers: [
+          'Your turnover (previous financial year)',
+          'B2B invoice (to a registered buyer)',
+          'B2C invoice (to a customer without GSTIN)',
+        ],
+        rows: [
+          ['Up to ₹5 crore', '4 digits', 'Not required'],
+          ['Above ₹5 crore', '6 digits', '6 digits'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Source: Notification No. 78/2020-Central Tax, dated 15 October 2020, and the GST Council press release on HS code and SAC.',
+      },
+      {
+        type: 'p',
+        text: 'Using **more** digits is fine. Many businesses print 6 or 8 digits even when 4 is enough. Using **fewer** digits is the mistake.',
+      },
+      {
+        type: 'h2',
+        text: 'What the 4, 6 and 8 digits mean',
+      },
+      {
+        type: 'ul',
+        items: [
+          '**4 digits** is the heading. Example: 6109 is T-shirts, singlets and vests, knitted.',
+          '**6 digits** is the sub-heading. Example: 610910 is T-shirts of cotton.',
+          '**8 digits** is the full tariff item. Example: 6109 10 00.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'You can look up any of these in our free [HSN code finder](/tools/hsn-code-finder). The [6109 page](/tools/hsn-code-finder/hsn/6109) shows all sub-codes of T-shirts and the GST rate for each.',
+      },
+      {
+        type: 'h2',
+        text: 'Which turnover counts?',
+      },
+      {
+        type: 'p',
+        text: 'The turnover of the **previous financial year**. For invoices issued in the financial year 2026-27, look at your turnover in 2025-26. If you crossed ₹5 crore last year, use 6 digits from 1 April.',
+      },
+      {
+        type: 'h2',
+        text: 'HSN code in GSTR-1',
+      },
+      {
+        type: 'p',
+        text: 'Your GSTR-1 has an **HSN summary** (Table 12). Two things changed from the April 2025 tax period:',
+      },
+      {
+        type: 'ol',
+        items: [
+          'The summary is **split into two tables**: B2B supplies and B2C supplies are reported separately.',
+          'You **cannot type the HSN manually**. You must pick the code from a dropdown list on the GST portal.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'So the HSN you print on invoices should be a code that exists in that dropdown. A made-up or old code will not work. Check each item in your billing software against the finder.',
+      },
+      {
+        type: 'h2',
+        text: 'What if the HSN code is wrong or too short?',
+      },
+      {
+        type: 'ul',
+        items: [
+          '**A short code** (for example, 4 digits when you need 6) is a compliance mistake.',
+          '**A wrong code** can mean you charge the wrong GST rate. Then you pay the difference, with interest, and the buyer may take the wrong input tax credit.',
+          'A general penalty of up to ₹25,000 under Section 125 of the CGST Act can apply for breaking GST rules where no specific penalty is written.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Pick the code from the official list, and check the rate condition. For example, clothes at 5% need the price per piece under ₹2,500. See [New GST rates after 22 September 2025](/blog/new-gst-rates-what-changed-22-september-2025).',
+      },
+      {
+        type: 'h2',
+        text: 'How to find the right HSN code in 4 steps',
+      },
+      {
+        type: 'ol',
+        items: [
+          'Search your product on the [HSN code finder](/tools/hsn-code-finder), for example "shirt" or "mobile".',
+          'Open the 4-digit heading page. Read the full description.',
+          'Pick the 6-digit sub-heading that fits your product best.',
+          'Save the code in your item, so it prints on every invoice.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Examples to start with: [rice (1006)](/tools/hsn-code-finder/hsn/1006), [mobile phones (8517)](/tools/hsn-code-finder/hsn/8517), [footwear (6403)](/tools/hsn-code-finder/hsn/6403).',
+      },
+      {
+        type: 'h2',
+        text: 'HSN vs SAC: what about services?',
+      },
+      {
+        type: 'p',
+        text: '**HSN** is for goods. **SAC** is for services and always starts with **99**. Services use a 6-digit SAC. Example: 998314 is IT design and development services. The same turnover rule applies to SAC. Browse the list in the [SAC code finder](/tools/hsn-code-finder).',
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Printing a 4-digit code when your turnover is above ₹5 crore.',
+          'Leaving the HSN field empty on B2B invoices.',
+          'Using one HSN for items that need different rates, such as clothes above and below ₹2,500 per piece.',
+          'Using an old code that no longer exists in the GST portal dropdown.',
+          'Forgetting to change to 6 digits after crossing ₹5 crore.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Set the HSN code once in Udyog',
+      },
+      {
+        type: 'p',
+        text: 'In Udyog, add the HSN code when you create an item. It then prints on every invoice and flows into your GSTR-1 HSN summary. You do not need to type it again.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is HSN code mandatory for B2C invoices?',
+        a: 'If your turnover is up to ₹5 crore, no. If it is above ₹5 crore, yes, with 6 digits.',
+      },
+      {
+        q: 'How many digits of HSN do I need if my turnover is below ₹5 crore?',
+        a: '4 digits on B2B invoices.',
+      },
+      {
+        q: 'Can I use an 8-digit HSN code?',
+        a: 'Yes. More digits than required are allowed. It is useful for products where the rate changes by the 8-digit item.',
+      },
+      {
+        q: 'What is the turnover limit for 6-digit HSN?',
+        a: 'Above ₹5 crore in the previous financial year.',
+      },
+      {
+        q: 'Do services need an HSN code?',
+        a: 'Services use a SAC code, not an HSN code. SAC is 6 digits and starts with 99.',
+      },
+      {
+        q: 'Can I type any HSN code in GSTR-1?',
+        a: 'No. From the April 2025 tax period, you pick the HSN from a dropdown. Manual entry is not allowed.',
+      },
+      {
+        q: 'Where can I check the HSN code of my product?',
+        a: 'Use the [free HSN and SAC code finder](/tools/hsn-code-finder), or search on the GST portal.',
+      },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
