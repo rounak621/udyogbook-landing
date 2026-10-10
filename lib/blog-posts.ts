@@ -8300,6 +8300,404 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+
+  // ─────────────────────────────────────────────
+  // POST 51 — delivery-challan-format-gst-rules-sample
+  // ─────────────────────────────────────────────
+  {
+    slug: 'delivery-challan-format-gst-rules-sample',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'Delivery Challan Format in GST: Rules and Sample',
+    excerpt: 'Delivery challan format in GST: when to use it, what it must contain, a simple sample and the copies needed. Make your bills with Udyog (14-day free trial).',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '4 min read',
+    metaTitle: 'Delivery Challan Format in GST: Rules and Sample | Udyog',
+    metaDescription: 'Delivery challan format in GST: when to use it, what it must contain, a simple sample and the copies needed. Make your bills with Udyog (14-day free trial).',
+    keywords: 'delivery challan format in GST, delivery challan kya hota hai, delivery challan rules, delivery challan sample, delivery challan vs invoice, challan for job work',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'A delivery challan is a document that goes with goods when you move them but a tax invoice is not issued at that time. Under Rule 55 of the CGST Rules, it is used for job work, for moving goods for reasons other than supply, for supply of liquid gas where the quantity is not known at the time of removal, and for other cases notified by the government. It carries a serial number (not more than 16 characters), the date, the names and addresses of both parties, the goods, the quantity and the value.',
+      },
+      {
+        type: 'p',
+        text: 'Keep your challans and bills in one place. [Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in). There is a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'When can you use a delivery challan?',
+      },
+      {
+        type: 'p',
+        text: 'Under Rule 55, you can issue a delivery challan instead of an invoice when you:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Send goods to a job worker for work, for example polishing, printing or stitching.',
+          'Move goods for a reason other than supply, for example moving your own goods between two places of your business.',
+          'Supply liquid gas where the exact quantity is not known when the goods leave.',
+          'Make any other supply that the government has notified for this purpose.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'If the goods move for a sale and you cannot issue the tax invoice at the time of removal, the supplier issues the tax invoice after the goods are delivered.',
+      },
+      {
+        type: 'h2',
+        text: 'What to write on a delivery challan',
+      },
+      {
+        type: 'p',
+        text: 'Under Rule 55, the challan must show:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'The date and the serial number of the challan. The number must not be more than 16 characters. You may use one series or more than one series.',
+          'Your name, address and GSTIN (if you are registered).',
+          'The name and address of the person receiving the goods, with their GSTIN or unique identity number if they are registered.',
+          'The HSN code and a description of the goods.',
+          'The quantity. If you do not know the exact quantity, write the provisional quantity.',
+          'The taxable value.',
+          'The tax rate and the tax amount, when the goods move for supply to the receiver.',
+          'The place of supply, if the goods move to another state.',
+          'Your signature.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'You can find the HSN code for your goods on our free [HSN code finder](/tools/hsn-code-finder). Read also [how many HSN digits you need on a bill](/blog/hsn-code-digits-gst-invoice-4-or-6-digits).',
+      },
+      {
+        type: 'h2',
+        text: 'How many copies?',
+      },
+      {
+        type: 'p',
+        text: 'When the challan is for goods that move for supply, it is made in three copies:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Original, marked for the person receiving the goods.',
+          'Duplicate, marked for the transporter.',
+          'Triplicate, marked for you (the sender).',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'A simple sample',
+      },
+      {
+        type: 'p',
+        text: 'The names and numbers are made up.',
+      },
+      {
+        type: 'p',
+        text: 'From: Sharma Furniture, Andheri, Mumbai (GSTIN written here)',
+      },
+      {
+        type: 'p',
+        text: 'Delivery challan no. DC-014, Date: 10 October 2026',
+      },
+      {
+        type: 'p',
+        text: 'To: Rahul Polishing Works, Thane (job worker)',
+      },
+      {
+        type: 'p',
+        text: 'Reason: goods sent for job work (polishing)',
+      },
+      {
+        type: 'table',
+        headers: ['Item', 'HSN', 'Qty', 'Value (Rs)'],
+        rows: [
+          ['Wooden panel', '4418', '20', '30,000'],
+          ['Wooden door frame', '4418', '5', '12,500'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Signature: Sharma Furniture',
+      },
+      {
+        type: 'h2',
+        text: 'Delivery challan vs invoice',
+      },
+      {
+        type: 'ul',
+        items: [
+          'A tax invoice is the bill for a sale. The buyer uses it for input tax credit and you use it to report your sales.',
+          'A delivery challan travels with the goods when there is no invoice at that time. It is not a bill for a sale.',
+          'When the goods are sold, a tax invoice must still be issued. For the steps, read [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye).',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Delivery challan and e-way bill',
+      },
+      {
+        type: 'p',
+        text: 'Goods that move on a delivery challan are also covered by the e-way bill rules. If the value is more than Rs 50,000, you generally need an e-way bill as well. See [E-way bill kaise banaye](/blog/e-way-bill-kaise-banaye-limit-rules-steps).',
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Using a delivery challan to avoid issuing an invoice for a sale.',
+          'Not writing the HSN code or the value.',
+          'Using the same challan number twice, or a number longer than 16 characters.',
+          'Not keeping the three copies.',
+          'Forgetting the e-way bill when the value is above Rs 50,000.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Keep your bills and challans together',
+      },
+      {
+        type: 'p',
+        text: 'In Udyog, you can keep your customers, your items and their HSN codes in one place, so the details are ready when you send goods. Share your bills on WhatsApp and search them by customer and date.',
+      },
+      {
+        type: 'p',
+        text: '[Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). See the [Udyog pricing page](/pricing) for plans after your 14-day free trial.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is a delivery challan?',
+        a: 'A delivery challan is a document that goes with goods when you move them without a tax invoice, for example for job work.',
+      },
+      {
+        q: 'Is a delivery challan a tax invoice?',
+        a: 'No. A delivery challan is not a bill for a sale. When the goods are sold, a tax invoice must still be issued.',
+      },
+      {
+        q: 'When is a delivery challan used in GST?',
+        a: 'For job work, for moving goods for reasons other than supply, for supply of liquid gas where the quantity is not known, and for other cases that the government notifies.',
+      },
+      {
+        q: 'How many copies of a delivery challan are needed?',
+        a: 'Three, when the goods move for supply: the original for the receiver, the duplicate for the transporter and the triplicate for the sender.',
+      },
+      {
+        q: 'What is the maximum length of a delivery challan number?',
+        a: 'Not more than 16 characters. It must be serial, and you may use one or more series.',
+      },
+      {
+        q: 'Do I need an e-way bill with a delivery challan?',
+        a: 'If the value of the goods is more than Rs 50,000, you generally need an e-way bill as well. Check the current rules or ask your CA.',
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 52 — gstr-1-kaise-bhare-due-date-details-steps
+  // ─────────────────────────────────────────────
+  {
+    slug: 'gstr-1-kaise-bhare-due-date-details-steps',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'GSTR-1 Kaise Bhare: Due Date, Details and Steps',
+    excerpt: 'GSTR-1 kaise bhare? Know the due dates, what details to report and the steps on the GST portal. Keep your sales bills ready with Udyog (14-day free trial).',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '4 min read',
+    metaTitle: 'GSTR-1 Kaise Bhare: Due Date, Details and Steps | Udyog',
+    metaDescription: 'GSTR-1 kaise bhare? Know the due dates, what details to report and the steps on the GST portal. Keep your sales bills ready with Udyog (14-day free trial).',
+    keywords: 'gstr 1 kaise bhare, GSTR-1 filing steps, GSTR-1 due date, what is GSTR-1, GSTR-1 monthly vs quarterly, nil GSTR-1',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'GSTR-1 is the return in which you report your sales (outward supplies) for a month or a quarter. Monthly filers file it by the 11th of the next month. Quarterly filers under the QRMP scheme file it by the 13th of the month after the quarter. You log in to the GST portal, enter or upload your sales details, check the summary, and file it with a digital signature or EVC.',
+      },
+      {
+        type: 'p',
+        text: 'Your sales bills are the base of this return. Keep them clean and in one place. [Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in). There is a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'What is GSTR-1?',
+      },
+      {
+        type: 'p',
+        text: 'GSTR-1 is a statement of all the sales you made in the period. The tax details in it also show up for your buyers, who use them to claim input tax credit. This is why a wrong invoice detail in your GSTR-1 can cause trouble for your customer.',
+      },
+      {
+        type: 'h2',
+        text: 'Who files GSTR-1?',
+      },
+      {
+        type: 'p',
+        text: 'Regular GST-registered businesses that make sales. Composition dealers do not file GSTR-1. They file other returns. If you made no sales in the period, you still file a nil GSTR-1.',
+      },
+      {
+        type: 'h2',
+        text: 'GSTR-1 due dates',
+      },
+      {
+        type: 'table',
+        headers: ['Filer', 'Due date'],
+        rows: [
+          ['Monthly filer', '11th of the next month'],
+          ['Quarterly filer (QRMP scheme)', '13th of the month after the quarter'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'The QRMP scheme is for businesses with yearly turnover up to Rs 5 crore that have chosen it. Under QRMP, you can also use the optional invoice furnishing facility (IFF) to report some B2B invoices of the first two months of the quarter by the 13th of the next month. Due dates can be extended by the government, so check the GST portal for the latest date.',
+      },
+      {
+        type: 'h2',
+        text: 'What do you report in GSTR-1?',
+      },
+      {
+        type: 'ul',
+        items: [
+          'B2B sales: invoices to GST-registered buyers.',
+          'B2C sales: sales to customers who are not registered.',
+          'Exports and supplies to SEZ units.',
+          'Credit notes and debit notes. See [Credit note and debit note in GST](/blog/credit-note-debit-note-gst-format-rules).',
+          'Advances received and their adjustment.',
+          'Nil-rated, exempt and non-GST sales.',
+          'A summary of sales by HSN or SAC code. See [how many HSN digits you need](/blog/hsn-code-digits-gst-invoice-4-or-6-digits).',
+          'A summary of the documents you issued, such as the invoice number series, the first and last number and the number cancelled.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Steps to file GSTR-1',
+      },
+      {
+        type: 'ol',
+        items: [
+          'Log in to the GST portal with your GSTIN and password.',
+          'Go to Services, then Returns, then Returns Dashboard. Choose the period and click Search.',
+          'Open GSTR-1. You can enter the details online or upload them from an offline file.',
+          'Check the entries. If you use e-invoicing, the e-invoice details come in automatically.',
+          'Generate the summary and match it with your books.',
+          'Download the summary and check it once more.',
+          'File the statement with the signing option enabled for your GSTIN (digital signature or EVC).',
+          'Save the ARN (acknowledgement reference number) and the filed return.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'The screens on the portal can change, so follow what you see there.',
+      },
+      {
+        type: 'h2',
+        text: 'Before you file: a quick checklist',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Every sale of the period is in your list, with no missing bill numbers.',
+          'The GSTIN of each B2B buyer is correct.',
+          'The HSN or SAC code and the tax rate are correct for each item. Use the free [HSN code finder](/tools/hsn-code-finder) to check.',
+          'Credit notes and debit notes are included.',
+          'The totals match your books.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Late filing',
+      },
+      {
+        type: 'p',
+        text: 'If you file after the due date, a late fee is charged for each day of delay, and the amount depends on your turnover and on whether the return is nil. Check the current amounts on the GST portal or ask your CA. Do not wait for the last day.',
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Missing the due date.',
+          'A wrong buyer GSTIN or a wrong invoice value.',
+          'Forgetting to include credit notes and debit notes.',
+          'Not filing a nil return when you had no sales.',
+          'Using the wrong HSN code or tax rate.',
+          'Not matching the GSTR-1 totals with your books.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Make GSTR-1 easier with clean bills',
+      },
+      {
+        type: 'p',
+        text: 'Most GSTR-1 trouble starts with a wrong bill. In Udyog, you can keep your customers with their GSTINs, your items with their HSN codes, and your bills in one place, and search them by customer and date. For the basics of a correct GST bill, read [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye).',
+      },
+      {
+        type: 'p',
+        text: '[Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). See the [Udyog pricing page](/pricing) for plans after your 14-day free trial.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is GSTR-1?',
+        a: 'GSTR-1 is the GST return in which you report your sales for a month or a quarter.',
+      },
+      {
+        q: 'What is the due date of GSTR-1?',
+        a: 'The 11th of the next month for monthly filers, and the 13th of the month after the quarter for quarterly (QRMP) filers. Check the portal for any extension.',
+      },
+      {
+        q: 'Who must file GSTR-1?',
+        a: 'Regular GST-registered businesses that make sales. Composition dealers file other returns.',
+      },
+      {
+        q: 'Do I file GSTR-1 if I had no sales?',
+        a: 'Yes. File a nil GSTR-1 for the period.',
+      },
+      {
+        q: 'Can I correct a mistake after filing GSTR-1?',
+        a: 'Mistakes can usually be corrected through an amendment in a later return or by the other methods the portal gives. Ask your CA what is right for your case.',
+      },
+      {
+        q: 'Is GSTR-1 the same as GSTR-3B?',
+        a: 'No. GSTR-1 reports your sales. GSTR-3B is the summary return in which you pay the tax.',
+      },
+      {
+        q: 'Do I need a CA to file GSTR-1?',
+        a: 'No, you can file it yourself on the portal. A CA can help if your case is complex.',
+      },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
