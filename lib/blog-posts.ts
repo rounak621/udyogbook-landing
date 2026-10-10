@@ -8741,8 +8741,11 @@ export const BLOG_POSTS: BlogPost[] = [
         rows: [
           ['What it is', 'Invoice-wise details of your sales', 'A summary of sales, input tax credit and tax payable'],
           ['Do you pay tax with it?', 'No', 'Yes'],
-          ['Read more', '[GSTR-1 kaise bhare](/blog/gstr-1-kaise-bhare-due-date-details-steps)', 'This post'],
         ],
+      },
+      {
+        type: 'p',
+        text: 'Read more: [GSTR-1 kaise bhare](/blog/gstr-1-kaise-bhare-due-date-details-steps)',
       },
       {
         type: 'h2',
