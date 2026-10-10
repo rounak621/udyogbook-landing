@@ -7701,6 +7701,406 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+
+  // ─────────────────────────────────────────────
+  // POST 48 — gst-registration-kaise-kare-steps-documents
+  // ─────────────────────────────────────────────
+  {
+    slug: 'gst-registration-kaise-kare-steps-documents',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'GST Registration Kaise Kare: Steps and Documents',
+    excerpt: 'GST registration kaise kare? 5 steps on the GST portal, documents, limits and time taken. Then start billing with Udyog (14-day free trial).',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '4 min read',
+    metaTitle: 'GST Registration Kaise Kare: Steps and Documents | Udyog',
+    metaDescription: 'GST registration kaise kare? 5 steps on the GST portal, documents, limits and time taken. Then start billing with Udyog (14-day free trial).',
+    keywords: 'gst registration kaise kare, GST registration process, documents for GST registration, GST registration online, GST number kaise nikale, GST registration fees',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'GST registration kaise kare? You can do it online, for free, on the GST portal (gst.gov.in). You need your PAN, Aadhaar, mobile number, email, a photo, address proof and bank details. You fill the form in two parts, submit it, and get an application reference number (ARN). With successful Aadhaar authentication, the GST number (GSTIN) is usually issued in about 7 working days.',
+      },
+      {
+        type: 'p',
+        text: 'Once you have your GSTIN, you can start making GST bills. [Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in). There is a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'Do you need GST registration?',
+      },
+      {
+        type: 'p',
+        text: 'You must register when your yearly turnover goes above the limit:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Rs 40 lakh for sellers of goods (in most states).',
+          'Rs 20 lakh for sellers of services.',
+          'Lower limits apply in special category states.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Some businesses must register even below these limits, for example businesses that sell through certain e-commerce platforms, and some businesses that sell to other states. You can also register by choice (voluntary registration), for example to get input tax credit or to sell to bigger businesses. Ask your CA which rule applies to you. Before you register, you can still bill customers without GST. See the [non-GST bill format for small businesses](/blog/non-gst-bill-format-small-business).',
+      },
+      {
+        type: 'h2',
+        text: 'Documents you need',
+      },
+      {
+        type: 'table',
+        headers: ['Business type', 'Main documents'],
+        rows: [
+          ['Sole proprietor', 'PAN, Aadhaar, photo, address proof of the business, bank account details'],
+          ['Partnership firm', 'Firm PAN, partnership deed, PAN, Aadhaar and photo of the partners, address proof, bank account details'],
+          ['Company or LLP', 'Incorporation certificate, PAN of the company, details of directors, board resolution or authorisation, address proof, bank account details'],
+        ],
+      },
+      {
+        type: 'p',
+        text: "Address proof can be an electricity bill, a property tax receipt or a rent agreement. If the place is rented, keep the owner's consent letter.",
+      },
+      {
+        type: 'h2',
+        text: '5 steps to register for GST online',
+      },
+      {
+        type: 'h3',
+        text: 'Step 1: Open the GST portal',
+      },
+      {
+        type: 'p',
+        text: 'Go to the GST portal and choose the new registration option.',
+      },
+      {
+        type: 'h3',
+        text: 'Step 2: Fill Part A',
+      },
+      {
+        type: 'p',
+        text: 'Choose your state and district, and enter your business name, PAN, mobile number and email. Verify both with the OTPs. You then get a temporary reference number (TRN).',
+      },
+      {
+        type: 'h3',
+        text: 'Step 3: Fill Part B',
+      },
+      {
+        type: 'p',
+        text: 'Log in with your TRN. Enter your business details, address, bank details, and the goods or services you sell with their HSN or SAC codes. Upload your documents. You can find HSN codes on our free [HSN code finder](/tools/hsn-code-finder).',
+      },
+      {
+        type: 'h3',
+        text: 'Step 4: Do Aadhaar authentication',
+      },
+      {
+        type: 'p',
+        text: 'Choose Aadhaar authentication, and complete it within 15 days of submitting Part B. If you skip it or it fails, you may have to visit a GST Suvidha Kendra for verification, which takes longer.',
+      },
+      {
+        type: 'h3',
+        text: 'Step 5: Submit and note your ARN',
+      },
+      {
+        type: 'p',
+        text: 'Sign the application with a digital signature, e-sign or EVC. You get an application reference number (ARN). Use it to track your application on the portal.',
+      },
+      {
+        type: 'h2',
+        text: 'How long does it take, and what does it cost?',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Cost: registration on the GST portal is free.',
+          'Time: after Aadhaar authentication, the GSTIN is usually issued within 7 working days. If authentication is not done, a site visit by the tax officer may be needed, and the application can take up to 30 days. If the officer asks a question, you get 7 working days to reply.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'What is a GSTIN?',
+      },
+      {
+        type: 'p',
+        text: 'Your GSTIN is a 15-character number. The first two digits are your state code, the next ten are your PAN, and the last characters are an entity number and a check digit. You print it on every bill.',
+      },
+      {
+        type: 'h2',
+        text: 'After you get your GSTIN',
+      },
+      {
+        type: 'ol',
+        items: [
+          'Start making GST tax invoices with your GSTIN, HSN or SAC codes and the right tax rate. See [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye).',
+          'Check how many HSN digits you need on bills: [HSN code digits in a GST invoice](/blog/hsn-code-digits-gst-invoice-4-or-6-digits).',
+          'Check the GST rate for each product on the [HSN code finder](/tools/hsn-code-finder).',
+          'File your GST returns on time. Ask your CA for the dates for your business.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Starting to charge GST before you get your GSTIN.',
+          'Not completing Aadhaar authentication in time.',
+          'Wrong address or wrong business activity in the form.',
+          'Selling above the limit without registering.',
+          'Forgetting to print the GSTIN on bills after registration.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Start billing as soon as you register',
+      },
+      {
+        type: 'p',
+        text: 'Add your GSTIN to Udyog once, and it prints on every bill. [Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). Your 14-day free trial starts when you sign up. See the [Udyog pricing page](/pricing) for plans.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is GST registration free?',
+        a: 'Yes. If you register yourself on the GST portal, there is no government fee.',
+      },
+      {
+        q: 'How long does GST registration take?',
+        a: 'After successful Aadhaar authentication, usually about 7 working days. If authentication is not done, it can take up to 30 days.',
+      },
+      {
+        q: 'What documents are needed for GST registration?',
+        a: 'For a sole proprietor: PAN, Aadhaar, a photo, address proof of the business and bank account details.',
+      },
+      {
+        q: 'Can I register for GST on my mobile?',
+        a: 'Yes. The GST portal works in a mobile browser. Keep your Aadhaar-linked mobile number with you for the OTP.',
+      },
+      {
+        q: 'What is the turnover limit for GST registration?',
+        a: 'Rs 40 lakh for goods and Rs 20 lakh for services in most states, with lower limits in special category states. Some businesses must register earlier.',
+      },
+      {
+        q: 'Can I charge GST before I get a GSTIN?',
+        a: 'No. Only a GST-registered business can charge GST on bills.',
+      },
+      {
+        q: 'Do I need a CA to register?',
+        a: 'No, you can apply yourself. A CA can help if your case is complex.',
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 49 — e-way-bill-kaise-banaye-limit-rules-steps
+  // ─────────────────────────────────────────────
+  {
+    slug: 'e-way-bill-kaise-banaye-limit-rules-steps',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'E-Way Bill Kaise Banaye: Limit, Rules and Steps',
+    excerpt: 'E-way bill kaise banaye? Know the Rs 50,000 limit, who must generate it, Part A and Part B, and the steps. Make the invoice first with Udyog.',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '4 min read',
+    metaTitle: 'E-Way Bill Kaise Banaye: Limit, Rules and Steps | Udyog',
+    metaDescription: 'E-way bill kaise banaye? Know the Rs 50,000 limit, who must generate it, Part A and Part B, and the steps. Make the invoice first with Udyog.',
+    keywords: 'e-way bill kaise banaye, e-way bill limit, e-way bill rules, when is e-way bill required, e-way bill Part A Part B, e-way bill generation steps',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'E-way bill kaise banaye? An e-way bill is an electronic document that you need when you move goods worth more than Rs 50,000. You generate it on the e-way bill portal using your tax invoice, the HSN code, the GSTINs, the distance and the vehicle details. The goods must travel with the e-way bill, or its number, so officers can check it on the road.',
+      },
+      {
+        type: 'p',
+        text: 'You need a correct GST invoice before you make an e-way bill. [Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in) to make the invoice. There is a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'When is an e-way bill required?',
+      },
+      {
+        type: 'p',
+        text: 'An e-way bill is needed when a registered person moves goods and the consignment value is more than Rs 50,000.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'The value is the value on the invoice, bill of supply or delivery challan, including the tax.',
+          'If one vehicle carries several consignments, an e-way bill is needed for the ones above Rs 50,000.',
+          'You can also make an e-way bill voluntarily for goods below Rs 50,000.',
+          "Some states have their own rules for movement of goods inside the state. Check your state's rule.",
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'When is it not required?',
+      },
+      {
+        type: 'p',
+        text: 'An e-way bill is not required for:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Goods on the exempt list given in the rules.',
+          'Goods moved by a non-motorised vehicle, such as a handcart.',
+          'Consignments of Rs 50,000 or less.',
+          'A few other cases, such as movement from a port or airport to a container depot for customs clearance.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'If you are not sure, ask your CA or your transporter.',
+      },
+      {
+        type: 'h2',
+        text: 'Who generates the e-way bill?',
+      },
+      {
+        type: 'ul',
+        items: [
+          'The seller (consignor) or the buyer (consignee) can generate it, whoever is moving the goods.',
+          'If you give the goods to a transporter, the transporter can generate it from the details you give.',
+          'If neither the seller nor the buyer generates it, and the value is above Rs 50,000, the transporter must generate it.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'What are Part A and Part B?',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Part A has the details of the goods and the invoice: the GSTIN of the buyer, the invoice number and date, the value, the HSN code and the place of delivery.',
+          'Part B has the transport details: the vehicle number.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'The e-way bill is complete when both parts are filled in.',
+      },
+      {
+        type: 'h2',
+        text: 'Steps to generate an e-way bill',
+      },
+      {
+        type: 'ol',
+        items: [
+          'Keep your tax invoice ready. It must have the GSTINs, the HSN codes, the taxable value and the tax amount.',
+          'Log in to the e-way bill portal with your GST login.',
+          'Choose to generate a new e-way bill.',
+          'Fill Part A with the invoice and goods details.',
+          'Fill Part B with the vehicle number, or leave it for the transporter.',
+          'Submit. The portal gives you an e-way bill number. Share it with the transporter or driver.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'How long is an e-way bill valid?',
+      },
+      {
+        type: 'p',
+        text: 'The validity depends on the distance the goods travel. The portal shows the validity when you generate the e-way bill. Plan your delivery within it.',
+      },
+      {
+        type: 'h2',
+        text: 'Details to keep ready',
+      },
+      {
+        type: 'p',
+        text: 'Mistakes in these details are the common reason for trouble:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'The GSTIN of the buyer.',
+          'The HSN code of each item. Find it on our free [HSN code finder](/tools/hsn-code-finder). Read [how many HSN digits you need](/blog/hsn-code-digits-gst-invoice-4-or-6-digits).',
+          'The invoice number, date and value.',
+          'The distance and the vehicle number.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Moving goods worth more than Rs 50,000 without an e-way bill.',
+          'A wrong HSN code or wrong buyer GSTIN.',
+          'An invoice value that does not match the e-way bill.',
+          'Not filling Part B before the goods start moving.',
+          'Planning delivery for later than the validity.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Make the invoice first',
+      },
+      {
+        type: 'p',
+        text: "An e-way bill starts with a correct tax invoice. In Udyog, you can keep your customers' GSTINs, your items and their HSN codes in one place, so the details are ready when you open the e-way bill portal. Read [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye) to make your invoice.",
+      },
+      {
+        type: 'p',
+        text: '[Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). Your 14-day free trial starts when you sign up. See the [Udyog pricing page](/pricing) for plans.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the e-way bill limit?',
+        a: 'An e-way bill is required for a consignment worth more than Rs 50,000. Some states have separate rules for movement inside the state.',
+      },
+      {
+        q: 'Who needs an e-way bill?',
+        a: 'A registered person who moves goods worth more than Rs 50,000. The seller, the buyer or the transporter generates it.',
+      },
+      {
+        q: 'Is an e-way bill needed for goods below Rs 50,000?',
+        a: 'Not required. You can generate one voluntarily.',
+      },
+      {
+        q: 'What is the difference between an e-way bill and an invoice?',
+        a: 'An invoice is the bill for the sale. An e-way bill is a transport document for moving the goods. You need the invoice to make the e-way bill.',
+      },
+      {
+        q: 'Can the transporter generate the e-way bill?',
+        a: 'Yes. If you give the goods to a transporter, the transporter can generate it from the details you give. If nobody else does, the transporter must generate it when the value is above Rs 50,000.',
+      },
+      {
+        q: 'What details do I need for an e-way bill?',
+        a: "The invoice number, date and value, the buyer's GSTIN, the HSN codes, the distance and the vehicle number.",
+      },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
