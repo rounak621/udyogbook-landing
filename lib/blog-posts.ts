@@ -7168,6 +7168,225 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+
+  // ─────────────────────────────────────────────
+  // POST 45 — best-billing-app-for-small-shops-india
+  // ─────────────────────────────────────────────
+  {
+    slug: 'best-billing-app-for-small-shops-india',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'Best Billing App for Small Shops in India (2026)',
+    excerpt: 'How to choose the best billing app for your shop in India: 8 things to check, GST features, WhatsApp bills and stock. Try Udyog with a 14-day free trial.',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '4 min read',
+    metaTitle: 'Best Billing App for Small Shops in India (2026) | Udyog',
+    metaDescription: 'How to choose the best billing app for your shop in India: 8 things to check, GST features, WhatsApp bills and stock. Try Udyog with a 14-day free trial.',
+    keywords: 'best billing app for small shops in India, billing app for small business, GST billing app, best billing software for small business India, billing app for shop',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'The best billing app for a small shop is one that makes correct GST bills fast on your mobile, shares them on WhatsApp, tracks your stock and customer dues, and gives your CA the data for returns. Do not choose by name or by the "free" label. Test it on your own shop\'s bills for a few days.',
+      },
+      {
+        type: 'p',
+        text: 'Udyog has a 14-day free trial. [Try it on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [on the web](https://app.udyogbook.in).',
+      },
+      {
+        type: 'h2',
+        text: '8 things to check before you choose a billing app',
+      },
+      {
+        type: 'h3',
+        text: '1. Correct GST bills',
+      },
+      {
+        type: 'p',
+        text: 'The app must make a proper GST invoice with your GSTIN, HSN or SAC codes, and the right tax split: CGST and SGST for the same state, IGST for another state. If you do not charge GST, it should also make a bill of supply or a non-GST bill.',
+      },
+      {
+        type: 'h3',
+        text: '2. Works well on your mobile',
+      },
+      {
+        type: 'p',
+        text: 'Most shop owners bill from a phone. Check that making a bill on your phone is quick, with big buttons and a short flow, not a cut-down version of a computer program.',
+      },
+      {
+        type: 'h3',
+        text: '3. Share the bill on WhatsApp',
+      },
+      {
+        type: 'p',
+        text: 'Customers want the bill on WhatsApp. Check that you can share the PDF in one or two taps.',
+      },
+      {
+        type: 'h3',
+        text: '4. Stock tracking',
+      },
+      {
+        type: 'p',
+        text: 'If you sell goods, the app should reduce your stock when you bill, and add stock when you record a purchase. Ask whether you can see low stock.',
+      },
+      {
+        type: 'h3',
+        text: '5. Customer and supplier ledger',
+      },
+      {
+        type: 'p',
+        text: 'You should see who owes you money, and whom you owe. This helps you collect dues on time.',
+      },
+      {
+        type: 'h3',
+        text: '6. Reports for you and your CA',
+      },
+      {
+        type: 'p',
+        text: 'Look for sales, purchase and profit and loss reports. Also check that your CA can get the data for GST returns, and whether your CA can be given access.',
+      },
+      {
+        type: 'h3',
+        text: '7. Your data is safe and portable',
+      },
+      {
+        type: 'p',
+        text: 'Check that your data is backed up, that you can use the app on more than one device, and that you can export your data if you ever leave.',
+      },
+      {
+        type: 'h3',
+        text: '8. Easy to learn',
+      },
+      {
+        type: 'p',
+        text: 'If you or your staff need hours to learn the app, you will stop using it. A good app is simple on day one.',
+      },
+      {
+        type: 'h2',
+        text: 'Free app or paid app?',
+      },
+      {
+        type: 'p',
+        text: 'Many apps say "free". Before you enter months of data, check these limits:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Is there a limit on the number of bills or items?',
+          'Are GST bills, WhatsApp sharing or reports locked behind a paid plan?',
+          'Can you export your data?',
+          'What does the plan cost after the trial or free period?',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Udyog has a 14-day free trial, so you can try every step with real bills before you pay. See the [Udyog pricing page](/pricing) for plans.',
+      },
+      {
+        type: 'h2',
+        text: 'What Udyog gives a small shop',
+      },
+      {
+        type: 'ul',
+        items: [
+          'GST, non-GST and service invoices, made in seconds.',
+          'Share bills on WhatsApp or email.',
+          'Stock tracking, purchase bills and a supplier ledger.',
+          'Sales, purchase and profit and loss reports.',
+          'Maya, a voice billing assistant, so you can create bills by speaking.',
+          'Access for your CA to your books.',
+          'Use on mobile and on the web, with your data in sync.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'New to GST billing on mobile? Read [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye).',
+      },
+      {
+        type: 'h2',
+        text: 'Which features matter for which shop',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Kirana and general store: fast billing, stock, customer dues.',
+          'Garment and footwear shop: correct GST rate by price per piece, sizes and stock. See [GST rates on clothes and footwear](/tools/hsn-code-finder/chapter/61).',
+          'Medical store: batch and expiry tracking, and a low-stock view. Ask the app if this fits your shop.',
+          'Service business: service invoices with the right SAC code, and payment tracking.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'A 7-day test for any billing app',
+      },
+      {
+        type: 'p',
+        text: 'During a free trial, do these seven things:',
+      },
+      {
+        type: 'ol',
+        items: [
+          'Make 10 real bills, including one to another state.',
+          'Share two bills on WhatsApp.',
+          'Add your top 20 items with HSN codes and GST rates. Use the [HSN code finder](/tools/hsn-code-finder) to check them.',
+          'Record one purchase and see your stock change.',
+          'Record a customer payment and see the due amount update.',
+          'Open the sales report for the week.',
+          'Ask your CA if the data they need is easy to get.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'If the app passes, keep it. If not, you lost nothing but a few days.',
+      },
+      {
+        type: 'h2',
+        text: 'Try Udyog',
+      },
+      {
+        type: 'p',
+        text: 'Start your 14-day free trial: [Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). Want to compare apps first? Read [Vyapar vs myBillBook vs Udyog](/blog/vyapar-vs-mybillbook-vs-udyog).',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'Which is the best billing app for a small shop in India?',
+        a: 'The best app is the one that fits your shop: correct GST bills, easy mobile use, WhatsApp sharing, stock and customer dues. Try two or three apps with real bills before you decide.',
+      },
+      {
+        q: 'Is there a free GST billing app?',
+        a: 'Some apps have free plans with limits. Udyog has a 14-day free trial, so you can test the full flow with real bills, then pick a plan on the [pricing page](/pricing).',
+      },
+      {
+        q: 'Do I need a billing app if I use Excel?',
+        a: 'An app makes fewer mistakes, because it calculates GST for you, numbers your invoices in order, and keeps your stock and dues in one place.',
+      },
+      {
+        q: 'Can a billing app work on mobile only?',
+        a: 'Yes. You can make and share GST bills fully from your phone. Udyog also works on the web if you want a bigger screen.',
+      },
+      {
+        q: 'Can my CA see my billing data?',
+        a: 'With Udyog, you can give your CA access to your books, so they do not need to ask you for files.',
+      },
+      {
+        q: 'How long does it take to start?',
+        a: 'You can make your first bill within minutes. Add your business details, your customers and your items, and start billing.',
+      },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
