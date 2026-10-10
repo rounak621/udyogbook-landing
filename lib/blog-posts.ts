@@ -6972,6 +6972,202 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+
+  // ─────────────────────────────────────────────
+  // POST 44 — mobile-se-gst-bill-kaise-banaye
+  // ─────────────────────────────────────────────
+  {
+    slug: 'mobile-se-gst-bill-kaise-banaye',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'Mobile se GST Bill Kaise Banaye: Step by Step (2026)',
+    excerpt: 'Mobile se GST bill kaise banaye? Make a GST invoice on your phone in 5 steps, share it on WhatsApp, and try Udyog free for 14 days.',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '4 min read',
+    metaTitle: 'Mobile se GST Bill Kaise Banaye: Step by Step (2026) | Udyog',
+    metaDescription: 'Mobile se GST bill kaise banaye? Make a GST invoice on your phone in 5 steps, share it on WhatsApp, and try Udyog free for 14 days.',
+    keywords: 'mobile se gst bill kaise banaye, GST bill on mobile, GST invoice app for mobile, how to make GST invoice on phone, GST bill format',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'Mobile se GST bill kaise banaye? You need a billing app, your business details, and about two minutes. Open the app, add your customer, add your items with the GST rate, then save the bill and send it on WhatsApp. No computer, no Excel and no printer needed.',
+      },
+      {
+        type: 'p',
+        text: '[Get the Udyog app on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile). You can also start from your browser at [app.udyogbook.in](https://app.udyogbook.in). Udyog has a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'What you need before you start',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Your business name, address and GSTIN.',
+          "Your customer's name, and their GSTIN if they are a registered business.",
+          'Your items with price, quantity, HSN code and GST rate.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'If you do not know the HSN code or GST rate of an item, search it in our free [HSN code finder](/tools/hsn-code-finder). You can also use the [GST calculator](/tools/gst-calculator) to check the tax amount on a price.',
+      },
+      {
+        type: 'h2',
+        text: '5 steps to make a GST bill on your mobile',
+      },
+      {
+        type: 'h3',
+        text: 'Step 1: Install the app and add your business',
+      },
+      {
+        type: 'p',
+        text: 'Install [Udyog from Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) and sign up. Enter your business name, address and GSTIN once. They print on every bill after that.',
+      },
+      {
+        type: 'h3',
+        text: 'Step 2: Start a new invoice',
+      },
+      {
+        type: 'p',
+        text: 'Open the app and tap the option to create a new invoice. Choose a GST invoice if you are a GST-registered business.',
+      },
+      {
+        type: 'h3',
+        text: 'Step 3: Add the customer',
+      },
+      {
+        type: 'p',
+        text: 'Pick a customer from your list, or add a new one. For a business customer, add their GSTIN. The app uses the state to work out whether the bill needs CGST and SGST (same state) or IGST (different state).',
+      },
+      {
+        type: 'h3',
+        text: 'Step 4: Add items with the GST rate',
+      },
+      {
+        type: 'p',
+        text: 'Add each item with its quantity, price, HSN code and GST rate. Check the rate for your product on the [HSN code finder](/tools/hsn-code-finder). Rates changed on 22 September 2025, so see [what changed in the new GST rates](/blog/new-gst-rates-what-changed-22-september-2025) if you are not sure.',
+      },
+      {
+        type: 'h3',
+        text: 'Step 5: Save and share on WhatsApp',
+      },
+      {
+        type: 'p',
+        text: 'Check the total, save the bill, and share the PDF on WhatsApp or email in one tap. The bill is saved in the app, so you can find it later.',
+      },
+      {
+        type: 'h2',
+        text: 'What a GST bill must contain',
+      },
+      {
+        type: 'p',
+        text: 'Under Rule 46 of the CGST Rules, a tax invoice must show these details. A good billing app fills most of them in for you.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Your name, address and GSTIN.',
+          'A unique invoice number and the invoice date.',
+          "The customer's name, address and GSTIN (if registered).",
+          'Description of the goods or services.',
+          'HSN code for goods, or SAC code for services.',
+          'Quantity and unit.',
+          'Taxable value after discount.',
+          'GST rate and the tax amount, split as CGST and SGST, or IGST.',
+          'Place of supply, if the sale is to another state.',
+          'Your signature or digital signature.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'The invoice number can have up to 16 characters, and it must be unique in the financial year. How many HSN digits you need depends on your turnover. See [HSN code digits in a GST invoice: 4 or 6](/blog/hsn-code-digits-gst-invoice-4-or-6-digits).',
+      },
+      {
+        type: 'h2',
+        text: 'Use your voice to make a bill',
+      },
+      {
+        type: 'p',
+        text: 'Udyog has Maya, a voice billing assistant. You can say what you sold and to whom, and Maya prepares the bill for you to check and save. It helps when your hands are busy at the shop.',
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes when you make a GST bill on mobile',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Using the wrong GST rate because the item rate was not updated.',
+          'Charging CGST and SGST on a bill to another state, where IGST applies.',
+          "Leaving the customer's GSTIN empty on a business bill, so the customer cannot claim input tax credit.",
+          'Using a duplicate invoice number.',
+          'Forgetting the HSN code on an item.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Why use an app instead of Excel or a paper book',
+      },
+      {
+        type: 'ul',
+        items: [
+          'The tax is calculated for you, so there are fewer mistakes.',
+          'Invoice numbers continue in order on their own.',
+          'Your bills are safe and searchable, even if your phone is lost.',
+          'You can share the bill in seconds.',
+          'Your sales data is ready for your CA at return time.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Try it',
+      },
+      {
+        type: 'p',
+        text: 'Make your first GST bill on your phone today. [Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in). Your 14-day free trial starts when you sign up. See the [Udyog pricing page](/pricing) for plans.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can I make a GST bill on my mobile?',
+        a: 'Yes. Use a billing app like Udyog. You add the customer and items, and the app calculates the tax, saves the bill and shares it.',
+      },
+      {
+        q: 'Can I make a GST bill without a GST number?',
+        a: 'No. Only a GST-registered business can charge GST. If you are not registered, you cannot collect GST on your bills.',
+      },
+      {
+        q: 'Is a GST bill made on mobile valid?',
+        a: 'Yes, if it contains all the mandatory details, such as GSTIN, invoice number, date, HSN code and tax split. A PDF bill from an app is valid.',
+      },
+      {
+        q: 'How do I send a GST bill on WhatsApp?',
+        a: 'Save the bill in the app, then tap the share option and choose WhatsApp. The bill goes as a PDF.',
+      },
+      {
+        q: 'How do I know which GST rate to use?',
+        a: 'Find your product on the [HSN code finder](/tools/hsn-code-finder). It shows the rate and the conditions. Check with your CA for unusual cases.',
+      },
+      {
+        q: 'Is there a free GST billing app?',
+        a: 'Udyog has a 14-day free trial. After the trial, you choose a plan on the [pricing page](/pricing).',
+      },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
