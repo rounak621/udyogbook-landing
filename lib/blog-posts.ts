@@ -8101,6 +8101,205 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+
+  // ─────────────────────────────────────────────
+  // POST 50 — credit-note-debit-note-gst-format-rules
+  // ─────────────────────────────────────────────
+  {
+    slug: 'credit-note-debit-note-gst-format-rules',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'Credit Note and Debit Note in GST: Format and Rules',
+    excerpt: 'Credit note and debit note in GST: when to issue each, what to write on it, a simple example and the time limit. Keep your bills in order with Udyog.',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '4 min read',
+    metaTitle: 'Credit Note and Debit Note in GST: Format and Rules | Udyog',
+    metaDescription: 'Credit note and debit note in GST: when to issue each, what to write on it, a simple example and the time limit. Keep your bills in order with Udyog.',
+    keywords: 'credit note and debit note in GST, credit note format GST, debit note format GST, credit note kya hota hai, when to issue credit note, difference between credit note and debit note',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'A credit note and a debit note are documents that fix a bill you already issued. You issue a credit note when the bill amount was too high, or the customer returned goods, or the goods or service were not up to the mark. You issue a debit note when the bill amount was too low. Both must show the original invoice number and date, the value, the tax rate and the tax amount.',
+      },
+      {
+        type: 'p',
+        text: 'Keep your bills in one place, so you can find the original invoice quickly. [Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in). There is a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'Credit note vs debit note',
+      },
+      {
+        type: 'table',
+        headers: ['', 'Credit note', 'Debit note'],
+        rows: [
+          ['Who issues it', 'The seller (supplier)', 'The seller (supplier)'],
+          ['When', 'Bill amount was too high, goods were returned, or goods or services were deficient', 'Bill amount was too low, for example the tax or the value was less than it should be'],
+          ['Effect', 'Reduces what the customer owes', 'Increases what the customer owes'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Only the seller can issue these notes. The buyer cannot issue them.',
+      },
+      {
+        type: 'h2',
+        text: 'When do you issue a credit note?',
+      },
+      {
+        type: 'ul',
+        items: [
+          'You charged more than you should have, for example a wrong rate or a wrong quantity.',
+          'The customer returned goods.',
+          'The goods or services were not as agreed, and you give a discount or a refund.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'When do you issue a debit note?',
+      },
+      {
+        type: 'ul',
+        items: [
+          'You charged less tax or less value than you should have, and you now need to collect the difference.',
+          'You need to add a charge you forgot on the original bill.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'What to write on a credit note or debit note',
+      },
+      {
+        type: 'p',
+        text: 'Under Rule 53 of the CGST Rules, the note must show:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Your name, address and GSTIN, and the words "credit note" or "debit note".',
+          'A serial number, unique for the financial year, not more than 16 characters.',
+          'The date.',
+          "The customer's name, address and GSTIN. For an unregistered customer, the name, address, delivery address and state with its code.",
+          'The number and date of the original invoice or bill of supply.',
+          'The value, the tax rate and the tax amount that you are crediting or debiting.',
+          'Your signature or digital signature.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'A simple example (credit note)',
+      },
+      {
+        type: 'p',
+        text: 'The names and numbers are made up.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Original invoice: INV-102, dated 5 September 2026, for 10 office chairs at Rs 3,000 each, with GST at 18% (an example rate).',
+          'The customer returns 2 chairs.',
+          'Credit note CN-01, dated 12 September 2026, refers to INV-102.',
+          'Value of goods returned: 2 x Rs 3,000 = Rs 6,000.',
+          'GST at 18%: Rs 1,080.',
+          'Total credit to the customer: Rs 7,080.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'What is the time limit?',
+      },
+      {
+        type: 'p',
+        text: 'A credit note must be declared in your return for the month in which you issue it. It must be issued by 30 November after the end of the financial year in which the supply was made, or by the date you file your annual return, whichever is earlier. Debit notes must also be declared in the return for the month in which you issue them.',
+      },
+      {
+        type: 'h2',
+        text: 'How credit notes and debit notes affect your GST return',
+      },
+      {
+        type: 'ul',
+        items: [
+          'You report them in your GSTR-1 for the month in which you issue them.',
+          'A credit note reduces your sales and your tax. A debit note increases them.',
+          'If your buyer had claimed input tax credit on the original invoice, they must adjust it. Tell your customer when you send the note.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Ask your CA how to show them for your business.',
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Giving cash back or a discount without issuing a credit note.',
+          'Not writing the number and date of the original invoice on the note.',
+          'Issuing the note after the time limit.',
+          'Not telling the buyer, so they do not adjust their input tax credit.',
+          'Using the same serial number twice.',
+          'Editing the original invoice instead of issuing a note.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Keep your original invoices ready',
+      },
+      {
+        type: 'p',
+        text: 'Every credit note and debit note starts from an original invoice, so keep your invoices easy to find. In Udyog, you can search your bills by customer and date, and share them on WhatsApp. For the basics of a GST bill, read [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye). To check HSN codes and rates, use the free [HSN code finder](/tools/hsn-code-finder).',
+      },
+      {
+        type: 'p',
+        text: '[Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). See the [Udyog pricing page](/pricing) for plans after your 14-day free trial.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is a credit note?',
+        a: 'A credit note is a document that the seller issues to reduce the amount of an earlier invoice, for example when goods are returned.',
+      },
+      {
+        q: 'What is a debit note?',
+        a: 'A debit note is a document that the seller issues to increase the amount of an earlier invoice, for example when the value or tax was charged too low.',
+      },
+      {
+        q: 'Who can issue a credit note?',
+        a: 'Only the seller (the supplier). A buyer cannot issue a GST credit note.',
+      },
+      {
+        q: 'Can I issue a credit note after a year?',
+        a: 'Only within the time limit: by 30 November after the end of the financial year of the original supply, or the date of the annual return, whichever is earlier.',
+      },
+      {
+        q: 'Do I need to write the original invoice number on the note?',
+        a: 'Yes. The note must refer to the number and date of the original invoice.',
+      },
+      {
+        q: 'Is a credit note the same as a refund?',
+        a: 'No. A credit note reduces the amount in the books. The refund or adjustment of money is a separate step between you and your customer.',
+      },
+      {
+        q: 'Do I report credit notes and debit notes in GSTR-1?',
+        a: 'Yes. Declare them in the return for the month in which you issue them.',
+      },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
