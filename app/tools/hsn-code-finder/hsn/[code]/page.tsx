@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Navbar from '../../../../components/Navbar'
 import Footer from '../../../../components/Footer'
+import SignupCta from '../../../../components/SignupCta'
 import CopyCodeButton from '../../CopyCodeButton'
 import {
   getAllHSNHeadings,
@@ -449,6 +450,13 @@ export default function HSNHeadingDetailPage({
             )}
           </div>
 
+          <SignupCta
+            variant="code"
+            medium="finder"
+            campaign={heading.c}
+            content="code"
+          />
+
           {/* Section 2: Child Tariff Codes (6-digit & 8-digit) */}
           <div
             style={{
@@ -658,6 +666,12 @@ export default function HSNHeadingDetailPage({
         </div>
       </main>
       <Footer />
+      <SignupCta
+        variant="bar"
+        medium="finder"
+        campaign={heading.c}
+        content="bar"
+      />
     </>
   )
 }

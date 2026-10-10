@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import SignupCta from '../../components/SignupCta'
 import FinderClient from './FinderClient'
 import {
   getAllHSNHeadings,
@@ -201,6 +202,14 @@ export default function HSNCodeFinderPage() {
         {/* Finder Interactive Area */}
         <section style={{ padding: 'clamp(36px,5vw,56px) clamp(16px,4vw,24px)' }}>
           <FinderClient />
+          <div style={{ maxWidth: 1040, margin: '28px auto 0' }}>
+            <SignupCta
+              variant="inline"
+              medium="finder"
+              campaign="hsn-code-finder"
+              content="top"
+            />
+          </div>
         </section>
 
         {/* Most Searched HSN Codes & Popular SAC Codes (Server-Rendered Plain Links) */}
@@ -528,6 +537,12 @@ export default function HSNCodeFinderPage() {
         </section>
       </main>
       <Footer />
+      <SignupCta
+        variant="bar"
+        medium="finder"
+        campaign="hsn-code-finder"
+        content="bar"
+      />
     </>
   )
 }

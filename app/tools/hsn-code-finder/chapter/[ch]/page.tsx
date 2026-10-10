@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Navbar from '../../../../components/Navbar'
 import Footer from '../../../../components/Footer'
+import SignupCta from '../../../../components/SignupCta'
 import CopyCodeButton from '../../CopyCodeButton'
 import {
   getAllHSNChapters,
@@ -302,6 +303,13 @@ export default function ChapterDetailPage({
             </div>
           </div>
 
+          <SignupCta
+            variant="inline"
+            medium="finder"
+            campaign={`chapter-${chapterCode}`}
+            content="top"
+          />
+
           {/* Headings List Header */}
           <div style={{ marginBottom: 20 }}>
             <h2
@@ -577,6 +585,12 @@ export default function ChapterDetailPage({
         </div>
       </main>
       <Footer />
+      <SignupCta
+        variant="bar"
+        medium="finder"
+        campaign={`chapter-${chapterCode}`}
+        content="bar"
+      />
     </>
   )
 }

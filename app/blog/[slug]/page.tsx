@@ -1,5 +1,6 @@
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import SignupCta from '../../components/SignupCta'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { BLOG_POSTS, getPostBySlug, getAllSlugs, type BlogSection } from '../../../lib/blog-posts'
@@ -255,7 +256,35 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         {/* Article body */}
         <section style={{ padding: 'clamp(40px,5vw,64px) var(--section-px)' }}>
           <div style={{ maxWidth: 760, margin: '0 auto' }}>
-            {post.content.map((section, i) => renderSection(section, i))}
+            {(() => {
+              const h2Indices = post.content
+                .map((s, idx) => (s.type === 'h2' ? idx : -1))
+                .filter(idx => idx !== -1)
+              const topCtaIndex =
+                h2Indices.length >= 2 ? h2Indices[1] : Math.min(3, post.content.length)
+              return (
+                <>
+                  {post.content
+                    .slice(0, topCtaIndex)
+                    .map((section, i) => renderSection(section, i))}
+                  <SignupCta
+                    variant="inline"
+                    medium="blog"
+                    campaign={post.slug}
+                    content="top"
+                  />
+                  {post.content
+                    .slice(topCtaIndex)
+                    .map((section, i) => renderSection(section, topCtaIndex + i))}
+                  <SignupCta
+                    variant="inline"
+                    medium="blog"
+                    campaign={post.slug}
+                    content="bottom"
+                  />
+                </>
+              )
+            })()}
           </div>
         </section>
 
@@ -325,6 +354,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
       </main>
       <Footer />
+      <SignupCta
+        variant="bar"
+        medium="blog"
+        campaign={post.slug}
+        content="bar"
+      />
     </>
   )
 }

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Navbar from '../../../../components/Navbar'
 import Footer from '../../../../components/Footer'
+import SignupCta from '../../../../components/SignupCta'
 import CopyCodeButton from '../../CopyCodeButton'
 import {
   getAll6DigitSACCodes,
@@ -294,6 +295,13 @@ export default function SACDetailPage({
             </div>
           </div>
 
+          <SignupCta
+            variant="code"
+            medium="finder"
+            campaign={sac.c}
+            content="code"
+          />
+
           {/* Sibling SAC Codes in Same Group */}
           {siblings.length > 0 && (
             <div
@@ -414,6 +422,12 @@ export default function SACDetailPage({
         </div>
       </main>
       <Footer />
+      <SignupCta
+        variant="bar"
+        medium="finder"
+        campaign={sac.c}
+        content="bar"
+      />
     </>
   )
 }
