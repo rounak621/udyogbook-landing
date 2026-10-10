@@ -8698,6 +8698,804 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+
+  // ─────────────────────────────────────────────
+  // POST 53 — gstr-3b-kaise-bhare-due-date-filing-steps
+  // ─────────────────────────────────────────────
+  {
+    slug: 'gstr-3b-kaise-bhare-due-date-filing-steps',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'GSTR-3B Kaise Bhare: Due Date and Filing Steps',
+    excerpt: 'GSTR-3B kaise bhare? Know the due dates, what the return contains and the filing steps on the GST portal. Keep bills ready with Udyog (14-day free trial).',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '4 min read',
+    metaTitle: 'GSTR-3B Kaise Bhare: Due Date and Filing Steps | Udyog',
+    metaDescription: 'GSTR-3B kaise bhare? Know the due dates, what the return contains and the filing steps on the GST portal. Keep bills ready with Udyog (14-day free trial).',
+    keywords: 'gstr 3b kaise bhare, GSTR-3B filing steps, GSTR-3B due date, what is GSTR-3B, GSTR-3B vs GSTR-1, GSTR-3B late fee',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'GSTR-3B is a summary return in which you declare your total sales, your input tax credit (ITC) and the tax you have to pay for the period. You file it on the GST portal, pay the tax from your cash or credit ledger, and submit with a digital signature or EVC. Monthly filers file it by the 20th of the next month. Quarterly filers under the QRMP scheme file it by the 22nd or 24th of the month after the quarter, depending on their state.',
+      },
+      {
+        type: 'p',
+        text: 'Your bills are the base of this return. Keep them correct and in one place. [Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in). There is a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'GSTR-3B vs GSTR-1',
+      },
+      {
+        type: 'table',
+        headers: ['', 'GSTR-1', 'GSTR-3B'],
+        rows: [
+          ['What it is', 'Invoice-wise details of your sales', 'A summary of sales, input tax credit and tax payable'],
+          ['Do you pay tax with it?', 'No', 'Yes'],
+          ['Read more', '[GSTR-1 kaise bhare](/blog/gstr-1-kaise-bhare-due-date-details-steps)', 'This post'],
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Who files GSTR-3B?',
+      },
+      {
+        type: 'p',
+        text: 'Every regular GST-registered business files GSTR-3B for each period, even if there was no sale. Composition dealers file other returns.',
+      },
+      {
+        type: 'h2',
+        text: 'GSTR-3B due dates',
+      },
+      {
+        type: 'table',
+        headers: ['Filer', 'Due date'],
+        rows: [
+          ['Monthly filer', '20th of the next month'],
+          ['Quarterly filer (QRMP scheme)', '22nd or 24th of the month after the quarter, depending on your state'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'The government can extend these dates, so check the GST portal for the latest date before you file.',
+      },
+      {
+        type: 'h2',
+        text: 'What does GSTR-3B contain?',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Your outward supplies: taxable sales, zero-rated sales such as exports, nil-rated and exempt sales.',
+          'Inter-state sales to unregistered buyers, composition dealers and UIN holders.',
+          'Input tax credit: the credit you claim, and any credit you have to reverse.',
+          'Inward supplies that are exempt, nil-rated or non-GST.',
+          'The tax payable (CGST, SGST or UTGST, IGST and cess), and the interest or late fee, if any.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Many values are filled in automatically from GSTR-1 and GSTR-2B. Check them. Do not trust them blindly.',
+      },
+      {
+        type: 'h2',
+        text: 'Steps to file GSTR-3B',
+      },
+      {
+        type: 'ol',
+        items: [
+          'Log in to the GST portal with your GSTIN and password.',
+          'Go to Services, then Returns, then Returns Dashboard. Choose the financial year and the period, and click Search.',
+          'Choose to prepare GSTR-3B online.',
+          'Enter or check the outward supplies and the input tax credit.',
+          'Check the values filled in from GSTR-1 and GSTR-2B.',
+          'Add interest and late fee, if they apply to you.',
+          'Create the challan and pay the tax due from your cash ledger. Use your credit ledger where the law allows it.',
+          'Submit with a digital signature or EVC, and save the ARN (acknowledgement reference number).',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Screens on the portal can change, so follow what you see there.',
+      },
+      {
+        type: 'h2',
+        text: 'Late filing',
+      },
+      {
+        type: 'p',
+        text: 'If you file after the due date, a late fee is charged for each day, and interest is charged on tax paid late. The amounts depend on your case, so check the current amounts on the GST portal or ask your CA. Do not wait for the last day.',
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Missing the due date.',
+          'Claiming input tax credit that does not match your purchase invoices.',
+          'Not matching your sales with GSTR-1.',
+          'Paying the tax after filing instead of before.',
+          'Not filing a nil return when you had no sales.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Clean bills make filing easier',
+      },
+      {
+        type: 'p',
+        text: 'Most return trouble starts with a wrong bill. In Udyog, you can keep your customers with their GSTINs, your items with their HSN codes, and your bills in one place. Read [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye) for a correct GST bill, and use the free [HSN code finder](/tools/hsn-code-finder) to check rates.',
+      },
+      {
+        type: 'p',
+        text: '[Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). See the [Udyog pricing page](/pricing) for plans after your 14-day free trial.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is GSTR-3B?',
+        a: 'GSTR-3B is a summary return in which you declare your sales, your input tax credit and the tax you have to pay.',
+      },
+      {
+        q: 'What is the due date of GSTR-3B?',
+        a: 'The 20th of the next month for monthly filers. Quarterly (QRMP) filers file by the 22nd or 24th of the month after the quarter, depending on the state. Check the portal for any extension.',
+      },
+      {
+        q: 'Is GSTR-3B the same as GSTR-1?',
+        a: 'No. GSTR-1 gives invoice-wise details of your sales. GSTR-3B is the summary return in which you pay the tax.',
+      },
+      {
+        q: 'Do I file GSTR-3B if I had no sales?',
+        a: 'Yes. File a nil GSTR-3B for the period.',
+      },
+      {
+        q: 'Can I pay tax after filing GSTR-3B?',
+        a: 'No. Pay the tax due before you submit the return.',
+      },
+      {
+        q: 'Who files GSTR-3B?',
+        a: 'Regular GST-registered businesses. Composition dealers file other returns.',
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 54 — e-invoice-kya-hai-limit-irn-who-needs-it
+  // ─────────────────────────────────────────────
+  {
+    slug: 'e-invoice-kya-hai-limit-irn-who-needs-it',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'E-Invoice Kya Hai: Limit, IRN and Who Needs It',
+    excerpt: 'E-invoice kya hai? Know the turnover limit, who needs it, what IRN and QR code mean and how it works. Start billing with Udyog (14-day free trial).',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '4 min read',
+    metaTitle: 'E-Invoice Kya Hai: Limit, IRN and Who Needs It | Udyog',
+    metaDescription: 'E-invoice kya hai? Know the turnover limit, who needs it, what IRN and QR code mean and how it works. Start billing with Udyog (14-day free trial).',
+    keywords: 'e invoice kya hai, e-invoice limit, e-invoicing applicability, IRN number kya hai, e-invoice QR code, e-invoice turnover limit 5 crore',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'An e-invoice is a GST invoice that you register on a government portal called the Invoice Registration Portal (IRP). The portal checks the invoice and gives it an Invoice Reference Number (IRN) and a QR code. E-invoicing is compulsory for businesses whose yearly turnover is above Rs 5 crore. If your turnover is below this, you do not need to make e-invoices. You continue to make normal GST invoices.',
+      },
+      {
+        type: 'p',
+        text: 'If you are below the limit, a good GST bill is all you need. [Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in). There is a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'What is an e-invoice?',
+      },
+      {
+        type: 'p',
+        text: 'An e-invoice is not a new kind of invoice and it is not made on the portal by hand. You make the invoice in your billing software, as usual. The invoice details are then sent to the IRP, which checks them and returns an IRN and a QR code. The invoice you give to your customer must carry both.',
+      },
+      {
+        type: 'h2',
+        text: 'Who needs to make e-invoices?',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Businesses whose aggregate turnover is above Rs 5 crore. The turnover is counted for the whole PAN, so all GST registrations under one PAN are added together.',
+          'Once your turnover has crossed the limit in a financial year, you generally stay under e-invoicing even if your turnover falls later. Ask your CA about your case.',
+          'Some businesses are exempt, such as banks, insurance companies, NBFCs, passenger transport services, SEZ units and businesses that supply only exempt goods or services.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'If your turnover is below Rs 5 crore, you can keep making normal GST invoices. Read [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye).',
+      },
+      {
+        type: 'h2',
+        text: 'How does e-invoicing work?',
+      },
+      {
+        type: 'ol',
+        items: [
+          'You make the invoice in your billing software in the prescribed format.',
+          'The software sends the invoice data to the IRP.',
+          'The IRP checks the invoice and creates the IRN and the QR code.',
+          'The invoice comes back with the IRN and the QR code, and you give it to your customer.',
+          'The invoice details also flow into your GST returns, so you do not enter them again.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'What are the IRN and the QR code?',
+      },
+      {
+        type: 'ul',
+        items: [
+          'The IRN is a unique number for each invoice, created by the IRP.',
+          'The QR code holds the main details of the invoice, so they can be checked.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Is there a time limit to report an e-invoice?',
+      },
+      {
+        type: 'p',
+        text: 'For businesses with an aggregate turnover of Rs 10 crore or more, an e-invoice must be reported to the IRP within 30 days of the invoice date. Older invoices are rejected. This is in force from 1 April 2025. Ask your CA to confirm if it applies to you.',
+      },
+      {
+        type: 'h2',
+        text: 'E-invoice vs e-way bill',
+      },
+      {
+        type: 'p',
+        text: 'An e-invoice is the invoice for a sale, registered on the IRP. An e-way bill is a transport document for moving goods worth more than Rs 50,000. They are different things. Read [E-way bill kaise banaye](/blog/e-way-bill-kaise-banaye-limit-rules-steps).',
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Thinking every business needs an e-invoice. Below the limit, you do not.',
+          'Counting only one GSTIN instead of all GSTINs under the PAN.',
+          'Giving the customer an invoice without the IRN and the QR code when e-invoicing applies to you.',
+          'Reporting an e-invoice very late.',
+          'A wrong GSTIN, HSN code or tax rate on the invoice. Check the HSN code on the free [HSN code finder](/tools/hsn-code-finder).',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'If you are below the limit',
+      },
+      {
+        type: 'p',
+        text: 'Most small shops and service providers are below Rs 5 crore. For you, the work is to make a correct GST bill every time, with the right GSTIN, HSN code and tax rate. In Udyog, you can keep your customers, items and HSN codes in one place and share the bill on WhatsApp.',
+      },
+      {
+        type: 'p',
+        text: '[Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). See the [Udyog pricing page](/pricing) for plans after your 14-day free trial.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is an e-invoice?',
+        a: "An e-invoice is a GST invoice that is registered on the government's Invoice Registration Portal, which gives it an IRN and a QR code.",
+      },
+      {
+        q: 'What is the e-invoice turnover limit?',
+        a: 'E-invoicing is compulsory for businesses with an aggregate turnover above Rs 5 crore.',
+      },
+      {
+        q: 'Do small businesses need an e-invoice?',
+        a: 'No, not if the turnover is below the limit. They make normal GST invoices.',
+      },
+      {
+        q: 'What is an IRN?',
+        a: 'The Invoice Reference Number. It is a unique number that the portal gives to each e-invoice.',
+      },
+      {
+        q: 'Is e-invoice the same as e-way bill?',
+        a: 'No. An e-invoice is the invoice for a sale. An e-way bill is a transport document for moving goods.',
+      },
+      {
+        q: 'Do I make an e-invoice on the GST portal by hand?',
+        a: 'No. You make the invoice in your billing software, which sends the details to the IRP.',
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 55 — proforma-invoice-kya-hota-hai-format-vs-tax-invoice
+  // ─────────────────────────────────────────────
+  {
+    slug: 'proforma-invoice-kya-hota-hai-format-vs-tax-invoice',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'Proforma Invoice Kya Hota Hai: Format and Use',
+    excerpt: 'Proforma invoice kya hota hai? Know when to use it, what to write on it, and how it differs from a tax invoice. Bill with Udyog (14-day free trial).',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '3 min read',
+    metaTitle: 'Proforma Invoice Kya Hota Hai: Format and Use | Udyog',
+    metaDescription: 'Proforma invoice kya hota hai? Know when to use it, what to write on it, and how it differs from a tax invoice. Bill with Udyog (14-day free trial).',
+    keywords: 'proforma invoice kya hota hai, proforma invoice format, proforma invoice vs tax invoice, proforma invoice GST, proforma invoice sample, proforma invoice for advance',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'A proforma invoice is a preview of the bill that you send to a customer before the sale. It shows the items, the quantity, the rate, the estimated tax and the total, so the customer can approve the order or pay an advance. It is not a tax invoice. You cannot use it to claim input tax credit, and it is not reported in your GST return. When the sale is done, you make the real tax invoice.',
+      },
+      {
+        type: 'p',
+        text: '[Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in) to make your bills. There is a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'When do you use a proforma invoice?',
+      },
+      {
+        type: 'ul',
+        items: [
+          'When the customer wants to see the full amount before ordering.',
+          'When you ask for an advance payment before you start work or send goods.',
+          "For custom orders, where the price needs the customer's approval.",
+          'For export papers and bank paperwork, where a preview of the bill is asked for.',
+          'For government or large company purchases, where an approval is needed first.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'What to write on a proforma invoice',
+      },
+      {
+        type: 'p',
+        text: 'GST law does not give a fixed format for a proforma invoice, so you can use a simple one. Good practice is to show:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'The words "Proforma Invoice" and a line saying that it is not a tax invoice.',
+          'A proforma number and the date.',
+          "Your name, address and GSTIN, and the customer's name, address and GSTIN.",
+          'The items, with HSN or SAC code, quantity and rate.',
+          'The estimated GST, and the total amount. You can check rates on the free [HSN code finder](/tools/hsn-code-finder).',
+          'The payment terms, the delivery time and how long the price is valid.',
+          'Your signature.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Proforma invoice vs tax invoice vs quotation',
+      },
+      {
+        type: 'table',
+        headers: ['', 'Quotation', 'Proforma invoice', 'Tax invoice'],
+        rows: [
+          ['What it is', 'A price offer', 'A preview of the bill', 'The real bill for a sale'],
+          ['When', 'Before the customer decides', 'Before the sale, after the customer shows interest', 'After or at the time of the sale'],
+          ['GST document?', 'No', 'No', 'Yes'],
+          ['Input tax credit for the buyer?', 'No', 'No', 'Yes'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'For quotations, read [Quotation vs invoice: when to send which](/blog/quotation-vs-invoice-when-to-send) and [Convert a quotation to a GST invoice](/blog/convert-quotation-to-gst-invoice). For the real bill, read [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye).',
+      },
+      {
+        type: 'h2',
+        text: 'Is GST payable on a proforma invoice?',
+      },
+      {
+        type: 'p',
+        text: 'Not just because you issued one. GST is linked to the real supply and the tax invoice. But if you receive an advance, there can be GST rules for that advance, and these differ for goods and services. Ask your CA how to handle advances in your business.',
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Using a proforma invoice as the final bill.',
+          'Not writing that it is not a tax invoice.',
+          'Letting the customer pay on a proforma invoice and never issuing the tax invoice.',
+          'Leaving out the validity date of the price.',
+          'Writing a different amount on the tax invoice without telling the customer.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Make the real bill fast',
+      },
+      {
+        type: 'p',
+        text: 'When the customer approves, you should be able to make the tax invoice quickly. In Udyog, you can keep your customers, items and HSN codes ready, make the bill and share it on WhatsApp.',
+      },
+      {
+        type: 'p',
+        text: '[Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). See the [Udyog pricing page](/pricing) for plans after your 14-day free trial.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is a proforma invoice?',
+        a: 'A proforma invoice is a preview of the bill that a seller sends before the sale. It is not a tax invoice.',
+      },
+      {
+        q: 'Is a proforma invoice a tax invoice?',
+        a: 'No. It is not a GST tax invoice and it is not reported in your GST return.',
+      },
+      {
+        q: 'Can a buyer claim input tax credit on a proforma invoice?',
+        a: 'No. Input tax credit needs a valid tax invoice or a similar document.',
+      },
+      {
+        q: 'Is there a fixed format for a proforma invoice?',
+        a: 'GST law does not give a fixed format. Use a clear one, with the items, rates, estimated tax and terms.',
+      },
+      {
+        q: 'What is the difference between a proforma invoice and a quotation?',
+        a: 'A quotation is a price offer. A proforma invoice is a more detailed preview of the bill, often used to ask for an advance.',
+      },
+      {
+        q: 'Do I still need a tax invoice after a proforma invoice?',
+        a: 'Yes. When the sale happens, you make the tax invoice.',
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 56 — udhar-khata-app-track-customer-credit-mobile
+  // ─────────────────────────────────────────────
+  {
+    slug: 'udhar-khata-app-track-customer-credit-mobile',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'Udhar Khata App: Track Customer Credit on Mobile',
+    excerpt: 'Udhar khata app: how to track customer credit, send reminders and get paid on time. Keep bills and dues in one place with Udyog (14-day free trial).',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '3 min read',
+    metaTitle: 'Udhar Khata App: Track Customer Credit on Mobile | Udyog',
+    metaDescription: 'Udhar khata app: how to track customer credit, send reminders and get paid on time. Keep bills and dues in one place with Udyog (14-day free trial).',
+    keywords: 'udhar khata app, udhar khata, khata book app, customer credit book, udhari ka hisab, udhar recovery app',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'An udhar khata app is a mobile app that keeps the account of every customer who buys on credit: what they owe, what they paid, and when. It replaces the paper notebook, so you never lose a page or forget a name. For a shop, the best way is to link the udhar entry to a real bill, so the customer and you both know what the amount is for.',
+      },
+      {
+        type: 'p',
+        text: '[Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in). There is a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'Why the paper khata causes trouble',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Pages get lost, torn or wet.',
+          'Names and amounts get mixed up when you are busy.',
+          'You do not know the total that is pending today.',
+          'Customers dispute the amount, and you have no bill to show.',
+          'You forget to ask for money at the right time.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'What a good udhar khata app should do',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Keep one account for each customer, with their name and phone number.',
+          'Record each credit sale and each payment, with the date.',
+          'Show what each customer owes right now, and the total pending for the shop.',
+          'Link the entry to a bill, so the amount is clear.',
+          'Help you send a reminder to the customer.',
+          'Work on your phone, so you can use it at the counter.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'How to track udhar step by step',
+      },
+      {
+        type: 'ol',
+        items: [
+          'Add the customer once, with the name and phone number.',
+          'Make the bill. If the customer does not pay in full, keep the remaining amount as pending.',
+          'When the customer pays, record the payment against that customer.',
+          'Check the pending list every few days.',
+          'Send a polite reminder on WhatsApp to customers whose payment is late.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Tips to get paid on time',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Agree on a due date when you give credit. Write it on the bill.',
+          'Send the bill on WhatsApp right away, so there is a record.',
+          'Remind early and politely. Do not wait for months.',
+          'Give a credit limit for each customer, and stop new credit when it is crossed.',
+          'Keep a record of every part payment.',
+          'For bigger amounts, read our guide on [recovering outstanding payments](/blog/outstanding-payment-recovery-small-business-india).',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Khata app vs billing app',
+      },
+      {
+        type: 'p',
+        text: 'A simple khata app only records money in and money out. A billing app also makes the GST bill, keeps your items and HSN codes, and keeps the bill and the amount owed together. If you sell on credit and also need proper bills, one app for both saves time. Read [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye) and [Best billing app for small shops](/blog/best-billing-app-for-small-shops-india).',
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Giving credit without writing the amount and the date.',
+          'Not making a bill for a credit sale.',
+          'Keeping khata in one place and bills in another, so the two never match.',
+          'Not following up, so old dues become hard to recover.',
+          'Giving more credit to a customer who has not paid the earlier one.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Keep your bills and dues together',
+      },
+      {
+        type: 'p',
+        text: 'In Udyog, you can keep each customer with their bills in one place, search by customer and date, and share bills on WhatsApp. That makes it easier to see who owes what.',
+      },
+      {
+        type: 'p',
+        text: '[Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). See the [Udyog pricing page](/pricing) for plans after your 14-day free trial.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. Check the latest rules or ask your CA for tax questions.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is an udhar khata app?',
+        a: 'An udhar khata app is a mobile app that records the money your customers owe you when they buy on credit.',
+      },
+      {
+        q: 'Is a khata app better than a notebook?',
+        a: 'Yes, for most shops. An app does not lose pages, shows the total pending and lets you send reminders.',
+      },
+      {
+        q: 'Can I send payment reminders from the app?',
+        a: 'Many apps let you send a reminder on WhatsApp. Check what your app offers.',
+      },
+      {
+        q: 'Should I make a bill for a credit sale?',
+        a: 'Yes. A bill shows the amount, the date and the items, and avoids disputes.',
+      },
+      {
+        q: 'How do I recover old udhar?',
+        a: 'Send a polite reminder with the bill, agree on a date to pay, and take part payments if the customer cannot pay in full.',
+      },
+      {
+        q: 'Do I need GST for udhar khata?',
+        a: 'No. Keeping a khata does not need GST. If you are GST-registered, your bills still need to be correct GST bills.',
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 57 — stock-management-app-small-shops-india-inventory
+  // ─────────────────────────────────────────────
+  {
+    slug: 'stock-management-app-small-shops-india-inventory',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'Stock Management App for Small Shops in India',
+    excerpt: 'Stock management app for small shops: why it matters, what to track and how to avoid dead stock. Try Udyog billing with inventory (14-day free trial).',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '3 min read',
+    metaTitle: 'Stock Management App for Small Shops in India | Udyog',
+    metaDescription: 'Stock management app for small shops: why it matters, what to track and how to avoid dead stock. Try Udyog billing with inventory (14-day free trial).',
+    keywords: 'stock management app, inventory management app for small shop, stock register app, stock management software India, inventory app for kirana, stock ka hisab kaise rakhe',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'A stock management app keeps the count of every item in your shop: what you bought, what you sold and what is left. It tells you when to reorder and which items are not selling. For a small shop, the best way is to keep stock and billing in one app, so you do not have to write the same item in two places.',
+      },
+      {
+        type: 'p',
+        text: '[Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in). There is a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'Why stock management matters',
+      },
+      {
+        type: 'ul',
+        items: [
+          'You do not run out of the items that sell fastest.',
+          'You do not lock money in items that do not sell (dead stock).',
+          'You find theft, damage and mistakes early.',
+          'You know the value of your stock at any time.',
+          'You reorder at the right time and place a better order.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'What to track for each item',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Item name and a short code.',
+          'HSN code and GST rate, if you are GST-registered. Use the free [HSN code finder](/tools/hsn-code-finder).',
+          'Buying price and selling price.',
+          'Quantity in stock and the unit (piece, kg, box).',
+          'A minimum level at which you want to reorder.',
+          'The supplier, if the item comes from one main supplier.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'How to manage stock step by step',
+      },
+      {
+        type: 'ol',
+        items: [
+          'Add all your items once, with the price and the opening quantity.',
+          'Add stock when you receive goods from a supplier.',
+          'Make a bill every time you sell, so the sale is on record.',
+          'Count the shelf from time to time and compare it with the app.',
+          'Check the items that are low, and reorder them.',
+          'Check the items that are not moving, and sell them with an offer.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Tips for small shops',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Count your fast-moving items every week and the others every month.',
+          'Keep a minimum level for each item that sells every day.',
+          'Give each item a clear name, so the same item is not added twice.',
+          'Write the HSN code once, so you do not have to look it up for every bill.',
+          'Do not mix your home use with shop stock without writing it down.',
+          'If you have many items with a barcode, read [Barcode billing software for India](/blog/barcode-billing-software-india-gst).',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Stock app vs billing app',
+      },
+      {
+        type: 'p',
+        text: 'A stock register only counts items. A billing app also makes the GST bill and keeps your customers. When both are in one app, the item name, price and HSN code are the same in the stock list and on the bill. For shops, read [Kirana store billing software](/blog/kirana-store-billing-software-india) and [Hardware store billing software](/blog/hardware-store-billing-software-india).',
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Selling without a bill, so stock and sales never match.',
+          'Never counting the shelf, so mistakes keep growing.',
+          'Adding the same item with two different names.',
+          'Buying too much of a slow item because of a discount.',
+          'Not checking expiry dates on food and medicines.',
+          'Using a wrong GST rate on an item and noticing it only at return time.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Keep stock and bills in one place',
+      },
+      {
+        type: 'p',
+        text: 'In Udyog, you can add your items with their price and HSN code, add your customers, make the bill and share it on WhatsApp. That keeps the item details the same everywhere.',
+      },
+      {
+        type: 'p',
+        text: '[Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). See the [Udyog pricing page](/pricing) for plans after your 14-day free trial.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is a stock management app?',
+        a: 'A stock management app keeps count of the items in your shop: what came in, what was sold and what is left.',
+      },
+      {
+        q: 'Do small shops need stock management?',
+        a: 'Yes. Even a small shop loses money when it runs out of fast items or holds items that do not sell.',
+      },
+      {
+        q: 'How often should I count my stock?',
+        a: 'Count fast-moving items every week and the rest every month, or as often as you can.',
+      },
+      {
+        q: 'What is dead stock?',
+        a: 'Items that have not sold for a long time, so your money is stuck in them.',
+      },
+      {
+        q: 'Should stock and billing be in the same app?',
+        a: 'It is easier, because the item name, price and HSN code stay the same in both places.',
+      },
+      {
+        q: 'Do I need an HSN code for each item?',
+        a: 'If you are GST-registered, bills need HSN codes. Use the free HSN code finder to find them.',
+      },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
