@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import SignupCta from '../../components/SignupCta'
+import SignupCta, { buildAppSignupUrl } from '../../components/SignupCta'
 import FinderClient from './FinderClient'
 import {
   getAllHSNHeadings,
@@ -518,7 +518,7 @@ export default function HSNCodeFinderPage() {
               No more manual rate lookups. Udyog automatically maps items to the right HSN, calculates CGST, SGST, IGST, and generates compliant e-invoices in seconds.
             </p>
             <a
-              href="https://app.udyogbook.in/sign-in?utm_source=hsn_finder"
+              href={buildAppSignupUrl('finder', 'hsn-code-finder', 'bottom')}
               style={{
                 display: 'inline-block',
                 background: '#C2410C',

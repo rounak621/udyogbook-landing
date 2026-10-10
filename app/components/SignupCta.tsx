@@ -22,7 +22,7 @@ export function buildAppSignupUrl(
     utm_campaign: campaign,
     utm_content: content,
   })
-  return `https://app.udyogbook.in/?${params.toString()}`
+  return `https://app.udyogbook.in/sign-up?${params.toString()}`
 }
 
 export function buildPlayStoreUrl(

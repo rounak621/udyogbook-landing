@@ -337,21 +337,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
-        {/* Bottom CTA */}
-        <section style={{ background: '#0F172A', padding: 'clamp(48px,6vw,72px) var(--section-px)', textAlign: 'center' }}>
-          <div style={{ maxWidth: 520, margin: '0 auto' }}>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,3vw,36px)', fontWeight: 400, color: '#fff', marginBottom: 14, letterSpacing: '-0.02em' }}>
-              Ready to try Udyog?
-            </h2>
-            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', marginBottom: 24 }}>
-              Free plan. No credit card. First invoice in 2 minutes.
-            </p>
-            <a href="https://app.udyogbook.in/sign-in" style={{ display: 'inline-block', background: '#F97316', color: '#fff', padding: '13px 32px', borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
-              Start free →
-            </a>
-          </div>
-        </section>
-
       </main>
       <Footer />
       <SignupCta

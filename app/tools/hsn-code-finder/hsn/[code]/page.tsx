@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Navbar from '../../../../components/Navbar'
 import Footer from '../../../../components/Footer'
-import SignupCta from '../../../../components/SignupCta'
+import SignupCta, { buildAppSignupUrl } from '../../../../components/SignupCta'
 import CopyCodeButton from '../../CopyCodeButton'
 import {
   getAllHSNHeadings,
@@ -643,7 +643,7 @@ export default function HSNHeadingDetailPage({
               Udyog automatically maps product items to the right HSN codes and applies current tax rates with zero manual errors.
             </p>
             <a
-              href="https://app.udyogbook.in/sign-in?utm_source=hsn_finder"
+              href={buildAppSignupUrl('finder', heading.c, 'bottom')}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
