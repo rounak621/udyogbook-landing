@@ -7701,6 +7701,369 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+
+  // ─────────────────────────────────────────────
+  // POST 48 — bina-gst-ka-bill-kaise-banaye
+  // ─────────────────────────────────────────────
+  {
+    slug: 'bina-gst-ka-bill-kaise-banaye',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'Bina GST Ka Bill Kaise Banaye: Bill of Supply Guide',
+    excerpt: 'Bina GST ka bill kaise banaye? Learn who can make a non-GST bill or bill of supply, what it must contain, and make one on mobile. 14-day free trial.',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '3 min read',
+    metaTitle: 'Bina GST Ka Bill Kaise Banaye: Bill of Supply Guide | Udyog',
+    metaDescription: 'Bina GST ka bill kaise banaye? Learn who can make a non-GST bill or bill of supply, what it must contain, and make one on mobile. 14-day free trial.',
+    keywords: 'bina gst ka bill kaise banaye, non GST bill, bill of supply format, bill without GST, bill of supply for composition dealer, how to make bill without GST number',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: 'Bina GST ka bill kaise banaye? If you are not registered for GST, make an ordinary bill with your name, the date, the items and the total, and no tax. If you are a composition dealer, or you sell exempt goods or services, make a bill of supply. In both cases, you do not charge GST to the customer.',
+      },
+      {
+        type: 'p',
+        text: 'Udyog makes non-GST bills and GST bills on your phone. [Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in). There is a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'Who can make a bill without GST?',
+      },
+      {
+        type: 'ul',
+        items: [
+          'A business that is not registered for GST, for example a small shop below the registration limit.',
+          'A composition dealer, who pays a fixed small tax and issues a bill of supply.',
+          'A seller of goods or services that are exempt from GST.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Do you need to register for GST?',
+      },
+      {
+        type: 'p',
+        text: 'Registration is needed when your yearly turnover crosses a limit. For most states, the limit is Rs 40 lakh for sellers of goods and Rs 20 lakh for sellers of services. For special category states, the limits are lower. Some businesses need to register even below the limit, for example when they sell to other states in some cases or sell through certain online platforms. Check your case with your CA.',
+      },
+      {
+        type: 'p',
+        text: 'If you are not registered, you must not charge GST on your bills.',
+      },
+      {
+        type: 'h2',
+        text: 'What to put on a simple bill (not registered)',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Your business name and address.',
+          'Bill number and date.',
+          'Customer name (and address if needed).',
+          'Items, quantity, price and total.',
+          'Your signature or business stamp.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Do not write "GST", a tax rate or a tax amount on this bill.',
+      },
+      {
+        type: 'h2',
+        text: 'What to put on a bill of supply',
+      },
+      {
+        type: 'p',
+        text: 'A bill of supply is for composition dealers and for exempt supplies. It should contain:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Your name, address and GSTIN.',
+          'A bill number and date.',
+          'Customer name and address (and GSTIN if they are registered).',
+          'Description of the goods or services, HSN or SAC code, quantity and value.',
+          'Your signature.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'A composition dealer must write "composition taxable person, not eligible to collect tax on supplies" on the bill of supply. A bill of supply does not show any tax amount.',
+      },
+      {
+        type: 'h2',
+        text: 'How to make a non-GST bill on your mobile',
+      },
+      {
+        type: 'ol',
+        items: [
+          'Install the app, sign up and add your business details once.',
+          'Create a new bill and choose the non-GST option.',
+          'Pick or add the customer, and add items with price and quantity.',
+          'Save the bill and share the PDF on WhatsApp.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Need the basics first? Read [Bill banane wala app: invoice maker for mobile](/blog/bill-banane-wala-app-invoice-maker-mobile). For a GST bill, see [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye).',
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Charging GST without a GST number.',
+          'Writing a GSTIN or a tax amount on a bill of supply.',
+          'Using a non-GST bill when you have crossed the registration limit.',
+          'Not keeping a bill number order.',
+          'A composition dealer forgetting the composition line on the bill.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'When you should switch to GST bills',
+      },
+      {
+        type: 'p',
+        text: "If your turnover goes above the limit, or you choose to register, you must start issuing GST tax invoices. Set your items' HSN codes and GST rates before you start. Use the free [HSN code finder](/tools/hsn-code-finder) to find them.",
+      },
+      {
+        type: 'h2',
+        text: 'Try it',
+      },
+      {
+        type: 'p',
+        text: 'Make your first non-GST bill today. [Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). See the [Udyog pricing page](/pricing) for plans after your 14-day free trial.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can I make a bill without a GST number?',
+        a: 'Yes. If you are not registered for GST, you can make an ordinary bill without GST. You must not charge GST on it.',
+      },
+      {
+        q: 'What is a bill of supply?',
+        a: 'A bill of supply is a bill that shows no tax. Composition dealers and sellers of exempt goods or services use it.',
+      },
+      {
+        q: 'Is a non-GST bill valid?',
+        a: 'Yes. A bill with your business details, a bill number, the date, the items and the total is a valid bill for an unregistered business.',
+      },
+      {
+        q: 'Can I charge GST if I do not have a GSTIN?',
+        a: 'No. Only a GST-registered business can collect GST from customers.',
+      },
+      {
+        q: 'Does a composition dealer make a tax invoice?',
+        a: 'No. A composition dealer makes a bill of supply and cannot collect tax from customers.',
+      },
+      {
+        q: 'Can I make a non-GST bill in Udyog?',
+        a: 'Yes. Udyog supports non-GST bills, along with GST and service bills.',
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────
+  // POST 49 — quotation-kaise-banaye-format-sample
+  // ─────────────────────────────────────────────
+  {
+    slug: 'quotation-kaise-banaye-format-sample',
+    category: 'GST Guide',
+    color: '#10b981',
+    title: 'Quotation Kaise Banaye: Format, Sample and App',
+    excerpt: 'Quotation kaise banaye? Learn what a quotation must contain, see a simple format and sample, and make one on mobile or web. 14-day free trial.',
+    date: '10 Oct 2026',
+    dateModified: '2026-10-10',
+    readTime: '3 min read',
+    metaTitle: 'Quotation Kaise Banaye: Format, Sample and App | Udyog',
+    metaDescription: 'Quotation kaise banaye? Learn what a quotation must contain, see a simple format and sample, and make one on mobile or web. 14-day free trial.',
+    keywords: 'quotation kaise banaye, quotation format, quotation sample, how to make a quotation, estimate bill, quotation vs invoice',
+    content: [
+      {
+        type: 'p',
+        text: '*Last updated: 10 October 2026.*',
+      },
+      {
+        type: 'h2',
+        text: 'Quick answer',
+      },
+      {
+        type: 'p',
+        text: "Quotation kaise banaye? A quotation is a price offer you send before the sale. Write your business details, a quotation number and date, the customer's name, a list of items with quantity and rate, the total, how long the price is valid, and your terms. Then send it as a PDF. It is not a tax invoice, so no payment is due on it.",
+      },
+      {
+        type: 'p',
+        text: 'You can make a quotation in a billing app in a minute. [Get Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [start on the web](https://app.udyogbook.in). There is a 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'What a quotation must contain',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Your business name, address, phone number and GSTIN (if you have one).',
+          'A quotation number and the date.',
+          "The customer's name and address.",
+          'A list of items or services, with quantity, rate and amount.',
+          'GST, if you are registered, shown as a separate line.',
+          'The total amount.',
+          'How long the quotation is valid, for example 7 or 15 days.',
+          'Terms: payment terms, delivery time and any other conditions.',
+          'Your signature or business stamp.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Quotation sample',
+      },
+      {
+        type: 'p',
+        text: 'Here is a simple example. The names and numbers are made up.',
+      },
+      {
+        type: 'p',
+        text: 'From: Sharma Furniture, Andheri, Mumbai',
+      },
+      {
+        type: 'p',
+        text: 'Quotation no. Q-0012, Date: 10 October 2026',
+      },
+      {
+        type: 'p',
+        text: 'To: Rahul Enterprises, Thane',
+      },
+      {
+        type: 'p',
+        text: 'Valid till: 25 October 2026',
+      },
+      {
+        type: 'table',
+        headers: ['Item', 'Qty', 'Rate (Rs)', 'Amount (Rs)'],
+        rows: [
+          ['Steel almirah', '2', '12,000', '24,000'],
+          ['Office chair', '4', '3,500', '14,000'],
+          ['Total before GST', '', '', '38,000'],
+          ['GST at 18% (example rate)', '', '', '6,840'],
+          ['Total', '', '', '44,840'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Terms: 50% advance, balance on delivery. Delivery within 10 days of the order.',
+      },
+      {
+        type: 'h2',
+        text: 'Quotation vs proforma invoice vs tax invoice',
+      },
+      {
+        type: 'ul',
+        items: [
+          'A quotation is a price offer made before the customer decides. The customer does not have to pay anything.',
+          'A proforma invoice is a preview of the bill, often used to ask for an advance. It is not a tax invoice.',
+          "A tax invoice is the real bill after the sale. It is the one that carries GST details for the customer's records.",
+        ],
+      },
+      {
+        type: 'p',
+        text: 'When the customer accepts your quotation, make the tax invoice. For the steps, read [Mobile se GST bill kaise banaye](/blog/mobile-se-gst-bill-kaise-banaye). To see which bill type you need, read [Bill banane wala app: invoice maker for mobile](/blog/bill-banane-wala-app-invoice-maker-mobile).',
+      },
+      {
+        type: 'h2',
+        text: 'How to make a quotation in an app',
+      },
+      {
+        type: 'ol',
+        items: [
+          'Open the app and start a new quotation.',
+          'Pick or add the customer.',
+          'Add your items with quantity and rate.',
+          'Add the GST rate if you are registered. Check the rate with the free [HSN code finder](/tools/hsn-code-finder).',
+          'Add the validity and terms, save, and share the PDF on WhatsApp.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Tips for a quotation that wins the order',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Send it quickly, while the customer is still deciding.',
+          'Keep it clear: one line per item and a clear total.',
+          'Mention the validity date, so prices do not stay open forever.',
+          'Write the payment terms and delivery time.',
+          'Follow up after a day or two.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Common mistakes',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Calling a quotation a tax invoice.',
+          'Forgetting the validity date.',
+          'Leaving out GST, then adding it later and surprising the customer.',
+          'Not numbering quotations, so you cannot find them later.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Try it',
+      },
+      {
+        type: 'p',
+        text: 'Make your first quotation today. [Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). See the [Udyog pricing page](/pricing) for plans after your 14-day free trial.',
+      },
+      {
+        type: 'p',
+        text: '*This post is for general information. GST rules change often, so check the latest notifications or ask your CA before you file.*',
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is a quotation?',
+        a: 'A quotation is a written price offer for goods or services, sent to a customer before the sale.',
+      },
+      {
+        q: 'Is a quotation a tax invoice?',
+        a: 'No. A quotation is not a bill. You make a tax invoice after the customer accepts and the sale happens.',
+      },
+      {
+        q: 'Do I need to put GST on a quotation?',
+        a: 'If you are GST-registered, show the GST as a separate line, so the customer knows the final amount.',
+      },
+      {
+        q: 'How long should a quotation be valid?',
+        a: 'Most businesses use 7 to 30 days. Write the date on the quotation.',
+      },
+      {
+        q: 'What is the difference between a quotation and an estimate?',
+        a: 'In everyday business, both mean a price offer before the sale. Different industries use different words.',
+      },
+      {
+        q: 'Can I make a quotation in Udyog?',
+        a: 'Yes. Udyog supports quotation (estimate) bills.',
+      },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
