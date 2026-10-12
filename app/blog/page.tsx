@@ -1,7 +1,17 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import type { Metadata } from 'next'
-import { BLOG_POSTS } from '../../lib/blog-posts'
+import { BLOG_POSTS, type BlogPost } from '../../lib/blog-posts'
+
+const POPULAR_SLUGS = [
+  'freelancer-consultant-gst-invoice-india',
+  'gst-invoice-format-service-provider-india',
+  'gst-on-rental-services-india',
+  'quotation-format-indian-service-businesses',
+  'service-invoice-vs-sales-invoice-india',
+  'mobile-se-gst-bill-kaise-banaye',
+  'hsn-code-guide-2026-invoice',
+]
 
 export const metadata: Metadata = {
   title: 'Blog — GST Guides, Billing Tips & Business Insights',
@@ -14,6 +24,10 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPage() {
+  const popularPosts = POPULAR_SLUGS
+    .map(slug => BLOG_POSTS.find(p => p.slug === slug))
+    .filter((p): p is BlogPost => Boolean(p))
+
   return (
     <>
       <Navbar />
@@ -32,7 +46,64 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* Posts grid */}
+        {/* Popular guides */}
+        <section style={{ background: '#F8FAFC', borderBottom: '1px solid #E2E8F0', padding: 'clamp(36px,4vw,48px) var(--section-px)' }}>
+          <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20, flexWrap: 'wrap', gap: 12 }}>
+              <div>
+                <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#F97316', marginBottom: 4 }}>Featured Reading</p>
+                <h2 style={{ fontSize: 'clamp(20px,2.5vw,26px)', fontWeight: 700, color: '#0f172a', margin: 0 }}>Popular guides</h2>
+              </div>
+              <span style={{ fontSize: 13, color: '#64748b' }}>Essential GST & billing guides</span>
+            </div>
+
+            <style suppressHydrationWarning>{`
+              .popular-guides-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 16px;
+              }
+              .popular-guide-card {
+                background: #fff;
+                border: 1px solid #E2E8F0;
+                border-radius: 12px;
+                padding: 16px 18px;
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+              }
+              .popular-guide-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+                border-color: #cbd5e1;
+              }
+            `}</style>
+            <div className="popular-guides-grid">
+              {popularPosts.map(post => (
+                <a key={post.slug} href={`/blog/${post.slug}`} className="popular-guide-card">
+                  <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+                      <span style={{ fontSize: 10, fontWeight: 700, color: post.color, textTransform: 'uppercase', letterSpacing: '0.05em', background: post.color + '15', padding: '2px 8px', borderRadius: 100 }}>
+                        {post.category}
+                      </span>
+                      <span style={{ fontSize: 11, color: '#94a3b8' }}>{post.readTime}</span>
+                    </div>
+                    <h3 style={{ fontSize: 14, fontWeight: 700, color: '#0f172a', lineHeight: 1.4, margin: '4px 0 8px' }}>
+                      {post.title}
+                    </h3>
+                  </div>
+                  <span style={{ fontSize: 12, color: '#F97316', fontWeight: 600, display: 'inline-flex', alignItems: 'center', marginTop: 8 }}>
+                    Read guide →
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* All Posts grid */}
         <section style={{ padding: 'clamp(48px,6vw,80px) var(--section-px)' }}>
           <style suppressHydrationWarning>{`
             .blog-card { background: #fff; border: 1px solid #E2E8F0; border-radius: 16px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; display: block; }
@@ -42,6 +113,12 @@ export default function BlogPage() {
             @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
           `}</style>
           <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+            <div style={{ marginBottom: 24 }}>
+              <h2 style={{ fontSize: 'clamp(20px,2.5vw,26px)', fontWeight: 700, color: '#0f172a', margin: 0 }}>All articles</h2>
+              <p style={{ fontSize: 14, color: '#64748b', marginTop: 4, marginBottom: 0 }}>
+                Browse all {BLOG_POSTS.length} guides, tutorials, and business compliance articles
+              </p>
+            </div>
             <div className="blog-grid">
               {BLOG_POSTS.map(post => (
                 <a key={post.slug} href={`/blog/${post.slug}`} className="blog-card">
