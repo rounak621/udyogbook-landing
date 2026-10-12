@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import type { Metadata } from 'next'
 import { BLOG_POSTS, type BlogPost } from '../../lib/blog-posts'
+import { getBreadcrumbSchema } from '../../lib/schema'
 
 const POPULAR_SLUGS = [
   'freelancer-consultant-gst-invoice-india',
@@ -23,6 +24,28 @@ export const metadata: Metadata = {
   },
 }
 
+const blogCollectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Udyog Blog — GST Guides & Billing Tips for Indian Businesses',
+  description: 'Tips, guides, and insights for Indian small businesses on GST, billing, voice invoicing, and business growth.',
+  url: 'https://udyogbook.in/blog',
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: BLOG_POSTS.map((post, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      name: post.title,
+      url: `https://udyogbook.in/blog/${post.slug}`,
+    })),
+  },
+}
+
+const blogBreadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://udyogbook.in' },
+  { name: 'Blog', url: 'https://udyogbook.in/blog' },
+])
+
 export default function BlogPage() {
   const popularPosts = POPULAR_SLUGS
     .map(slug => BLOG_POSTS.find(p => p.slug === slug))
@@ -30,6 +53,14 @@ export default function BlogPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogCollectionSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogBreadcrumbSchema) }}
+      />
       <Navbar />
       <main style={{ paddingTop: 68, background: '#fff', minHeight: '100vh' }}>
 

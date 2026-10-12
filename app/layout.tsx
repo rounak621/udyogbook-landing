@@ -140,6 +140,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               sameAs: [
                 'https://play.google.com/store/apps/details?id=com.udyog.udyogmobile',
               ],
+              contactPoint: {
+                '@type': 'ContactPoint',
+                contactType: 'customer support',
+                email: 'contact@udyogbook.in',
+                availableLanguage: ['English', 'Hindi'],
+              },
             }),
           }}
         />

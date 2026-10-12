@@ -7,6 +7,7 @@ export type BlogPost = {
   dateModified?: string
   readTime: string
   color: string
+  quickAnswer?: string
   content: BlogSection[]
   metaTitle: string
   metaDescription: string
@@ -978,6 +979,7 @@ export const BLOG_POSTS: BlogPost[] = [
     metaTitle: 'Freelancer GST Invoice India 2026 — SAC Code aur Format Guide | Udyog',
     metaDescription: 'Freelancer aur consultant ka GST invoice kaise banaye 2026. SAC codes, 18% GST, service invoice format, aur WhatsApp pe invoice bhejne ka tarika.',
     keywords: 'freelancer gst invoice india, consultant gst invoice, service invoice freelancer india, sac code freelancer india, gst invoice for services india 2026',
+    quickAnswer: 'Freelancers aur consultants ke liye ₹20 lakh saalana turnover ke baad GST registration mandatory hai. Services invoices par 18% GST aur HSN ki jagah 6-digit SAC code (jaise IT/consulting ke liye 9983) lagta hai. Valid GST invoice generate karke client ko bhejne se client asani se apna Input Tax Credit (ITC) claim kar sakta hai.',
     content: [
       { type: 'p', text: 'India mein freelancing aur consulting industry bohot tezi se grow kar rahi hai. Software developers, designers, content writers, aur business consultants ab formal contract base par corporate clients ke saath kaam kar rahe hain. Corporate B2B clients ke saath transaction karne ke liye GST invoice banana mandatory hota hai taaki wo paid GST par Input Tax Credit (ITC) claim kar sakein. Services sector ke invoices products billing se alag hote hain kyunki isme HSN code ki jagah SAC codes aur units ki jagah time-based charges apply hote hain.' },
       { type: 'p', text: 'Is article mein hum service sector ke liye GST billing format, common SAC codes, aur invoicing guidelines ko aasaan Hinglish mein samjhenge.' },
@@ -1256,6 +1258,7 @@ export const BLOG_POSTS: BlogPost[] = [
     metaTitle: 'GST Invoice Format for Service Providers India 2026 | Udyog',
     metaDescription: 'GST invoice format for service providers India 2026. SAC codes, 18% GST, mandatory fields, and how to create service invoices in Udyog in 8 seconds.',
     keywords: 'gst invoice format service provider india, service invoice format india 2026, sac code invoice india, gst invoice for services india, service provider gst invoice mandatory fields',
+    quickAnswer: 'A valid GST service invoice requires 6-digit SAC codes, provider and recipient GSTINs, place of supply, and clear CGST/SGST or IGST tax splits. Under Rule 47, service invoices must be issued within 30 days of completing the service (45 days for BFSI). Most professional and commercial services attract 18% GST.',
     content: [
       { type: 'p', text: 'Service sector businesses (jaise consultants, designers, software developers, agency firms) ka billing setup products trading sector se bohot distinct hota hai. Service sector invoices par quantity (Qty) or items boxes metrics physical parameters columns use nahi hote, balki project deliverables, service milestones, hourly rates, service periods, aur SAC (Services Accounting Code) classifications mapping dynamic features target hote hain.' },
       { type: 'p', text: 'Is dynamic compliance guide mein hum cover karenge service provider bills format setup requirements, target fields, aur localized configurations.' },
@@ -2019,6 +2022,7 @@ export const BLOG_POSTS: BlogPost[] = [
     metaTitle: "GST on Rental Services in India: Rates & Rules | Udyog",
     metaDescription: "Complete guide to GST on rental services in India. Check 18% and 12% rates, SAC codes, reverse charge rules, ITC eligibility, and invoice templates for 2026.",
     keywords: "gst on rental services india, sac code rental services, rental gst rate 18, input tax credit rental business, commercial rental gst rules 2026",
+    quickAnswer: "Commercial equipment, machinery, and camera rentals in India attract a standard 18% GST rate classified under SAC heading 9973. Registered rental operators can claim full Input Tax Credit (ITC) on equipment purchases and operational costs. Refundable security deposits do not attract GST unless adjusted against unpaid rent or damages.",
     content: [
       {
             "type": "p",
@@ -3391,6 +3395,7 @@ export const BLOG_POSTS: BlogPost[] = [
     metaTitle: "HSN Code Guide 2026: Find the Right Code for Bill | Udyog",
     metaDescription: "Complete HSN code guide for 2026 GST invoices: learn 4-digit vs 6-digit rules, how to find commodity codes, avoid wrong classification penalties, and bill fast.",
     keywords: "hsn code guide 2026 invoice, find hsn code gst, 4 digit vs 6 digit hsn code, sac code services gst, hsn classification rules india",
+    quickAnswer: "Under GST rules in 2026, businesses with annual turnover above ₹5 crore must declare at least 6 digits of HSN on all invoices, while businesses up to ₹5 crore declare at least 4 digits on B2B bills. Services use 6-digit SAC codes. Declaring the correct code protects your buyer's ITC and prevents misclassification penalties under Section 125.",
     content: [
       {
         type: 'highlight',
@@ -3794,6 +3799,7 @@ export const BLOG_POSTS: BlogPost[] = [
     metaTitle: "Service Invoice vs Sales Invoice in India: Rules | Udyog",
     metaDescription: "Compare service invoice vs sales invoice under GST in India. Understand SAC vs HSN codes, Section 12 vs 13 time of supply, Rule 47 deadlines, and formats.",
     keywords: "service invoice vs sales invoice, difference between goods and service invoice, sac code vs hsn code, time of supply gst, rule 47 cgst rules",
+    quickAnswer: "Sales invoices bill physical goods using HSN codes and must be issued before goods dispatch under Section 31(1). Service invoices bill intangible supplies using SAC codes and allow a 30-day issuance window from service completion under Section 31(2) and Rule 47. Both require GSTIN, tax breakdown, and determine buyer ITC eligibility.",
     content: [
       {
             "type": "p",
@@ -4888,6 +4894,7 @@ export const BLOG_POSTS: BlogPost[] = [
     metaTitle: "Quotation Format for Indian Service Businesses | Udyog",
     metaDescription: "Download free estimate and quotation formats for Indian service businesses. Learn essential clauses, SAC code rules, scope protection, and payment milestones.",
     keywords: "quotation format service business india, estimate template india, service quotation format, scope creep protection clauses, sac code quotation format",
+    quickAnswer: "A quotation or estimate is an offer outlining scope and pricing before work starts—it is not a legal tax invoice, and no GST is payable at this stage. It should specify work deliverables, a validity window (15–30 days), milestone payment stages, and estimated 18% GST under the relevant SAC code to avoid billing disputes.",
     content: [
       {
             "type": "p",

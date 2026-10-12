@@ -14,19 +14,38 @@ import DarkCTA from './components/DarkCTA'
 import CTABanner from './components/CTABanner'
 import Footer from './components/Footer'
 import FreeTools from './components/FreeTools'
+import { HOMEPAGE_FAQS } from '../lib/faqData'
+import { getPlanOffersSchema, getBreadcrumbSchema, getFAQPageSchema } from '../lib/schema'
 
 const homepageSoftwareSchema = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'Udyog',
   applicationCategory: 'BusinessApplication',
-  operatingSystem: 'Android, Web',
-  offers: {
-    '@type': 'Offer',
-    price: '799',
-    priceCurrency: 'INR',
+  operatingSystem: 'Web, Android',
+  description: 'AI-powered GST billing and invoicing software for Indian small businesses, MSMEs, retailers, and traders.',
+  image: 'https://udyogbook.in/hero-mockup.png',
+  offers: getPlanOffersSchema(),
+}
+
+const homepageOrganizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Udyog',
+  url: 'https://udyogbook.in',
+  logo: 'https://udyogbook.in/udyog-logo.png',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer support',
+    email: 'contact@udyogbook.in',
+    availableLanguage: ['English', 'Hindi'],
   },
 }
+
+const homepageFaqSchema = getFAQPageSchema(HOMEPAGE_FAQS)
+const homepageBreadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://udyogbook.in' },
+])
 
 export default function Home() {
   return (
@@ -34,6 +53,18 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSoftwareSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageOrganizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageFaqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageBreadcrumbSchema) }}
       />
       <Navbar />
       <main>
