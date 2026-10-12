@@ -19,6 +19,12 @@ function formatIsoDate(dateStr: string): string {
   return `${year}-${month}-${day}`
 }
 
+function formatDisplayDate(dateStr: string): string {
+  const d = new Date(dateStr)
+  if (isNaN(d.getTime())) return dateStr
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+}
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = getPostBySlug(params.slug)
   if (!post) return {}
@@ -196,7 +202,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   if (!post) notFound()
 
   const isoPublished = formatIsoDate(post.date)
-  const isoModified = (post as any).dateModified ? formatIsoDate((post as any).dateModified) : isoPublished
+  const isoModified = post.dateModified ? formatIsoDate(post.dateModified) : isoPublished
 
   const postImage = post.content.find(s => s.type === 'image' && s.src)?.src || 'https://udyogbook.in/hero-mockup.png'
   const postImageUrl = postImage.startsWith('http') ? postImage : `https://udyogbook.in${postImage.startsWith('/') ? '' : '/'}${postImage}`
@@ -253,6 +259,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             </h1>
             <div style={{ display: 'flex', gap: 16, alignItems: 'center', flexWrap: 'wrap' }}>
               <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>{post.date}</span>
+              {post.dateModified && (
+                <>
+                  <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>·</span>
+                  <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>Last updated: {formatDisplayDate(post.dateModified)}</span>
+                </>
+              )}
               <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>·</span>
               <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>{post.readTime}</span>
               <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>·</span>
@@ -264,6 +276,30 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         {/* Article body */}
         <section style={{ padding: 'clamp(40px,5vw,64px) var(--section-px)' }}>
           <div style={{ maxWidth: 760, margin: '0 auto' }}>
+            {post.quickAnswer && (
+              <div style={{
+                background: '#FFF7ED',
+                border: '1px solid #FFEDD5',
+                borderLeft: '4px solid #F97316',
+                borderRadius: 10,
+                padding: '18px 22px',
+                marginBottom: 32,
+              }}>
+                <p style={{
+                  fontSize: 12,
+                  fontWeight: 700,
+                  color: '#EA580C',
+                  marginBottom: 6,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.08em',
+                }}>
+                  Quick answer
+                </p>
+                <p style={{ fontSize: 15, color: '#1E293B', lineHeight: 1.75, margin: 0 }}>
+                  {post.quickAnswer}
+                </p>
+              </div>
+            )}
             {(() => {
               const h2Indices = post.content
                 .map((s, idx) => (s.type === 'h2' ? idx : -1))
