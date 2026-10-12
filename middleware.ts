@@ -70,10 +70,8 @@ const GONE_HTML = `<!DOCTYPE html>
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
-  const hasTrailingSlash = pathname.length > 1 && pathname.endsWith('/')
-  const normalizedPath = hasTrailingSlash ? pathname.slice(0, -1) : pathname
+  const normalizedPath = pathname.length > 1 && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname
 
-  // Keep GONE_PATHS slash handling as it is (both /blog/slug and /blog/slug/ return 410)
   if (GONE_PATHS.has(normalizedPath)) {
     return new NextResponse(GONE_HTML, {
       status: 410,
@@ -83,32 +81,14 @@ export function middleware(request: NextRequest) {
     })
   }
 
-  // Legacy blog redirects (1-to-1 mappings)
   if (REDIRECT_MAP[normalizedPath]) {
     const destination = REDIRECT_MAP[normalizedPath]
     return NextResponse.redirect(new URL(destination, request.url), 308)
-  }
-
-  // For any non-gone path that ends with a slash, return 308 redirect to the URL without trailing slash
-  if (hasTrailingSlash) {
-    const url = request.nextUrl.clone()
-    url.pathname = normalizedPath
-    return NextResponse.redirect(url, 308)
   }
 
   return NextResponse.next()
 }
 
 export const config = {
-  matcher: [
-    /*
-     * Match all request paths except:
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico, sitemap.xml, robots.txt
-     * - public files with extensions (e.g. .svg, .png, .jpg, .webp, .ico)
-     */
-    '/((?!_next/static|_next/image|favicon\\.ico|sitemap\\.xml|robots\\.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)).*)',
-  ],
+  matcher: ['/blog/:path*'],
 }
-
