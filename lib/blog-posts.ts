@@ -9508,3 +9508,108 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
 export function getAllSlugs(): string[] {
   return BLOG_POSTS.map(p => p.slug)
 }
+
+const EXCLUDED_RELATED_SLUGS = new Set([
+  'ca-collaboration-portal',
+  'gstr-1-filing-guide-2026',
+  'inventory-management-small-business-india',
+  'negative-stock-indian-retailers',
+  'wholesale-distributor-billing-software-india',
+  'zoho-books-vs-udyog-2026',
+  'billing-software-delhi-traders-2026',
+  'ai-billing-small-business-india-guide',
+  'maya-ai-voice-billing',
+  'gst-invoice-kaise-banaye',
+  'billing-software-mumbai-traders-2026',
+  'gst-registration-ke-baad-kya-karein',
+  'how-to-reduce-gst-filing-time-small-business',
+  'furniture-event-equipment-rental-software-india',
+  'rental-business-billing-software',
+  'what-is-ai-billing-india',
+  'gst-invoice-voice-hindi',
+  'khatabook-vs-udyog-2026',
+  'what-is-udyog-gst-billing-app',
+  'mybillbook-vs-udyog-2026',
+  'tent-shamiana-rental-business-billing-india',
+  'billing-software-pune-small-business-2026',
+  'gst-mistakes-small-business',
+  'profitbooks-vs-udyog-2026',
+  'how-maya-ai-creates-gst-invoices',
+  'tally-vs-vyapar-vs-udyog-2026',
+  'gst-billing-software-for-ca-india',
+  'voice-ai-billing-vs-manual-billing-india',
+  'udyog-vs-tally-small-business',
+  'free-gst-invoice-template-download',
+  'how-to-send-gst-invoice-whatsapp',
+  'how-to-switch-tally-to-cloud-billing',
+  'busy-accounting-vs-udyog-2026',
+  'equipment-rental-business-management-software-india',
+  'camera-rental-business-billing-software-india',
+  'gst-invoice-rental-business-india',
+])
+
+const RELATED_STOP_WORDS = new Set([
+  'the', 'and', 'for', 'in', 'of', 'to', 'a', 'is', 'on', 'with', 'by', 'as', 'at', 'an', 'india', '2026', 'what', 'which', 'how'
+])
+
+export function getRelatedPosts(currentPost: BlogPost, limit = 3): BlogPost[] {
+  const currentKeywords = (currentPost.keywords || '')
+    .toLowerCase()
+    .split(',')
+    .map(k => k.trim())
+    .filter(Boolean)
+
+  const currentTitleWords = new Set(
+    currentPost.title
+      .toLowerCase()
+      .replace(/[^a-z0-9 ]/g, '')
+      .split(/\s+/)
+      .filter(w => w.length > 2 && !RELATED_STOP_WORDS.has(w))
+  )
+
+  const scored = BLOG_POSTS
+    .filter(p => p.slug !== currentPost.slug && !EXCLUDED_RELATED_SLUGS.has(p.slug))
+    .map(p => {
+      let score = 0
+
+      // Shared category
+      if (p.category && p.category.toLowerCase() === currentPost.category.toLowerCase()) {
+        score += 5
+      }
+
+      // Shared tags / keywords
+      const pKeywords = (p.keywords || '')
+        .toLowerCase()
+        .split(',')
+        .map(k => k.trim())
+        .filter(Boolean)
+
+      for (const ck of currentKeywords) {
+        for (const pk of pKeywords) {
+          if (ck === pk) {
+            score += 3
+          } else if ((ck.length > 3 && pk.includes(ck)) || (pk.length > 3 && ck.includes(pk))) {
+            score += 1.5
+          }
+        }
+      }
+
+      // Fallback: Shared title / topic keywords
+      const pTitleWords = p.title
+        .toLowerCase()
+        .replace(/[^a-z0-9 ]/g, '')
+        .split(/\s+/)
+        .filter(w => w.length > 2 && !RELATED_STOP_WORDS.has(w))
+
+      for (const tw of pTitleWords) {
+        if (currentTitleWords.has(tw)) {
+          score += 2
+        }
+      }
+
+      return { post: p, score }
+    })
+
+  scored.sort((a, b) => b.score - a.score)
+  return scored.slice(0, limit).map(s => s.post)
+}
