@@ -4,6 +4,7 @@ import SignupCta from '../../components/SignupCta'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { BLOG_POSTS, getPostBySlug, getAllSlugs, getRelatedPosts, type BlogSection } from '../../../lib/blog-posts'
+import { getBreadcrumbSchema, getFAQPageSchema } from '../../../lib/schema'
 
 export async function generateStaticParams() {
   return getAllSlugs().map(slug => ({ slug }))
@@ -194,27 +195,25 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug)
   if (!post) notFound()
 
-  const faqSchema = post.faqs && post.faqs.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": post.faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.q,
-      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
-    }))
-  } : null
-
   const isoPublished = formatIsoDate(post.date)
   const isoModified = (post as any).dateModified ? formatIsoDate((post as any).dateModified) : isoPublished
 
-  const articleSchema = {
+  const postImage = post.content.find(s => s.type === 'image' && s.src)?.src || 'https://udyogbook.in/hero-mockup.png'
+  const postImageUrl = postImage.startsWith('http') ? postImage : `https://udyogbook.in${postImage.startsWith('/') ? '' : '/'}${postImage}`
+
+  const blogPostingSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "headline": post.title,
     "description": post.metaDescription,
+    "image": postImageUrl,
     "datePublished": isoPublished,
     "dateModified": isoModified,
-    "author": { "@type": "Organization", "name": "Udyog" },
+    "author": {
+      "@type": "Organization",
+      "name": "Udyog",
+      "url": "https://udyogbook.in"
+    },
     "publisher": {
       "@type": "Organization",
       "name": "Udyog",
@@ -223,11 +222,20 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     "mainEntityOfPage": { "@type": "WebPage", "@id": `https://udyogbook.in/blog/${post.slug}` }
   }
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://udyogbook.in' },
+    { name: 'Blog', url: 'https://udyogbook.in/blog' },
+    { name: post.title, url: `https://udyogbook.in/blog/${post.slug}` },
+  ])
+
+  const faqSchema = post.faqs && post.faqs.length > 0 ? getFAQPageSchema(post.faqs) : null
+
   return (
     <>
       <Navbar />
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
 
       <main style={{ paddingTop: 68, background: '#fff', minHeight: '100vh' }}>

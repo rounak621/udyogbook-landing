@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { PRICING_FAQS } from '../../lib/pricingData'
+import { getPlanOffersSchema, getBreadcrumbSchema, getFAQPageSchema } from '../../lib/schema'
 
 export const metadata: Metadata = {
   title: 'Pricing Plans — Affordable GST Billing Software',
@@ -13,10 +15,44 @@ export const metadata: Metadata = {
   },
 }
 
+const pricingSoftwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Udyog',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web, Android',
+  description: 'Simple, transparent pricing for Udyog GST billing software. Plans start at ₹149/month with a 14-day free trial.',
+  image: 'https://udyogbook.in/hero-mockup.png',
+  offers: getPlanOffersSchema(),
+}
+
+const pricingFaqSchema = getFAQPageSchema(PRICING_FAQS)
+const pricingBreadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://udyogbook.in' },
+  { name: 'Pricing', url: 'https://udyogbook.in/pricing' },
+])
+
 export default function PricingLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return <>{children}</>
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSoftwareSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingFaqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingBreadcrumbSchema) }}
+      />
+      {children}
+    </>
+  )
 }
+

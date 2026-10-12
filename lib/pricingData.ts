@@ -186,3 +186,14 @@ export function filterPlansByPlatform(platform: 'desktop' | 'mobile' | 'both'): 
     return true;
   });
 }
+
+export const PRICING_FAQS = [
+  { q: 'Is there a free trial?', a: 'Yes — all plans include a 14-day free trial. No credit card required. You can explore every feature before committing to a paid plan.' },
+  { q: 'What is the billing cycle?', a: 'Udyog offers 1-year and 3-year subscription plans. Choosing a 3-year plan saves you 20% across all plans.' },
+  { q: 'Do you offer monthly billing?', a: 'Subscriptions are billed annually or in 3-year terms. The 3-year plan gives you a 20% discount. Annual billing allows us to keep subscription prices as low as possible and continually ship new features.' },
+  { q: 'Can I change my plan later?', a: 'Absolutely. You can upgrade or downgrade your plan at any time from your account settings. Upgrades take effect immediately. Downgrades take effect at the next billing cycle.' },
+  { q: 'Are prices inclusive of GST?', a: 'No — prices shown are exclusive of GST. 18% GST will be applicable on all plans as per Indian tax regulations. Your GST invoice will be provided for every payment.' },
+  { q: 'What payment methods do you accept?', a: 'We accept UPI, credit/debit cards, net banking, and all major Indian payment methods including Paytm, PhonePe, and Google Pay.' },
+  { q: 'Do you offer refunds?', a: 'We do not offer refunds on subscription payments. However, you can cancel at any time — your plan remains active until the end of the billing period. We strongly recommend using the 14-day free trial before purchasing. See our full Refund Policy for details.' },
+]
+
