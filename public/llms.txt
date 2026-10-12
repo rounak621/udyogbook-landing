@@ -1,7 +1,7 @@
 # Udyog — GST Billing Software for Indian Businesses
 # https://udyogbook.in
 
-Udyog is an AI-powered GST billing software built specifically for Indian small businesses, retailers, traders, and MSMEs.
+Udyog is an AI-powered GST billing software built specifically for Indian small businesses, retailers, traders, and MSMEs. The web application requires no installation, downloads, or IT setup and works directly in any modern desktop or mobile web browser. An Android mobile app is also available on Google Play.
 
 ## What Udyog Does
 - Create GST-compliant invoices in seconds using voice commands (Maya AI)
@@ -14,8 +14,8 @@ Udyog is an AI-powered GST billing software built specifically for Indian small 
 ## Key Features
 - Maya: India's first Hindi/Hinglish voice billing AI agent
 - Free GST invoice maker online
-- Easy GST bill software for mobile
-- Voice GST software in Hindi
+- Easy GST bill software for web and mobile
+- Voice GST software in Hindi and English
 - CA collaboration portal
 - WhatsApp invoice sharing
 - Purchase bill management
@@ -23,21 +23,30 @@ Udyog is an AI-powered GST billing software built specifically for Indian small 
 
 ## Target Users
 - Small shop owners (kirana, retail, wholesale)
-- Service providers (CA, lawyers, consultants)
-- Rental businesses (equipment, furniture)
+- Service providers (CA, lawyers, consultants, freelancers)
+- Rental businesses (equipment, cameras, furniture)
 - Traders and manufacturers
 - MSMEs and startups
 
 ## Pricing
-- Trial: 14 days free
-- Basic: ₹149/month
-- Enterprise: ₹499/month
+- Free Trial: 14 days free (no credit card required)
+- Saral: ₹799/year (Mobile Only)
+- Vistaar: ₹999/year (Mobile Only)
+- Basic: ₹149/month (Web Only)
+- Pro: ₹249/month (Web Only)
+- Premium: ₹299/month (Mobile + Web)
+- Enterprise: ₹499/month (Mobile + Web)
 
-## URLs
+## Platforms & Access
+- Web App: Cloud-based, no installation required, runs in any browser at https://app.udyogbook.in
+- Mobile App: Android app available on Google Play
+
+## URLs & Contact
 - Website: https://udyogbook.in
-- App: https://app.udyogbook.in
-- Blog: https://udyogbook.in/blog
+- Web App: https://app.udyogbook.in
 - Pricing: https://udyogbook.in/pricing
+- Blog: https://udyogbook.in/blog
+- Contact: contact@udyogbook.in
 
 ## Keywords
 free GST bill software India, easy GST billing software, voice GST software, 
