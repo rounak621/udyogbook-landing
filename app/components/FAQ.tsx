@@ -28,7 +28,7 @@ const FAQS = [
   },
   {
     q: 'Do I need to install anything?',
-    a: 'No. Udyog is entirely web-based. It works on any browser on desktop or mobile. No installation, no updates, no IT support needed.',
+    a: 'No. The Udyog web app needs no installation and works in any browser on desktop or mobile — no updates or IT support needed. An Android app is also available on Google Play for mobile billing.',
   },
 ]
 
@@ -105,7 +105,7 @@ export default function FAQ() {
         <div className={`faq-still fade-up${visible ? ' visible' : ''}`}>
           <p className="faq-still-title">Still have questions?</p>
           <p className="faq-still-sub">Our team is available Mon–Sat, 9am–7pm IST. Average response time: under 2 hours.</p>
-          <a href="mailto:hello@udyog.in" className="btn-outline" style={{ fontSize: 14 }}>Email us →</a>
+          <a href="mailto:contact@udyogbook.in" className="btn-outline" style={{ fontSize: 14 }}>Email us →</a>
         </div>
       </div>
     </section>
