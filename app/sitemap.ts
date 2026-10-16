@@ -1,62 +1,139 @@
 import { MetadataRoute } from 'next'
+import { execSync } from 'child_process'
 import { BLOG_POSTS } from '../lib/blog-posts'
-import { getAllHSNChapters, getAllHSNHeadings, getAll6DigitSACCodes } from '../lib/hsn-data'
+import {
+  getAllHSNChapters,
+  getAllHSNHeadings,
+  getAll6DigitSACCodes,
+  getAllSACGroups,
+} from '../lib/hsn-data'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://udyogbook.in'
-    const lastModified = new Date('2026-09-08')
+export async function generateSitemaps() {
+  return [
+    { id: 'core' },
+    { id: 'blog' },
+    { id: 'chapters' },
+    { id: 'headings' },
+    { id: 'sac' },
+  ]
+}
 
-    // Static pages
-    const staticPages: MetadataRoute.Sitemap = [
-        { url: baseUrl, lastModified, changeFrequency: 'weekly', priority: 1.0 },
-        { url: `${baseUrl}/pricing`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-        { url: `${baseUrl}/custom-solutions`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-        { url: `${baseUrl}/tools`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
-        { url: `${baseUrl}/tools/gst-calculator`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-        { url: `${baseUrl}/tools/invoice-template`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-        { url: `${baseUrl}/tools/digital-signature`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-        { url: `${baseUrl}/tools/hsn-code-finder`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
-        { url: `${baseUrl}/about`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-        { url: `${baseUrl}/contact`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
-        { url: `${baseUrl}/blog`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
-        { url: `${baseUrl}/gst-compliance`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
-        { url: `${baseUrl}/privacy-policy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
-        { url: `${baseUrl}/terms-of-service`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
-        { url: `${baseUrl}/refund-policy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
-        { url: `${baseUrl}/cookie-policy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
-    ]
+const baseUrl = 'https://udyogbook.in'
 
-    // Dynamic blog pages
-    const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map(post => ({
-        url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: new Date(post.date),
-        changeFrequency: 'monthly' as const,
-        priority: 0.8,
-    }))
+function getGitLastMod(filePath: string): Date | undefined {
+  try {
+    const stdout = execSync(`git log -1 --format=%cI -- ${filePath}`, {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim()
+    if (stdout) {
+      const d = new Date(stdout)
+      if (!isNaN(d.getTime())) return d
+    }
+  } catch {
+    // If git is not available or file is untracked, omit lastmod
+  }
+  return undefined
+}
 
-    // HSN 2-digit chapter pages
-    const chapterPages: MetadataRoute.Sitemap = getAllHSNChapters().map(ch => ({
+export default async function sitemap({
+  id,
+}: {
+  id: string
+}): Promise<MetadataRoute.Sitemap> {
+  switch (id) {
+    case 'core': {
+      const corePages: {
+        path: string
+        file: string
+        changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']
+        priority: number
+      }[] = [
+        { path: '', file: 'app/page.tsx', changeFrequency: 'weekly', priority: 1.0 },
+        { path: '/pricing', file: 'app/pricing/page.tsx', changeFrequency: 'monthly', priority: 0.9 },
+        { path: '/custom-solutions', file: 'app/custom-solutions/page.tsx', changeFrequency: 'monthly', priority: 0.9 },
+        { path: '/tools', file: 'app/tools/page.tsx', changeFrequency: 'weekly', priority: 0.9 },
+        { path: '/tools/gst-calculator', file: 'app/tools/gst-calculator/page.tsx', changeFrequency: 'monthly', priority: 0.9 },
+        { path: '/tools/invoice-template', file: 'app/tools/invoice-template/page.tsx', changeFrequency: 'monthly', priority: 0.9 },
+        { path: '/tools/digital-signature', file: 'app/tools/digital-signature/page.tsx', changeFrequency: 'monthly', priority: 0.9 },
+        { path: '/tools/hsn-code-finder', file: 'app/tools/hsn-code-finder/page.tsx', changeFrequency: 'weekly', priority: 0.9 },
+        { path: '/about', file: 'app/about/page.tsx', changeFrequency: 'monthly', priority: 0.8 },
+        { path: '/contact', file: 'app/contact/page.tsx', changeFrequency: 'monthly', priority: 0.7 },
+        { path: '/blog', file: 'app/blog/page.tsx', changeFrequency: 'weekly', priority: 0.8 },
+        { path: '/gst-compliance', file: 'app/gst-compliance/page.tsx', changeFrequency: 'monthly', priority: 0.7 },
+        { path: '/privacy-policy', file: 'app/privacy-policy/page.tsx', changeFrequency: 'yearly', priority: 0.3 },
+        { path: '/terms-of-service', file: 'app/terms-of-service/page.tsx', changeFrequency: 'yearly', priority: 0.3 },
+        { path: '/refund-policy', file: 'app/refund-policy/page.tsx', changeFrequency: 'yearly', priority: 0.3 },
+        { path: '/cookie-policy', file: 'app/cookie-policy/page.tsx', changeFrequency: 'yearly', priority: 0.3 },
+      ]
+
+      return corePages.map(page => {
+        const lastModified = getGitLastMod(page.file)
+        return {
+          url: `${baseUrl}${page.path}`,
+          ...(lastModified ? { lastModified } : {}),
+          changeFrequency: page.changeFrequency,
+          priority: page.priority,
+        }
+      })
+    }
+
+    case 'blog': {
+      return BLOG_POSTS.map(post => {
+        const dateStr = post.dateModified || post.date
+        const lastModified = new Date(dateStr)
+        const validLastMod = !isNaN(lastModified.getTime()) ? lastModified : undefined
+
+        return {
+          url: `${baseUrl}/blog/${post.slug}`,
+          ...(validLastMod ? { lastModified: validLastMod } : {}),
+          changeFrequency: 'monthly' as const,
+          priority: 0.8,
+        }
+      })
+    }
+
+    case 'chapters': {
+      return getAllHSNChapters().map(ch => ({
         url: `${baseUrl}/tools/hsn-code-finder/chapter/${ch.c}`,
-        lastModified,
         changeFrequency: 'monthly' as const,
         priority: 0.8,
-    }))
+      }))
+    }
 
-    // HSN 4-digit heading pages
-    const hsnPages: MetadataRoute.Sitemap = getAllHSNHeadings().map(h => ({
+    case 'headings': {
+      return getAllHSNHeadings().map(h => ({
         url: `${baseUrl}/tools/hsn-code-finder/hsn/${h.c}`,
-        lastModified,
         changeFrequency: 'monthly' as const,
         priority: 0.7,
-    }))
+      }))
+    }
 
-    // SAC 6-digit code pages
-    const sacPages: MetadataRoute.Sitemap = getAll6DigitSACCodes().map(s => ({
+    case 'sac': {
+      const chapter99 = [
+        {
+          url: `${baseUrl}/tools/hsn-code-finder/chapter/99`,
+          changeFrequency: 'monthly' as const,
+          priority: 0.8,
+        },
+      ]
+
+      const groups = getAllSACGroups().map(g => ({
+        url: `${baseUrl}/tools/hsn-code-finder/sac/${g.c}`,
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+      }))
+
+      const codes = getAll6DigitSACCodes().map(s => ({
         url: `${baseUrl}/tools/hsn-code-finder/sac/${s.c}`,
-        lastModified,
         changeFrequency: 'monthly' as const,
         priority: 0.7,
-    }))
+      }))
 
-    return [...staticPages, ...blogPages, ...chapterPages, ...hsnPages, ...sacPages]
+      return [...chapter99, ...groups, ...codes]
+    }
+
+    default:
+      return []
+  }
 }
