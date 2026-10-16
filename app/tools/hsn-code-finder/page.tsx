@@ -9,6 +9,7 @@ import {
   getAll6DigitSACCodes,
   getAllHSNChapters,
 } from '../../../lib/hsn-data'
+import { selfCanonical } from '../../../lib/seo'
 
 export const metadata: Metadata = {
   title: 'HSN Code Finder & GST Rates 2026',
@@ -16,9 +17,7 @@ export const metadata: Metadata = {
     'Search 21,000+ HSN and SAC codes with official CBIC GST rates (0%, 5%, 18% and 40%). Search by product name, Hinglish keywords, or 4-digit tariff code.',
   keywords:
     'hsn code finder, gst rate finder, sac code list, hsn search online, cbic gst rates, gst goods rates 2026, sac code search india',
-  alternates: {
-    canonical: 'https://udyogbook.in/tools/hsn-code-finder',
-  },
+  alternates: selfCanonical('/tools/hsn-code-finder'),
   openGraph: {
     title: 'HSN Code Finder & GST Rates 2026',
     description:
@@ -332,8 +331,72 @@ export default function HSNCodeFinderPage() {
               </div>
             </div>
 
+            {/* Browse Services (SAC codes) Card */}
+            <div style={{ marginBottom: 36, paddingTop: 16 }}>
+              <Link
+                href="/tools/hsn-code-finder/chapter/99"
+                style={{
+                  background: '#0F172A',
+                  color: '#FFFFFF',
+                  borderRadius: 12,
+                  padding: '24px 28px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  textDecoration: 'none',
+                  flexWrap: 'wrap',
+                  gap: 16,
+                  border: '1px solid #1E293B',
+                  boxShadow: '0 4px 12px rgba(15, 23, 42, 0.08)',
+                }}
+              >
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
+                    <span
+                      style={{
+                        background: '#EA580C',
+                        color: '#FFFFFF',
+                        fontSize: 12,
+                        fontWeight: 700,
+                        padding: '3px 10px',
+                        borderRadius: 6,
+                        letterSpacing: '0.05em',
+                      }}
+                    >
+                      CHAPTER 99
+                    </span>
+                    <span style={{ fontSize: 13, color: '#94A3B8', fontWeight: 600 }}>
+                      Services Directory
+                    </span>
+                  </div>
+                  <h3 style={{ fontSize: 20, fontWeight: 700, color: '#FFFFFF', margin: '0 0 6px 0' }}>
+                    Browse Services (SAC codes)
+                  </h3>
+                  <p style={{ fontSize: 14, color: '#CBD5E1', margin: 0, maxWidth: 640, lineHeight: 1.5 }}>
+                    Explore all 31 GST service groups and 649 Services Accounting Codes under Chapter 99.
+                  </p>
+                </div>
+                <span
+                  style={{
+                    background: '#EA580C',
+                    color: '#FFFFFF',
+                    fontSize: 14,
+                    fontWeight: 700,
+                    padding: '10px 18px',
+                    borderRadius: 8,
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 6,
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  Browse Chapter 99 →
+                </span>
+              </Link>
+            </div>
+
             {/* Browse All Chapters Section */}
-            <div id="browse-chapters" style={{ paddingTop: 16 }}>
+            <div id="browse-chapters" style={{ paddingTop: 8 }}>
               <h2 style={{ fontSize: 22, fontWeight: 700, color: '#0F172A', margin: '0 0 6px 0' }}>
                 Browse All 98 HSN Chapters
               </h2>
@@ -473,6 +536,91 @@ export default function HSNCodeFinderPage() {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Related Guides Section */}
+        <section
+          style={{
+            background: '#FFFFFF',
+            borderTop: '1px solid #D1D5DB',
+            borderBottom: '1px solid #D1D5DB',
+            padding: 'clamp(44px,6vw,64px) clamp(16px,4vw,24px)',
+          }}
+        >
+          <div style={{ maxWidth: 1040, margin: '0 auto' }}>
+            <h2 style={{ fontSize: 22, fontWeight: 700, color: '#0F172A', margin: '0 0 8px 0' }}>
+              Related Business & GST Guides
+            </h2>
+            <p style={{ fontSize: 14, color: '#4B5563', margin: '0 0 20px 0' }}>
+              Essential reading on invoice compliance and daily retail management for Indian store owners.
+            </p>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                gap: 16,
+              }}
+            >
+              <Link
+                href="/blog/hsn-code-guide-2026-invoice"
+                style={{
+                  background: '#F8FAFC',
+                  border: '1px solid #D1D5DB',
+                  borderRadius: 10,
+                  padding: '20px 22px',
+                  textDecoration: 'none',
+                  color: '#0F172A',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <div>
+                  <span style={{ fontSize: 11, fontWeight: 700, color: '#C2410C', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    GST Invoice Guide
+                  </span>
+                  <h3 style={{ fontSize: 17, fontWeight: 700, color: '#0F172A', margin: '8px 0', lineHeight: 1.4 }}>
+                    HSN Code Guide 2026: Mandatory Digits & Invoice Rules
+                  </h3>
+                  <p style={{ fontSize: 13, color: '#4B5563', lineHeight: 1.6, margin: 0 }}>
+                    Understand turnover thresholds, 4-digit vs 6-digit requirements, and how to avoid GST invoice errors.
+                  </p>
+                </div>
+                <span style={{ marginTop: 14, fontSize: 13, fontWeight: 700, color: '#EA580C' }}>
+                  Read Guide →
+                </span>
+              </Link>
+              <Link
+                href="/blog/stock-management-app-small-shops-india-inventory"
+                style={{
+                  background: '#F8FAFC',
+                  border: '1px solid #D1D5DB',
+                  borderRadius: 10,
+                  padding: '20px 22px',
+                  textDecoration: 'none',
+                  color: '#0F172A',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <div>
+                  <span style={{ fontSize: 11, fontWeight: 700, color: '#C2410C', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    Inventory Management
+                  </span>
+                  <h3 style={{ fontSize: 17, fontWeight: 700, color: '#0F172A', margin: '8px 0', lineHeight: 1.4 }}>
+                    Stock Management App for Small Shops in India
+                  </h3>
+                  <p style={{ fontSize: 13, color: '#4B5563', lineHeight: 1.6, margin: 0 }}>
+                    How small retailers manage fast-moving stock, low inventory alerts, and billing in one seamless app.
+                  </p>
+                </div>
+                <span style={{ marginTop: 14, fontSize: 13, fontWeight: 700, color: '#EA580C' }}>
+                  Read Guide →
+                </span>
+              </Link>
             </div>
           </div>
         </section>

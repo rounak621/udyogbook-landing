@@ -669,3 +669,53 @@ export function getChapterCopy(chapter: HSNItem, headingsCount: number): Chapter
     breadcrumbName: sName,
   }
 }
+
+export interface SACGroupPageCopy {
+  shortName: string
+  metaTitle: string
+  h1: string
+  metaDescription: string
+  introParagraph: string
+  breadcrumbName: string
+}
+
+export function getSACGroupCopy(group: SACItem, codesCount: number): SACGroupPageCopy {
+  const code = group.c
+  const name = sentenceCase(group.d)
+
+  // Title (<= 60 chars total with " | Udyog", so <= 52 before)
+  const baseTitle = `SAC Group ${code}: `
+  const maxNameInTitle = 52 - baseTitle.length
+  let nameForTitle = shortenByWholeWords(name, maxNameInTitle)
+  while (nameForTitle && (`${baseTitle}${nameForTitle} | Udyog`.replace(/'/g, '&#x27;').length > 60)) {
+    nameForTitle = shortenByWholeWords(nameForTitle, nameForTitle.length - 1)
+  }
+  const metaTitle = nameForTitle ? `${baseTitle}${nameForTitle}` : `SAC Group ${code}`
+
+  // H1 (<= 90 chars)
+  const baseH1 = `SAC Group ${code}: `
+  const maxNameInH1 = 90 - baseH1.length
+  const nameForH1 = shortenByWholeWords(name, maxNameInH1)
+  const h1 = `${baseH1}${nameForH1 || name}`
+
+  // Meta description (<= 155 chars, never cut mid-word, no ellipses)
+  const basePrefix = `SAC Group ${code} classifies `
+  const baseSuffix = ` under GST Chapter 99. Explore all ${codesCount} service accounting codes in this group.`
+  const lowerName = lowerFirstUnlessAcronym(name)
+  const maxNameInMeta = 155 - basePrefix.length - baseSuffix.length
+  const nameForMeta = shortenByWholeWords(lowerName, maxNameInMeta)
+  const metaDescription = `${basePrefix}${nameForMeta || lowerName}${baseSuffix}`
+
+  // Intro paragraph: neutral structural wording only from data
+  const introParagraph = `SAC Group ${code} is a service category under Chapter 99 of the Indian Goods and Services Tax (GST) classification. It covers ${lowerName} and contains ${codesCount} six-digit tariff code${codesCount === 1 ? '' : 's'}.`
+
+  return {
+    shortName: name,
+    metaTitle,
+    h1,
+    metaDescription,
+    introParagraph,
+    breadcrumbName: `Group ${code}`,
+  }
+}
+
