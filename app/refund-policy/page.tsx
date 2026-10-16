@@ -1,10 +1,12 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import type { Metadata } from 'next'
+import { selfCanonical } from '../../lib/seo'
 
 export const metadata: Metadata = {
   title: 'Refund Policy',
   description: 'Refund policy for Udyog billing software subscriptions.',
+  alternates: selfCanonical('/refund-policy'),
 }
 
 export default function RefundPolicyPage() {

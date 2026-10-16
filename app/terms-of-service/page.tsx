@@ -1,10 +1,12 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import type { Metadata } from 'next'
+import { selfCanonical } from '../../lib/seo'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'Terms of Service for Udyog billing software.',
+  alternates: selfCanonical('/terms-of-service'),
 }
 
 export default function TermsPage() {

@@ -1,11 +1,13 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import type { Metadata } from 'next'
+import { selfCanonical } from '../../lib/seo'
 
 export const metadata: Metadata = {
   title: 'GST Compliance Software for Indian Businesses',
   description: 'How Udyog keeps your business 100% GST-compliant. Auto CGST/SGST/IGST calculation, GSTR-1 & GSTR-3B reports, e-invoicing, HSN codes, ITC tracking, and CA collaboration — all in one app.',
   keywords: 'gst compliance software india, gst invoice software, gst billing app, gst return filing software, e-invoicing software india, hsn code billing, cgst sgst igst calculator',
+  alternates: selfCanonical('/gst-compliance'),
   openGraph: {
     title: 'GST Compliance Software for Indian Businesses — Udyog',
     description: 'Auto GST calculation, GSTR-1 reports, e-invoicing, HSN codes, and CA portal. Built for Indian MSMEs.',

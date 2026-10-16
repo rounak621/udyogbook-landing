@@ -2,10 +2,12 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import AboutCTAButtons from './AboutCTAButtons'
 import type { Metadata } from 'next'
+import { selfCanonical } from '../../lib/seo'
 
 export const metadata: Metadata = {
   title: 'About Udyog — India\'s Next-Generation GST Billing Platform',
   description: 'Udyog is India\'s GST-ready billing and business management platform for retailers, traders, MSMEs, and CAs. Our story, mission, and the team behind the product.',
+  alternates: selfCanonical('/about'),
 }
 
 export default function AboutPage() {

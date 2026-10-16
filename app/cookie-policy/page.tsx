@@ -1,11 +1,13 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import type { Metadata } from 'next'
+import { selfCanonical } from '../../lib/seo'
 
 export const metadata: Metadata = {
   title: 'Cookie Policy — How We Use Cookies',
   description: 'Learn how Udyog uses cookies to improve your experience. We use essential, analytics, and preference cookies. You can control cookie settings at any time.',
   keywords: 'udyog cookie policy, cookies billing software, cookie consent india',
+  alternates: selfCanonical('/cookie-policy'),
 }
 
 export default function CookiePolicyPage() {

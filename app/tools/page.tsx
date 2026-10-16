@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Link from 'next/link'
+import { selfCanonical } from '../../lib/seo'
 
 export const metadata: Metadata = {
   title: 'Free Business & GST Tools for MSMEs',
@@ -13,9 +14,7 @@ export const metadata: Metadata = {
     url: 'https://udyogbook.in/tools',
     type: 'website',
   },
-  alternates: {
-    canonical: 'https://udyogbook.in/tools',
-  },
+  alternates: selfCanonical('/tools'),
 }
 
 const TOOLS = [
