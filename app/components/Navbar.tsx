@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { label: 'Pricing', href: '/pricing' },
   { label: 'Custom Billing', href: '/custom-solutions' },
   { label: 'Free Tools', href: '/tools' },
+  { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '/#faq' },
   { label: 'Contact', href: '/contact' },
 ]
