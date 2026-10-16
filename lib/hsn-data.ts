@@ -88,6 +88,43 @@ export function getAll6DigitSACCodes(): SACItem[] {
   return _sacData!.filter(x => x.c.length === 6)
 }
 
+export function getAllSACGroups(): SACItem[] {
+  loadData()
+  return _sacData!.filter(x => x.c.length === 4).sort((a, b) => a.c.localeCompare(b.c))
+}
+
+export function getSACGroupDetails(groupCode: string) {
+  loadData()
+  const group = _sacData!.find(x => x.c === groupCode && x.c.length === 4)
+  if (!group) return null
+
+  const codes = _sacData!
+    .filter(x => x.c.startsWith(groupCode) && x.c.length === 6)
+    .sort((a, b) => a.c.localeCompare(b.c))
+
+  return {
+    group,
+    groupCode,
+    codes,
+  }
+}
+
+export function getChapter99Details() {
+  loadData()
+  const chapter = _sacData!.find(x => x.c === '99') || { c: '99', d: 'All Services', p: [] }
+  const groups = getAllSACGroups().map(g => ({
+    ...g,
+    codesCount: _sacData!.filter(x => x.c.startsWith(g.c) && x.c.length === 6).length,
+  }))
+  const totalCodes = getAll6DigitSACCodes().length
+
+  return {
+    chapter,
+    groups,
+    totalCodes,
+  }
+}
+
 export function getRatesForHSN(code: string): MatchedRate[] {
   loadData()
   return matchHSNRates(code, _goodsRatesData!).mainRates
@@ -170,9 +207,11 @@ import {
   getHSNCopy,
   getSACCopy,
   getChapterCopy,
+  getSACGroupCopy,
   HSNPageCopy,
   SACPageCopy,
   ChapterPageCopy,
+  SACGroupPageCopy,
 } from './hsn-copy'
 
 export function getHSNPageSummary(
@@ -197,4 +236,11 @@ export function getChapterPageSummary(
   headingsCount: number
 ): ChapterPageCopy {
   return getChapterCopy(chapter, headingsCount)
+}
+
+export function getSACGroupPageSummary(
+  group: SACItem,
+  codesCount: number
+): SACGroupPageCopy {
+  return getSACGroupCopy(group, codesCount)
 }

@@ -14,8 +14,14 @@ import DarkCTA from './components/DarkCTA'
 import CTABanner from './components/CTABanner'
 import Footer from './components/Footer'
 import FreeTools from './components/FreeTools'
+import type { Metadata } from 'next'
+import { selfCanonical } from '../lib/seo'
 import { HOMEPAGE_FAQS } from '../lib/faqData'
 import { getPlanOffersSchema, getBreadcrumbSchema, getFAQPageSchema } from '../lib/schema'
+
+export const metadata: Metadata = {
+  alternates: selfCanonical('/'),
+}
 
 const homepageSoftwareSchema = {
   '@context': 'https://schema.org',

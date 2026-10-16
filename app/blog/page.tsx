@@ -14,9 +14,12 @@ const POPULAR_SLUGS = [
   'hsn-code-guide-2026-invoice',
 ]
 
+import { selfCanonical } from '../../lib/seo'
+
 export const metadata: Metadata = {
   title: 'Blog — GST Guides, Billing Tips & Business Insights',
   description: 'Tips, guides, and insights for Indian small businesses on GST, billing, voice invoicing, and business growth. Written by the Udyog team.',
+  alternates: selfCanonical('/blog'),
   openGraph: {
     title: 'Udyog Blog — GST Guides & Billing Tips for Indian Businesses',
     description: 'GST guides, billing tips, and business insights for Indian MSMEs, retailers, and traders.',

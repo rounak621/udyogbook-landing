@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import DigitalSignatureTool from './DigitalSignatureTool'
 import SEOContent from './SEOContent'
+import { selfCanonical } from '../../../lib/seo'
 
 export const metadata: Metadata = {
   title: 'Free Digital Signature Maker Online | Create Transparent PNG',
@@ -14,9 +15,7 @@ export const metadata: Metadata = {
     url: 'https://udyogbook.in/tools/digital-signature',
     type: 'website',
   },
-  alternates: {
-    canonical: 'https://udyogbook.in/tools/digital-signature',
-  },
+  alternates: selfCanonical('/tools/digital-signature'),
 }
 
 export default function DigitalSignaturePage() {
