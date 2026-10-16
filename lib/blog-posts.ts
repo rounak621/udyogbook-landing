@@ -456,6 +456,18 @@ export const BLOG_POSTS: BlogPost[] = [
       },
 
       {
+        type: 'h2',
+        text: 'Related Reading for Store Owners',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Track inventory and prevent stockouts: [Stock Management App for Small Shops in India](/blog/stock-management-app-small-shops-india-inventory)',
+          'Get your invoice codes right: [HSN Code Guide for GST Invoices (2026)](/blog/hsn-code-guide-2026-invoice)',
+        ],
+      },
+
+      {
         type: 'cta',
         text: 'Try Udyog free for 14 days — built for kirana stores, grocery shops, and retail businesses. Bill faster, track better, grow more.',
         label: 'Start Free for Kirana Store',
@@ -1110,6 +1122,17 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Voice Billing for Hardware Counter' },
       { type: 'p', text: 'Busy trade seasons mein counter lines control karne ke liye voice invoicing system check save karta hai. Udyog voice inputs parse kar sakta hai (e.g., "50 bag cement, 200 kg steel rods aur 10 tin paint Ramesh builder ko bill karo") aur draft bills instant generate karta hai.' },
       { type: 'highlight', label: 'GST Tax split alert', color: '#f59e0b', text: 'Different item sets single bill mein generate karte waqt, system automatically 28% aur 18% splits generate karta hai, aur clear subtotal report updates show karta hai.' },
+      {
+        type: 'h2',
+        text: 'Related Guides for Hardware Stores',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Manage stock levels and low inventory alerts: [Stock Management App for Small Shops](/blog/stock-management-app-small-shops-india-inventory)',
+          'Look up rates and invoice rules: [HSN Code Guide for GST Invoices (2026)](/blog/hsn-code-guide-2026-invoice)',
+        ],
+      },
       { type: 'cta', label: 'Try Hardware Billing', text: 'Try Udyog free — perfect for hardware and building material stores. 14 day trial.' }
     ],
     faqs: [
@@ -8668,6 +8691,17 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'p',
         text: '[Download Udyog on Google Play](https://play.google.com/store/apps/details?id=com.udyog.udyogmobile) or [open it on the web](https://app.udyogbook.in). See the [Udyog pricing page](/pricing) for plans after your 14-day free trial.',
+      },
+      {
+        type: 'h2',
+        text: 'Related Guides',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Prepare compliant sales invoices: [HSN Code Guide for GST Invoices (2026)](/blog/hsn-code-guide-2026-invoice)',
+          'Organize shop stock and item records: [Stock Management App for Small Shops in India](/blog/stock-management-app-small-shops-india-inventory)',
+        ],
       },
       {
         type: 'p',

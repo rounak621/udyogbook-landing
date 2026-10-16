@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react'
+import Link from 'next/link'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import { ChevronDown, ChevronUp, Check } from 'lucide-react'
@@ -358,6 +359,78 @@ export default function InvoiceTemplateClient() {
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Related Guides Section */}
+        <section style={{ padding: 'clamp(44px,5vw,64px) var(--section-px)', background: '#F8FAFC', borderTop: '1px solid #E2E8F0' }}>
+          <div style={{ maxWidth: 760, margin: '0 auto' }}>
+            <h2 style={{ fontSize: 22, fontWeight: 700, color: '#0F172A', margin: '0 0 8px 0' }}>
+              Related Business & GST Guides
+            </h2>
+            <p style={{ fontSize: 14, color: '#64748B', margin: '0 0 20px 0' }}>
+              Helpful resources on GST invoice requirements and shop management in India.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 16 }}>
+              <Link
+                href="/blog/hsn-code-guide-2026-invoice"
+                style={{
+                  background: '#FFFFFF',
+                  border: '1px solid #E2E8F0',
+                  borderRadius: 12,
+                  padding: '20px 22px',
+                  textDecoration: 'none',
+                  color: '#0F172A',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <div>
+                  <span style={{ fontSize: 11, fontWeight: 700, color: '#F97316', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    GST Invoice Rules
+                  </span>
+                  <h3 style={{ fontSize: 16, fontWeight: 700, color: '#0F172A', margin: '8px 0', lineHeight: 1.4 }}>
+                    HSN Code Guide 2026: Mandatory Digits & Invoice Rules
+                  </h3>
+                  <p style={{ fontSize: 13, color: '#64748B', lineHeight: 1.6, margin: 0 }}>
+                    Understand HSN digit rules by turnover and ensure your tax invoices meet CBIC standards.
+                  </p>
+                </div>
+                <span style={{ marginTop: 14, fontSize: 13, fontWeight: 700, color: '#F97316' }}>
+                  Read Guide →
+                </span>
+              </Link>
+              <Link
+                href="/blog/stock-management-app-small-shops-india-inventory"
+                style={{
+                  background: '#FFFFFF',
+                  border: '1px solid #E2E8F0',
+                  borderRadius: 12,
+                  padding: '20px 22px',
+                  textDecoration: 'none',
+                  color: '#0F172A',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <div>
+                  <span style={{ fontSize: 11, fontWeight: 700, color: '#F97316', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    Store Operations
+                  </span>
+                  <h3 style={{ fontSize: 16, fontWeight: 700, color: '#0F172A', margin: '8px 0', lineHeight: 1.4 }}>
+                    Stock Management App for Small Shops in India
+                  </h3>
+                  <p style={{ fontSize: 13, color: '#64748B', lineHeight: 1.6, margin: 0 }}>
+                    Track item inventory alongside your daily billing without complex spreadsheets.
+                  </p>
+                </div>
+                <span style={{ marginTop: 14, fontSize: 13, fontWeight: 700, color: '#F97316' }}>
+                  Read Guide →
+                </span>
+              </Link>
             </div>
           </div>
         </section>
