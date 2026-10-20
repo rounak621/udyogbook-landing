@@ -102,7 +102,7 @@ export default function LaunchModal({ isOpen, onClose }: LaunchModalProps) {
           fontSize: 15, color: '#64748b',
           lineHeight: 1.7, marginBottom: 28,
         }}>
-          Udyog is launching very soon. Be the first to know when we go live — drop your email and we&apos;ll notify you instantly.
+          UDYOG is launching very soon. Be the first to know when we go live — drop your email and we&apos;ll notify you instantly.
         </p>
 
         {/* Email input */}
@@ -139,7 +139,7 @@ export default function LaunchModal({ isOpen, onClose }: LaunchModalProps) {
 
         {/* Fine print */}
         <p style={{ fontSize: 12, color: '#94a3b8' }}>
-          No spam. We&apos;ll only email you when Udyog launches.
+          No spam. We&apos;ll only email you when UDYOG launches.
         </p>
 
         {/* Divider */}

@@ -51,7 +51,7 @@ export default function PriceComparison() {
                 <th>Feature</th>
                 <th>Vyapar</th>
                 <th>myBillBook</th>
-                <th className="th-udyog">Udyog</th>
+                <th className="th-udyog">UDYOG</th>
               </tr>
             </thead>
             <tbody>
@@ -83,14 +83,14 @@ export default function PriceComparison() {
                 <td>Annual price</td>
                 <td><span className="price-cross">₹599/mo</span></td>
                 <td><span className="price-cross">₹399/mo</span></td>
-                <td><span className="price-udyog">₹149/mo</span></td>
+                <td><span className="price-udyog">₹67/mo</span></td>
               </tr>
             </tbody>
           </table>
         </div>
         
         <div className="pc-cta-wrap">
-          <a href="/pricing" className="btn-orange">Switch to Udyog — ₹149/mo →</a>
+          <a href="/pricing" className="btn-orange">Switch to UDYOG — ₹67/mo →</a>
           <p style={{ fontSize: 12, color: '#64748b', marginTop: 12 }}>*Maya AI is not included in the Basic plan.</p>
         </div>
       </div>

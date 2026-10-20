@@ -11,7 +11,7 @@ const FEATURES = [
   { name: 'Real-time dashboard', udyog: true, billbook: true, vyapar: true },
   { name: 'Multi-business support', udyog: true, billbook: true, vyapar: true },
   { name: 'Rental Equipment Management', udyog: true, billbook: false, vyapar: false },
-  { name: 'Starting price', udyog: '₹149/mo', billbook: '₹399/mo', vyapar: '₹599/mo' },
+  { name: 'Starting price', udyog: '₹67/mo', billbook: '₹399/mo', vyapar: '₹599/mo' },
 ]
 
 export default function ComparisonTable() {
@@ -46,11 +46,11 @@ export default function ComparisonTable() {
 
       <div className="cmp-inner" ref={ref}>
         <div className={`cmp-header fade-up${visible ? ' visible' : ''}`}>
-          <span className="section-label">Why Udyog</span>
+          <span className="section-label">Why UDYOG</span>
           <h2 className="display" style={{ fontSize: 'clamp(28px,4vw,44px)', marginBottom: 12 }}>
             More features, <span className="italic" style={{ color: '#F97316' }}>lower price</span>
           </h2>
-          <p style={{ fontSize: 16, color: '#666' }}>See how Udyog compares to other billing software in India.</p>
+          <p style={{ fontSize: 16, color: '#666' }}>See how UDYOG compares to other billing software in India.</p>
         </div>
 
         <div className={`fade-up${visible ? ' visible' : ''}`} style={{ overflowX: 'auto' }}>
@@ -58,7 +58,7 @@ export default function ComparisonTable() {
             <thead>
               <tr>
                 <th className="cmp-th feat-col">Feature</th>
-                <th className="cmp-th udyog-col">Udyog ⭐</th>
+                <th className="cmp-th udyog-col">UDYOG ⭐</th>
                 <th className="cmp-th other-col">myBillBook</th>
                 <th className="cmp-th other-col">Vyapar</th>
               </tr>

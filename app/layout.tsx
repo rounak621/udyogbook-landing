@@ -4,7 +4,7 @@ import LaunchModalProvider from './components/LaunchModalProvider'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Udyog – GST Billing & Invoicing Software for Indian Businesses',
+    default: 'UDYOG – GST Billing & Invoicing Software for Indian Businesses',
     template: '%s | Udyog'
   },
   description: 'Create GST invoices in seconds with voice billing, manage inventory, track payments, and collaborate with your CA. Built for Indian retailers, traders, and MSMEs.',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   publisher: 'Udyog',
   metadataBase: new URL('https://udyogbook.in'),
   openGraph: {
-    title: 'Udyog — Bill banao, bolke.',
+    title: 'UDYOG — Bill banao, bolke.',
     description: "India's smartest GST billing platform. Create invoices with your voice, manage inventory, and collaborate with your CA.",
     url: 'https://udyogbook.in',
     siteName: 'Udyog',
@@ -64,13 +64,13 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Udyog — GST Billing Software for Indian Businesses',
+        alt: 'UDYOG — GST Billing Software for Indian Businesses',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Udyog — GST Billing for Indian Businesses',
+    title: 'UDYOG — GST Billing for Indian Businesses',
     description: 'Create GST invoices with your voice. Built for Indian MSMEs.',
     images: ['/og-image.png'],
   },

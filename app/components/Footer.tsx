@@ -31,14 +31,14 @@ export default function Footer() {
             <div className="footer-logo">
               <Image
                 src="/udyog-logo.png"
-                alt="Udyog"
+                alt="UDYOG"
                 width={130}
                 height={40}
                 style={{ objectFit: 'contain', borderRadius: '10px' }}
               />
             </div>
             <p className="footer-tagline">
-              Udyog is built to simplify business operations and make GST compliance effortless through a NextGen, technology-first, voice-first, and India-first approach where all business data is available in real-time for both the owner and their CA.
+              UDYOG is built to simplify business operations and make GST compliance effortless through a NextGen, technology-first, voice-first, and India-first approach where all business data is available in real-time for both the owner and their CA.
             </p>
             <div style={{ marginTop: 16 }}>
               <a

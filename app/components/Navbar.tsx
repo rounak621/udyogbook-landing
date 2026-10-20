@@ -124,7 +124,7 @@ export default function Navbar() {
           <a href="/" className="nav-logo">
             <Image
               src="/udyog-logo.png"
-              alt="Udyog"
+              alt="UDYOG"
               width={140}
               height={44}
               style={{ objectFit: 'contain', mixBlendMode: 'multiply' }}

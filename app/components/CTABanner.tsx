@@ -42,7 +42,7 @@ export default function CTABanner() {
             <span className="italic text-orange">smarter?</span>
           </h2>
           <p className="cta-sub">
-            Join 5,000+ Indian businesses already using Udyog.
+            Join 5,000+ Indian businesses already using UDYOG.
             Start your free trial today — setup takes under 2 minutes.
           </p>
           <div className="cta-actions">

@@ -1,12 +1,10 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, Phone, Zap, Mic2, BarChart3 } from 'lucide-react'
-import { useLaunchModal } from './LaunchModalProvider'
 
 export default function DarkCTA() {
   const [visible, setVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
-  const { openModal } = useLaunchModal()
   useEffect(() => {
     const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVisible(true) }, { threshold: 0.1 })
     if (ref.current) o.observe(ref.current)
@@ -51,9 +49,9 @@ export default function DarkCTA() {
             <a href="https://app.udyogbook.in/sign-in" className="dcta-btn-primary">
               Start free trial <ArrowRight size={16} />
             </a>
-            <button onClick={openModal} className="dcta-btn-secondary">
+            <a href="/contact" className="dcta-btn-secondary">
               <Phone size={16} /> Talk to sales
-            </button>
+            </a>
             <a href="https://wa.me/917021922933" target="_blank" rel="noopener noreferrer" style={{ background: '#25D366', color: '#fff', border: 'none', padding: '12px 24px', borderRadius: '10px', fontWeight: 700, fontSize: '15px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               💬 Chat with us on WhatsApp
             </a>

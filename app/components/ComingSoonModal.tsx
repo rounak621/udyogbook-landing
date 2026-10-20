@@ -47,7 +47,7 @@ export default function ComingSoonModal({ isOpen, onClose }: Props) {
           Launching April 19, 2026!
         </h2>
         <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.6, marginBottom: 24 }}>
-          Udyog is launching very soon. Be among the first to experience
+          UDYOG is launching very soon. Be among the first to experience
           AI-powered GST billing for your business.
         </p>
 
