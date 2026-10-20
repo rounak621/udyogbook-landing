@@ -88,7 +88,7 @@ export default function Home() {
           <span style={{ background: '#F97316', color: '#fff', fontSize: 10, fontWeight: 800, padding: '2px 8px', borderRadius: 100, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
             Coming Soon
           </span>
-          <span>Udyog is launching soon — </span>
+          <span>UDYOG is launching soon — </span>
           <a href="mailto:contact@udyogbook.in" style={{ color: '#F97316', fontWeight: 700, textDecoration: 'none' }}>
             Join the waitlist →
           </a>

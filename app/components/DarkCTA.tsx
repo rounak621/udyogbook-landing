@@ -1,12 +1,10 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, Phone, Zap, Mic2, BarChart3 } from 'lucide-react'
-import { useLaunchModal } from './LaunchModalProvider'
 
 export default function DarkCTA() {
   const [visible, setVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
-  const { openModal } = useLaunchModal()
   useEffect(() => {
     const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVisible(true) }, { threshold: 0.1 })
     if (ref.current) o.observe(ref.current)
@@ -24,7 +22,7 @@ export default function DarkCTA() {
         .dcta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
         .dcta-btn-primary { background: #F97316; color: #fff; border: none; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: var(--font-body); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 20px rgba(249,115,22,0.4); }
         .dcta-btn-primary:hover { background: #ea580c; transform: translateY(-1px); }
-        .dcta-btn-secondary { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.2); padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: var(--font-body); display: inline-flex; align-items: center; gap: 8px; }
+        .dcta-btn-secondary { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.2); padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.2s; font-family: var(--font-body); display: inline-flex; align-items: center; gap: 8px; }
         .dcta-btn-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
         .dcta-right {}
         .dcta-cards { display: flex; flex-direction: column; gap: 16px; }
@@ -51,9 +49,9 @@ export default function DarkCTA() {
             <a href="https://app.udyogbook.in/sign-in" className="dcta-btn-primary">
               Start free trial <ArrowRight size={16} />
             </a>
-            <button onClick={openModal} className="dcta-btn-secondary">
+            <a href="/contact" className="dcta-btn-secondary">
               <Phone size={16} /> Talk to sales
-            </button>
+            </a>
             <a href="https://wa.me/917021922933" target="_blank" rel="noopener noreferrer" style={{ background: '#25D366', color: '#fff', border: 'none', padding: '12px 24px', borderRadius: '10px', fontWeight: 700, fontSize: '15px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               💬 Chat with us on WhatsApp
             </a>

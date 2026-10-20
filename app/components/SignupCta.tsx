@@ -87,7 +87,7 @@ export default function SignupCta({
         `}</style>
         <aside
           className="signup-cta-bar md:hidden"
-          aria-label="Download Udyog mobile app"
+          aria-label="Download UDYOG mobile app"
         >
           <div className="signup-cta-bar-inner">
             <p
@@ -173,7 +173,7 @@ export default function SignupCta({
               fontFamily: 'var(--font-body)',
             }}
           >
-            Save HSN and SAC codes to your items in Udyog and make GST bills in seconds. 14-day free trial.
+            Save HSN and SAC codes to your items in UDYOG and make GST bills in seconds. 14-day free trial.
           </p>
         </div>
         <div
@@ -203,7 +203,7 @@ export default function SignupCta({
               boxSizing: 'border-box',
             }}
           >
-            Make a bill with Udyog
+            Make a bill with UDYOG
           </a>
           <a
             href={playUrl}
@@ -233,7 +233,7 @@ export default function SignupCta({
   // Default: "inline" variant
   return (
     <aside
-      aria-label="Start 14-day free trial with Udyog"
+      aria-label="Start 14-day free trial with UDYOG"
       style={{
         background: '#F8FAFC',
         border: '1px solid #CBD5E1',
@@ -254,7 +254,7 @@ export default function SignupCta({
           fontFamily: 'var(--font-body)',
         }}
       >
-        Make GST bills on mobile or web with Udyog
+        Make GST bills on mobile or web with UDYOG
       </p>
       <p
         style={{

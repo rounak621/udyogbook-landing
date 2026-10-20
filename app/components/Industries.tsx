@@ -100,7 +100,7 @@ export default function Industries() {
             Built for every Indian business.
           </h2>
           <p style={{ fontSize: 16, color: '#64748b', maxWidth: 480, margin: '0 auto' }}>
-            From kirana stores to CA firms — Udyog works for your business type.
+            From kirana stores to CA firms — UDYOG works for your business type.
           </p>
         </div>
 

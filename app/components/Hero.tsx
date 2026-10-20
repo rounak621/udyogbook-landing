@@ -142,7 +142,7 @@ export default function Hero() {
               <span className="hero-stars-text">4.9/5 · 5,000+ businesses</span>
             </div>
             <h1 className="hero-h1">
-              Udyog: Bill banao, <span className="orange">bolke.</span><br />
+              UDYOG: Bill banao, <span className="orange">bolke.</span><br />
               <span className="italic-black">Sirf</span> ek awaaz mein.
             </h1>
             <p className="hero-p">
@@ -202,7 +202,7 @@ export default function Hero() {
             <div className="hero-mockup-container">
               <Image
                 src="/hero-mockup.png"
-                alt="Udyog GST Billing Software on Desktop and Mobile"
+                alt="UDYOG GST Billing Software on Desktop and Mobile"
                 width={1536}
                 height={1024}
                 quality={95}

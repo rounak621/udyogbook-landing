@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
+import { Mic } from 'lucide-react'
 
 export default function MayaAISpotlight() {
   const [visible, setVisible] = useState(false)
@@ -72,7 +73,7 @@ export default function MayaAISpotlight() {
 
         <div className="maya-right">
           <div className="maya-ui-top">
-            <div className="maya-mic">🎤</div>
+            <div className="maya-mic"><Mic size={24} color="#F97316" strokeWidth={1.75} /></div>
             <div className="maya-text">&quot;Ramesh ko 10 shirt ka bill banao...&quot;</div>
           </div>
           

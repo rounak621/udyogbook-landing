@@ -8,7 +8,7 @@ const TESTIMONIALS = [
   { text: 'GST filing used to be a nightmare. Now my CA does it in minutes from the portal without bothering me.', name: 'Anil Gupta', role: 'Electronics Retailer', location: 'Delhi', avatar: 'AG', color: '#0ea5e9' },
   { text: 'Inventory tracking is seamless. Every sale and purchase auto-updates stock. I always know what I have.', name: 'Sunita Patel', role: 'FMCG Distributor', location: 'Ahmedabad, Gujarat', avatar: 'SP', color: '#10b981' },
   { text: 'WhatsApp reminders have reduced my outstanding receivables by 40%. Customers actually pay on time now.', name: 'Manoj Verma', role: 'Pharma Distributor', location: 'Indore, MP', avatar: 'MV', color: '#ec4899' },
-  { text: 'As a new business owner with no accounting background, Udyog made it dead simple. Strongly recommended.', name: 'Ritu Singh', role: 'Boutique Owner', location: 'Jaipur, Rajasthan', avatar: 'RS', color: '#f59e0b' },
+  { text: 'As a new business owner with no accounting background, UDYOG made it dead simple. Strongly recommended.', name: 'Ritu Singh', role: 'Boutique Owner', location: 'Jaipur, Rajasthan', avatar: 'RS', color: '#f59e0b' },
 ]
 
 export default function Testimonials() {
@@ -50,7 +50,7 @@ export default function Testimonials() {
         <div className={`t-header fade-up${visible ? ' visible' : ''}`}>
           <span className="section-label">Testimonials</span>
           <h2 className="display" style={{ fontSize: 'clamp(32px, 5vw, 48px)', marginBottom: 8 }}>
-            Businesses <span className="italic text-orange">love</span> Udyog
+            Businesses <span className="italic text-orange">love</span> UDYOG
           </h2>
           <div className="t-stars-row">
             {[1,2,3,4,5].map(i => <Star key={i} size={18} fill="#f59e0b" color="#f59e0b" />)}
