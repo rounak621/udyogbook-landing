@@ -130,11 +130,11 @@ export default function ChapterDetailPage({
         <div style={{ background: '#0F172A', color: '#FFFFFF', padding: '36px clamp(16px,4vw,24px) 44px' }}>
           <div style={{ maxWidth: 1040, margin: '0 auto' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: '#E2E8F0', marginBottom: 20, flexWrap: 'wrap' }}>
-              <Link href="/tools" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
+              <Link prefetch={false} href="/tools" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
                 Free Tools
               </Link>
               <span>/</span>
-              <Link href="/tools/hsn-code-finder" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
+              <Link prefetch={false} href="/tools/hsn-code-finder" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
                 HSN Code Finder
               </Link>
               <span>/</span>
@@ -211,7 +211,7 @@ export default function ChapterDetailPage({
             {/* Prev / Next chapter navigation */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', paddingTop: 8 }}>
               {prevChapter && (
-                <Link
+                <Link prefetch={false}
                   href={`/tools/hsn-code-finder/chapter/${prevChapter.c}`}
                   style={{
                     display: 'inline-flex',
@@ -233,7 +233,7 @@ export default function ChapterDetailPage({
                 </Link>
               )}
               {nextChapter && (
-                <Link
+                <Link prefetch={false}
                   href={`/tools/hsn-code-finder/chapter/${nextChapter.c}`}
                   style={{
                     display: 'inline-flex',
@@ -254,7 +254,7 @@ export default function ChapterDetailPage({
                   Next: Chapter {nextChapter.c} <ArrowRight size={16} />
                 </Link>
               )}
-              <Link
+              <Link prefetch={false}
                 href="/tools/hsn-code-finder"
                 style={{
                   display: 'inline-flex',
@@ -347,7 +347,7 @@ export default function ChapterDetailPage({
               <p style={{ fontSize: 14, color: '#64748B', margin: '0 0 20px 0', maxWidth: 540, marginLeft: 'auto', marginRight: 'auto' }}>
                 Chapter {chapterCode} is reserved in the Indian GST / Customs Tariff schedule for future use and contains no active goods classifications.
               </p>
-              <Link
+              <Link prefetch={false}
                 href="/tools/hsn-code-finder"
                 style={{
                   display: 'inline-flex',
@@ -395,7 +395,7 @@ export default function ChapterDetailPage({
                       }}
                     >
                       <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
-                        <Link
+                        <Link prefetch={false}
                           href={`/tools/hsn-code-finder/hsn/${h.c}`}
                           style={{
                             fontFamily: 'monospace',
@@ -418,7 +418,7 @@ export default function ChapterDetailPage({
                         <CopyCodeButton code={h.c} />
                       </div>
 
-                      <Link
+                      <Link prefetch={false}
                         href={`/tools/hsn-code-finder/hsn/${h.c}`}
                         style={{
                           fontSize: 14,

@@ -441,7 +441,7 @@ export default function FinderClient() {
                     </span>
                   </div>
 
-                  <Link
+                  <Link prefetch={false}
                     href={detailUrl}
                     style={{
                       display: 'inline-flex',
@@ -464,7 +464,7 @@ export default function FinderClient() {
 
                 {/* Description Header */}
                 <h3 style={{ fontSize: 18, fontWeight: 700, color: '#0F172A', margin: '0 0 10px 0', lineHeight: 1.4 }}>
-                  <Link href={detailUrl} style={{ color: 'inherit', textDecoration: 'none' }}>
+                  <Link prefetch={false} href={detailUrl} style={{ color: 'inherit', textDecoration: 'none' }}>
                     {item.d}
                   </Link>
                 </h3>

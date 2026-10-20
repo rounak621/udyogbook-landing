@@ -160,18 +160,18 @@ export default function SACDetailPage({
                   flexWrap: 'wrap',
                 }}
               >
-                <Link href="/tools" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
+                <Link prefetch={false} href="/tools" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
                   Free Tools
                 </Link>
                 <span>/</span>
-                <Link
+                <Link prefetch={false}
                   href="/tools/hsn-code-finder"
                   style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}
                 >
                   HSN & SAC Code Finder
                 </Link>
                 <span>/</span>
-                <Link
+                <Link prefetch={false}
                   href="/tools/hsn-code-finder/chapter/99"
                   style={{ color: '#FED7AA', textDecoration: 'none', fontWeight: 600 }}
                 >
@@ -224,7 +224,7 @@ export default function SACDetailPage({
           <div style={{ maxWidth: 1040, margin: '0 auto', padding: '36px clamp(16px,4vw,24px) 64px' }}>
             {/* Back to Chapter 99 Hub */}
             <div style={{ marginBottom: 24, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <Link
+              <Link prefetch={false}
                 href="/tools/hsn-code-finder/chapter/99"
                 style={{
                   display: 'inline-flex',
@@ -242,7 +242,7 @@ export default function SACDetailPage({
               >
                 <ArrowLeft size={16} /> Back to Chapter 99 (Services)
               </Link>
-              <Link
+              <Link prefetch={false}
                 href="/tools/hsn-code-finder"
                 style={{
                   display: 'inline-flex',
@@ -323,7 +323,7 @@ export default function SACDetailPage({
                 {codes.map(c => {
                   const cleanDesc = c.d.replace(/\s+/g, ' ').trim()
                   return (
-                    <Link
+                    <Link prefetch={false}
                       key={c.c}
                       href={`/tools/hsn-code-finder/sac/${c.c}`}
                       style={{
@@ -458,19 +458,19 @@ export default function SACDetailPage({
         <div style={{ background: '#0F172A', color: '#FFFFFF', padding: '36px clamp(16px,4vw,24px) 44px' }}>
           <div style={{ maxWidth: 1040, margin: '0 auto' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: '#E2E8F0', marginBottom: 20, flexWrap: 'wrap' }}>
-              <Link href="/tools" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
+              <Link prefetch={false} href="/tools" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
                 Free Tools
               </Link>
               <span>/</span>
-              <Link href="/tools/hsn-code-finder" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
+              <Link prefetch={false} href="/tools/hsn-code-finder" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
                 HSN & SAC Code Finder
               </Link>
               <span>/</span>
-              <Link href="/tools/hsn-code-finder/chapter/99" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
+              <Link prefetch={false} href="/tools/hsn-code-finder/chapter/99" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
                 Chapter 99 (Services)
               </Link>
               <span>/</span>
-              <Link href={`/tools/hsn-code-finder/sac/${headingCode}`} style={{ color: '#FED7AA', textDecoration: 'none', fontWeight: 600 }}>
+              <Link prefetch={false} href={`/tools/hsn-code-finder/sac/${headingCode}`} style={{ color: '#FED7AA', textDecoration: 'none', fontWeight: 600 }}>
                 Group {headingCode}
               </Link>
               <span>/</span>
@@ -600,7 +600,7 @@ export default function SACDetailPage({
               <div>
                 <span style={{ fontSize: 12, fontWeight: 700, color: '#64748B', textTransform: 'uppercase' }}>Service Group</span>
                 <p style={{ fontSize: 15, fontWeight: 600, color: '#0F172A', margin: '4px 0 0' }}>
-                  <Link href={`/tools/hsn-code-finder/sac/${headingCode}`} style={{ color: '#C2410C', textDecoration: 'none' }}>
+                  <Link prefetch={false} href={`/tools/hsn-code-finder/sac/${headingCode}`} style={{ color: '#C2410C', textDecoration: 'none' }}>
                     Group {headingCode}
                   </Link>
                   {heading ? ` (${sentenceCase(heading.d)})` : ''}
@@ -609,7 +609,7 @@ export default function SACDetailPage({
               <div>
                 <span style={{ fontSize: 12, fontWeight: 700, color: '#64748B', textTransform: 'uppercase' }}>Chapter</span>
                 <p style={{ fontSize: 15, fontWeight: 600, color: '#0F172A', margin: '4px 0 0' }}>
-                  <Link href="/tools/hsn-code-finder/chapter/99" style={{ color: '#C2410C', textDecoration: 'none' }}>
+                  <Link prefetch={false} href="/tools/hsn-code-finder/chapter/99" style={{ color: '#C2410C', textDecoration: 'none' }}>
                     Chapter 99 (Services)
                   </Link>
                 </p>
@@ -633,7 +633,7 @@ export default function SACDetailPage({
                 <h2 style={{ fontSize: 20, fontWeight: 700, color: '#0F172A', margin: 0 }}>
                   Other Services in Group {headingCode} ({siblings.length})
                 </h2>
-                <Link
+                <Link prefetch={false}
                   href={`/tools/hsn-code-finder/sac/${headingCode}`}
                   style={{
                     color: '#C2410C',
@@ -653,7 +653,7 @@ export default function SACDetailPage({
                 }}
               >
                 {siblings.map(sib => (
-                  <Link
+                  <Link prefetch={false}
                     key={sib.c}
                     href={`/tools/hsn-code-finder/sac/${sib.c}`}
                     style={{
@@ -687,7 +687,7 @@ export default function SACDetailPage({
 
           {/* Return & CTA */}
           <div style={{ marginBottom: 32, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <Link
+            <Link prefetch={false}
               href={`/tools/hsn-code-finder/sac/${headingCode}`}
               style={{
                 display: 'inline-flex',
@@ -706,7 +706,7 @@ export default function SACDetailPage({
             >
               <ArrowLeft size={16} /> Group {headingCode} Hub
             </Link>
-            <Link
+            <Link prefetch={false}
               href="/tools/hsn-code-finder/chapter/99"
               style={{
                 display: 'inline-flex',
@@ -725,7 +725,7 @@ export default function SACDetailPage({
             >
               Chapter 99 (Services)
             </Link>
-            <Link
+            <Link prefetch={false}
               href="/tools/hsn-code-finder"
               style={{
                 display: 'inline-flex',
