@@ -135,15 +135,15 @@ export default function HSNHeadingDetailPage({
         <div style={{ background: '#0F172A', color: '#FFFFFF', padding: '36px clamp(16px,4vw,24px) 44px' }}>
           <div style={{ maxWidth: 1040, margin: '0 auto' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: '#E2E8F0', marginBottom: 20, flexWrap: 'wrap' }}>
-              <Link href="/tools" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
+              <Link prefetch={false} href="/tools" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
                 Free Tools
               </Link>
               <span>/</span>
-              <Link href="/tools/hsn-code-finder" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
+              <Link prefetch={false} href="/tools/hsn-code-finder" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
                 HSN Code Finder
               </Link>
               <span>/</span>
-              <Link href={`/tools/hsn-code-finder/chapter/${chapterCode}`} style={{ color: '#FED7AA', textDecoration: 'none', fontWeight: 600 }}>
+              <Link prefetch={false} href={`/tools/hsn-code-finder/chapter/${chapterCode}`} style={{ color: '#FED7AA', textDecoration: 'none', fontWeight: 600 }}>
                 Chapter {chapterCode}
               </Link>
               <span>/</span>
@@ -221,7 +221,7 @@ export default function HSNHeadingDetailPage({
             {chapter && (
               <p style={{ fontSize: 14, color: '#CBD5E1', margin: 0, lineHeight: 1.6, overflowWrap: 'anywhere' }}>
                 <strong style={{ color: '#FFFFFF' }}>
-                  <Link
+                  <Link prefetch={false}
                     href={`/tools/hsn-code-finder/chapter/${chapterCode}`}
                     style={{ color: '#FED7AA', textDecoration: 'underline' }}
                   >
@@ -569,7 +569,7 @@ export default function HSNHeadingDetailPage({
                 }}
               >
                 {siblings.map(sib => (
-                  <Link
+                  <Link prefetch={false}
                     key={sib.c}
                     href={`/tools/hsn-code-finder/hsn/${sib.c}`}
                     style={{
@@ -606,7 +606,7 @@ export default function HSNHeadingDetailPage({
 
           {/* Section 4: Return Link & Signup CTA */}
           <div style={{ marginBottom: 32 }}>
-            <Link
+            <Link prefetch={false}
               href="/tools/hsn-code-finder"
               style={{
                 display: 'inline-flex',

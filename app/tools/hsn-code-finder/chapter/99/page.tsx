@@ -84,11 +84,11 @@ export default function Chapter99Page() {
                 flexWrap: 'wrap',
               }}
             >
-              <Link href="/tools" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
+              <Link prefetch={false} href="/tools" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>
                 Free Tools
               </Link>
               <span>/</span>
-              <Link
+              <Link prefetch={false}
                 href="/tools/hsn-code-finder"
                 style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}
               >
@@ -143,7 +143,7 @@ export default function Chapter99Page() {
         <div style={{ maxWidth: 1040, margin: '0 auto', padding: '36px clamp(16px,4vw,24px) 64px' }}>
           {/* Back link */}
           <div style={{ marginBottom: 24 }}>
-            <Link
+            <Link prefetch={false}
               href="/tools/hsn-code-finder"
               style={{
                 display: 'inline-flex',
@@ -233,7 +233,7 @@ export default function Chapter99Page() {
               {groups.map(group => {
                 const groupName = sentenceCase(group.d)
                 return (
-                  <Link
+                  <Link prefetch={false}
                     key={group.c}
                     href={`/tools/hsn-code-finder/sac/${group.c}`}
                     style={{

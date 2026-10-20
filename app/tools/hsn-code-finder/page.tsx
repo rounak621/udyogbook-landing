@@ -261,7 +261,7 @@ export default function HSNCodeFinderPage() {
                 }}
               >
                 {mostSearchedHsns.map(item => (
-                  <Link
+                  <Link prefetch={false}
                     key={item.code}
                     href={item.href}
                     style={{
@@ -304,7 +304,7 @@ export default function HSNCodeFinderPage() {
                 }}
               >
                 {popularSacs.map(item => (
-                  <Link
+                  <Link prefetch={false}
                     key={item.code}
                     href={item.href}
                     style={{
@@ -333,7 +333,7 @@ export default function HSNCodeFinderPage() {
 
             {/* Browse Services (SAC codes) Card */}
             <div style={{ marginBottom: 36, paddingTop: 16 }}>
-              <Link
+              <Link prefetch={false}
                 href="/tools/hsn-code-finder/chapter/99"
                 style={{
                   background: '#0F172A',
@@ -415,7 +415,7 @@ export default function HSNCodeFinderPage() {
                   const rawClause = clean.split(/[;:\n]/)[0].trim().replace(/\.$/, '')
                   const shortDesc = rawClause.length > 28 ? rawClause.slice(0, 27).trim() + '…' : rawClause
                   return (
-                    <Link
+                    <Link prefetch={false}
                       key={ch.c}
                       href={`/tools/hsn-code-finder/chapter/${ch.c}`}
                       style={{
@@ -563,7 +563,7 @@ export default function HSNCodeFinderPage() {
                 gap: 16,
               }}
             >
-              <Link
+              <Link prefetch={false}
                 href="/blog/hsn-code-guide-2026-invoice"
                 style={{
                   background: '#F8FAFC',
@@ -592,7 +592,7 @@ export default function HSNCodeFinderPage() {
                   Read Guide →
                 </span>
               </Link>
-              <Link
+              <Link prefetch={false}
                 href="/blog/stock-management-app-small-shops-india-inventory"
                 style={{
                   background: '#F8FAFC',
