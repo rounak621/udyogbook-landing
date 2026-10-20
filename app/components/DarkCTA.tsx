@@ -22,7 +22,7 @@ export default function DarkCTA() {
         .dcta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
         .dcta-btn-primary { background: #F97316; color: #fff; border: none; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: var(--font-body); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 20px rgba(249,115,22,0.4); }
         .dcta-btn-primary:hover { background: #ea580c; transform: translateY(-1px); }
-        .dcta-btn-secondary { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.2); padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: var(--font-body); display: inline-flex; align-items: center; gap: 8px; }
+        .dcta-btn-secondary { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.2); padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.2s; font-family: var(--font-body); display: inline-flex; align-items: center; gap: 8px; }
         .dcta-btn-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
         .dcta-right {}
         .dcta-cards { display: flex; flex-direction: column; gap: 16px; }
