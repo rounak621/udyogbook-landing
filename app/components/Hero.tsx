@@ -150,17 +150,17 @@ export default function Hero() {
             </p>
             <div className="hero-stats-inline">
               <div className="stat-inline-item">
-                <span className="stat-inline-num">3 sec</span>
+                <span className="stat-inline-num">3 sec</span>{" "}
                 <span className="stat-inline-lbl">to create an invoice</span>
               </div>
               <div className="stat-inline-div" />
               <div className="stat-inline-item">
-                <span className="stat-inline-num">5,000+</span>
+                <span className="stat-inline-num">5,000+</span>{" "}
                 <span className="stat-inline-lbl">businesses</span>
               </div>
               <div className="stat-inline-div" />
               <div className="stat-inline-item">
-                <span className="stat-inline-num">₹67</span>
+                <span className="stat-inline-num">₹67</span>{" "}
                 <span className="stat-inline-lbl">/mo</span>
               </div>
             </div>

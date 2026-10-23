@@ -83,14 +83,28 @@ export default function Industries() {
         .ind-p-link { color: #F97316; font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; gap: 6px; }
         .ind-p-link:hover { text-decoration: underline; }
 
-        .ind-mobile { display: none; }
         @media (max-width: 800px) {
-          .ind-layout { display: none; }
-          .ind-mobile { display: flex; flex-direction: column; gap: 24px; }
-          .ind-mob-card { background: #0F172A; border-radius: 16px; padding: 32px; color: #fff; }
-          .ind-mob-head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-          .ind-mob-head svg { color: #F97316; flex-shrink: 0; }
-          .ind-mob-title { font-family: var(--font-display); font-size: 24px; font-weight: 400; }
+          .ind-layout { grid-template-columns: 1fr; gap: 20px; }
+          .ind-sidebar {
+            flex-direction: row;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            gap: 8px;
+            -webkit-overflow-scrolling: touch;
+          }
+          .ind-item {
+            white-space: nowrap;
+            flex-shrink: 0;
+            border-left: none;
+            border-bottom: 3px solid transparent;
+            border-radius: 8px;
+          }
+          .ind-item.active {
+            border-left-color: transparent;
+            border-bottom-color: #F97316;
+          }
+          .ind-panel { padding: 24px; }
+          .ind-p-title { font-size: 24px; }
         }
       `}</style>
       
@@ -104,7 +118,6 @@ export default function Industries() {
           </p>
         </div>
 
-        {/* Desktop Layout */}
         <div className={`ind-layout fade-up d1${visible ? ' visible' : ''}`}>
           <div className="ind-sidebar">
             {INDUSTRIES.map((ind, i) => (
@@ -131,28 +144,6 @@ export default function Industries() {
             </ul>
             <a href="#" className="ind-p-link">Learn more →</a>
           </div>
-        </div>
-
-        {/* Mobile Layout */}
-        <div className={`ind-mobile fade-up d1${visible ? ' visible' : ''}`}>
-          {INDUSTRIES.map((ind, i) => (
-            <div key={ind.name} className="ind-mob-card">
-              <div className="ind-mob-head">
-                {ind.icon}
-                <h3 className="ind-mob-title">{ind.name}</h3>
-              </div>
-              <p className="ind-p-desc" style={{ marginBottom: 24 }}>{ind.desc}</p>
-              <ul className="ind-p-bullets" style={{ marginBottom: 24 }}>
-                {ind.bullets.map((b, i) => (
-                  <li key={i} className="ind-p-bullet">
-                    <span className="ind-p-check">✓</span>
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-              <a href="#" className="ind-p-link">Learn more →</a>
-            </div>
-          ))}
         </div>
       </div>
     </section>

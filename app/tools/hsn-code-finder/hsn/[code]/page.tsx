@@ -19,6 +19,9 @@ import {
 } from '../../../../../lib/hsn-data'
 import { Info, ArrowLeft, ArrowRight, Tag } from 'lucide-react'
 
+export const dynamic = 'force-static'
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   const headings = getAllHSNHeadings()
   return headings.map(h => ({ code: h.c }))

@@ -16,6 +16,9 @@ import {
 } from '../../../../../lib/hsn-data'
 import { Info, ArrowLeft, ArrowRight, BookOpen, Layers } from 'lucide-react'
 
+export const dynamic = 'force-static'
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   const chapters = getAllHSNChapters()
   return chapters.map(ch => ({ ch: ch.c }))
