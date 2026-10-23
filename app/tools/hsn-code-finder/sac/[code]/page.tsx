@@ -18,6 +18,9 @@ import {
 import { selfCanonical } from '../../../../../lib/seo'
 import { Info, ArrowLeft, ArrowRight, ExternalLink, Briefcase, Layers } from 'lucide-react'
 
+export const dynamic = 'force-static'
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   const codes = getAll6DigitSACCodes()
   const groups = getAllSACGroups()

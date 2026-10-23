@@ -6,6 +6,9 @@ import { notFound } from 'next/navigation'
 import { BLOG_POSTS, getPostBySlug, getAllSlugs, getRelatedPosts, type BlogSection } from '../../../lib/blog-posts'
 import { getBreadcrumbSchema, getFAQPageSchema } from '../../../lib/schema'
 
+export const dynamic = 'force-static'
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   return getAllSlugs().map(slug => ({ slug }))
 }

@@ -177,6 +177,7 @@ export default function ToolsHubPage() {
                 <Link
                   key={tool.href}
                   href={tool.href}
+                  prefetch={false}
                   style={{ textDecoration: 'none', color: 'inherit' }}
                 >
                   <div className="tool-card">

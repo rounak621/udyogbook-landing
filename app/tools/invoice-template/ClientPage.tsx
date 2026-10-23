@@ -375,6 +375,7 @@ export default function InvoiceTemplateClient() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 16 }}>
               <Link
                 href="/blog/hsn-code-guide-2026-invoice"
+                prefetch={false}
                 style={{
                   background: '#FFFFFF',
                   border: '1px solid #E2E8F0',
@@ -404,6 +405,7 @@ export default function InvoiceTemplateClient() {
               </Link>
               <Link
                 href="/blog/stock-management-app-small-shops-india-inventory"
+                prefetch={false}
                 style={{
                   background: '#FFFFFF',
                   border: '1px solid #E2E8F0',
